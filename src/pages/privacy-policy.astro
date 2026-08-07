@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+
+const seoTitle = "Privacy Policy | Yasir Jamal";
+const seoDescription = "Privacy policy and data protection guidelines for Yasir Jamal Product Design & Web Engineering.";
+const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/privacy-policy";
+---
+
+<Layout title={seoTitle}>
+  <Fragment slot="head">
+    <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
+  </Fragment>
+
+  <!-- Hero Header Banner matching Site Brand Style -->
+  <section class="w-full bg-[#01013E] text-white pt-28 pb-16 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h1 class="text-3xl sm:text-4xl font-light text-white tracking-tight mb-3">Privacy Policy</h1>
+      <p class="text-xs text-[#B7D5DF] font-light">Last Updated: July 2026</p>
+    </div>
+  </section>
+
+  <main class="w-full bg-slate-50 py-16 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-6 space-y-6 text-sm text-slate-600">
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">1. Information We Collect</h2>
+        <p>We collect personal information that you voluntarily provide to us when submitting project inquiries, contact forms, or direct messages. This may include your name, email address, phone number, company name, and project specifications.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">2. How We Use Your Information</h2>
+        <p>The information collected is used exclusively to evaluate project requirements, respond to inquiries, deliver customized proposals, and communicate project updates. We do not sell, rent, or trade your personal information to third parties.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">3. Cookies & Analytics</h2>
+        <p>Our website uses standard cookies and web analytics tools to understand website traffic, user interactions, and performance metrics to continuously improve our user experience.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">4. Data Security</h2>
+        <p>We implement industry-standard administrative and technical security measures to safeguard your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">5. Contact Us</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy, please contact us at <a href="mailto:info@yasirjamal.com" class="text-[#1559E7] font-semibold underline">info@yasirjamal.com</a>.</p>
+      </section>
+    </div>
+  </main>
+</Layout>

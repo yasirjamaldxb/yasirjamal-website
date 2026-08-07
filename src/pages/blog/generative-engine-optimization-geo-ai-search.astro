@@ -1,0 +1,283 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "Generative Engine Optimization (GEO): How AI Search Is Changing Web Traffic in 2026",
+  slug: "generative-engine-optimization-geo-ai-search",
+  category: "AI & Search Architecture",
+  datePublished: "2026-07-25",
+  dateModified: "2026-07-25",
+  readTime: "11 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/geo-ai-search.jpg",
+  description: "A comprehensive guide on Generative Engine Optimization (GEO) strategies to ensure your business ranks and gets cited by Gemini, ChatGPT, Claude, and Perplexity."
+};
+
+const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/blog/${article.slug}`;
+---
+
+<Layout title={`${article.title} | Yasir Jamal Blog`}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} />
+  </Fragment>
+
+  <!-- Article Schema & Breadcrumb JSON-LD Markup -->
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lawngreen-toad-836930.hostingersite.com" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://lawngreen-toad-836930.hostingersite.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": article.title, "item": pageUrl }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": `${pageUrl}#article`,
+        "headline": article.title,
+        "description": article.description,
+        "image": article.image,
+        "datePublished": article.datePublished,
+        "dateModified": article.dateModified,
+        "author": {
+          "@type": "Person",
+          "name": "Yasir Jamal",
+          "url": "https://lawngreen-toad-836930.hostingersite.com/#person"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Yasir Jamal Web Engineering Studio",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://lawngreen-toad-836930.hostingersite.com/images/logo.webp"
+          }
+        },
+        "mainEntityOfPage": pageUrl
+      }
+    ]
+  })} />
+
+  <!-- Clean Light Mode Article Header Banner -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">Written by Yasir Jamal</span>
+          <span class="text-xs text-slate-500 font-light">Senior Web Designer & Developer (15+ Yrs) • {article.readTime}</span>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Editorial 2-Column Blog Article Layout -->
+  <article class="w-full bg-white text-slate-900 font-elegant pt-12 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      
+      <!-- Main 2-Column Grid Layout: Left 8-Cols Article Body, Right 4-Cols Sticky Sidebar -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Main Content (Lg: 8 Cols) -->
+        <div class="lg:col-span-8 space-y-8">
+          
+          <!-- Hero Article Cover Image -->
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 bg-slate-100">
+            <img src={article.image} alt={article.title} class="w-full h-auto object-cover" />
+          </div>
+
+          <!-- Key Takeaway Summary Box -->
+          <div class="bg-[#f8fafc] rounded-2xl p-6 sm:p-7 border-l-4 border-[#1559E7] shadow-sm">
+            <div class="flex items-center gap-2 text-[#1559E7] text-xs font-bold uppercase tracking-wider mb-2">
+              <svg class="w-4 h-4 text-[#1559E7]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 17v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z" clip-rule="evenodd"/></svg>
+              <span>Key Takeaway</span>
+            </div>
+            <p class="text-slate-700 text-sm sm:text-base font-normal leading-relaxed">
+              Over 40% of mobile users now ask AI engines like Google Gemini, ChatGPT, or Perplexity for direct recommendations instead of scanning 10 blue links. Generative Engine Optimization (GEO) is the practice of engineering your website content and JSON-LD schema so LLMs extract and recommend your business first.
+            </p>
+          </div>
+
+          <!-- Collapsible/Inline Table of Contents -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/90">
+            <span class="text-sm font-bold text-slate-900 block mb-3 uppercase tracking-wider">In This Article</span>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#what-is-geo" class="hover:text-[#1559E7] hover:underline">1. What Is Generative Engine Optimization (GEO)?</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#three-pillars" class="hover:text-[#1559E7] hover:underline">2. The 3 Core Pillars of GEO Optimization</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#schema-architecture" class="hover:text-[#1559E7] hover:underline">3. Deep JSON-LD Schema Architecture</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#dubai-geo" class="hover:text-[#1559E7] hover:underline">4. How Yasir Jamal Engineers GEO-Ready Websites in Dubai</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Editorial Article Body Content -->
+          <div class="prose prose-slate max-w-none text-slate-800 text-base sm:text-lg leading-relaxed space-y-8">
+            
+            <section id="what-is-geo" class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">1. What Is Generative Engine Optimization (GEO)?</h2>
+              <p>
+                While traditional SEO focuses on keyword placement and backlinks to rank on Google's search result pages, GEO optimizes content for AI language models that summarize information directly to users.
+              </p>
+              <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 text-blue-950 text-sm font-medium leading-normal">
+                <strong>💡 Pro Tip:</strong> AI crawlers prioritize structured, verifiable facts (pricing models, location coordinates, exact client deliverables) over marketing fluff.
+              </div>
+            </section>
+
+            <section id="three-pillars" class="space-y-4 pt-4 border-t border-slate-100">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">2. The 3 Core Pillars of GEO Optimization</h2>
+              <ul class="space-y-3 list-disc pl-5 text-sm sm:text-base font-light">
+                <li><strong class="font-semibold text-slate-900">1. Fact-Dense Entity Graphs:</strong> AI models prefer structured, verifiable facts over opinion pieces.</li>
+                <li><strong class="font-semibold text-slate-900">2. Deep JSON-LD Schema Architecture:</strong> Embedded `@graph` arrays containing `Person`, `LocalBusiness`, `Service`, and `FAQPage` schemas allow AI crawlers to parse your business metadata without ambiguity.</li>
+                <li><strong class="font-semibold text-slate-900">3. Citation Authority:</strong> Providing authoritative statistics and real-world case studies increases your odds of being cited as a primary source.</li>
+              </ul>
+            </section>
+
+            <section id="schema-architecture" class="space-y-4 pt-4 border-t border-slate-100">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">3. Deep JSON-LD Schema Architecture</h2>
+              <p>
+                To get recommended by ChatGPT or Perplexity when users search for services in Dubai, your codebase must output validated JSON-LD schema blocks that explicitly outline your service offerings, credentials, and geographic regions.
+              </p>
+            </section>
+
+            <section id="dubai-geo" class="space-y-4 pt-4 border-t border-slate-100">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">4. How Yasir Jamal Engineers GEO-Ready Websites in Dubai</h2>
+              <p>
+                Every website built at our studio includes native GEO schema architecture. Learn more on our <a href="/web-design-dubai/" class="text-[#1559E7] font-bold underline hover:text-[#01013E]">Custom Web Design Dubai</a> page.
+              </p>
+            </section>
+
+          </div>
+
+          <!-- In-Content Lead Magnet / Proposal Box -->
+          <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden border border-slate-800 my-10">
+            <div class="space-y-4 relative z-10 text-center sm:text-left">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#F6CD0B] text-xs font-semibold uppercase tracking-wider">
+                Direct Senior Engineering Partnership
+              </span>
+              <h3 class="text-2xl sm:text-3xl font-light text-white tracking-tight">
+                Make Your Brand Recommended by AI Search Engines
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                Get a native GEO & Technical SEO schema audit from senior developer Yasir Jamal.
+              </p>
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a href="https://wa.me/971552600494" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-slate-950 px-7 py-3 rounded-full text-xs font-bold hover:bg-white transition-all shadow-md">
+                  WhatsApp Yasir Directly &rarr;
+                </a>
+                <a href="/quote" class="bg-white text-[#01013E] px-7 py-3 rounded-full text-xs font-bold hover:bg-slate-100 transition-all shadow-md">
+                  Request GEO Audit
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Bio Footer Box -->
+          <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div class="w-20 h-20 rounded-full bg-[#F6CD0B] p-1 overflow-hidden shrink-0 shadow-md">
+              <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-slate-950">About Yasir Jamal</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                Yasir Jamal is a senior web designer & developer based in Dubai Media City with over 15 years of experience engineering high-speed custom websites, eCommerce architectures, and technical SEO schema for UAE & global brands.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Sticky Sidebar -->
+        <aside class="lg:col-span-4 space-y-8 sticky top-28">
+          
+          <!-- Sidebar Widget 1: Author Bio Box -->
+          <div class="bg-[#f8fafc] rounded-3xl p-6 border border-slate-200/80 shadow-sm text-center">
+            <div class="w-20 h-20 rounded-full bg-[#F6CD0B] p-1 mx-auto mb-4 overflow-hidden shadow-md">
+              <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-1">Hi, I'm Yasir Jamal</h3>
+            <p class="text-xs text-slate-500 font-light leading-relaxed mb-5">
+              Senior Developer & Web Engineer in Dubai helping brands eliminate agency bloat and double website speed.
+            </p>
+            <a href="https://wa.me/971552600494" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#01013E] text-white px-5 py-3 rounded-full text-xs font-semibold hover:bg-slate-900 transition-colors shadow-md">
+              <span>Talk to Yasir Directly</span> &rarr;
+            </a>
+          </div>
+
+          <!-- Sidebar Widget 2: Free SEO & Speed Audit Lead Magnet -->
+          <div class="bg-[#01013E] text-white rounded-3xl p-6 shadow-xl border border-slate-800 text-center space-y-4">
+            <span class="inline-block bg-[#F6CD0B] text-[#01013E] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Free Assessment
+            </span>
+            <h3 class="text-xl font-light text-white tracking-tight">
+              Get Your Free Website Speed & Technical SEO Audit
+            </h3>
+            <p class="text-slate-300 text-xs font-light leading-relaxed">
+              Discover why your website isn't ranking #1 on Google UAE or converting visitors into leads.
+            </p>
+            <a href="/quote" class="w-full inline-flex items-center justify-center gap-2 bg-[#1559E7] text-white px-5 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-[#01013E] transition-all shadow-md">
+              <span>Claim Free Audit</span> &rarr;
+            </a>
+          </div>
+
+          <!-- Sidebar Widget 3: Related Articles -->
+          <div class="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-4">
+            <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider">Related Guides</h3>
+            <ul class="space-y-4 text-xs font-medium text-slate-700">
+              <li>
+                <a href="/blog/modern-web-design-trends-2026/" class="hover:text-[#1559E7] transition-colors leading-snug block">
+                  10 Modern Web Design Trends Dominating Dubai Brands in 2026 &rarr;
+                </a>
+              </li>
+              <li class="pt-3 border-t border-slate-100">
+                <a href="/blog/astro-vs-wordpress-speed-performance-guide/" class="hover:text-[#1559E7] transition-colors leading-snug block">
+                  Why Astro Outperforms WordPress Theme Builders by 300% &rarr;
+                </a>
+              </li>
+              <li class="pt-3 border-t border-slate-100">
+                <a href="/blog/dubai-technical-seo-audit-ranking-guide/" class="hover:text-[#1559E7] transition-colors leading-snug block">
+                  Technical SEO Audit Blueprint: Rank #1 on Google UAE &rarr;
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+
+    </div>
+  </article>
+</Layout>

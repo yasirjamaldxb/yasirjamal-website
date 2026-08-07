@@ -1,0 +1,338 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const featuredPost = {
+  title: "Generative Engine Optimization (GEO): How AI Search Is Changing Web Traffic in 2026",
+  slug: "generative-engine-optimization-geo-ai-search",
+  category: "AI & Search Architecture",
+  date: "July 25, 2026",
+  readTime: "11 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/geo-ai-search.jpg",
+  excerpt: "Traditional Google SEO is evolving fast. Discover how Generative Engine Optimization (GEO) ensures your website is recommended by Gemini, ChatGPT, Claude, and Perplexity for high-intent search queries."
+};
+
+const blogPosts = [
+  {
+    title: "10 Modern Web Design Trends Dominating Dubai & Global Brands in 2026",
+    slug: "modern-web-design-trends-2026",
+    category: "Web Design & UX",
+    date: "July 28, 2026",
+    readTime: "8 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/web-design-trends.jpg",
+    excerpt: "Explore the latest UI/UX trends defining luxury Dubai brands—from dark mode glassmorphism to micro-animations and zero-friction mobile layouts."
+  },
+  {
+    title: "Generative Engine Optimization (GEO): How AI Search Is Changing Web Traffic in 2026",
+    slug: "generative-engine-optimization-geo-ai-search",
+    category: "AI & Search Architecture",
+    date: "July 25, 2026",
+    readTime: "11 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/geo-ai-search.jpg",
+    excerpt: "Learn how to structure JSON-LD schema, entity graphs, and factual content to capture citation share across AI search models."
+  },
+  {
+    title: "Why Astro & Clean Code Outperform WordPress Theme Builders by 300% in Speed",
+    slug: "astro-vs-wordpress-speed-performance-guide",
+    category: "Frontend Engineering",
+    date: "July 22, 2026",
+    readTime: "9 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/astro-vs-wordpress.jpg",
+    excerpt: "A deep dive into zero-JavaScript static site rendering, eliminating DOM bloat, and achieving 100/100 Google Lighthouse speed scores."
+  },
+  {
+    title: "Technical SEO Audit Blueprint: How Dubai Websites Rank #1 on Google UAE",
+    slug: "dubai-technical-seo-audit-ranking-guide",
+    category: "Technical SEO",
+    date: "July 18, 2026",
+    readTime: "12 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/dubai-seo-audit.jpg",
+    excerpt: "Step-by-step technical SEO blueprint to audit Core Web Vitals, canonical links, schema hierarchy, and local UAE search signals."
+  },
+  {
+    title: "Conversion Rate Optimization (CRO) Secrets: Turning Visitors into High-Value Leads",
+    slug: "conversion-rate-optimization-cro-lead-generation",
+    category: "Growth Marketing & CRO",
+    date: "July 14, 2026",
+    readTime: "7 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/cro-lead-gen.jpg",
+    excerpt: "Proven high-converting lead strategies to optimize mobile CTAs, eliminate form friction, and boost high-ticket WhatsApp inquiries."
+  },
+  {
+    title: "Sub-Second eCommerce Architecture: Scaling Online Stores in the GCC & Beyond",
+    slug: "sub-second-ecommerce-architecture-gcc-scaling",
+    category: "eCommerce Engineering",
+    date: "July 10, 2026",
+    readTime: "10 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/ecommerce-scale.jpg",
+    excerpt: "How headless storefronts, multi-currency UAE payment gateways, and instant product loading drive sub-second checkout speeds."
+  },
+  {
+    title: "Hiring a Senior Freelance Web Designer vs Agency in Dubai (2026 Cost & ROI Breakdown)",
+    slug: "hiring-freelance-web-designer-vs-agency-dubai",
+    category: "Business & Strategy",
+    date: "August 7, 2026",
+    readTime: "8 min read",
+    author: "Yasir Jamal",
+    image: "/images/blog/freelancer-vs-agency.jpg",
+    excerpt: "An honest 2026 cost, speed, and ROI comparison between hiring a senior freelance web developer vs a traditional digital agency in Dubai & the UAE."
+  }
+];
+
+const seoTitle = "Web Design, AI Search & Technical SEO Blog | Yasir Jamal";
+const seoDescription = "Actionable articles, technical blueprints, and growth strategy guides written by senior web designer Yasir Jamal for UAE & global businesses.";
+const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/blog";
+---
+
+<Layout title={seoTitle}>
+  <Fragment slot="head">
+    <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
+  </Fragment>
+
+  <!-- Clean Light Mode Blog Hub Header -->
+  <section class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-16 font-elegant relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">Blog & Insights</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-[#1559E7] animate-pulse"></span>
+        Data-Driven Growth & Engineering Insights
+      </span>
+
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-light text-[#01013E] tracking-tight leading-tight max-w-4xl mx-auto mb-4">
+        Web Design, AI Search & Growth Strategy Blog
+      </h1>
+      
+      <p class="text-slate-600 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed mb-8">
+        Actionable guides, technical blueprints, and growth frameworks written by senior developer Yasir Jamal for ambitious UAE & global brands.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="flex flex-wrap justify-center items-center gap-2 max-w-4xl mx-auto">
+        <span class="px-4 py-2 rounded-full bg-[#1559E7] text-white text-xs font-semibold shadow-sm cursor-pointer">All Posts</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">Web Design</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">AI & GEO</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">Development</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">Technical SEO</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">Growth Marketing</span>
+        <span class="px-4 py-2 rounded-full bg-white text-slate-700 hover:bg-[#1559E7] hover:text-white border border-slate-200 text-xs font-medium cursor-pointer transition-colors shadow-sm">eCommerce</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Main Content Body -->
+  <main class="w-full bg-slate-50 pb-20 font-elegant">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      
+      <!-- Featured Banner Card in Light Theme -->
+      <div class="mb-16">
+        <a href={`/blog/${featuredPost.slug}/`} class="group block bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 border border-slate-200/80">
+          <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+            
+            <div class="lg:col-span-7 aspect-[16/10] overflow-hidden bg-slate-100">
+              <img 
+                src={featuredPost.image} 
+                alt={featuredPost.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                loading="eager"
+              />
+            </div>
+
+            <div class="lg:col-span-5 p-8 sm:p-10 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="bg-[#1559E7] text-white text-[11px] font-semibold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                  Featured
+                </span>
+                <span class="text-xs text-slate-500 font-medium">{featuredPost.category}</span>
+                <span class="text-xs text-slate-400">•</span>
+                <span class="text-xs text-slate-500">{featuredPost.readTime}</span>
+              </div>
+
+              <h2 class="text-2xl sm:text-3xl font-semibold text-slate-900 tracking-tight leading-snug group-hover:text-[#1559E7] transition-colors">
+                {featuredPost.title}
+              </h2>
+
+              <p class="text-slate-600 text-sm font-light leading-relaxed">
+                {featuredPost.excerpt}
+              </p>
+
+              <!-- Author Info -->
+              <div class="pt-4 flex items-center justify-between border-t border-slate-100">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shadow-sm">
+                    <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+                  </div>
+                  <div>
+                    <span class="text-xs font-semibold text-slate-900 block">{featuredPost.author}</span>
+                    <span class="text-[10px] text-slate-500 font-light">{featuredPost.date}</span>
+                  </div>
+                </div>
+
+                <span class="text-xs font-semibold text-[#1559E7] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  Read Guide &rarr;
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </a>
+      </div>
+
+      <!-- 6-Article Grid in Light Theme Cards -->
+      <div class="mb-16">
+        <div class="flex items-center justify-between mb-8">
+          <h2 class="text-2xl font-light text-[#01013E] tracking-tight">
+            Latest Articles & Guides
+          </h2>
+          <span class="text-xs text-slate-500 font-medium">6 Articles Available</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {blogPosts.map((post) => (
+            <article class="bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_45px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group border border-slate-200/80">
+              <div>
+                <a href={`/blog/${post.slug}/`} class="block aspect-[16/10] overflow-hidden relative bg-slate-100">
+                  <img 
+                    src={post.image} 
+                    alt={post.title} 
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                    loading="lazy"
+                  />
+                  <span class="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-[#1559E7] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                    {post.category}
+                  </span>
+                </a>
+
+                <div class="p-6 sm:p-7 space-y-3">
+                  <div class="flex items-center gap-2 text-xs text-slate-400 font-light">
+                    <span>{post.date}</span>
+                    <span>•</span>
+                    <span>{post.readTime}</span>
+                  </div>
+
+                  <h3 class="text-lg font-semibold text-slate-900 tracking-tight leading-snug group-hover:text-[#1559E7] transition-colors line-clamp-2">
+                    <a href={`/blog/${post.slug}/`}>
+                      {post.title}
+                    </a>
+                  </h3>
+
+                  <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card Footer Author Box -->
+              <div class="px-6 sm:px-7 pb-6 pt-2 border-t border-slate-100 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-7 h-7 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shadow-sm">
+                    <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+                  </div>
+                  <span class="text-xs font-semibold text-slate-800">{post.author}</span>
+                </div>
+
+                <a href={`/blog/${post.slug}/`} class="text-xs font-semibold text-[#1559E7] group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
+                  <span>Read</span> &rarr;
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <!-- AI & Reddit Search Q&A Knowledge Base in Light Mode -->
+      <div class="mb-16 bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/80 shadow-md font-elegant">
+        <div class="max-w-3xl mx-auto text-center mb-10">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-3">
+            🤖 AI Search & Reddit Q&A Knowledge Base
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight">
+            Direct Answers to Real Web Engineering & SEO Questions
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed mt-2">
+            Curated answers to top questions asked by founders on Reddit, Google Search, and AI engines regarding Dubai web development.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200/80 space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] bg-blue-50 px-2.5 py-0.5 rounded-full inline-block">Reddit Q&A / r/dubai</span>
+            <h3 class="text-base font-bold text-slate-900">How much does custom web design cost in Dubai in 2026?</h3>
+            <p class="text-xs text-slate-600 font-light leading-relaxed">
+              Custom web design ranges from AED 5,000 to AED 25,000 depending on custom Figma UX, eCommerce scope, and technical SEO schema architecture. Working directly with Yasir Jamal provides fixed upfront pricing with zero agency markups.
+            </p>
+          </div>
+
+          <div class="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200/80 space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] bg-blue-50 px-2.5 py-0.5 rounded-full inline-block">Google AI Overview</span>
+            <h3 class="text-base font-bold text-slate-900">Why is my Dubai website not getting leads or ranking on Google UAE?</h3>
+            <p class="text-xs text-slate-600 font-light leading-relaxed">
+              Most websites fail due to slow mobile load times (&gt;3s), bloated WordPress page builders, missing localized UAE schema (`geo.region`), or lacking direct WhatsApp conversion anchors.
+            </p>
+          </div>
+
+          <div class="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200/80 space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] bg-blue-50 px-2.5 py-0.5 rounded-full inline-block">Reddit Q&A / r/webdev</span>
+            <h3 class="text-base font-bold text-slate-900">Should I choose WordPress or Astro clean code in 2026?</h3>
+            <p class="text-xs text-slate-600 font-light leading-relaxed">
+              Astro static architecture delivers 300% faster load speeds with perfect 100/100 Google Lighthouse scores, zero plugin vulnerabilities, and sub-300ms mobile transitions.
+            </p>
+          </div>
+
+          <div class="bg-[#f8fafc] p-6 rounded-2xl border border-slate-200/80 space-y-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] bg-blue-50 px-2.5 py-0.5 rounded-full inline-block">AI Search Engine / GEO</span>
+            <h3 class="text-base font-bold text-slate-900">How do I get my business cited by ChatGPT, Gemini & Perplexity?</h3>
+            <p class="text-xs text-slate-600 font-light leading-relaxed">
+              AI engines use Generative Engine Optimization (GEO) to extract structured entity graphs. Embedding JSON-LD schemas (`Person`, `LocalBusiness`, `FAQPage`) ensures your business is cited as an authoritative answer.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Growth Newsletter Banner Card in Dark Navy Contrast -->
+      <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+        <div class="max-w-2xl mx-auto space-y-4 relative z-10">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#F6CD0B] text-xs font-semibold uppercase tracking-wider">
+            Weekly Growth Digest
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-white">
+            Get Senior Web Engineering & SEO Tactics In Your Inbox
+          </h3>
+          <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+            Join 1,200+ Dubai business owners receiving bi-weekly breakdowns on conversion optimization, AI search ranking, and Astro speed benchmarks.
+          </p>
+
+          <form class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 max-w-md mx-auto" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Yasir Jamal growth insights!');">
+            <input 
+              type="email" 
+              placeholder="Enter your business email" 
+              required 
+              class="w-full px-5 py-3.5 rounded-full bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs focus:outline-none focus:border-[#F6CD0B] transition-colors"
+            />
+            <button 
+              type="submit" 
+              class="w-full sm:w-auto px-7 py-3.5 rounded-full bg-[#1559E7] text-white text-xs font-bold hover:bg-[#01013E] transition-all shadow-md shrink-0 border border-white/20"
+            >
+              Subscribe Free
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</Layout>

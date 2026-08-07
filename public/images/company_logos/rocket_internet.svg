@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 40" fill="none">
+  <path d="M6 30L16 10L26 30H20L16 20L12 30H6Z" fill="#E2001A"/>
+  <circle cx="16" cy="14" r="3" fill="#002D62"/>
+  <text x="32" y="21" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="13" fill="#111827" letter-spacing="-0.2">ROCKET</text>
+  <text x="32" y="31" font-family="'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="9" fill="#E2001A" letter-spacing="1.5">INTERNET</text>
+</svg>

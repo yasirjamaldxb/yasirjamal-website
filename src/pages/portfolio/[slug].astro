@@ -1,0 +1,277 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: 'alston-clayden' },
+      props: {
+        project: {
+          title: "Alston & Clayden",
+          slug: "alston-clayden",
+          category: "Real Estate & Legal Advisory",
+          domain: "alstonclayden.com",
+          liveUrl: "https://alstonclayden.com",
+          coverImage: "/images/portfolio/alston_clayden.jpg",
+          description: "Bespoke web platform and brand architecture engineered for Alston & Clayden luxury real estate and corporate advisory in Dubai. Designed to provide a high-ticket client experience with zero-friction inquiry flows.",
+          gallery: [
+            "/images/portfolio/alston-clayden-2.jpg",
+            "/images/portfolio/alston-clayden-3.jpg",
+            "/images/portfolio/alston-clayden-4.jpg",
+            "/images/portfolio/alston-clayden-5.jpg",
+            "/images/portfolio/alston-clayden-6.jpg",
+            "/images/portfolio/alston-clayden-7.jpg",
+            "/images/portfolio/alston-clayden-8.jpg"
+          ],
+          highlights: [
+            "Bespoke Figma UI/UX tailored for high-net-worth real estate & legal clients",
+            "Sub-second page load times with zero theme builder bloat",
+            "Direct WhatsApp lead routing and instant inquiry consultation forms"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'alomaids' },
+      props: {
+        project: {
+          title: "Alomaids",
+          slug: "alomaids",
+          category: "Home Services & Tech Booking",
+          domain: "alomaids.com",
+          liveUrl: "https://alomaids.com",
+          coverImage: "/images/portfolio/alomaids.jpg",
+          description: "High-converting online booking engine and mobile-optimized web application for Dubai's premier maid and technical service provider. Built with sub-second mobile checkout speed and direct booking channels.",
+          gallery: [
+            "/images/portfolio/alomaids-2.jpg",
+            "/images/portfolio/alomaids-3.jpg",
+            "/images/portfolio/alomaids-4.jpg",
+            "/images/portfolio/alomaids-5.jpg",
+            "/images/portfolio/alomaids-6.jpg"
+          ],
+          highlights: [
+            "Seamless multi-step service booking calculator for Dubai residents",
+            "100/100 Google Lighthouse mobile speed score",
+            "Integrated WhatsApp instant support and automated booking confirmation"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'westminster-properties' },
+      props: {
+        project: {
+          title: "Westminster Properties",
+          slug: "westminster-properties",
+          category: "Luxury Real Estate Portal",
+          domain: "westminsterproperties.ae",
+          liveUrl: "https://westminsterproperties.ae",
+          coverImage: "/images/portfolio/westminster.jpg",
+          description: "Exclusive real estate portal showcasing luxury Dubai residences, architectural penthouses, and high-yield investment properties. Engineered for maximum visual impact and lead generation.",
+          gallery: [
+            "/images/portfolio/westminster-properties-2.jpg",
+            "/images/portfolio/westminster-properties-3.jpg",
+            "/images/portfolio/westminster-properties-4.jpg",
+            "/images/portfolio/westminster-properties-5.jpg"
+          ],
+          highlights: [
+            "High-resolution property gallery layout with instant filter search",
+            "Optimized lead capture funnels for international investors",
+            "Fully responsive UI/UX across all mobile and tablet breakpoints"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'skylynx' },
+      props: {
+        project: {
+          title: "SkyLynx Aviation",
+          slug: "skylynx",
+          category: "Private Aviation & Jet Charter",
+          domain: "skylynx.ae",
+          liveUrl: "https://skylynx.ae",
+          coverImage: "/images/portfolio/skylynx.jpg",
+          description: "Premium private aviation charter platform engineered with instant flight request tools, luxury aircraft fleet showcase, and VIP client portals.",
+          gallery: [
+            "/images/portfolio/skylynx-2.jpg",
+            "/images/portfolio/skylynx-3.jpg",
+            "/images/portfolio/skylynx-4.jpg",
+            "/images/portfolio/skylynx-5.jpg",
+            "/images/portfolio/skylynx-6.jpg"
+          ],
+          highlights: [
+            "Interactive flight charter request module for private jet bookings",
+            "Luxury dark-mode glassmorphic aesthetic matching global VIP standards",
+            "Ultra-fast performance and clean technical SEO architecture"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'dubai-podiatrist' },
+      props: {
+        project: {
+          title: "Dubai Podiatrist Clinic",
+          slug: "dubai-podiatrist",
+          category: "Medical & Healthcare Platform",
+          domain: "dubaipodiatrist.com",
+          liveUrl: "https://dubaipodiatrist.com",
+          coverImage: "/images/portfolio/dubai_podiatrist.jpg",
+          description: "Specialist medical practice portal featuring online patient appointment booking, doctor profiles, and healthcare technical SEO architecture.",
+          gallery: [
+            "/images/portfolio/dubai-podiatrist-2.jpg"
+          ],
+          highlights: [
+            "HIPAA & UAE medical compliant patient booking integration",
+            "Structured schema markup for medical specialties & clinic locations",
+            "Sub-second loading speed for mobile health inquiries"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'noor-abu-dhabi' },
+      props: {
+        project: {
+          title: "Noor Abu Dhabi",
+          slug: "noor-abu-dhabi",
+          category: "Renewable Solar Energy",
+          domain: "noorabudhabi.com",
+          liveUrl: "https://noorabudhabi.com",
+          coverImage: "/images/p_noor_v2.jpg",
+          description: "Enterprise web presentation and digital platform for Noor Abu Dhabi solar project, highlighting renewable energy leadership and sustainability metrics in the UAE.",
+          gallery: [
+            "/images/p_noor_v2.jpg"
+          ],
+          highlights: [
+            "Corporate ESG sustainability dashboard and impact presentation",
+            "Clean enterprise architecture with zero DOM bloat",
+            "Bilingual capability for English & Arabic regional audiences"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'paws-and-planes' },
+      props: {
+        project: {
+          title: "Paws & Planes UAE",
+          slug: "paws-and-planes",
+          category: "Pet Relocation & Travel Portal",
+          domain: "pawsandplanes.ae",
+          liveUrl: "https://pawsandplanes.ae/",
+          coverImage: "/images/p_paws_v2.jpg",
+          description: "MOCCAE-licensed pet relocation portal engineered with custom door-to-door flight calculators, regulatory guidance, and high-converting WhatsApp consultation channels.",
+          gallery: [
+            "/images/p_paws_v2.jpg"
+          ],
+          highlights: [
+            "Custom flight route relocation calculator for international pets",
+            "Direct WhatsApp consultation integration for high conversion",
+            "100/100 Google Core Web Vitals speed optimization"
+          ]
+        }
+      }
+    }
+  ];
+}
+
+const { project } = Astro.props;
+const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${project.slug}`;
+---
+
+<Layout title={`${project.title} - Case Study | Yasir Jamal`}>
+  <Fragment slot="head">
+    <SEO 
+      title={`${project.title} | Case Study by Yasir Jamal`} 
+      description={project.description} 
+      url={pageUrl} 
+    />
+  </Fragment>
+
+  <!-- Hero Header Banner matching Light Theme -->
+  <section class="w-full bg-[#01013E] text-white pt-28 pb-16 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex justify-center items-center gap-2 text-xs text-[#B7D5DF] mb-4">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/portfolio/" class="hover:text-white transition-colors">Case Studies</a>
+        <span>&rsaquo;</span>
+        <span class="text-white font-semibold">{project.title}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-[#F6CD0B] text-xs font-semibold uppercase tracking-wider mb-4">
+        {project.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-white tracking-tight leading-tight mb-4">
+        {project.title}
+      </h1>
+
+      <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto mb-6">
+        {project.description}
+      </p>
+
+      {project.liveUrl && (
+        <a 
+          href={project.liveUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 px-7 py-3 bg-white text-[#01013E] rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-100 hover:scale-105 transition-all shadow-lg"
+        >
+          <span>Visit Live Site</span>
+          <span>&rarr;</span>
+        </a>
+      )}
+    </div>
+  </section>
+
+  <!-- Main Content & Image Gallery Section -->
+  <main class="w-full bg-slate-50 py-16 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+      
+      <!-- Key Project Highlights Box -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-xl font-semibold text-slate-900 mb-4">Case Study Highlights</h2>
+        <ul class="space-y-3">
+          {project.highlights.map(item => (
+            <li class="flex items-start gap-3 text-sm text-slate-600 font-light">
+              <span class="w-5 h-5 rounded-full bg-[#1559E7]/10 text-[#1559E7] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Project Image Gallery -->
+      <div class="space-y-8">
+        <h2 class="text-2xl font-semibold text-slate-900 text-center mb-6">Case Study Showcase & Design Artifacts</h2>
+        {project.gallery.map((imgSrc, i) => (
+          <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-slate-200/80">
+            <img 
+              src={imgSrc} 
+              alt={`${project.title} Case Study Image ${i + 1}`} 
+              class="w-full h-auto object-cover" 
+              loading="lazy" 
+            />
+          </div>
+        ))}
+      </div>
+
+      <!-- Back to Case Studies Navigation -->
+      <div class="text-center pt-8 border-t border-slate-200">
+        <a 
+          href="/portfolio/" 
+          class="inline-flex items-center gap-2 px-8 py-3.5 bg-slate-950 hover:bg-slate-900 text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md"
+        >
+          <span>&larr; Back to All Case Studies</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

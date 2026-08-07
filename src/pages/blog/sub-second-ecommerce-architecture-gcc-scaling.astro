@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "Sub-Second eCommerce Architecture: Scaling Online Stores in the GCC & Beyond",
+  slug: "sub-second-ecommerce-architecture-gcc-scaling",
+  category: "eCommerce Engineering",
+  datePublished: "2026-07-10",
+  dateModified: "2026-07-10",
+  readTime: "10 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/ecommerce-scale.jpg",
+  description: "How headless storefronts, multi-currency UAE payment gateways, and instant product loading drive sub-second checkout speeds."
+};
+
+const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/blog/${article.slug}`;
+---
+
+<Layout title={`${article.title} | Yasir Jamal Blog`}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} />
+  </Fragment>
+
+  <!-- Clean Light Mode Article Header Banner -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">Written by Yasir Jamal</span>
+          <span class="text-xs text-slate-500 font-light">Senior Web Designer & Developer (15+ Yrs) • {article.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Editorial 2-Column Blog Article Layout -->
+  <article class="w-full bg-white text-slate-900 font-elegant pt-12 pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Column: Main Article Body -->
+        <div class="lg:col-span-8 space-y-8">
+          
+          <div class="rounded-3xl overflow-hidden shadow-lg border border-slate-200/80 bg-slate-100">
+            <img src={article.image} alt={article.title} class="w-full h-auto object-cover" />
+          </div>
+
+          <!-- Summary Takeaway Box -->
+          <div class="bg-[#f8fafc] rounded-2xl p-6 sm:p-7 border-l-4 border-[#1559E7] shadow-sm">
+            <div class="flex items-center gap-2 text-[#1559E7] text-xs font-bold uppercase tracking-wider mb-2">
+              <svg class="w-4 h-4 text-[#1559E7]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 17v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z" clip-rule="evenodd"/></svg>
+              <span>Key Takeaway</span>
+            </div>
+            <p class="text-slate-700 text-sm sm:text-base font-normal leading-relaxed">
+              In GCC eCommerce, every 100ms delay in page loading drops sales conversion by 7%. Headless storefronts combined with localized Stripe, Checkout.com, and Apple Pay payment APIs enable instant product views and sub-second checkout.
+            </p>
+          </div>
+
+          <!-- Table of Contents -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200/90">
+            <span class="text-sm font-bold text-slate-900 block mb-3 uppercase tracking-wider">In This Article</span>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#ecom-1" class="hover:text-[#1559E7] hover:underline">1. Headless vs Monolithic WooCommerce</a>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-[#1559E7] font-bold">&rsaquo;</span>
+                <a href="#ecom-2" class="hover:text-[#1559E7] hover:underline">2. GCC Multi-Currency & Apple Pay Integration</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Article Content -->
+          <div class="prose prose-slate max-w-none text-slate-800 text-base sm:text-lg leading-relaxed space-y-8">
+            <section id="ecom-1" class="space-y-4">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">1. Headless vs Monolithic WooCommerce</h2>
+              <p>
+                Headless architecture decouples the frontend display from backend catalog management, serving static product pages instantly from Middle East edge CDNs.
+              </p>
+            </section>
+
+            <section id="ecom-2" class="space-y-4 pt-4 border-t border-slate-100">
+              <h2 class="text-2xl sm:text-3xl font-bold text-[#01013E] tracking-tight">2. GCC Multi-Currency & Apple Pay Integration</h2>
+              <p>
+                Supporting direct AED/SAR currencies and native 1-tap Apple Pay reduces cart abandonment rate by up to 35% on mobile devices.
+              </p>
+            </section>
+          </div>
+
+          <!-- CTA Box -->
+          <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden border border-slate-800 my-10">
+            <div class="space-y-4 relative z-10 text-center sm:text-left">
+              <h3 class="text-2xl sm:text-3xl font-light text-white tracking-tight">
+                Scale Your eCommerce Store to Sub-Second Speeds
+              </h3>
+              <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                Consult with senior eCommerce engineer Yasir Jamal on custom headless storefronts.
+              </p>
+              <div class="pt-2 flex flex-wrap items-center gap-3">
+                <a href="https://wa.me/971552600494" target="_blank" rel="noopener noreferrer" class="bg-[#25D366] text-slate-950 px-7 py-3 rounded-full text-xs font-bold hover:bg-white transition-all shadow-md">
+                  WhatsApp Yasir Directly &rarr;
+                </a>
+                <a href="/quote" class="bg-white text-[#01013E] px-7 py-3 rounded-full text-xs font-bold hover:bg-slate-100 transition-all shadow-md">
+                  Request eCommerce Proposal
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Author Bio -->
+          <div class="bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-200 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+            <div class="w-20 h-20 rounded-full bg-[#F6CD0B] p-1 overflow-hidden shrink-0 shadow-md">
+              <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <div class="space-y-1.5">
+              <h4 class="text-lg font-bold text-slate-950">About Yasir Jamal</h4>
+              <p class="text-xs sm:text-sm text-slate-600 font-light leading-relaxed">
+                Senior web developer specializing in high-performance GCC eCommerce solutions and custom payment gateway integrations.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sticky Sidebar -->
+        <aside class="lg:col-span-4 space-y-8 sticky top-28">
+          <div class="bg-[#f8fafc] rounded-3xl p-6 border border-slate-200/80 shadow-sm text-center">
+            <div class="w-20 h-20 rounded-full bg-[#F6CD0B] p-1 mx-auto mb-4 overflow-hidden shadow-md">
+              <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+            </div>
+            <h3 class="text-base font-bold text-slate-900 mb-1">Hi, I'm Yasir Jamal</h3>
+            <p class="text-xs text-slate-500 font-light leading-relaxed mb-5">
+              Senior eCommerce Web Engineer in Dubai.
+            </p>
+            <a href="https://wa.me/971552600494" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-[#01013E] text-white px-5 py-3 rounded-full text-xs font-semibold hover:bg-slate-900 transition-colors shadow-md">
+              <span>Talk to Yasir Directly</span> &rarr;
+            </a>
+          </div>
+
+          <div class="bg-[#01013E] text-white rounded-3xl p-6 shadow-xl border border-slate-800 text-center space-y-4">
+            <span class="inline-block bg-[#F6CD0B] text-[#01013E] text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Free Assessment
+            </span>
+            <h3 class="text-xl font-light text-white tracking-tight">
+              Get Your Free eCommerce Audit
+            </h3>
+            <p class="text-slate-300 text-xs font-light leading-relaxed">
+              Analyze your store checkout speed and mobile conversion bottlenecks.
+            </p>
+            <a href="/quote" class="w-full inline-flex items-center justify-center gap-2 bg-[#1559E7] text-white px-5 py-3 rounded-full text-xs font-bold hover:bg-white hover:text-[#01013E] transition-all shadow-md">
+              <span>Claim Free Audit</span> &rarr;
+            </a>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </article>
+</Layout>

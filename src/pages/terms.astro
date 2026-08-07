@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SEO from '../components/SEO.astro';
+
+const seoTitle = "Terms of Service | Yasir Jamal";
+const seoDescription = "Terms of service and project agreements for Yasir Jamal Product Design & Web Engineering.";
+const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/terms";
+---
+
+<Layout title={seoTitle}>
+  <Fragment slot="head">
+    <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
+  </Fragment>
+
+  <!-- Hero Header Banner matching Site Brand Style -->
+  <section class="w-full bg-[#01013E] text-white pt-28 pb-16 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h1 class="text-3xl sm:text-4xl font-light text-white tracking-tight mb-3">Terms of Service</h1>
+      <p class="text-xs text-[#B7D5DF] font-light">Last Updated: July 2026</p>
+    </div>
+  </section>
+
+  <main class="w-full bg-slate-50 py-16 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-6 space-y-6 text-sm text-slate-600">
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">1. Scope of Services</h2>
+        <p>Yasir Jamal provides custom website design, product UI/UX architecture, frontend engineering, and digital strategy consulting services to client companies worldwide.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">2. Intellectual Property & Ownership</h2>
+        <p>Upon receipt of full payment, all custom design deliverables, source code, and assets developed specifically for the client are fully assigned to the client. No recurring licensing fees or restrictive builder locks apply.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">3. Client Responsibilities & Feedback</h2>
+        <p>Project success relies on timely feedback and provision of necessary content assets. Deliverable schedules are based on mutual responsiveness throughout the active project timeline.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">4. Limitation of Liability</h2>
+        <p>Services are provided on a professional basis as specified in individual project scope agreements. In no event shall Yasir Jamal be liable for indirect, consequential, or incidental damages arising from third-party server hosting or external platform outages.</p>
+      </section>
+
+      <section class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-sm">
+        <h2 class="text-lg font-semibold text-slate-900 mb-3">5. Revisions & Support</h2>
+        <p>Each engagement includes dedicated revision rounds during design and engineering phases, as well as post-launch technical warranty support to ensure smooth operation.</p>
+      </section>
+    </div>
+  </main>
+</Layout>

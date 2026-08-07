@@ -1,0 +1,133 @@
+---
+/* Clean Face Portrait Cutout with Real Photo Mouse Eye Tracking */
+---
+
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[350px] md:h-[350px] flex items-center justify-center z-10 group select-none">
+  <!-- Glowing Neon Halo Ring -->
+  <div class="absolute -inset-2 rounded-full bg-gradient-to-tr from-[#d4f378] via-emerald-400 to-transparent blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+  <!-- Circular Face Photo Container -->
+  <div class="w-full h-full rounded-full border-4 border-[#d4f378] shadow-[0_20px_60px_rgba(0,0,0,0.7)] relative overflow-hidden bg-slate-900">
+    
+    <!-- Real Photograph Cutout -->
+    <img 
+      id="real-face-photo"
+      src="/images/real_hero_portrait.jpg" 
+      alt="Yasir Jamal - Web Designer Dubai" 
+      class="w-full h-full object-cover object-[center_25%] transform transition-transform duration-500 ease-out group-hover:scale-105"
+    />
+
+    <!-- Subtle Vignette Edge Overlay -->
+    <div class="absolute inset-0 rounded-full shadow-[inset_0_0_30px_rgba(0,0,0,0.5)] pointer-events-none z-10"></div>
+
+    <!-- Interactive Pupil Eye Tracking Overlay -->
+    <div class="absolute inset-0 pointer-events-none z-20">
+      
+      <!-- Left Eye Iris/Pupil Overlay -->
+      <div 
+        id="left-eye-socket" 
+        class="absolute w-7 h-5 rounded-full flex items-center justify-center overflow-hidden"
+        style="top: 41%; left: 42%; transform: translate(-50%, -50%);"
+      >
+        <div 
+          id="left-eye-pupil" 
+          class="w-3.5 h-3.5 rounded-full bg-[#1e293b] border border-white/60 shadow-md flex items-center justify-center transition-transform ease-out duration-75"
+        >
+          <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+          <div class="absolute top-0.5 left-0.5 w-1 h-1 rounded-full bg-white opacity-80"></div>
+        </div>
+      </div>
+
+      <!-- Right Eye Iris/Pupil Overlay -->
+      <div 
+        id="right-eye-socket" 
+        class="absolute w-7 h-5 rounded-full flex items-center justify-center overflow-hidden"
+        style="top: 41%; left: 58%; transform: translate(-50%, -50%);"
+      >
+        <div 
+          id="right-eye-pupil" 
+          class="w-3.5 h-3.5 rounded-full bg-[#1e293b] border border-white/60 shadow-md flex items-center justify-center transition-transform ease-out duration-75"
+        >
+          <div class="w-1.5 h-1.5 rounded-full bg-black"></div>
+          <div class="absolute top-0.5 left-0.5 w-1 h-1 rounded-full bg-white opacity-80"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Hover Smile Glow Badge -->
+    <div 
+      id="face-smile-badge"
+      class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-[#18230b]/95 backdrop-blur-md border border-[#d4f378] text-[#d4f378] text-xs font-bold shadow-2xl opacity-0 scale-90 transition-all duration-300 pointer-events-none z-30 flex items-center gap-1.5 whitespace-nowrap"
+    >
+      <span>😊</span> Ready to Talk!
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const leftEye = document.getElementById('left-eye-socket');
+    const rightEye = document.getElementById('right-eye-socket');
+    const leftPupil = document.getElementById('left-eye-pupil');
+    const rightPupil = document.getElementById('right-eye-pupil');
+    const facePhoto = document.getElementById('real-face-photo');
+    const smileBadge = document.getElementById('face-smile-badge');
+
+    if (!leftEye || !rightEye || !leftPupil || !rightPupil) return;
+
+    const maxRadius = 5;
+
+    function getCenter(el) {
+      const rect = el.getBoundingClientRect();
+      return {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2
+      };
+    }
+
+    // Smooth Mouse Eye Tracking
+    window.addEventListener('mousemove', (e) => {
+      const mouseX = e.clientX;
+      const mouseY = e.clientY;
+
+      // Left Eye Tracking
+      const leftCenter = getCenter(leftEye);
+      const dxLeft = mouseX - leftCenter.x;
+      const dyLeft = mouseY - leftCenter.y;
+      const distLeft = Math.hypot(dxLeft, dyLeft);
+      const angleLeft = Math.atan2(dyLeft, dxLeft);
+      const rLeft = Math.min(maxRadius, distLeft / 25);
+      leftPupil.style.transform = `translate(${Math.cos(angleLeft) * rLeft}px, ${Math.sin(angleLeft) * rLeft}px)`;
+
+      // Right Eye Tracking
+      const rightCenter = getCenter(rightEye);
+      const dxRight = mouseX - rightCenter.x;
+      const dyRight = mouseY - rightCenter.y;
+      const distRight = Math.hypot(dxRight, dyRight);
+      const angleRight = Math.atan2(dyRight, dxRight);
+      const rRight = Math.min(maxRadius, distRight / 25);
+      rightPupil.style.transform = `translate(${Math.cos(angleRight) * rRight}px, ${Math.sin(angleRight) * rRight}px)`;
+    });
+
+    // CTA Hover Smile State
+    const ctas = document.querySelectorAll('a, button, input, select, textarea');
+    ctas.forEach((cta) => {
+      cta.addEventListener('mouseenter', () => {
+        if (facePhoto) facePhoto.style.transform = 'scale(1.08)';
+        if (smileBadge) {
+          smileBadge.classList.remove('opacity-0', 'scale-90');
+          smileBadge.classList.add('opacity-100', 'scale-100');
+        }
+      });
+      cta.addEventListener('mouseleave', () => {
+        if (facePhoto) facePhoto.style.transform = 'scale(1)';
+        if (smileBadge) {
+          smileBadge.classList.remove('opacity-100', 'scale-100');
+          smileBadge.classList.add('opacity-0', 'scale-90');
+        }
+      });
+    });
+  });
+</script>

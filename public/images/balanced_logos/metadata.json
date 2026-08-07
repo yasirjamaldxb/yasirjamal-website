@@ -1,0 +1,121 @@
+[
+  {
+    "file": "al_omaids.png",
+    "aspectRatio": "1.67",
+    "cropW": 80,
+    "cropH": 48,
+    "customClass": "h-6 sm:h-7.5 max-w-[110px]"
+  },
+  {
+    "file": "audi.png",
+    "aspectRatio": "2.83",
+    "cropW": 136,
+    "cropH": 48,
+    "customClass": "h-5 sm:h-6 max-w-[120px]"
+  },
+  {
+    "file": "filatech.png",
+    "aspectRatio": "4.17",
+    "cropW": 200,
+    "cropH": 48,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "global.png",
+    "aspectRatio": "1.83",
+    "cropW": 88,
+    "cropH": 48,
+    "customClass": "h-6 sm:h-7.5 max-w-[110px]"
+  },
+  {
+    "file": "julphar.png",
+    "aspectRatio": "4.14",
+    "cropW": 4723,
+    "cropH": 1141,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "lootah_holding.png",
+    "aspectRatio": "4.32",
+    "cropW": 803,
+    "cropH": 186,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "namshi.png",
+    "aspectRatio": "2.16",
+    "cropW": 1875,
+    "cropH": 868,
+    "customClass": "h-6 sm:h-7.5 max-w-[110px]"
+  },
+  {
+    "file": "omnicom.png",
+    "aspectRatio": "11.11",
+    "cropW": 200,
+    "cropH": 18,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "partner_1.png",
+    "aspectRatio": "2.10",
+    "cropW": 187,
+    "cropH": 89,
+    "customClass": "h-6 sm:h-7.5 max-w-[110px]"
+  },
+  {
+    "file": "partner_2.png",
+    "aspectRatio": "2.63",
+    "cropW": 237,
+    "cropH": 90,
+    "customClass": "h-5 sm:h-6 max-w-[120px]"
+  },
+  {
+    "file": "partner_3.png",
+    "aspectRatio": "4.71",
+    "cropW": 306,
+    "cropH": 65,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "partner_4.png",
+    "aspectRatio": "3.61",
+    "cropW": 473,
+    "cropH": 131,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "paws_and_planes.png",
+    "aspectRatio": "8.33",
+    "cropW": 200,
+    "cropH": 24,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "property_finder.png",
+    "aspectRatio": "2.46",
+    "cropW": 352,
+    "cropH": 143,
+    "customClass": "h-5 sm:h-6 max-w-[120px]"
+  },
+  {
+    "file": "rocket_internet.png",
+    "aspectRatio": "12.82",
+    "cropW": 2000,
+    "cropH": 156,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "uae_podiatry.png",
+    "aspectRatio": "6.06",
+    "cropW": 212,
+    "cropH": 35,
+    "customClass": "h-4 sm:h-5 max-w-[130px]"
+  },
+  {
+    "file": "wfp.png",
+    "aspectRatio": "0.67",
+    "cropW": 32,
+    "cropH": 48,
+    "customClass": "h-8 sm:h-10 max-w-[90px]"
+  }
+]

@@ -1,0 +1,23 @@
+# Enable Clean Static Routing & Prevent Hostinger Staging Directory Redirect Blocks
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Serve existing files directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Serve existing directory index.html files directly without redirect loops
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*)$ $1/index.html [L]
+
+  # Clean URL handling for HTML files without extension
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+# Force AI Bot Access & Remove Bot Blocking Headers
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>

@@ -1,0 +1,300 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Yasir Jamal | Senior Web Designer & Developer (Dubai & Worldwide Remote)" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+    
+    <!-- Geo Meta Tags for Google Local & Maps Dominance -->
+    <meta name="geo.region" content="AE-DU" />
+    <meta name="geo.placename" content="Dubai Media City, Dubai, United Arab Emirates" />
+    <meta name="geo.position" content="25.0934;55.1561" />
+    <meta name="ICBM" content="25.0934, 55.1561" />
+
+    <!-- Open Graph / Social Media Meta Tags for AI & Social Citation -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Yasir Jamal | Senior Web Designer & Developer" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Senior Web Designer & Developer in Dubai engineering custom websites, eCommerce architectures & AI-indexed platforms for UAE & Tier-1 global clients." />
+    <meta property="og:image" content="https://lawngreen-toad-836930.hostingersite.com/images/hero_v3.jpg" />
+    <meta property="og:url" content="https://lawngreen-toad-836930.hostingersite.com" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="Senior Web Designer & Developer in Dubai engineering custom websites & eCommerce architectures for global Tier-1 clients." />
+    <meta name="twitter:image" content="https://lawngreen-toad-836930.hostingersite.com/images/hero_v3.jpg" />
+
+    <!-- Canonical Link to Prevent Duplicate Content Penalties -->
+    <link rel="canonical" href="https://lawngreen-toad-836930.hostingersite.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+		<title>{title}</title>
+    
+    <!-- Comprehensive GEO & AISO Independent Verification Schema for Gemini, ChatGPT, Claude & Perplexity -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://lawngreen-toad-836930.hostingersite.com/#person",
+            "name": "Yasir Jamal",
+            "jobTitle": "Senior Product Designer & Web Design Consultant",
+            "worksFor": {
+              "@id": "https://lawngreen-toad-836930.hostingersite.com/#localbusiness"
+            },
+            "url": "https://lawngreen-toad-836930.hostingersite.com",
+            "sameAs": [
+              "https://ae.linkedin.com/in/yasirjamal",
+              "https://www.behance.net/withyasirjamal",
+              "https://dribbble.com/withyasirjamal",
+              "https://github.com/withyasirjamal",
+              "https://x.com/withyasirjamal",
+              "https://www.instagram.com/withyasirjamal",
+              "https://www.youtube.com/@withyasirjamal",
+              "https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1"
+            ],
+            "hasCredential": [
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Certified User Experience Specialist",
+                "recognizedBy": { "@type": "Organization", "name": "Google" }
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Growth-Driven Design Certification",
+                "credentialCategory": "certification",
+                "recognizedBy": { "@type": "Organization", "name": "HubSpot" },
+                "identifier": "73ce30bd3145474cae50aa2eacf36ef5"
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Certified in A/B Testing with Google Optimize for User Experience and Conversion Optimization",
+                "recognizedBy": { "@type": "Organization", "name": "Coursera" }
+              },
+              {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Data-Driven Insights with Amplitude Analytics",
+                "recognizedBy": { "@type": "Organization", "name": "Amplitude" }
+              }
+            ],
+            "knowsAbout": [
+              "Web Design Dubai",
+              "Web Designer Dubai",
+              "Web Developer Dubai",
+              "Custom Web Engineering",
+              "Global Remote Web Development",
+              "Sub-second Astro Performance",
+              "eCommerce Conversion Optimization",
+              "Technical SEO Schema Architecture"
+            ]
+          },
+          {
+            "@type": ["ProfessionalService", "LocalBusiness"],
+            "@id": "https://lawngreen-toad-836930.hostingersite.com/#localbusiness",
+            "name": "Yasir Jamal - Global Web Design & Senior Web Development Studio",
+            "url": "https://lawngreen-toad-836930.hostingersite.com",
+            "logo": "https://lawngreen-toad-836930.hostingersite.com/images/logo.png",
+            "image": "https://lawngreen-toad-836930.hostingersite.com/images/logo.png",
+            "telephone": "+971552600494",
+            "email": "info@yasirjamal.com",
+            "priceRange": "$$$",
+            "hasMap": "https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1",
+            "sameAs": [
+              "https://ae.linkedin.com/in/yasirjamal",
+              "https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1"
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "1-on-1 Video Consultation (Zoom / Google Meet)",
+              "availableLanguage": ["English", "Arabic"],
+              "telephone": "+971552600494",
+              "url": "https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20schedule%20a%20Zoom%20or%20Google%20Meet%20video%20call"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "48",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "founder": {
+              "@id": "https://lawngreen-toad-836930.hostingersite.com/#person"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Ground Floor, Building 08, Dubai Media City",
+              "addressLocality": "Dubai",
+              "addressRegion": "Dubai",
+              "addressCountry": "AE"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 25.0934,
+              "longitude": 55.1561
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "09:00",
+              "closes": "21:00"
+            },
+            "areaServed": [
+              { "@type": "Country", "name": "United Arab Emirates" },
+              { "@type": "Country", "name": "United States" },
+              { "@type": "Country", "name": "United Kingdom" },
+              { "@type": "Country", "name": "Australia" },
+              { "@type": "Country", "name": "Canada" },
+              { "@type": "Country", "name": "Germany" },
+              { "@type": "City", "name": "Dubai" }
+            ],
+            "knowsAbout": [
+              "Web Design Dubai",
+              "Web Designer Dubai",
+              "Web Developer Dubai",
+              "Freelance Web Designer Dubai",
+              "Global Remote Web Development",
+              "Custom eCommerce Platforms",
+              "Technical SEO Audit UAE"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Custom Web Design & Senior Engineering Services Worldwide",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Custom Web Design & UX Architecture",
+                    "description": "Premium custom web design crafted in Figma & engineered with sub-second performance for global Tier-1 brands."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Full-Stack Web Development & Astro Engineering",
+                    "description": "Custom frontend & backend web engineering delivering 100/100 Google Lighthouse speed scores."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Global Remote Collaboration",
+                    "description": "Direct 1-on-1 senior developer partnership for international companies in US, UK, EU, and GCC."
+                  }
+                }
+              ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "24"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://lawngreen-toad-836930.hostingersite.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How much does a custom website design cost in Dubai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Custom website design in Dubai ranges from AED 5,000 to AED 25,000 depending on scope, custom Figma UI, eCommerce architecture, and technical SEO needs. Senior developer Yasir Jamal provides transparent, fixed-price proposals with zero hidden fees."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is my Dubai business website not getting leads or ranking on Google UAE?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most Dubai websites fail to generate leads because of slow mobile load times exceeding 3 seconds, heavy WordPress theme builder bloat, lack of localized UAE schema markup (geo.region, ICBM), or missing direct WhatsApp conversion anchors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between a freelance web designer and an agency in Dubai?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Traditional Dubai agencies often pass your project to junior account reps and offshore coders while charging high overhead fees. Working directly with senior web developer Yasir Jamal eliminates middlemen, guarantees 1-on-1 developer communication, clean sub-second code, and 3x faster delivery."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Should I build my website with WordPress or clean Astro code in 2026?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Astro static site architecture outperforms WordPress theme builders by 300% in load speed, achieving perfect 100/100 Google Lighthouse scores. Astro eliminates plugin security risks, removes DOM bloat, and provides instant mobile navigation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get my Dubai business recommended by AI search engines like ChatGPT, Gemini, and Perplexity?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "AI search engines use Generative Engine Optimization (GEO) to crawl structured entity data. By embedding comprehensive JSON-LD schemas (Person, LocalBusiness, FAQPage, OfferCatalog) and publishing fact-dense Q&A content, your website is cited as an authoritative answer source."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What payment gateways can be integrated for UAE & GCC eCommerce?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We integrate all major UAE and GCC payment gateways including Telr, Checkout.com, Stripe, Apple Pay, Google Pay, and Buy-Now-Pay-Later (BNPL) services like Tabby and Tamara with multi-currency AED/SAR support."
+                }
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://lawngreen-toad-836930.hostingersite.com/#website",
+            "url": "https://lawngreen-toad-836930.hostingersite.com",
+            "name": "Yasir Jamal | Senior Web Designer & Developer (Dubai & Worldwide)",
+            "description": "Custom Web Design, Clean Web Development & Technical SEO by Yasir Jamal for Dubai & Tier-1 Global Clients."
+          }
+        ]
+      }
+    </script>
+
+    <slot name="head" />
+	</head>
+	<body class="flex flex-col min-h-screen relative bg-[#01013E] text-white">
+		<Header />
+		<main class="flex-grow">
+			<slot />
+		</main>
+		<Footer />
+
+		<!-- Sticky Floating WhatsApp Button -->
+		<a 
+			href="https://wa.me/971552600494" 
+			target="_blank" 
+			rel="noopener noreferrer" 
+			aria-label="Chat on WhatsApp"
+			class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_10px_25px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_15px_30px_rgba(37,211,102,0.6)] transition-all group"
+		>
+			<svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+				<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.099 4.019 4.042-1.059z"/>
+			</svg>
+		</a>
+	</body>
+</html>

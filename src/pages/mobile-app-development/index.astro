@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+import SEO from '../../components/SEO.astro';
+
+const seoTitle = "Mobile App Development Dubai | Native iOS & Android Apps";
+const seoDescription = "Custom iOS and Android mobile app development in Dubai. I build highly scalable, native and cross platform mobile applications.";
+const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/mobile-app-development/";
+---
+
+<Layout title={seoTitle}>
+  <Fragment slot="head">
+    <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
+    <Schema title={seoTitle} description={seoDescription} url={pageUrl} type="LocalBusiness" />
+  </Fragment>
+
+  <main class="w-full bg-slate-950 text-white pt-36 pb-24 font-elegant relative overflow-hidden min-h-screen">
+    <!-- Background Hero Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-[#18230b] to-transparent opacity-60 pointer-events-none z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <!-- Hero Headline Banner -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#d4f378] text-xs font-light tracking-wider uppercase mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Mobile App Engineering Specialist
+        </span>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-light tracking-tight leading-snug mb-5 drop-shadow-md">
+          Native iOS & Android Mobile App Engineering in Dubai
+        </h1>
+        <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+          High-performance mobile applications engineered with intuitive UI/UX systems, real-time cloud API synchronization, push notifications, and enterprise security for UAE businesses.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid (Matching Bento Canvas Style) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">📱</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Native iOS & Android</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            Engineered with React Native and Swift for 60fps fluid animations, biometric authentication (Face ID), and offline data storage.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">⚡</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Resilient Cloud Backends</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            REST and GraphQL cloud backend APIs built on Node.js and AWS to handle millions of active user sessions with zero latency.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">🔒</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Apple & Google Store Publishing</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            Complete end-to-end App Store Optimization (ASO), compliance verification, and deployment to Apple App Store and Google Play Store.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Callout Card -->
+      <div class="bg-gradient-to-r from-[#18230b] to-[#273812] rounded-3xl p-8 sm:p-12 text-center border border-[#384e1b] shadow-2xl">
+        <h2 class="text-xl sm:text-2xl font-light text-[#d4f378] mb-3">Have a mobile app idea for the UAE market?</h2>
+        <p class="text-slate-200 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
+          Transform your product concept into a market-ready mobile application with direct senior developer partnership.
+        </p>
+        <a href="/quote" class="inline-flex items-center gap-2 bg-[#d4f378] text-[#18230b] px-7 py-3 rounded-full text-xs font-semibold hover:bg-[#e7f9a9] transition-all shadow-lg">
+          Discuss Mobile App Project &rarr;
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>

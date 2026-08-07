@@ -1,0 +1,39 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  url: string;
+}
+
+const { title, description, url } = Astro.props;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "Organization"],
+      "@id": "https://yasirjamal.com/#organization",
+      "name": "Yasir Jamal | Premium Web Design Dubai",
+      "url": "https://yasirjamal.com",
+      "email": "info@yasirjamal.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE",
+      },
+      "description": "Dubai's top tier freelance web designer and development agency. We build highly converting and incredibly fast websites.",
+      "priceRange": "$$",
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      "url": url,
+      "name": title,
+      "description": description,
+    }
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />

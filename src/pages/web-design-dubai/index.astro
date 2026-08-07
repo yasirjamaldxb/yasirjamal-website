@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Schema from '../../components/Schema.astro';
+import SEO from '../../components/SEO.astro';
+
+const seoTitle = "Web Design Dubai | #1 Freelance Web Designer in UAE";
+const seoDescription = "Hire the top freelance web designer in Dubai. I build custom, lightning fast websites that dominate local SEO and drive massive revenue.";
+const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/web-design-dubai/";
+---
+
+<Layout title={seoTitle}>
+  <Fragment slot="head">
+    <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
+    <Schema title={seoTitle} description={seoDescription} url={pageUrl} type="LocalBusiness" />
+  </Fragment>
+
+  <main class="w-full bg-slate-950 text-white pt-36 pb-24 font-elegant relative overflow-hidden min-h-screen">
+    <!-- Background Hero Glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-[#18230b] to-transparent opacity-60 pointer-events-none z-0"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      
+      <!-- Hero Headline Banner -->
+      <div class="text-center mb-16 max-w-3xl mx-auto">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#d4f378] text-xs font-light tracking-wider uppercase mb-6 shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Web Design Dubai Specialist
+        </span>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-light tracking-tight leading-snug mb-5 drop-shadow-md">
+          Custom Web Design & SEO Engineering in Dubai
+        </h1>
+        <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed max-w-2xl mx-auto drop-shadow-sm">
+          You don't need a bloated traditional agency. Work directly 1-on-1 with a Senior Web Engineer with 15+ years of UAE market experience to build digital products that print revenue.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid (Matching Bento Canvas Style) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">⚡</div>
+          <h3 class="text-lg font-semibold text-white mb-2">100/100 Core Web Vitals</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            Slow websites lose up to 70% of UAE mobile customers. Every site is custom-engineered with Astro to guarantee sub-second global edge loading speeds.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">🎯</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Local Dubai SEO Dominance</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            Built-in structured data schema and technical SEO architecture engineered so Google and AI search engines rank your business #1 across Dubai & the UAE.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl hover:border-[#d4f378]/50 transition-all shadow-xl">
+          <div class="text-[#d4f378] text-2xl mb-4">🛡️</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Zero Template Restrictions</h3>
+          <p class="text-slate-400 text-xs font-light leading-relaxed">
+            Custom Figma UI/UX designed from scratch. No restrictive WordPress plugins or heavy theme builders that slow down your server.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Callout Card -->
+      <div class="bg-gradient-to-r from-[#18230b] to-[#273812] rounded-3xl p-8 sm:p-12 text-center border border-[#384e1b] shadow-2xl">
+        <h2 class="text-xl sm:text-2xl font-light text-[#d4f378] mb-3">Ready to scale your Dubai business online?</h2>
+        <p class="text-slate-200 text-xs sm:text-sm max-w-xl mx-auto mb-8 font-light leading-relaxed">
+          Book a 1-on-1 direct technical consultation today and receive a fixed scope proposal within 24 hours.
+        </p>
+        <a href="/quote" class="inline-flex items-center gap-2 bg-[#d4f378] text-[#18230b] px-7 py-3 rounded-full text-xs font-semibold hover:bg-[#e7f9a9] transition-all shadow-lg">
+          Request Instant Proposal &rarr;
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>
