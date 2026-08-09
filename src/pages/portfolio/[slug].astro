@@ -191,28 +191,28 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
     />
   </Fragment>
 
-  <!-- Hero Header Banner matching Light Theme -->
-  <section class="w-full bg-[#01013E] text-white pt-32 pb-20 font-elegant relative overflow-hidden">
-    <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+  <!-- Clean Pure White Top Header Banner (No Fill Color) -->
+  <section class="w-full bg-white text-[#01013E] pt-32 pb-16 sm:pt-40 sm:pb-20 font-elegant relative border-b border-slate-200/80">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
       
       <!-- Breadcrumbs -->
-      <nav class="flex justify-center items-center gap-2 text-xs text-[#B7D5DF] mb-5">
-        <a href="/" class="hover:text-white transition-colors">Home</a>
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-6">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
         <span>&rsaquo;</span>
-        <a href="/portfolio/" class="hover:text-white transition-colors">Case Studies</a>
+        <a href="/portfolio/" class="hover:text-[#1559E7] transition-colors">Case Studies</a>
         <span>&rsaquo;</span>
-        <span class="text-white font-semibold">{project.title}</span>
+        <span class="text-slate-900 font-semibold">{project.title}</span>
       </nav>
 
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-[#F6CD0B] text-xs font-semibold uppercase tracking-widest mb-5 backdrop-blur-md border border-white/15">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-[#1559E7] text-xs font-semibold uppercase tracking-widest mb-6 border border-slate-200/80">
         {project.category}
       </span>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-light text-white tracking-tight leading-tight mb-6">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
         {project.title}
       </h1>
 
-      <p class="text-slate-300 text-sm sm:text-lg font-light leading-relaxed max-w-3xl mx-auto mb-8">
+      <p class="text-slate-600 text-base sm:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-8">
         {project.description}
       </p>
 
@@ -221,7 +221,7 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
           href={project.liveUrl} 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#01013E] rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-100 hover:scale-105 transition-all shadow-xl"
+          class="inline-flex items-center gap-2.5 px-9 py-4 bg-[#1559E7] hover:bg-[#01013E] text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xl hover:shadow-2xl"
         >
           <span>Visit Live Site</span>
           <span>&rarr;</span>
@@ -230,51 +230,51 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
     </div>
   </section>
 
-  <!-- Main Content & Large Showcase Gallery Section -->
-  <main class="w-full bg-slate-50 py-16 sm:py-24 font-elegant text-slate-800 leading-relaxed">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+  <!-- Main Content & Spacious Showcase Section -->
+  <main class="w-full bg-[#f8fafc] py-20 sm:py-28 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-24">
       
       <!-- Key Project Highlights Box -->
-      <div class="max-w-5xl mx-auto bg-white p-8 sm:p-12 rounded-3xl border border-slate-200/80 shadow-md">
-        <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Case Study Highlights</h2>
+      <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-[2.5rem] border border-slate-200/80 shadow-sm">
+        <h2 class="text-xl sm:text-2xl font-bold text-[#01013E] mb-6">Case Study Highlights</h2>
         <ul class="space-y-4">
           {project.highlights.map(item => (
-            <li class="flex items-start gap-3.5 text-sm sm:text-base text-slate-700 font-light">
-              <span class="w-6 h-6 rounded-full bg-[#1559E7] text-white flex items-center justify-center shrink-0 text-xs font-bold mt-0.5 shadow-sm">✓</span>
+            <li class="flex items-start gap-4 text-base sm:text-lg text-slate-700 font-light">
+              <span class="w-6 h-6 rounded-full bg-[#1559E7]/10 text-[#1559E7] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">✓</span>
               <span>{item}</span>
             </li>
           ))}
         </ul>
       </div>
 
-      <!-- Large High-Impact Project Image Gallery with Browser Framing -->
-      <div class="space-y-12 max-w-7xl mx-auto">
+      <!-- Spacious High-Resolution Showcase Images (Full Width Un-crowded Canvas) -->
+      <div class="space-y-16 sm:space-y-20 max-w-7xl mx-auto">
         <div class="text-center">
           <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] mb-2 block">Visual Showcase</span>
           <h2 class="text-2xl sm:text-4xl font-light text-[#01013E] tracking-tight">Case Study Showcase & Design Artifacts</h2>
         </div>
 
         {project.gallery.map((imgSrc, i) => (
-          <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-200/90 transition-all duration-300">
-            <!-- Simulated Browser Header Bar for Ultra-Realistic Showcase -->
-            <div class="bg-slate-100 px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+          <div class="group relative bg-white rounded-[2.5rem] overflow-hidden shadow-[0_15px_45px_rgba(0,0,0,0.06)] border border-slate-200/90 transition-all duration-500">
+            <!-- Simulated Browser Bar -->
+            <div class="bg-slate-100 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between">
               <div class="flex items-center gap-2">
                 <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
                 <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
                 <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
               </div>
-              <div class="px-6 py-1 rounded-full bg-white text-[11px] font-medium text-slate-500 border border-slate-200/80 shadow-inner">
+              <div class="px-6 py-1 rounded-full bg-white text-xs font-medium text-slate-500 border border-slate-200/80 shadow-inner">
                 {project.domain}
               </div>
               <div class="w-12"></div>
             </div>
 
-            <!-- Full-Width High-Res Image -->
-            <div class="w-full bg-slate-50">
+            <!-- Full-Width Unconstrained High-Res Image -->
+            <div class="w-full bg-white">
               <img 
                 src={imgSrc} 
                 alt={`${project.title} Case Study Image ${i + 1}`} 
-                class="w-full h-auto object-cover block" 
+                class="w-full h-auto object-contain block" 
                 loading="lazy" 
               />
             </div>
@@ -283,10 +283,10 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
       </div>
 
       <!-- Back to Case Studies Navigation -->
-      <div class="text-center pt-12 border-t border-slate-200">
+      <div class="text-center pt-16 border-t border-slate-200">
         <a 
           href="/portfolio/" 
-          class="inline-flex items-center gap-2 px-9 py-4 bg-slate-950 hover:bg-slate-900 text-white rounded-full text-xs sm:text-sm font-bold transition-all shadow-xl hover:scale-105"
+          class="inline-flex items-center gap-2.5 px-10 py-4.5 bg-[#01013E] hover:bg-slate-900 text-white rounded-full text-xs sm:text-sm font-bold transition-all shadow-xl hover:scale-105"
         >
           <span>&larr; Back to All Case Studies</span>
         </a>
