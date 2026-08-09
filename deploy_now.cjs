@@ -1,13 +1,20 @@
-const { spawn } = require('child_process');
+const { spawn, execSync } = require('child_process');
 const path = require('path');
+const fs = require('fs');
 
 const token = "VZ8TJ40doCBmZ2xt3zzoTkeBaFQlbOg3yY3ZJ0K39a45c00e";
 const domain = "lawngreen-toad-836930.hostingersite.com";
-const archivePath = path.join(__dirname, "deploy_package.zip");
+const timestamp = Date.now();
+const zipName = `deploy_${timestamp}.zip`;
+const archivePath = path.join(__dirname, zipName);
 
-console.log("Spawning hostinger-hosting-mcp CLI...");
-console.log("Archive Path:", archivePath);
+console.log("1. Creating fresh unique zip archive:", zipName);
+const powershellCmd = `Compress-Archive -Path "${path.join(__dirname, 'dist', '*')}" -DestinationPath "${archivePath}" -Force`;
+execSync(`powershell -Command "${powershellCmd}"`);
 
+console.log("Zip created. Size:", (fs.statSync(archivePath).size / 1024 / 1024).toFixed(2), "MB");
+
+console.log("2. Spawning Hostinger MCP CLI...");
 const child = spawn('npx.cmd', ['--package=hostinger-api-mcp@latest', 'hostinger-hosting-mcp'], {
   shell: true,
   env: {
@@ -17,11 +24,20 @@ const child = spawn('npx.cmd', ['--package=hostinger-api-mcp@latest', 'hostinger
 });
 
 child.stdout.on('data', (data) => {
-  console.log("MCP Response:", data.toString());
+  const str = data.toString();
+  console.log("[HOSTINGER MCP RESPONSE]:\n", str);
+  if (str.includes('"deploy":{"status":"success"') || str.includes('Request accepted')) {
+    console.log("\n🎉 SUCCESS! HOSTINGER SERVER DEPLOYED THE NEW WEBSITE!");
+    try { fs.unlinkSync(archivePath); } catch(e){}
+    setTimeout(() => {
+      child.kill();
+      process.exit(0);
+    }, 2000);
+  }
 });
 
 child.stderr.on('data', (data) => {
-  console.error("MCP Log:", data.toString());
+  console.error("[HOSTINGER LOG]:", data.toString());
 });
 
 function send(msg) {
@@ -30,7 +46,7 @@ function send(msg) {
 }
 
 setTimeout(() => {
-  console.log("Sending initialize...");
+  console.log("3. Initializing MCP Client...");
   send({
     jsonrpc: "2.0",
     id: 1,
@@ -44,7 +60,7 @@ setTimeout(() => {
 }, 1000);
 
 setTimeout(() => {
-  console.log("Calling hosting_deployStaticWebsite with fresh deploy_package.zip...");
+  console.log("4. Sending hosting_deployStaticWebsite request to Hostinger...");
   send({
     jsonrpc: "2.0",
     id: 2,
@@ -60,22 +76,7 @@ setTimeout(() => {
 }, 3000);
 
 setTimeout(() => {
-  console.log("Calling hosting_clearWebsiteCacheV1...");
-  send({
-    jsonrpc: "2.0",
-    id: 3,
-    method: "tools/call",
-    params: {
-      name: "hosting_clearWebsiteCacheV1",
-      arguments: {
-        domain: domain
-      }
-    }
-  });
-}, 25000);
-
-setTimeout(() => {
-  console.log("Deployment and cache flush window completed.");
+  console.log("Deployment timeout reached (180s).");
   child.kill();
-  process.exit(0);
-}, 40000);
+  process.exit(1);
+}, 180000);

@@ -77,7 +77,7 @@ const projects = [
     <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
       
       <!-- Clean Minimalist Header (Exact Match to User Reference Screenshot) -->
-      <div class="flex flex-col md:flex-row items-baseline md:items-center justify-between gap-6 mb-16 sm:mb-20">
+      <div class="flex flex-col md:flex-row items-baseline md:items-center justify-between gap-6 mb-14 sm:mb-18">
         <div>
           <h1 class="text-3xl sm:text-4xl md:text-5xl text-[#01013E] font-normal tracking-tight leading-tight">
             Case Studies & Client Projects Worldwide
@@ -90,12 +90,12 @@ const projects = [
         </div>
       </div>
 
-      <!-- Asymmetrical Editorial Staggered Grid (Matching Reference Screenshot) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 sm:gap-14 lg:gap-16 mb-24">
+      <!-- Asymmetrical Editorial Staggered Grid (Tightly Spaced Meta Text Below Image) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 items-start gap-x-10 sm:gap-x-14 lg:gap-x-16 gap-y-12 sm:gap-y-16 mb-24">
         {projects.map((project, idx) => (
           <a 
             href={`/portfolio/${project.slug}/`} 
-            class={`group flex flex-col justify-between block ${idx % 2 === 1 ? 'md:mt-24' : ''}`}
+            class={`group flex flex-col block ${idx % 2 === 1 ? 'md:mt-20' : ''}`}
           >
             <!-- Image Frame -->
             <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200/80 shadow-[0_10px_35px_rgba(0,0,0,0.04)] group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.1)] transition-all duration-500">
@@ -106,8 +106,8 @@ const projects = [
               />
             </div>
 
-            <!-- Meta Underneath (Title Left, Category & Tags Right) -->
-            <div class="flex justify-between items-start pt-5 gap-4">
+            <!-- Tight Meta Underneath (Tight pt-3.5 Spacing directly under image) -->
+            <div class="flex justify-between items-start pt-3.5 sm:pt-4 gap-4">
               <div>
                 <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 leading-tight group-hover:text-[#1559E7] transition-colors">
                   {project.title}
