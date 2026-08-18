@@ -774,252 +774,99 @@ const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/about";
       </div>
     </section>
 
-    <!-- 4. MY DESIGN APPROACH: Interactive Strategic Roadmap -->
+    <!-- 4. MY DESIGN APPROACH: Ultra-Clean Connected Roadmap (Zero Box Clutter) -->
     <section class="py-20 sm:py-28 bg-[#f8fafc] border-b border-slate-200/80 font-elegant relative overflow-hidden" id="process">
-      <!-- Subtle Ambient Background Glow -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none"></div>
-
-      <div class="max-w-7xl mx-auto px-6 sm:px-10 relative z-10">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10">
         
         <!-- Section Header -->
-        <div class="max-w-3xl mb-14">
+        <div class="max-w-3xl mb-16">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-3">
-            <span class="w-2 h-2 rounded-full bg-[#1559E7] animate-pulse"></span>
-            End-to-End Design Roadmap
+            <span class="w-2 h-2 rounded-full bg-[#1559E7]"></span>
+            Strategic Workflow
           </div>
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-4">
             Solving Business Problems Through Strategic Process
           </h2>
           <p class="text-slate-600 font-light text-sm sm:text-base leading-relaxed">
-            Every project starts with understanding the business. Rather than jumping straight to visuals, I execute a structured 13-step roadmap across 4 strategic phases—ensuring every decision drives measurable conversion, user clarity, and engineering scalability.
+            Every project starts with understanding the business. Rather than jumping straight to visuals, I execute a structured 13-step roadmap—ensuring every decision drives measurable conversion, user clarity, and engineering scalability.
           </p>
         </div>
 
-        <!-- 4-Phase Roadmap Grid Container -->
-        <div class="space-y-8">
+        <!-- Box-Free Connected Roadmap Pipeline (Desktop Flow) -->
+        <div class="relative py-4">
+          
+          <!-- Continuous Stepper Pipeline Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-10 gap-x-6 relative">
+            {[
+              { num: "01", name: "Discovery", phase: "Strategy" },
+              { num: "02", name: "Research", phase: "Strategy" },
+              { num: "03", name: "Strategy", phase: "Strategy" },
+              { num: "04", name: "Architecture", phase: "UX Blueprint" },
+              { num: "05", name: "Flows & Wireframes", phase: "UX Blueprint" },
+              { num: "06", name: "Prototype & Test", phase: "UX Blueprint" },
+              { num: "07", name: "UI Design", phase: "Visual Craft" },
+              { num: "08", name: "Design System", phase: "Visual Craft" },
+              { num: "09", name: "Responsive & Accessible", phase: "Visual Craft" },
+              { num: "10", name: "SEO & Conversion", phase: "Launch & Growth" },
+              { num: "11", name: "Dev Collaboration", phase: "Launch & Growth" },
+              { num: "12", name: "QA & Testing", phase: "Launch & Growth" },
+              { num: "13", name: "Optimization", phase: "Live Growth" }
+            ].map((step, idx, arr) => (
+              <div class="relative group">
+                
+                <!-- Connector Line -->
+                {idx < arr.length - 1 && (
+                  <div class="hidden lg:block absolute top-4 left-10 right-0 h-[2px] bg-slate-200/90 group-hover:bg-[#1559E7]/40 transition-colors z-0"></div>
+                )}
 
-          <!-- PHASE 01: DISCOVERY & STRATEGY -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-[0_4px_25px_rgba(0,0,0,0.03)] relative">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 mb-6 border-b border-slate-100">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-xl bg-[#01013E] text-[#F6CD0B] text-xs font-bold flex items-center justify-center shadow-sm">
-                  01
-                </span>
-                <div>
-                  <span class="text-[11px] font-bold uppercase tracking-widest text-[#1559E7] block">Phase One</span>
-                  <h3 class="text-lg sm:text-xl font-medium text-[#01013E] tracking-tight">Discovery &amp; Strategy</h3>
-                </div>
-              </div>
-              <span class="text-xs font-normal text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 self-start sm:self-auto">
-                Goal: Business Alignment &amp; Audience Clarity
-              </span>
-            </div>
+                <div class="relative z-10 flex items-start gap-4">
+                  <!-- Node Badge -->
+                  <div class="w-8 h-8 rounded-full bg-white border-2 border-[#1559E7] text-[#1559E7] font-bold text-xs flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#1559E7] group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                    {idx + 1}
+                  </div>
 
-            <!-- Steps 1 - 3 -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 01</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
+                  <!-- Text Block -->
+                  <div class="pt-0.5">
+                    <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] block mb-0.5">
+                      {step.phase}
+                    </span>
+                    <h3 class="text-base font-medium text-[#01013E] group-hover:text-[#1559E7] transition-colors">
+                      {step.name}
+                    </h3>
+                  </div>
                 </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Discovery</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Understanding stakeholder goals, product vision, market constraints, and primary revenue KPIs.</p>
-              </div>
 
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 02</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Research</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Competitive teardowns, qualitative user interviews, analytics auditing, and behavioral insights.</p>
               </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 03</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Strategy</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Defining value propositions, product positioning, user personas, and a prioritized feature roadmap.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- PHASE 02: ARCHITECTURE & UX BLUEPRINT -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-[0_4px_25px_rgba(0,0,0,0.03)] relative">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 mb-6 border-b border-slate-100">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-xl bg-[#01013E] text-[#F6CD0B] text-xs font-bold flex items-center justify-center shadow-sm">
-                  02
-                </span>
-                <div>
-                  <span class="text-[11px] font-bold uppercase tracking-widest text-[#1559E7] block">Phase Two</span>
-                  <h3 class="text-lg sm:text-xl font-medium text-[#01013E] tracking-tight">Architecture &amp; UX Blueprint</h3>
-                </div>
-              </div>
-              <span class="text-xs font-normal text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 self-start sm:self-auto">
-                Goal: Intuitive Flows &amp; Structural Clarity
-              </span>
-            </div>
-
-            <!-- Steps 4 - 6 -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 04</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Architecture</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Mapping information architecture, content hierarchy, taxonomy, and frictionless navigation trees.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 05</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Flows / Wireframes</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Crafting low-fidelity wireframes, user journeys, decision paths, and core screen layouts.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 06</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Prototype / Test</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Building clickable Figma prototypes, running usability tests, and iterating before code begins.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- PHASE 03: VISUAL ENGINEERING & DESIGN SYSTEMS -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-[0_4px_25px_rgba(0,0,0,0.03)] relative">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 mb-6 border-b border-slate-100">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-xl bg-[#01013E] text-[#F6CD0B] text-xs font-bold flex items-center justify-center shadow-sm">
-                  03
-                </span>
-                <div>
-                  <span class="text-[11px] font-bold uppercase tracking-widest text-[#1559E7] block">Phase Three</span>
-                  <h3 class="text-lg sm:text-xl font-medium text-[#01013E] tracking-tight">Visual Craft &amp; Design Systems</h3>
-                </div>
-              </div>
-              <span class="text-xs font-normal text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 self-start sm:self-auto">
-                Goal: World-Class Polish &amp; Scalability
-              </span>
-            </div>
-
-            <!-- Steps 7 - 9 -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 07</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">UI Design</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Designing high-fidelity, pixel-perfect interfaces with refined typography, micro-interactions, and visual harmony.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 08</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Design System</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Architecting reusable components, design tokens, color variables, and comprehensive team styleguides.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 09</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Responsive / Accessible</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Adapting across mobile, tablet &amp; 4K displays while meeting strict WCAG AA accessibility standards.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- PHASE 04: LAUNCH, GROWTH & CONTINUOUS OPTIMIZATION -->
-          <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-[0_4px_25px_rgba(0,0,0,0.03)] relative">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-5 mb-6 border-b border-slate-100">
-              <div class="flex items-center gap-3">
-                <span class="w-8 h-8 rounded-xl bg-[#01013E] text-[#F6CD0B] text-xs font-bold flex items-center justify-center shadow-sm">
-                  04
-                </span>
-                <div>
-                  <span class="text-[11px] font-bold uppercase tracking-widest text-[#1559E7] block">Phase Four</span>
-                  <h3 class="text-lg sm:text-xl font-medium text-[#01013E] tracking-tight">Launch, Collaboration &amp; Optimization</h3>
-                </div>
-              </div>
-              <span class="text-xs font-normal text-slate-500 bg-slate-50 px-3 py-1 rounded-full border border-slate-100 self-start sm:self-auto">
-                Goal: Sub-Second Speed, Search Domination &amp; CRO
-              </span>
-            </div>
-
-            <!-- Steps 10 - 13 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 10</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">SEO / Conversion</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Technical metadata, JSON-LD entity schema, Google &amp; AI engine crawlability, and conversion triggers.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 11</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Dev Collaboration</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Clean code-ready handoff specs, direct engineer pairing, and flawless front-end translation.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 12</span>
-                  <span class="text-slate-300 group-hover:text-[#1559E7] transition-colors">&rarr;</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">QA &amp; Testing</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Cross-browser visual testing, 100/100 Lighthouse performance audits, and bug mitigation.</p>
-              </div>
-
-              <div class="p-4 sm:p-5 rounded-2xl bg-slate-50/70 border border-slate-200/60 hover:border-[#1559E7] hover:bg-white hover:shadow-md transition-all duration-300 group">
-                <div class="flex items-center justify-between mb-2.5">
-                  <span class="text-xs font-bold text-[#1559E7] bg-blue-50 px-2 py-0.5 rounded-md">Step 13</span>
-                  <span class="text-emerald-500 font-bold text-xs">✓ LIVE</span>
-                </div>
-                <h4 class="text-sm sm:text-base font-semibold text-slate-900 mb-1 group-hover:text-[#1559E7] transition-colors">Optimization</h4>
-                <p class="text-xs text-slate-500 font-light leading-relaxed">Post-launch behavioral analytics, user heatmaps, A/B experimentation, and conversion growth.</p>
-              </div>
-            </div>
+            ))}
           </div>
 
         </div>
 
-        <!-- Roadmap Bottom Highlights Strip -->
-        <div class="mt-10 p-5 rounded-2xl bg-[#01013E] text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl">
-          <div class="flex items-center gap-3 text-center sm:text-left">
-            <div class="w-10 h-10 rounded-xl bg-[#F6CD0B] text-[#01013E] font-bold flex items-center justify-center shrink-0">
-              ⚡
-            </div>
-            <div>
-              <div class="text-sm font-semibold">Structured, Transparent &amp; Measurable Delivery</div>
-              <div class="text-xs text-slate-300 font-light">Every step is documented, testable, and reviewed directly with you.</div>
-            </div>
+        <!-- Sleek Horizontal Process Summary Bar -->
+        <div class="mt-16 pt-8 border-t border-slate-200/70 flex flex-col md:flex-row items-center justify-between gap-6 text-slate-600 text-xs sm:text-sm font-light">
+          <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 sm:gap-8">
+            <span class="inline-flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#1559E7]"></span>
+              No Guesswork
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#1559E7]"></span>
+              Direct Senior Designer Access
+            </span>
+            <span class="inline-flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#1559E7]"></span>
+              100% Milestone-Driven
+            </span>
           </div>
+
           <a 
             href="https://wa.me/971552600494" 
             target="_blank" 
             rel="noopener noreferrer" 
-            class="px-5 py-2.5 rounded-full bg-[#1559E7] hover:bg-blue-600 text-white text-xs font-semibold transition-all whitespace-nowrap shadow-md inline-flex items-center gap-1.5"
+            class="text-xs font-semibold text-[#1559E7] hover:text-[#01013E] inline-flex items-center gap-1.5 transition-colors"
           >
-            <span>Discuss your timeline</span>
-            <span>&rarr;</span>
+            <span>Discuss your project timeline directly</span>
+            <span class="text-sm">&rarr;</span>
           </a>
         </div>
 
