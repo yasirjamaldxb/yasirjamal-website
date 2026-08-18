@@ -8,13 +8,13 @@ const timestamp = Date.now();
 const zipName = `deploy_${timestamp}.zip`;
 const archivePath = path.join(__dirname, zipName);
 
-console.log("1. Creating fresh unique zip archive:", zipName);
-const powershellCmd = `Compress-Archive -Path "${path.join(__dirname, 'dist', '*')}" -DestinationPath "${archivePath}" -Force`;
+console.log("1. Creating fresh zip archive from dist folder...");
+const powershellCmd = `Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::CreateFromDirectory('${path.join(__dirname, 'dist')}', '${archivePath}')`;
 execSync(`powershell -Command "${powershellCmd}"`);
 
-console.log("Zip created. Size:", (fs.statSync(archivePath).size / 1024 / 1024).toFixed(2), "MB");
+console.log("Zip created:", (fs.statSync(archivePath).size / 1024 / 1024).toFixed(2), "MB");
 
-console.log("2. Spawning Hostinger MCP CLI...");
+console.log("2. Spawning Hostinger MCP Server...");
 const child = spawn('npx.cmd', ['--package=hostinger-api-mcp@latest', 'hostinger-hosting-mcp'], {
   shell: true,
   env: {
@@ -23,11 +23,66 @@ const child = spawn('npx.cmd', ['--package=hostinger-api-mcp@latest', 'hostinger
   }
 });
 
+function send(msg) {
+  const str = JSON.stringify(msg) + '\n';
+  child.stdin.write(str);
+}
+
+let stage = 0;
+
 child.stdout.on('data', (data) => {
   const str = data.toString();
-  console.log("[HOSTINGER MCP RESPONSE]:\n", str);
-  if (str.includes('"deploy":{"status":"success"') || str.includes('Request accepted')) {
-    console.log("\n🎉 SUCCESS! HOSTINGER SERVER DEPLOYED THE NEW WEBSITE!");
+  console.log("[HOSTINGER MCP]:", str.trim());
+
+  if (str.includes('"id":1') && stage === 0) {
+    stage = 1;
+    console.log("Initialized. Waiting 3s to authenticate session...");
+    setTimeout(() => {
+      send({
+        jsonrpc: "2.0",
+        id: 2,
+        method: "tools/call",
+        params: {
+          name: "hosting_listOrdersV1",
+          arguments: {}
+        }
+      });
+    }, 3000);
+  } else if (str.includes('"id":2') && stage === 1) {
+    stage = 2;
+    console.log("Session authenticated. Waiting 4s before sending hosting_deployStaticWebsite...");
+    setTimeout(() => {
+      send({
+        jsonrpc: "2.0",
+        id: 3,
+        method: "tools/call",
+        params: {
+          name: "hosting_deployStaticWebsite",
+          arguments: {
+            domain: domain,
+            archivePath: archivePath
+          }
+        }
+      });
+    }, 4000);
+  } else if (str.includes('Pre-upload request failed') && stage === 2) {
+    console.log("Pre-upload error encountered, retrying deploy in 3s...");
+    setTimeout(() => {
+      send({
+        jsonrpc: "2.0",
+        id: 4,
+        method: "tools/call",
+        params: {
+          name: "hosting_deployStaticWebsite",
+          arguments: {
+            domain: domain,
+            archivePath: archivePath
+          }
+        }
+      });
+    }, 3000);
+  } else if (str.includes('Request accepted') || str.includes('"status":"success"')) {
+    console.log("\n🎉 SUCCESS: Hostinger accepted and deployed the website!");
     try { fs.unlinkSync(archivePath); } catch(e){}
     setTimeout(() => {
       child.kill();
@@ -37,46 +92,27 @@ child.stdout.on('data', (data) => {
 });
 
 child.stderr.on('data', (data) => {
-  console.error("[HOSTINGER LOG]:", data.toString());
+  const str = data.toString().trim();
+  if (str) console.log("[HOSTINGER LOG]:", str);
+  if (str.includes("started successfully with") && stage === 0) {
+    console.log("Server ready. Sending initialize...");
+    setTimeout(() => {
+      send({
+        jsonrpc: "2.0",
+        id: 1,
+        method: "initialize",
+        params: {
+          protocolVersion: "2024-11-05",
+          capabilities: {},
+          clientInfo: { name: "antigravity", version: "1.0.0" }
+        }
+      });
+    }, 500);
+  }
 });
 
-function send(msg) {
-  const str = JSON.stringify(msg) + '\n';
-  child.stdin.write(str);
-}
-
 setTimeout(() => {
-  console.log("3. Initializing MCP Client...");
-  send({
-    jsonrpc: "2.0",
-    id: 1,
-    method: "initialize",
-    params: {
-      protocolVersion: "2024-11-05",
-      capabilities: {},
-      clientInfo: { name: "antigravity", version: "1.0.0" }
-    }
-  });
-}, 1000);
-
-setTimeout(() => {
-  console.log("4. Sending hosting_deployStaticWebsite request to Hostinger...");
-  send({
-    jsonrpc: "2.0",
-    id: 2,
-    method: "tools/call",
-    params: {
-      name: "hosting_deployStaticWebsite",
-      arguments: {
-        domain: domain,
-        archivePath: archivePath
-      }
-    }
-  });
-}, 3000);
-
-setTimeout(() => {
-  console.log("Deployment timeout reached (180s).");
+  console.log("Deployment timeout reached (300s).");
   child.kill();
   process.exit(1);
-}, 180000);
+}, 300000);

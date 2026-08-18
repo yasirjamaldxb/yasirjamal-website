@@ -107,12 +107,12 @@
 
 @layer base {
   html {
-    font-size: 14.5px;
-  }
-  @media (min-width: 1024px) {
-    html {
-      font-size: 15px;
-    }
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
     @apply bg-slate-950 text-slate-100 font-body antialiased;

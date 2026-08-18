@@ -5,6 +5,138 @@ import SEO from '../../components/SEO.astro';
 export function getStaticPaths() {
   return [
     {
+      params: { slug: 'julphar' },
+      props: {
+        project: {
+          title: "Julphar Pharmaceuticals",
+          slug: "julphar",
+          category: "Pharmaceuticals & Healthcare",
+          domain: "julphar.net",
+          liveUrl: "https://www.julphar.net/ar/",
+          coverImage: "/images/portfolio/julphar.jpg",
+          description: "Enterprise regional web portal for Julphar Gulf Pharmaceutical Industries, one of the largest pharmaceutical manufacturers in the MENA region. Built with bilingual architecture, product catalog search, and corporate ESG presentation.",
+          gallery: [
+            "/images/portfolio/julphar.jpg"
+          ],
+          highlights: [
+            "Enterprise bilingual Arabic & English digital platform for MENA healthcare",
+            "Structured pharmaceutical product classification & search architecture",
+            "100/100 Core Web Vitals speed optimization across mobile devices"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'abayadore' },
+      props: {
+        project: {
+          title: "Abaya Dore",
+          slug: "abayadore",
+          category: "Luxury Fashion & eCommerce",
+          domain: "abayadore.com",
+          liveUrl: "http://abayadore.com/",
+          coverImage: "/images/portfolio/abayadore.jpg",
+          description: "Luxury abaya fashion portal and high-converting online boutique engineered with instant mobile checkout, high-resolution product showcases, and direct WhatsApp ordering.",
+          gallery: [
+            "/images/portfolio/abayadore.jpg"
+          ],
+          highlights: [
+            "High-converting mobile eCommerce checkout flow tailored for GCC shoppers",
+            "Luxury visual presentation with fast image loading optimization",
+            "Direct integration with WhatsApp order support and instant inquiries"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'prime-middle-east' },
+      props: {
+        project: {
+          title: "Prime Middle East",
+          slug: "prime-middle-east",
+          category: "Industrial & Corporate Services",
+          domain: "primemiddle-east.com",
+          liveUrl: "https://www.primemiddle-east.com/",
+          coverImage: "/images/portfolio/primemiddleeast.jpg",
+          description: "Enterprise corporate portal and industrial services web platform engineered for Prime Middle East, highlighting regional project capabilities, industrial solutions, and B2B quote inquiries.",
+          gallery: [
+            "/images/portfolio/primemiddleeast.jpg"
+          ],
+          highlights: [
+            "Corporate B2B service architecture for industrial clients across the GCC",
+            "Sub-second page rendering and clean technical SEO setup",
+            "Streamlined inquiry consultation funnels for regional contracts"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'hunza-global' },
+      props: {
+        project: {
+          title: "Hunza Global",
+          slug: "hunza-global",
+          category: "Global Logistics & Trading",
+          domain: "hunzaglobal.com",
+          liveUrl: "https://hunzaglobal.com",
+          coverImage: "/images/portfolio/hunzaglobal.jpg",
+          description: "International supply chain, logistics, and trading portal engineered for Hunza Global, featuring an interactive service catalog, cargo tracking integration, and global quote calculators.",
+          gallery: [
+            "/images/portfolio/hunzaglobal.jpg"
+          ],
+          highlights: [
+            "Global logistics & freight service catalog for international trading",
+            "Mobile-optimized quote calculator & shipment inquiry forms",
+            "High-performance architecture with sub-second response times"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'markwilliams' },
+      props: {
+        project: {
+          title: "Mark Williams",
+          slug: "markwilliams",
+          category: "Executive Search & Recruitment",
+          domain: "markwilliams.ae",
+          liveUrl: "https://markwilliams.ae",
+          coverImage: "/images/portfolio/markwilliams.jpg",
+          description: "Senior executive search portal and high-impact recruitment web architecture engineered for Mark Williams in Dubai & Abu Dhabi. Built with tailored search filters, candidate portal integration, and ultra-fast mobile loading.",
+          gallery: [
+            "/images/portfolio/markwilliams.jpg"
+          ],
+          highlights: [
+            "Bespoke executive search UI/UX architecture for senior GCC leadership candidates",
+            "Sub-second page load times across all mobile and desktop devices",
+            "Direct integration with executive consultation and candidate inquiry channels"
+          ]
+        }
+      }
+    },
+    {
+      params: { slug: 'fila-tech' },
+      props: {
+        project: {
+          title: "FILA Tech Store",
+          slug: "fila-tech",
+          category: "eCommerce & Tech Retail",
+          domain: "fila-tech.store",
+          liveUrl: "https://fila-tech.store",
+          coverImage: "/images/portfolio/filatech.jpg",
+          description: "High-performance eCommerce store and digital technology catalog engineered for FILA Tech Store with custom product filtering, instant checkout, and conversion-optimized mobile UX.",
+          gallery: [
+            "/images/portfolio/filatech.jpg"
+          ],
+          highlights: [
+            "Conversion-optimized mobile checkout experience with zero friction",
+            "High-speed product catalog browsing and instant search filters",
+            "100/100 Core Web Vitals performance score for GCC online retail"
+          ]
+        }
+      }
+    },
+    {
       params: { slug: 'alston-clayden' },
       props: {
         project: {
@@ -231,20 +363,20 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
   </section>
 
   <!-- Main Content & Seamless Showcase Section -->
-  <main class="w-full bg-[#f8fafc] py-20 sm:py-28 font-elegant text-slate-800 leading-relaxed">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-24">
+  <main class="w-full bg-[#f8fafc] py-16 sm:py-24 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-20">
       
-      <!-- Key Project Highlights Box -->
-      <div class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl border border-slate-200/80 shadow-sm">
-        <h2 class="text-xl sm:text-2xl font-bold text-[#01013E] mb-6">Case Study Highlights</h2>
-        <ul class="space-y-4">
-          {project.highlights.map(item => (
-            <li class="flex items-start gap-4 text-base sm:text-lg text-slate-700 font-light">
-              <span class="w-6 h-6 rounded-full bg-[#1559E7]/10 text-[#1559E7] flex items-center justify-center shrink-0 text-xs font-bold mt-0.5">✓</span>
-              <span>{item}</span>
-            </li>
+      <!-- Pure Minimalist Project Highlights (No Box, No Card Border, Clean Grid) -->
+      <div class="max-w-5xl mx-auto py-2 w-full">
+        <span class="text-[11px] font-bold text-[#1559E7] uppercase tracking-widest mb-4 block">Case Study Highlights</span>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200">
+          {project.highlights.map((item, idx) => (
+            <div class="flex flex-col gap-1.5">
+              <span class="text-xs font-bold text-slate-400">0{idx + 1}</span>
+              <p class="text-sm sm:text-base text-slate-800 font-light leading-relaxed">{item}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       <!-- Seamless Single Browser Frame (Zero Gap Continuous Stacked Image Slices) -->

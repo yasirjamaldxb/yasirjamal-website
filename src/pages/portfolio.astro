@@ -4,10 +4,58 @@ import Schema from '../components/Schema.astro';
 import SEO from '../components/SEO.astro';
 
 const seoTitle = "Web Design & UX Case Studies | Selected Works by Yasir Jamal";
-const seoDescription = "Explore recent web design and development case studies by Yasir Jamal including Alston & Clayden, Alomaids, Westminster Properties, SkyLynx, Dubai Podiatrist, Noor Abu Dhabi, and Paws & Planes.";
+const seoDescription = "Explore selected web design, UI/UX, and web development case studies by Yasir Jamal across healthcare, luxury fashion, real estate, logistics, and enterprise sectors in Dubai and worldwide.";
 const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/portfolio";
 
 const projects = [
+  {
+    title: "Julphar Pharmaceuticals",
+    slug: "julphar",
+    domain: "julphar.net",
+    category: "Pharmaceuticals & Healthcare",
+    image: "/images/portfolio/julphar.jpg",
+    description: "Enterprise regional web portal for Julphar Gulf Pharmaceutical Industries, one of the largest pharmaceutical manufacturers in the MENA region."
+  },
+  {
+    title: "Abaya Dore",
+    slug: "abayadore",
+    domain: "abayadore.com",
+    category: "Luxury Fashion & eCommerce",
+    image: "/images/portfolio/abayadore.jpg",
+    description: "Luxury abaya couture portal and high-converting boutique website engineered with instant checkout and mobile WhatsApp ordering."
+  },
+  {
+    title: "Prime Middle East",
+    slug: "prime-middle-east",
+    domain: "primemiddle-east.com",
+    category: "Industrial & Corporate Services",
+    image: "/images/portfolio/primemiddleeast.jpg",
+    description: "Enterprise corporate portal and industrial services web platform engineered for Prime Middle East across the GCC region."
+  },
+  {
+    title: "Hunza Global",
+    slug: "hunza-global",
+    domain: "hunzaglobal.com",
+    category: "Global Logistics & Trading",
+    image: "/images/portfolio/hunzaglobal.jpg",
+    description: "International supply chain, logistics, and trading portal engineered with interactive service catalog and global quote calculators."
+  },
+  {
+    title: "Mark Williams",
+    slug: "markwilliams",
+    domain: "markwilliams.ae",
+    category: "Executive Search & Recruitment",
+    image: "/images/portfolio/markwilliams.jpg",
+    description: "Senior executive search portal and high-impact recruitment web architecture engineered for Mark Williams in Dubai & Abu Dhabi."
+  },
+  {
+    title: "FILA Tech Store",
+    slug: "fila-tech",
+    domain: "fila-tech.store",
+    category: "eCommerce & Tech Retail",
+    image: "/images/portfolio/filatech.jpg",
+    description: "High-performance eCommerce store and digital technology catalog engineered with custom product filtering and instant checkout."
+  },
   {
     title: "Alston & Clayden",
     slug: "alston-clayden",
@@ -65,12 +113,33 @@ const projects = [
     description: "MOCCAE-licensed pet relocation portal engineered with custom door-to-door flight calculators and high-converting WhatsApp channels."
   }
 ];
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "@id": `${pageUrl}/#collection`,
+  "url": pageUrl,
+  "name": seoTitle,
+  "description": seoDescription,
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": projects.length,
+    "itemListElement": projects.map((p, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": p.title,
+      "url": `${pageUrl}/${p.slug}/`,
+      "description": p.description
+    }))
+  }
+};
 ---
 
 <Layout title={seoTitle}>
   <Fragment slot="head">
     <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
     <Schema title={seoTitle} description={seoDescription} url={pageUrl} type="LocalBusiness" />
+    <script type="application/ld+json" set:html={JSON.stringify(collectionSchema)} />
   </Fragment>
 
   <main class="w-full bg-[#f8fafc] text-slate-900 pt-28 sm:pt-36 pb-28 font-elegant relative overflow-hidden min-h-screen">
@@ -106,7 +175,7 @@ const projects = [
               />
             </div>
 
-            <!-- Tight Meta Underneath (Tight pt-3.5 Spacing directly under image) -->
+            <!-- Tight Meta Underneath (Domain Removed as requested) -->
             <div class="flex justify-between items-start pt-3.5 sm:pt-4 gap-4">
               <div>
                 <h2 class="text-xl sm:text-2xl font-semibold text-slate-900 leading-tight group-hover:text-[#1559E7] transition-colors">
@@ -114,10 +183,10 @@ const projects = [
                 </h2>
               </div>
               <div class="text-right shrink-0">
-                <span class="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-widest block">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">
                   {project.category}
                 </span>
-                <span class="text-[10px] font-semibold text-[#1559E7] uppercase tracking-wider block mt-0.5 group-hover:underline">
+                <span class="text-xs font-semibold text-[#1559E7] uppercase tracking-wider block mt-1 group-hover:underline">
                   View Project &rarr;
                 </span>
               </div>

@@ -7,6 +7,9 @@ const isLightPage = [
   '/portfolio',
   '/design-system',
   '/blog',
+  '/about',
+  '/privacy-policy',
+  '/terms',
 ].includes(pathname) || pathname.startsWith('/blog/') || pathname.startsWith('/portfolio/');
 
 const isLightHeader = isLightPage && !isQuotePage;
@@ -14,24 +17,22 @@ const isLightHeader = isLightPage && !isQuotePage;
 
 <header 
   id="main-header" 
-  class="absolute top-0 left-0 right-0 z-[100] w-full px-6 sm:px-12 py-6 font-elegant bg-transparent"
+  class="absolute top-0 left-0 right-0 z-[100] w-full px-4 sm:px-8 md:px-12 py-4 sm:py-6 font-elegant bg-transparent"
 >
   <div class="w-full max-w-7xl mx-auto flex items-center justify-between">
     
     <!-- Left: Avatar Photo Logo -->
     <a href="/" aria-label="Yasir Jamal" class="flex items-center group relative z-10">
-      <div class="w-11 h-11 rounded-full bg-[#F6CD0B] p-0.5 flex items-center justify-center overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
+      <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#F6CD0B] p-0.5 flex items-center justify-center overflow-hidden shadow-lg group-hover:scale-105 transition-transform">
         <img src="/images/logo.webp" alt="Yasir Jamal" width="44" height="44" loading="eager" decoding="async" class="w-full h-full object-cover rounded-full" />
       </div>
     </a>
 
-    <!-- Center: Clean Navigation Links -->
+    <!-- Center: Clean Navigation Links (Desktop & Tablet) -->
     {!isQuotePage ? (
-      <nav class={`hidden md:flex items-center gap-10 text-sm md:text-base font-medium relative z-10 ${isLightHeader ? 'text-slate-900' : 'text-white/90'}`}>
-        <a href="/#services" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Services</a>
-        <a href="/portfolio/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Case Studies</a>
-        <a href="/blog/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Blog</a>
+      <nav class={`hidden md:flex items-center gap-8 lg:gap-10 text-sm lg:text-base font-medium relative z-10 ${isLightHeader ? 'text-slate-900' : 'text-white/90'}`}>
         <a href="/about/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>About</a>
+        <a href="/portfolio/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Case Studies</a>
       </nav>
     ) : (
       <span class="text-slate-700 text-xs font-medium tracking-wide hidden md:inline">
@@ -39,7 +40,7 @@ const isLightHeader = isLightPage && !isQuotePage;
       </span>
     )}
 
-    <!-- Right: Minimalist Action CTA -->
+    <!-- Right: Minimalist Action CTA & Mobile Menu Toggle -->
     <div class="flex items-center gap-2 sm:gap-3 relative z-10">
       {!isQuotePage ? (
         <a 
@@ -47,17 +48,67 @@ const isLightHeader = isLightPage && !isQuotePage;
           target="_blank" 
           rel="noopener noreferrer" 
           class={isLightHeader 
-            ? "bg-slate-950 text-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-800 hover:scale-105 transition-all shadow-md whitespace-nowrap flex items-center gap-2 border border-slate-900" 
-            : "bg-white text-[#01013E] px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-100 hover:scale-105 transition-all shadow-lg whitespace-nowrap flex items-center gap-2 border border-white/20"}
+            ? "bg-slate-950 text-white px-4 sm:px-7 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-800 transition-all shadow-md whitespace-nowrap flex items-center gap-1.5 sm:gap-2 border border-slate-900" 
+            : "bg-white text-[#01013E] px-4 sm:px-7 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-semibold hover:bg-slate-100 transition-all shadow-lg whitespace-nowrap flex items-center gap-1.5 sm:gap-2 border border-white/20"}
         >
           <span>Let's Talk</span>
-          <span class="text-sm sm:text-base">&rarr;</span>
+          <span class="text-xs sm:text-base">&rarr;</span>
         </a>
       ) : (
         <a href="/" class="text-xs font-semibold text-slate-800 hover:text-slate-950 transition-colors bg-white px-4 py-2 rounded-full border border-slate-200 shadow-sm">
-          &larr; Back to Main Site
+          &larr; Main Site
         </a>
+      )}
+
+      <!-- Mobile Menu Toggle Button (Visible only on mobile < md) -->
+      {!isQuotePage && (
+        <button 
+          id="mobile-menu-btn" 
+          type="button" 
+          aria-label="Toggle Mobile Menu"
+          class={`md:hidden p-2 rounded-xl border transition-all ${isLightHeader ? 'text-slate-900 border-slate-200 bg-white/90 shadow-sm' : 'text-white border-white/20 bg-black/20'}`}
+        >
+          <svg id="menu-icon-open" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
       )}
     </div>
   </div>
+
+  <!-- Mobile Navigation Dropdown Menu -->
+  {!isQuotePage && (
+    <div id="mobile-menu-dropdown" class="hidden md:hidden absolute top-full left-4 right-4 mt-2 p-5 rounded-3xl bg-white border border-slate-200/90 shadow-2xl space-y-3 z-[110] text-slate-900 font-elegant">
+      <a href="/about/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors">About</a>
+      <a href="/portfolio/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors">Case Studies</a>
+      <a href="/design-system/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors text-slate-600">Design System</a>
+      <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+        <span class="text-xs text-slate-500 font-light">Dubai Media City, UAE</span>
+        <a href="https://wa.me/971552600494" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-[#1559E7]">WhatsApp &rarr;</a>
+      </div>
+    </div>
+  )}
 </header>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu-dropdown');
+    const openIcon = document.getElementById('menu-icon-open');
+    const closeIcon = document.getElementById('menu-icon-close');
+
+    if (btn && menu && openIcon && closeIcon) {
+      btn.addEventListener('click', () => {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          openIcon.classList.add('hidden');
+          closeIcon.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+          openIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+        }
+      });
+    }
+  });
+</script>
