@@ -792,54 +792,44 @@ const pageUrl = "https://lawngreen-toad-836930.hostingersite.com/about";
           </p>
         </div>
 
-        <!-- Box-Free Connected Roadmap Pipeline (Desktop Flow) -->
+        <!-- 13-Step Clean Sequential Roadmap Track -->
         <div class="relative py-4">
-          
-          <!-- Continuous Stepper Pipeline Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-y-10 gap-x-6 relative">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-7 gap-x-8">
             {[
-              { num: "01", name: "Discovery", phase: "Strategy" },
-              { num: "02", name: "Research", phase: "Strategy" },
-              { num: "03", name: "Strategy", phase: "Strategy" },
-              { num: "04", name: "Architecture", phase: "UX Blueprint" },
-              { num: "05", name: "Flows & Wireframes", phase: "UX Blueprint" },
-              { num: "06", name: "Prototype & Test", phase: "UX Blueprint" },
-              { num: "07", name: "UI Design", phase: "Visual Craft" },
-              { num: "08", name: "Design System", phase: "Visual Craft" },
-              { num: "09", name: "Responsive & Accessible", phase: "Visual Craft" },
-              { num: "10", name: "SEO & Conversion", phase: "Launch & Growth" },
-              { num: "11", name: "Dev Collaboration", phase: "Launch & Growth" },
-              { num: "12", name: "QA & Testing", phase: "Launch & Growth" },
-              { num: "13", name: "Optimization", phase: "Live Growth" }
-            ].map((step, idx, arr) => (
-              <div class="relative group">
-                
-                <!-- Connector Line -->
-                {idx < arr.length - 1 && (
-                  <div class="hidden lg:block absolute top-4 left-10 right-0 h-[2px] bg-slate-200/90 group-hover:bg-[#1559E7]/40 transition-colors z-0"></div>
-                )}
-
-                <div class="relative z-10 flex items-start gap-4">
-                  <!-- Node Badge -->
-                  <div class="w-8 h-8 rounded-full bg-white border-2 border-[#1559E7] text-[#1559E7] font-bold text-xs flex items-center justify-center shrink-0 shadow-sm group-hover:bg-[#1559E7] group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                    {idx + 1}
-                  </div>
-
-                  <!-- Text Block -->
-                  <div class="pt-0.5">
-                    <span class="text-[10px] font-bold uppercase tracking-wider text-[#1559E7] block mb-0.5">
-                      {step.phase}
-                    </span>
-                    <h3 class="text-base font-medium text-[#01013E] group-hover:text-[#1559E7] transition-colors">
-                      {step.name}
-                    </h3>
-                  </div>
+              "Discovery",
+              "Research",
+              "Strategy",
+              "Architecture",
+              "Flows / Wireframes",
+              "Prototype / Test",
+              "UI Design",
+              "Design System",
+              "Responsive / Accessible",
+              "SEO / Conversion",
+              "Development Collaboration",
+              "QA",
+              "Optimization"
+            ].map((step, idx) => (
+              <div class="flex items-center gap-3.5 group cursor-default">
+                <!-- Circular Number Node -->
+                <div class="w-8 h-8 rounded-full bg-white border border-slate-300 text-slate-700 group-hover:border-[#1559E7] group-hover:bg-[#1559E7] group-hover:text-white font-semibold text-xs flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm">
+                  {idx + 1 < 10 ? `0${idx + 1}` : idx + 1}
                 </div>
 
+                <!-- Single Step Title -->
+                <span class="text-sm sm:text-base font-medium text-[#01013E] group-hover:text-[#1559E7] transition-colors whitespace-nowrap">
+                  {step}
+                </span>
+
+                <!-- Subtle Connector Arrow -->
+                {idx < 12 && (
+                  <span class="text-slate-300 text-xs hidden sm:inline ml-auto pr-1 font-light group-hover:text-[#1559E7]/60 transition-colors">
+                    &rarr;
+                  </span>
+                )}
               </div>
             ))}
           </div>
-
         </div>
 
         <!-- Sleek Horizontal Process Summary Bar -->
