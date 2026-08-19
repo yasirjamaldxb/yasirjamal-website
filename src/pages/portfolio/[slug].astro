@@ -1175,7 +1175,7 @@ const { project } = Astro.props;
 const pageUrl = `https://yasirjamal.com/portfolio/${project.slug}`;
 ---
 
-<Layout title={`${project.title} - Case Study | Yasir Jamal`}>
+<Layout title={`${project.title} - Case Study | Yasir Jamal`} description={project.description}>
   <Fragment slot="head">
     <SEO 
       title={`${project.title} | Case Study by Yasir Jamal`} 

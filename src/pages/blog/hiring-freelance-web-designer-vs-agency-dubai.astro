@@ -17,7 +17,7 @@ const article = {
 const pageUrl = `https://yasirjamal.com/blog/${article.slug}`;
 ---
 
-<Layout title={`${article.title} | Yasir Jamal Blog`}>
+<Layout title={`${article.title} | Yasir Jamal Blog`} description={article.description}>
   <Fragment slot="head">
     <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} />
   </Fragment>

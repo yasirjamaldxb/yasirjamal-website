@@ -5,16 +5,20 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "#1 Rated Web Design Dubai & Custom Web Developer in Dubai with 15+ years experience. Custom web development, eCommerce engineering, and Google Maps local SEO across the UAE." 
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Yasir Jamal | Senior Web Designer & Developer (Dubai & Worldwide Remote)" />
+		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
