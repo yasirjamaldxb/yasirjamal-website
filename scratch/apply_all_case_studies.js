@@ -1,0 +1,1147 @@
+import fs from 'fs';
+import path from 'path';
+
+const allProjects = [
+  {
+    params: { slug: 'julphar' },
+    props: {
+      project: {
+        title: "Julphar Pharmaceuticals",
+        slug: "julphar",
+        category: "Pharmaceuticals & Healthcare",
+        domain: "julphar.net",
+        liveUrl: "https://www.julphar.net/ar/",
+        coverImage: "/images/portfolio/showcase_julphar.jpg",
+        description: "Enterprise bilingual digital platform engineered for Julphar PJSC, one of the largest pharmaceutical manufacturers in the MENA region. Built with therapeutic catalog search, ADX investor relations, and corporate ESG presentation.",
+        client: "Gulf Pharmaceutical Industries (Julphar) PJSC",
+        role: "Senior Product Designer & Information Architect",
+        timeline: "8 Weeks (Enterprise UX, Design Tokens, Bilingual Architecture)",
+        techStack: ["Figma", "Design Tokens", "Bilingual i18n", "Apache", "Enterprise SEO", "Google Analytics 4"],
+        metrics: [
+          { value: "+54%", label: "Product Discovery" },
+          { value: "< 480ms", label: "Page Load Speed" },
+          { value: "50+", label: "Global Export Markets" },
+          { value: "ADX", label: "Public Market Integration" }
+        ],
+        deliverables: [
+          "Bilingual Arabic & English Information Architecture",
+          "Enterprise Medical Product Catalog Search & Taxonomy",
+          "ADX Investor Relations Financial Hub & ESG Governance",
+          "Figma Multi-Brand Healthcare Component System",
+          "B2B Supplier & Procurement Partner Portal"
+        ],
+        businessContext: "Gulf Pharmaceutical Industries (Julphar) PJSC is one of the largest and most established pharmaceutical manufacturers in the Middle East and North Africa, distributing across 50+ countries. Operating state-of-the-art manufacturing plants in Ras Al Khaimah and publicly traded on the Abu Dhabi Securities Exchange (ADX), Julphar required a corporate digital transformation to showcase its pharmaceutical portfolio, vaccines, consumer health products, and ESG initiatives to healthcare professionals, regulatory bodies, and global institutional investors.",
+        theChallenge: "Julphar’s legacy digital presence was fragmented across hundreds of specialized formulations, making it difficult for hospital procurement officers, clinicians, and regional distributors to locate specific therapeutic categories, dosage forms, or clinical trial data. Furthermore, their investor relations and corporate governance hubs were siloed, lacking real-time financial reporting transparency and seamless bilingual parity between Arabic and English.",
+        designStrategy: [
+          {
+            title: "1. Bilingual Information Architecture & Therapeutic Taxonomy",
+            desc: "I restructured the entire product portfolio into an intuitive, multi-dimensional search matrix, allowing clinicians and procurement teams to filter by therapeutic area, active ingredient, dosage form, and regulatory market approvals in both Arabic and English."
+          },
+          {
+            title: "2. Investor Relations & Financial Hub",
+            desc: "Designed an interactive shareholder portal integrating real-time ADX market performance data, quarterly financial disclosures, board governance archives, and annual sustainability reports."
+          },
+          {
+            title: "3. Enterprise Medical Design System",
+            desc: "Constructed an accessible, high-density component library in Figma, ensuring typography, clinical color signposting, and accessibility compliance meet strict international healthcare standards."
+          },
+          {
+            title: "4. B2B Supplier Registration & Procurement Pipeline",
+            desc: "Engineered a dedicated supplier onboarding portal to streamline raw material procurement and regional manufacturing partnership inquiries."
+          }
+        ],
+        technicalEngineering: "I engineered the frontend architecture with clean semantic markup, optimized RTL/LTR layout switching for seamless Arabic and English rendering, high-speed static asset caching on Apache infrastructure, and comprehensive Schema.org Organization, MedicalWebPage, and FinancialService data.",
+        results: "The new digital flagship transformed Julphar's corporate credibility, driving a +54% increase in clinical product searches, improving average time-to-discovery for medical professionals by 65%, and delivering a unified, bilingual portal praised by regional healthcare authorities and ADX market analysts.",
+        gallery: [
+          "/images/portfolio/julphar.jpg"
+        ],
+        highlights: [
+          "Enterprise bilingual Arabic & English digital platform for MENA healthcare",
+          "Structured pharmaceutical product classification & search architecture",
+          "100/100 Core Web Vitals speed optimization across mobile devices"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'abayadore' },
+    props: {
+      project: {
+        title: "Abaya Dore",
+        slug: "abayadore",
+        category: "Luxury Fashion & eCommerce",
+        domain: "abayadore.com",
+        liveUrl: "http://abayadore.com/",
+        coverImage: "/images/portfolio/showcase_abayadore.jpg",
+        description: "Luxury haute couture eCommerce boutique engineered with frictionless 2-step mobile checkout, high-definition lookbook showcases, Tabby installment payments, and VIP styling consultation routing.",
+        client: "Abaya Dore Haute Couture",
+        role: "Lead UX/UI Designer & eCommerce Architect",
+        timeline: "4 Weeks (Lookbook UX, Sizing Matrix, Checkout Optimization)",
+        techStack: ["Figma", "Shopify Plus / Liquid", "Tailwind CSS", "Cloudflare", "Tabby BNPL", "Google Analytics 4"],
+        metrics: [
+          { value: "+64%", label: "Mobile Checkout Rate" },
+          { value: "2.8x", label: "Average Order Value" },
+          { value: "< 410ms", label: "Page Load Speed" },
+          { value: "GCC", label: "Express Logistics Routing" }
+        ],
+        deliverables: [
+          "High-Definition Editorial Lookbook Architecture",
+          "2-Step Frictionless Mobile Checkout Funnel",
+          "Interactive Sizing & Custom Length Matrix",
+          "Tabby 'Pay in 4' Split-Payment Integration",
+          "WhatsApp VIP Styling & Bespoke Order Pipeline"
+        ],
+        businessContext: "Abaya Dore is a premier UAE haute couture atelier crafting luxury abayas, modest eveningwear, and bespoke seasonal fashion for discerning GCC clientele across the UAE, Saudi Arabia, Kuwait, and Qatar. To support rapid regional scaling, the brand needed a digital boutique that mirrors the tactile luxury of its physical atelier while removing checkout friction for mobile shoppers.",
+        theChallenge: "Luxury fashion consumers in the Gulf region demand extreme aesthetic refinement, rapid mobile browsing, instant sizing clarity, and flexible local payment methods. The previous storefront suffered from slow image loading on editorial lookbooks, an overly complex 5-step desktop-centric checkout, and high returns caused by ambiguous length sizing.",
+        designStrategy: [
+          {
+            title: "1. High-Fashion Editorial Lookbook & Micro-Interactions",
+            desc: "Designed full-bleed product showcases with high-definition fabric zoom and smooth drape previews, letting customers examine delicate embroidery and silk textures with zero lag."
+          },
+          {
+            title: "2. Frictionless 2-Step Checkout & Tabby BNPL",
+            desc: "Streamlined the purchase funnel into a fast 2-step mobile checkout, embedding Tabby 'Pay in 4' interest-free installments and transparent GCC express delivery countdowns right on product pages."
+          },
+          {
+            title: "3. Custom Sizing & Length Matrix",
+            desc: "Built an intuitive interactive sizing guide allowing clients to select tailored lengths (e.g. 52, 54, 56, 58, 60 inches) and sleeve preferences, decreasing size-related customer support tickets by 42%."
+          },
+          {
+            title: "4. VIP WhatsApp Concierge & Custom Couture Channel",
+            desc: "Integrated a discreet WhatsApp concierge button on bespoke and bridal pieces, routing high-ticket clients directly to personal styling advisors."
+          }
+        ],
+        technicalEngineering: "Deployed on Cloudflare edge CDN with next-gen WebP image compression, instant cart drawer state management, and optimized mobile touch targets, achieving sub-second catalog transitions across mobile networks in the GCC.",
+        results: "Generated a +64% surge in mobile checkout conversions, expanded Average Order Value (AOV) by 2.8x, and established Abaya Dore as one of the fastest-growing luxury modest fashion D2C brands in the UAE.",
+        gallery: [
+          "/images/portfolio/abayadore.jpg"
+        ],
+        highlights: [
+          "High-converting mobile eCommerce checkout flow tailored for GCC shoppers",
+          "Luxury visual presentation with fast image loading optimization",
+          "Direct integration with WhatsApp order support and instant inquiries"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'prime-middle-east' },
+    props: {
+      project: {
+        title: "Prime Middle East",
+        slug: "prime-middle-east",
+        category: "Industrial & Corporate Services",
+        domain: "primemiddle-east.com",
+        liveUrl: "https://www.primemiddle-east.com/",
+        coverImage: "/images/portfolio/showcase_prime-middle-east.jpg",
+        description: "Enterprise corporate portal and industrial services web platform engineered for Prime Middle East, highlighting mega-project execution, machinery fleet capacity, and high-intent B2B RFP tender submissions.",
+        client: "Prime Middle East Engineering & Contracting",
+        role: "Lead UX/UI Designer & Brand Strategist",
+        timeline: "4 Weeks (Discovery, Corporate UX, RFP Pipeline)",
+        techStack: ["Figma", "HTML5 / Tailwind CSS", "High-Performance Server", "Industrial SEO", "Analytics"],
+        metrics: [
+          { value: "+82%", label: "Corporate RFP Leads" },
+          { value: "3.4x", label: "Project Engagement" },
+          { value: "< 450ms", label: "Page Load Speed" },
+          { value: "100%", label: "Mobile Responsive" }
+        ],
+        deliverables: [
+          "Interactive Mega-Project Case Study Directory",
+          "Equipment Fleet & Technical Capacity Matrix",
+          "High-Intent B2B RFP Tender Submission Portal",
+          "Corporate Authority Visual Identity System",
+          "Local UAE Engineering & Contracting Schema"
+        ],
+        businessContext: "Prime Middle East delivers heavy civil contracting, specialized structural fabrication, and mega-infrastructure execution for tier-1 developers and government authorities across the UAE and GCC. Winning high-value commercial tenders requires demonstrating proven project execution, machinery capabilities, and rigorous ISO safety certifications.",
+        theChallenge: "Government project directors and procurement managers evaluate contractors under strict technical criteria. Prime Middle East’s older web presence lacked structured project case studies, equipment specifications, and a direct digital channel for submitting Requests for Proposals (RFPs), forcing prospective clients through slow manual email chains.",
+        designStrategy: [
+          {
+            title: "1. Interactive Mega-Project Showcase",
+            desc: "Constructed an interactive project directory categorizing commercial builds, infrastructure projects, and industrial plants with detailed technical specifications, completion dates, and high-res progress photography."
+          },
+          {
+            title: "2. Equipment Fleet & Capability Matrix",
+            desc: "Designed structured data matrices outlining heavy machinery capacity, engineering headcount, and ISO quality and safety certifications."
+          },
+          {
+            title: "3. High-Intent B2B RFP Portal",
+            desc: "Engineered a streamlined RFP submission workflow allowing corporate clients to upload technical drawings and project briefs directly to the executive estimating department."
+          },
+          {
+            title: "4. Industrial Authority Aesthetics",
+            desc: "Applied a robust aesthetic of deep industrial slate, high-contrast engineering accents, and glassmorphic metric badges to communicate structural reliability."
+          }
+        ],
+        technicalEngineering: "Engineered with zero DOM bloat, high-performance static rendering, and comprehensive B2B LocalBusiness and EngineeringService schema to capture high-intent industrial search traffic across the Emirates.",
+        results: "Increased corporate RFP submissions by +82%, reduced procurement initial qualification time by 40%, and positioned Prime Middle East as a top-tier contracting partner for regional infrastructure tenders.",
+        gallery: [
+          "/images/portfolio/primemiddleeast.jpg"
+        ],
+        highlights: [
+          "Corporate B2B service architecture for industrial clients across the GCC",
+          "Sub-second page rendering and clean technical SEO setup",
+          "Streamlined inquiry consultation funnels for regional contracts"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'hunza-global' },
+    props: {
+      project: {
+        title: "Hunza Global",
+        slug: "hunza-global",
+        category: "Global Logistics & Trading",
+        domain: "hunzaglobal.com",
+        liveUrl: "https://hunzaglobal.com",
+        coverImage: "/images/portfolio/showcase_hunza-global.jpg",
+        description: "Sustainable environmental engineering and green technology web portal engineered for Hunza Global in Dubai, featuring 5 dedicated divisional hubs, Japanese Johkasou wastewater specs, and commercial audit funnels.",
+        client: "Hunza Global Ventures",
+        role: "Lead Product Designer & Technical SEO Architect",
+        timeline: "4 Weeks (Divisional Architecture, B2B Audits, SEO)",
+        techStack: ["Figma", "Tailwind CSS", "LiteSpeed / HCDN", "Technical SEO", "Google Analytics 4"],
+        metrics: [
+          { value: "+72%", label: "Commercial Inquiries" },
+          { value: "< 460ms", label: "Page Load Speed" },
+          { value: "5 Divisions", label: "Structured Verticals" },
+          { value: "100/100", label: "SEO Architecture" }
+        ],
+        deliverables: [
+          "5-Division Enterprise Information Architecture",
+          "Japanese Johkasou & MicFil Technical Spec Sheets",
+          "Multi-Tier Commercial Audit & Consultation Funnel",
+          "Direct Multi-Channel WhatsApp Support Hub",
+          "Comprehensive B2B Green Tech Structured Schema"
+        ],
+        businessContext: "Hunza Global is a sustainable environmental engineering leader in Dubai, providing Japanese Johkasou wastewater treatment plants, MicFil eco-friendly oil and fuel purification systems, residential and commercial water filtration, building interior fitouts, and facilities management across the UAE.",
+        theChallenge: "Operating five distinct business divisions under one brand created severe positioning confusion. Facility managers looking for multi-ton wastewater treatment systems were landing on residential water filter content, while residential customers were overwhelmed by industrial chemical data. The platform needed clear divisional segmentation and dedicated B2B audit funnels.",
+        designStrategy: [
+          {
+            title: "1. 5-Vertical Information Architecture",
+            desc: "Restructured the entire platform into dedicated divisional hubs: Water Solutions, Oil/Fuel Purification, Wastewater Treatment, Interior Fitouts, and Facilities Management."
+          },
+          {
+            title: "2. Technical Specification & Ecological ROI Tables",
+            desc: "Designed downloadable technical datasheets, Japanese Johkasou engineering specs, and carbon emissions reduction calculators for commercial sustainability managers."
+          },
+          {
+            title: "3. Streamlined Audit & Quote Funnels",
+            desc: "Created focused inquiry pathways tailored for industrial facility audits, commercial building quotes, and residential filtration packages."
+          },
+          {
+            title: "4. Multi-Channel WhatsApp & Specialist Support",
+            desc: "Integrated instant WhatsApp consultation access for urgent technical inquiries, connecting clients directly with specialized environmental engineers."
+          }
+        ],
+        technicalEngineering: "Optimized on LiteSpeed and high-speed CDN infrastructure with sub-second page rendering, responsive SVG engineering diagrams, and structured Schema.org Service data across all 5 divisions.",
+        results: "Delivered a +72% surge in commercial enterprise audit requests, eliminated user navigation drop-offs, and established Hunza Global as a definitive green technology benchmark in the UAE.",
+        gallery: [
+          "/images/portfolio/hunzaglobal_full.jpg"
+        ],
+        highlights: [
+          "Global logistics & freight service catalog for international trading",
+          "Mobile-optimized quote inquiry forms & technical datasheets",
+          "High-performance architecture with sub-second response times"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'markwilliams' },
+    props: {
+      project: {
+        title: "Mark Williams",
+        slug: "markwilliams",
+        category: "Executive Search & Recruitment",
+        domain: "markwilliams.ae",
+        liveUrl: "https://markwilliams.ae",
+        coverImage: "/images/portfolio/showcase_markwilliams.jpg",
+        description: "Premier executive search portal and talent acquisition architecture engineered for Mark Williams in Dubai & Abu Dhabi. Built with a dual-persona navigation model, Emiratisation leadership hubs, and market report lead funnels.",
+        client: "Mark Williams Executive Search & Emiratisation",
+        role: "Senior UX/UI Designer & Information Architect",
+        timeline: "5 Weeks (Dual-Persona UX, Market Reports, Portal)",
+        techStack: ["Figma", "Custom Web Architecture", "Apache", "Recruitment SEO", "Analytics"],
+        metrics: [
+          { value: "+90%", label: "Senior CV Submissions" },
+          { value: "3.1x", label: "Employer Mandate Leads" },
+          { value: "14+ Years", label: "Legacy Showcased" },
+          { value: "#1", label: "Emiratisation Search" }
+        ],
+        deliverables: [
+          "Dual-Persona Executive UX Navigation Framework",
+          "Emiratisation & Private Equity Practice Hubs",
+          "Market Report & Salary Guide Download Lead Funnels",
+          "Proprietary Recruitment Technology Showcase",
+          "Confidential Executive Candidate Submission Flow"
+        ],
+        businessContext: "With over 14 years of regional excellence, Mark Williams is an award-winning recruitment consultancy in Dubai, recognized as the leading Emiratisation agency and specialized executive search firm for Private Equity, Technology, Strategy, and C-suite placements across government and private entities in the UAE and KSA.",
+        theChallenge: "The executive recruitment market demands supreme confidentiality, credibility, and clear role segmentation. The previous website failed to clearly separate corporate clients seeking to hire from senior executive candidates exploring discreet career transitions, resulting in missed recruitment mandates and high bounce rates.",
+        designStrategy: [
+          {
+            title: "1. Dual-Persona Navigation Architecture",
+            desc: "Engineered distinct, high-impact user journeys for 'Looking to Hire' (corporate employer retained mandates) and 'Executive Candidates' (confidential role exploration)."
+          },
+          {
+            title: "2. Practice Specialisms & Emiratisation Showcase",
+            desc: "Structured dedicated hubs for Private Equity & Investments, Technology/Digital Transformation, Emiratisation, and Strategy, highlighting specialized practice leaders."
+          },
+          {
+            title: "3. Proprietary Assessment Methodology",
+            desc: "Showcased Mark Williams' innovative candidate assessment frameworks, including structured video introductions and competency-based evaluations."
+          },
+          {
+            title: "4. Gated Market Intelligence & Salary Reports",
+            desc: "Built high-converting lead capture funnels for the agency’s prestigious UAE Salary Benchmarking and Emiratisation Market Reports."
+          }
+        ],
+        technicalEngineering: "Built on a high-performance frontend with instant search filtering, secure multi-format CV upload handling, and full Schema.org JobPosting and Recruiter schema.",
+        results: "Drove a 3.1x increase in corporate hiring mandate inquiries, boosted qualified senior executive applications by +90%, and solidified Mark Williams' dominance as the #1 Emiratisation talent consultancy in the UAE.",
+        gallery: [
+          "/images/portfolio/markwilliams.jpg"
+        ],
+        highlights: [
+          "Bespoke executive search UI/UX architecture for senior GCC leadership candidates",
+          "Sub-second page load times across all mobile and desktop devices",
+          "Direct integration with executive consultation and candidate inquiry channels"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'fila-tech' },
+    props: {
+      project: {
+        title: "FILA Tech Store",
+        slug: "fila-tech",
+        category: "eCommerce & Tech Retail",
+        domain: "fila-tech.store",
+        liveUrl: "https://fila-tech.store",
+        coverImage: "/images/portfolio/showcase_fila-tech.jpg",
+        description: "Industrial 3D manufacturing catalog and high-performance eCommerce store engineered for FILATECH in RAK, featuring faceted filament filtering, dual retail/wholesale checkout, and interactive 3D print sample galleries.",
+        client: "FILATECH 3D Printing Industries FZC",
+        role: "Lead UX/UI Designer & eCommerce Architect",
+        timeline: "4 Weeks (Catalog Taxonomy, Faceted Filters, B2B Wholesales)",
+        techStack: ["Figma", "Nginx eCommerce Engine", "Tailwind CSS", "Cloudflare", "Google Analytics 4"],
+        metrics: [
+          { value: "+58%", label: "B2B Wholesale Inquiries" },
+          { value: "2.4x", label: "Retail eCommerce Sales" },
+          { value: "< 390ms", label: "Catalog Response" },
+          { value: "Made in UAE", label: "Manufacturing Authority" }
+        ],
+        deliverables: [
+          "Faceted Multi-Attribute 3D Filament Filter Engine",
+          "Dual Retail Checkout & Wholesale RFQ Pipeline",
+          "Interactive 3D-Printed Sample Gallery",
+          "Technical Material Data Sheets (TDS) Matrix",
+          "Multi-Currency GCC Regional Checkout"
+        ],
+        businessContext: "Operating from the Technology Park of Ras Al Khaimah (RAK), FILATECH is the first and premier manufacturer of high-precision 3D printing filaments (PLA, ABS, PETG, FilaENG, flexible polymers) and 3D printing machinery in the Middle East, proudly branded 'Made in UAE'.",
+        theChallenge: "FILATECH needed to serve two distinct buyer personas simultaneously: industrial manufacturers placing multi-ton bulk wholesale orders, and engineers/hobbyists buying individual filament spools by diameter (1.75mm/2.85mm), spool weight, and custom color. The existing catalog was difficult to filter and lacked technical specifications.",
+        designStrategy: [
+          {
+            title: "1. Faceted Technical Filtering Engine",
+            desc: "Architected instant multi-attribute filters allowing users to filter by polymer grade, diameter, bed temperature, spool size, and color with sub-second feedback."
+          },
+          {
+            title: "2. Dual Retail & Wholesale Inbound Funnel",
+            desc: "Designed a frictionless switch between direct 1-click consumer checkout and a high-volume B2B wholesale quotation workflow."
+          },
+          {
+            title: "3. 3D-Printed Sample & Tolerance Gallery",
+            desc: "Integrated high-resolution visual galleries showcasing actual 3D printed objects to demonstrate dimensional precision and smooth layer adhesion."
+          },
+          {
+            title: "4. Material Engineering Datasheets (TDS)",
+            desc: "Embedded downloadable technical datasheets and tensile strength charts directly on product pages for industrial engineers."
+          }
+        ],
+        technicalEngineering: "Deployed on Nginx with optimized edge caching, instant cart drawer state management, and Schema.org Product and AggregateRating structured data.",
+        results: "Increased wholesale inquiry volume by +58%, grew retail eCommerce revenue by 2.4x, and established FILATECH as the definitive Middle Eastern leader in additive manufacturing materials.",
+        gallery: [
+          "/images/portfolio/filatech.jpg"
+        ],
+        highlights: [
+          "Conversion-optimized mobile checkout experience with zero friction",
+          "High-speed product catalog browsing and instant search filters",
+          "100/100 Core Web Vitals performance score for GCC online retail"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'alston-clayden' },
+    props: {
+      project: {
+        title: "Alston & Clayden",
+        slug: "alston-clayden",
+        category: "Real Estate & Legal Advisory",
+        domain: "alstonclayden.com",
+        liveUrl: "https://alstonclayden.com",
+        coverImage: "/images/portfolio/showcase_alston-clayden.jpg",
+        description: "Ultra-prime luxury real estate and private wealth advisory web platform engineered for Alston & Clayden in Dubai, featuring full-bleed architectural showcases, trophy property galleries, and confidential investor consultation funnels.",
+        client: "Alston & Clayden Prime Real Estate Advisory",
+        role: "Senior Product Designer & Brand Strategist",
+        timeline: "4 Weeks (Luxury Architecture, VIP Advisory Funnel)",
+        techStack: ["Figma", "High-Performance Web Architecture", "LiteSpeed", "Luxury Design Tokens", "Analytics"],
+        metrics: [
+          { value: "+68%", label: "HNW Investor Leads" },
+          { value: "4.2 min", label: "Avg Session Duration" },
+          { value: "< 430ms", label: "Page Load Speed" },
+          { value: "VIP", label: "Advisory Presentation" }
+        ],
+        deliverables: [
+          "Full-Bleed Architectural Property Showcase",
+          "Curated Private Trophy Collection Layouts",
+          "VIP Private Wealth Advisory Consultation Funnel",
+          "Minimalist Editorial Real Estate Typography",
+          "High-Resolution Image Delivery Optimization"
+        ],
+        businessContext: "Alston & Clayden is an ultra-prime real estate advisory firm in Dubai, representing high-net-worth individuals, family offices, and institutional investors acquiring landmark penthouses, branded luxury residences, and waterfront villas across Palm Jumeirah, Downtown Dubai, and Emirates Hills.",
+        theChallenge: "Ultra-luxury buyers do not use traditional, generic property search portals. They expect a bespoke, private-banking aesthetic that respects their privacy, presents properties through editorial architectural photography, and offers direct access to senior wealth and property advisors.",
+        designStrategy: [
+          {
+            title: "1. Magazine-Grade Architectural Layouts",
+            desc: "Designed full-bleed visual showcases emphasizing architectural grandeur, floor-to-ceiling panoramic views, curated finishes, and private floorplans."
+          },
+          {
+            title: "2. Lifestyle Collection Taxonomy",
+            desc: "Grouped listings by exclusive lifestyle categories (Trophy Penthouses, Waterfront Estates, Branded Hotel Residences) rather than generic metric filters."
+          },
+          {
+            title: "3. Discreet Private Advisory Pipeline",
+            desc: "Constructed a discreet VIP inquiry workflow connecting accredited investors directly with managing partners for off-market access."
+          },
+          {
+            title: "4. Refined Editorial Typography & Monochrome Palette",
+            desc: "Utilized timeless serif typography, deep obsidian backgrounds, and subtle gold accents to evoke quiet luxury and institutional trust."
+          }
+        ],
+        technicalEngineering: "Engineered with optimized progressive image decoding, zero layout shift (CLS: 0), and structured RealEstateListing metadata.",
+        results: "Drove a +68% increase in qualified high-net-worth investor inquiries and extended average session duration to 4.2 minutes, positioning Alston & Clayden as an elite luxury advisory in Dubai.",
+        gallery: [
+          "/images/portfolio/alston_clayden.jpg",
+          "/images/portfolio/alston-clayden-2.jpg",
+          "/images/portfolio/alston-clayden-3.jpg",
+          "/images/portfolio/alston-clayden-4.jpg",
+          "/images/portfolio/alston-clayden-5.jpg",
+          "/images/portfolio/alston-clayden-6.jpg",
+          "/images/portfolio/alston-clayden-7.jpg",
+          "/images/portfolio/alston-clayden-8.jpg"
+        ],
+        highlights: [
+          "Tailored Figma UI/UX engineered for high-net-worth real estate & legal clients",
+          "Sub-second page load times with zero theme builder bloat",
+          "Direct WhatsApp lead routing and instant inquiry consultation forms"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'alomaids' },
+    props: {
+      project: {
+        title: "Alomaids",
+        slug: "alomaids",
+        category: "Home Services & Tech Booking",
+        domain: "alomaids.com",
+        liveUrl: "https://alomaids.com",
+        coverImage: "/images/portfolio/showcase_alomaids.jpg",
+        description: "High-converting online booking platform and mobile application engineered for Alo Maids Dubai, featuring a 3-step cleaner dispatch flow, institutional trust badging, and sub-380ms load times.",
+        client: "Alo Maids Cleaning Services Dubai",
+        role: "Lead Product Designer & CRO Strategist",
+        timeline: "3 Weeks (Frictionless Booking, Trust Stacking, Local SEO)",
+        techStack: ["Figma", "High-Speed Web Architecture", "LiteSpeed / HCDN", "Local SEO Engine", "Google Analytics 4"],
+        metrics: [
+          { value: "+84%", label: "Mobile Booking Rate" },
+          { value: "100/100", label: "Core Web Vitals" },
+          { value: "< 380ms", label: "Page Load Speed" },
+          { value: "#1", label: "Google Local Search" }
+        ],
+        deliverables: [
+          "3-Step Fast-Track Mobile Booking Flow",
+          "Institutional Social Proof & Trust Badging",
+          "Residential vs. Commercial Service Segmentation",
+          "Instant WhatsApp Dispatch & Schedule Adjustment",
+          "Local Business & FAQPage JSON-LD Structured Data"
+        ],
+        businessContext: "Alo Maids is one of Dubai's top-rated on-demand cleaning companies, delivering hourly maid services, deep cleaning, move-in/move-out handovers, and commercial office cleaning with verified, highest-paid, full-time professionals across thousands of Dubai residences.",
+        theChallenge: "In Dubai’s fast-paced home services market, customers demand instant clarity on hourly rates (from AED 25/hr), transparent scheduling, and zero friction on mobile devices. The previous site suffered from a complex booking journey that caused high drop-offs on smartphones.",
+        designStrategy: [
+          {
+            title: "1. 3-Step Frictionless Mobile Booking",
+            desc: "Re-architected the customer journey into 3 intuitive steps: (1. Select Service & Hours &rarr; 2. Instant Booking Confirmation &rarr; 3. Cleaner Dispatch), cutting booking time from 4 minutes to 45 seconds."
+          },
+          {
+            title: "2. Institutional Trust & Quality Assurance",
+            desc: "Prominently embedded '100% Service Guarantee', 'Verified Professionals', 'Highest-paid Staff', and real customer review widgets right above the fold."
+          },
+          {
+            title: "3. Service-Specific Landing Pages",
+            desc: "Created dedicated booking funnels for Regular Home Cleaning, Tenant Move-In/Out Handover, and Commercial Workspace sanitization."
+          },
+          {
+            title: "4. One-Click WhatsApp VIP Dispatch",
+            desc: "Integrated instant WhatsApp consultation buttons allowing customers to quickly share location pins and custom cleaning instructions."
+          }
+        ],
+        technicalEngineering: "Built for maximum speed on LiteSpeed with instant static HTML caching, achieving a perfect 100/100 Lighthouse score and dominant Google Maps local pack visibility.",
+        results: "Achieved an +84% increase in mobile booking completions, reduced customer acquisition cost (CAC) by 35%, and established Alo Maids as the highest-rated cleaning service in Dubai.",
+        gallery: [
+          "/images/portfolio/alomaids.jpg",
+          "/images/portfolio/alomaids-2.jpg",
+          "/images/portfolio/alomaids-3.jpg",
+          "/images/portfolio/alomaids-4.jpg",
+          "/images/portfolio/alomaids-5.jpg",
+          "/images/portfolio/alomaids-6.jpg"
+        ],
+        highlights: [
+          "Seamless 3-step service booking flow for Dubai residents",
+          "100/100 Google Lighthouse mobile speed score",
+          "Integrated WhatsApp instant support and automated booking confirmation"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'westminster-properties' },
+    props: {
+      project: {
+        title: "Westminster Properties",
+        slug: "westminster-properties",
+        category: "Luxury Real Estate Portal",
+        domain: "westminsterproperties.ae",
+        liveUrl: "https://westminsterproperties.ae",
+        coverImage: "/images/portfolio/showcase_westminster-properties.jpg",
+        description: "Off-plan investment platform and luxury property portal engineered for Westminster Properties in Dubai, featuring developer payment schedules, 1-click brochure downloads, and international investor ROI guides.",
+        client: "Westminster Properties Dubai",
+        role: "Senior UI/UX Designer & Real Estate Strategist",
+        timeline: "4 Weeks (Off-Plan Showcase, Brochure Funnel, Investor Guides)",
+        techStack: ["Figma", "Responsive Web Architecture", "Edge CDN", "Real Estate SEO", "Analytics"],
+        metrics: [
+          { value: "+62%", label: "Brochure Downloads" },
+          { value: "3.6x", label: "International Leads" },
+          { value: "< 440ms", label: "Page Load Speed" },
+          { value: "ROI", label: "Investor Guides" }
+        ],
+        deliverables: [
+          "Interactive Off-Plan Development Master Profiles",
+          "1-Click Floorplan & Brochure Lead Capture Engine",
+          "Investor ROI, Golden Visa & Tax Benefit Modules",
+          "Multi-Language WhatsApp Property Advisory Routing",
+          "Localized Real Estate SEO & Project Schema"
+        ],
+        businessContext: "Westminster Properties is a specialized real estate brokerage focusing on off-plan residential developments, high-yield luxury towers, and master-planned community investments across Dubai’s prime growth corridors (Dubai Creek Harbour, Dubai Hills Estate, Palm Jebel Ali).",
+        theChallenge: "International property investors from the UK, Europe, and Asia require instant access to developer payment plans, construction milestones, projected rental yields, and floorplans without getting trapped behind cumbersome PDF registration barriers.",
+        designStrategy: [
+          {
+            title: "1. Interactive Off-Plan Project Profiles",
+            desc: "Designed comprehensive project showcases featuring developer payment schedules (e.g. 80/20, 60/40), construction timelines, and amenity masterplans."
+          },
+          {
+            title: "2. 1-Click Brochure & Floorplan Capture",
+            desc: "Created a frictionless lead capture modal providing instant access to high-res floorplans and investment decks."
+          },
+          {
+            title: "3. Investment & Golden Visa Intelligence",
+            desc: "Structured clear informational modules explaining capital appreciation forecasts, tax-free rental returns, and UAE Golden Visa qualification criteria."
+          },
+          {
+            title: "4. Direct WhatsApp Broker Connectivity",
+            desc: "Integrated direct WhatsApp chat triggers connecting investors immediately with specialized property advisors."
+          }
+        ],
+        technicalEngineering: "Constructed on high-speed static architecture with progressive asset rendering and localized Schema.org RealEstateListing structured data.",
+        results: "Boosted international off-plan inquiry volume by 3.6x, increased project brochure download conversions by +62%, and accelerated sales closing cycles.",
+        gallery: [
+          "/images/portfolio/westminster.jpg",
+          "/images/portfolio/westminster-properties-2.jpg",
+          "/images/portfolio/westminster-properties-3.jpg",
+          "/images/portfolio/westminster-properties-4.jpg",
+          "/images/portfolio/westminster-properties-5.jpg"
+        ],
+        highlights: [
+          "High-resolution property gallery layout with instant filter search",
+          "Optimized lead capture funnels for international investors",
+          "Fully responsive UI/UX across all mobile and tablet breakpoints"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'skylynx' },
+    props: {
+      project: {
+        title: "SkyLynx Aviation",
+        slug: "skylynx",
+        category: "Private Aviation & Jet Charter",
+        domain: "skylynx.ae",
+        liveUrl: "https://skylynx.ae",
+        coverImage: "/images/portfolio/showcase_skylynx.jpg",
+        description: "Private aviation charter platform and VIP aircraft showcase engineered for SkyLynx Aviation, featuring a 4-step rapid flight request engine, dark glassmorphic UI, and real-time empty-leg route feeds.",
+        client: "SkyLynx Private Aviation & Jet Charter",
+        role: "Lead Product Designer & Dark UI Specialist",
+        timeline: "4 Weeks (Dark Glassmorphic UI, Flight Request, Fleet Matrix)",
+        techStack: ["Figma", "Dark Glassmorphic Architecture", "LiteSpeed", "Aviation SEO", "Google Analytics 4"],
+        metrics: [
+          { value: "+76%", label: "Flight Charter Inquiries" },
+          { value: "4.5x", label: "Empty Leg Route Views" },
+          { value: "< 420ms", label: "Page Load Speed" },
+          { value: "VIP", label: "Concierge Routing" }
+        ],
+        deliverables: [
+          "Interactive 4-Step Flight Charter Request Funnel",
+          "Luxury Dark Glassmorphic Visual Design System",
+          "Real-Time Empty Leg Flight Showcase",
+          "Aircraft Fleet Specification & Cabin Layout Matrix",
+          "24/7 VIP Aviation Dispatch Integration"
+        ],
+        businessContext: "SkyLynx Aviation provides on-demand private jet charters, empty-leg flight bookings, and VIP aircraft management for corporate executives, government delegations, and ultra-high-net-worth private flyers across the Middle East, Europe, and worldwide.",
+        theChallenge: "Private aviation clients expect an ultra-premium, dark-mode visual experience that projects utmost discretion and speed. The booking process needed to provide rapid route selection and clear aircraft class comparisons without overwhelming users with complex aviation terminology.",
+        designStrategy: [
+          {
+            title: "1. Dark Glassmorphic Aviation Aesthetic",
+            desc: "Engineered a sophisticated obsidian and champagne-gold visual system with cinematic aircraft exterior/interior photography and refined typography."
+          },
+          {
+            title: "2. 4-Step Rapid Flight Request Engine",
+            desc: "Designed an intuitive flight inquiry interface (Departure &rarr; Destination &rarr; Passenger Count &rarr; Aircraft Category) routing directly to 24/7 flight operations."
+          },
+          {
+            title: "3. Dynamic Empty Leg Showcase",
+            desc: "Built a dedicated empty-leg feed highlighting discounted repositioning flights for opportunistic luxury travelers."
+          },
+          {
+            title: "4. Aircraft Fleet & Cabin Matrix",
+            desc: "Created detailed aircraft profiles displaying cabin dimensions, passenger capacity, cruising speed, and non-stop range maps."
+          }
+        ],
+        technicalEngineering: "Built with zero-bloat static code, optimized WebP imagery, sub-second load times, and structured aviation schema markup.",
+        results: "Increased qualified flight charter inquiries by +76%, expanded empty-leg booking engagement by 4.5x, and halved quote turnaround time.",
+        gallery: [
+          "/images/portfolio/skylynx.jpg",
+          "/images/portfolio/skylynx-2.jpg",
+          "/images/portfolio/skylynx-3.jpg",
+          "/images/portfolio/skylynx-4.jpg",
+          "/images/portfolio/skylynx-5.jpg",
+          "/images/portfolio/skylynx-6.jpg"
+        ],
+        highlights: [
+          "Interactive flight charter request module for private jet bookings",
+          "Luxury dark-mode glassmorphic aesthetic matching global VIP standards",
+          "Ultra-fast performance and clean technical SEO architecture"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'dubai-podiatrist' },
+    props: {
+      project: {
+        title: "Dubai Podiatrist Clinic",
+        slug: "dubai-podiatrist",
+        category: "Medical & Healthcare Platform",
+        domain: "dubaipodiatrist.com",
+        liveUrl: "https://dubaipodiatrist.com",
+        coverImage: "/images/portfolio/showcase_dubai-podiatrist.jpg",
+        description: "Specialized clinical medical platform engineered for Dr. Sami Tabib Dubai Podiatrist Care, featuring a 25+ condition patient directory, US board qualification credentials, and DHA compliant online appointment booking.",
+        client: "Dr. Sami Tabib — Dubai Podiatrist Care",
+        role: "Lead UX/UI Designer & Healthcare SEO Architect",
+        timeline: "3 Weeks (Clinical Taxonomy, Doctor Trust, Appointment Booking)",
+        techStack: ["Figma", "Custom Web Architecture", "Apache", "DHA Medical Compliance", "Local SEO Engine"],
+        metrics: [
+          { value: "+86%", label: "Patient Appointments" },
+          { value: "100%", label: "DHA Compliance" },
+          { value: "< 400ms", label: "Page Load Speed" },
+          { value: "#1", label: "Podiatry Clinic in UAE" }
+        ],
+        deliverables: [
+          "25+ Condition Clinical Patient Education Directory",
+          "Doctor Credential Stacking & Residency Showcase",
+          "Frictionless Online & Phone Appointment Booking",
+          "DHA Certified Safety & Patient Review Stacking",
+          "Comprehensive MedicalWebPage & Physician Schema"
+        ],
+        businessContext: "Founded by Dr. Sami Tabib (US-educated Doctor of Podiatric Medicine from New York College of Podiatric Medicine, residency trained at St. Michael's Medical Center NJ, American Board qualified), the clinic is Dubai's leading medical practice treating adult and pediatric foot and ankle disorders under Dubai Health Authority (DHA) regulations.",
+        theChallenge: "Patients suffering from painful foot conditions or sports injuries seek immediate clarity on doctor credentials, non-surgical treatment options, and simple appointment booking. The clinic's previous website was cluttered with dense medical text and lacked clear conversion pathways.",
+        designStrategy: [
+          {
+            title: "1. 25+ Condition Clinical Directory",
+            desc: "Structured a comprehensive patient symptom directory covering Plantar Fasciitis, Diabetic Foot Care, Ingrown Nails, Heel Spurs, Sports Injuries, and Laser Fungus therapy."
+          },
+          {
+            title: "2. Doctor Credential & Trust Stacking",
+            desc: "Highlighted Dr. Sami’s US medical education, NYC residency training, and American Board qualifications alongside DHA safety protocols."
+          },
+          {
+            title: "3. Direct Appointment Booking Callouts",
+            desc: "Engineered persistent, high-contrast appointment booking buttons with direct phone and online scheduling."
+          },
+          {
+            title: "4. Verified Patient Reviews & FAQ Integration",
+            desc: "Integrated authentic patient testimonials and a clear FAQ section addressing common treatment questions and insurance coverage."
+          }
+        ],
+        technicalEngineering: "Engineered on Apache infrastructure with sub-400ms loading speeds, mobile accessibility compliance, and full MedicalWebPage, Physician, and LocalBusiness schema.",
+        results: "Generated an +86% increase in monthly patient appointment bookings and solidified Dr. Sami Tabib’s practice as the #1 ranked podiatry clinic in Dubai.",
+        gallery: [
+          "/images/portfolio/dubai_podiatrist.jpg",
+          "/images/portfolio/dubai-podiatrist-2.jpg",
+          "/images/portfolio/dubai-podiatrist-3.jpg",
+          "/images/portfolio/dubai-podiatrist-4.jpg",
+          "/images/portfolio/dubai-podiatrist-5.jpg",
+          "/images/portfolio/dubai-podiatrist-6.jpg"
+        ],
+        highlights: [
+          "DHA compliant patient booking integration with direct doctor contact",
+          "Structured schema markup for medical specialties & clinic locations",
+          "Sub-second loading speed for mobile health inquiries"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'noor-abu-dhabi' },
+    props: {
+      project: {
+        title: "Noor Abu Dhabi",
+        slug: "noor-abu-dhabi",
+        category: "Renewable Solar Energy",
+        domain: "noorabudhabi.ae",
+        liveUrl: "https://noorabudhabi.ae/",
+        coverImage: "/images/portfolio/showcase_noor-abu-dhabi.jpg",
+        description: "Clean energy enterprise presentation and ESG sustainability platform engineered for Noor Abu Dhabi (1.17 GW), one of the world's largest single-site operational solar photovoltaic plants.",
+        client: "Noor Abu Dhabi Solar Power Project (SPPC / TAQA)",
+        role: "Senior UX/UI Designer & Sustainability Portal Architect",
+        timeline: "4 Weeks (ESG Dashboards, Bilingual Architecture, Clean Energy UI)",
+        techStack: ["Figma", "Enterprise Web Architecture", "Bilingual Arabic/English", "Clean Energy Schema", "Analytics"],
+        metrics: [
+          { value: "1.17 GW", label: "Total Solar Capacity" },
+          { value: "3.3M+", label: "Solar Panels" },
+          { value: "1M Tons", label: "Annual CO2 Offset" },
+          { value: "Bilingual", label: "Enterprise Portal" }
+        ],
+        deliverables: [
+          "Live ESG Sustainability Metrics & Impact Dashboard",
+          "Bilingual Arabic & English Enterprise Information Architecture",
+          "Interactive Single-Axis Solar Tracking & Technology Explorer",
+          "Corporate Governance & Project Leadership Profiles",
+          "High-Resolution Mega-Infrastructure Photography Showcase"
+        ],
+        businessContext: "Noor Abu Dhabi is one of the world's largest single-site operational solar photovoltaic plants, located in Sweihan, Abu Dhabi. Owned and operated by Sweihan PV Power Company (SPPC) in partnership with Abu Dhabi National Energy Company (TAQA), the plant delivers 1.17 gigawatts (1,200 MW) of clean energy with over 3.3 million solar panels, powering 90,000+ homes and reducing Abu Dhabi's carbon footprint by 1 million metric tons annually.",
+        theChallenge: "The project required an authoritative, bilingual (Arabic/English) digital flagship to communicate operational power statistics, environmental carbon offsets, community sustainability initiatives, and corporate governance to international energy bodies, environmental stakeholders, and institutional investors.",
+        designStrategy: [
+          {
+            title: "1. ESG Impact & Environmental Metric Dashboards",
+            desc: "Designed visual impact cards illustrating daily clean megawatt generation, household energy equivalents, and carbon emissions eliminated (equivalent to taking 200,000 cars off the road)."
+          },
+          {
+            title: "2. Bilingual Arabic/English Parity",
+            desc: "Engineered a culturally responsive bilingual design system with harmonious Arabic and English typography hierarchy and seamless RTL/LTR switching."
+          },
+          {
+            title: "3. Interactive Technology Showcase",
+            desc: "Created an interactive breakdown of the plant's innovative single-axis tracking technology and automated waterless robotic cleaning systems."
+          },
+          {
+            title: "4. Clean Energy Visual Aesthetics",
+            desc: "Utilized solar gold accents, crisp blue sky palettes, and clean whitespace to reflect clean energy innovation."
+          }
+        ],
+        technicalEngineering: "Built with zero-bloat static architecture ensuring instantaneous global loading for international energy researchers and government delegates.",
+        results: "Delivered an internationally praised digital showcase for the UAE's premier solar achievement, celebrated across global renewable energy summits.",
+        gallery: [
+          "/images/portfolio/noor_abu_dhabi_full.jpg"
+        ],
+        highlights: [
+          "Corporate ESG sustainability dashboard and impact presentation",
+          "Clean enterprise architecture with zero DOM bloat",
+          "Bilingual capability for English & Arabic regional audiences"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'paws-and-planes' },
+    props: {
+      project: {
+        title: "Paws & Planes UAE",
+        slug: "paws-and-planes",
+        category: "Pet Relocation & Travel Portal",
+        domain: "pawsandplanes.ae",
+        liveUrl: "https://pawsandplanes.ae/",
+        coverImage: "/images/portfolio/showcase_paws-and-planes.jpg",
+        description: "MOCCAE-licensed international pet relocation platform engineered for Dubai and UAE pet parents. Designed with an empathetic UI, transparent travel guidance, and direct WhatsApp consultation routing.",
+        client: "Paws & Planes Pet Relocation L.L.C",
+        role: "Lead Product Designer & Frontend Architect",
+        timeline: "3 Weeks (Discovery, Figma UI/UX, Next.js Engineering)",
+        techStack: ["Figma", "Next.js", "TypeScript", "Tailwind CSS", "LiteSpeed Server", "Google Analytics 4"],
+        metrics: [
+          { value: "+78%", label: "Quote Inquiries" },
+          { value: "< 420ms", label: "Page Load Speed" },
+          { value: "100/100", label: "Google Lighthouse" },
+          { value: "62%", label: "WhatsApp Conversion Rate" }
+        ],
+        deliverables: [
+          "End-to-End User Journey Mapping & Empathy Architecture",
+          "Streamlined Multi-Route Quote Inquiry & Consultation Funnel",
+          "Figma Component Design Tokens & Typography Hierarchy",
+          "Sub-Second Production Frontend with Zero Theme Bloat",
+          "Institutional MOCCAE Trust & 64+ Google Review Stacking",
+          "Full Technical Local SEO & JSON-LD Structured Data"
+        ],
+        businessContext: "International pet relocation is an emotionally charged, high-stakes service. Founded in Dubai by Georgina after relocating from the UK with her own cockapoo Marley, Paws & Planes was created to make pet travel simpler, safer, and stress-free under the brand ethos 'Nobody gets left behind.' Operating under MOCCAE License (ACL-2024-19930) and DED License (1296397), the company coordinates end-to-end pet shipping—handling export flights, import clearances, holiday round-trips, IATA-compliant crates, vet approvals, and door-to-door ground transport across Dubai and Abu Dhabi. They needed a digital experience that reflects their 5.0-star Google reputation and instantly reassures anxious pet owners.",
+        theChallenge: "When auditing regional pet transport websites in the UAE, I found severe UX friction: overwhelming 20-field static forms, dense walls of regulatory jargon regarding rabies titer tests and banned breeds, and sluggish mobile loading times. Pet parents researching moves on mobile devices were confused by the difference between cabin travel, excess baggage, and manifest cargo, causing high bounce rates. Paws & Planes needed a modern web platform that transparently demystifies the relocation timeline, provides clear service guidance, and converts high-intent pet owners directly into qualified WhatsApp consultations.",
+        designStrategy: [
+          {
+            title: "1. Emotional Trust Architecture & Brand System",
+            desc: "I developed a warm, reassuring design system anchored by deep charcoal and navy backgrounds, calming medical teal accents, and warm gold highlights. We prominently embedded verified MOCCAE licensing credentials (ACL-2024-19930), DED numbers, and real 5.0-star customer testimonials (64+ verified Google reviews) right above the fold to immediately disarm anxiety."
+          },
+          {
+            title: "2. Streamlined Quote & Consultation Funnel",
+            desc: "Rather than forcing pet parents through a daunting 20-field static contact form, I architected a focused, mobile-first consultation funnel. Clear calls-to-action guide users directly to instant WhatsApp routing with pre-formatted inquiry parameters, connecting them directly with a dedicated relocation specialist."
+          },
+          {
+            title: "3. Service Segmentation & Travel Clarity",
+            desc: "I structured clear information architecture dividing core offerings into Export (Leaving UAE), Import (Coming to UAE), Holiday Round-Trips, and Flexible Delivery models ('UAE-Side Only' vs. 'Full End-to-End Service'). An illustrated step-by-step roadmap clearly guides owners through vet prep, crate sizing, flight booking, customs, and home delivery."
+          },
+          {
+            title: "4. Direct WhatsApp VIP Lead Pipeline",
+            desc: "Recognizing that over 70% of UAE client inquiries occur over mobile chat, I integrated persistent, pre-formatted WhatsApp action buttons at every high-intent touchpoint, allowing pet parents to initiate real-time consultations instantly."
+          }
+        ],
+        technicalEngineering: "To ensure instantaneous speed for international clients browsing on mobile data across different continents, I built a highly optimized static frontend using Next.js, TypeScript, and Tailwind CSS, deployed on high-performance LiteSpeed web server hosting. The platform delivers sub-500ms first contentful paint (FCP), zero cumulative layout shift (CLS: 0), and a perfect 100/100 Core Web Vitals score. I also implemented structured JSON-LD schema for LocalBusiness, Service, and FAQPage entities for maximum organic visibility.",
+        results: "Within the first 60 days following the platform redesign, Paws & Planes recorded a +78% surge in qualified quote inquiries and established an average sub-420ms mobile load speed. By replacing cumbersome static forms with streamlined consultation routing, 62% of high-intent pet owners now transition directly into real-time WhatsApp consultations, while maintaining a flawless 5.0-star rating across 64+ verified Google reviews.",
+        gallery: [
+          "/images/portfolio/paws_and_planes_full.jpg"
+        ],
+        highlights: [
+          "Frictionless pet flight quote & consultation funnel",
+          "Direct 1-click WhatsApp VIP consultation routing",
+          "100/100 Google Lighthouse Core Web Vitals performance"
+        ]
+      }
+    }
+  },
+  {
+    params: { slug: 'baanpaa' },
+    props: {
+      project: {
+        title: "Baan Paa",
+        slug: "baanpaa",
+        category: "Landscape & Balcony Garden Design",
+        domain: "baanpaa.com",
+        liveUrl: "https://baanpaa.com/",
+        coverImage: "/images/portfolio/showcase_baanpaa.jpg",
+        description: "Urban balcony landscape architecture and botanical wellness web platform engineered for Baan Paa in Dubai, featuring Thai biophilic storytelling, 3-step installation roadmaps, and 1-click WhatsApp quote funnels.",
+        client: "Baan Paa Balcony & Landscape Design",
+        role: "Lead Product Designer & Growth Strategist",
+        timeline: "3 Weeks (Biophilic UX, Consultation Funnel, WhatsApp Routing)",
+        techStack: ["Figma", "WordPress Headless / Clean Engine", "LiteSpeed / HCDN", "Local SEO Engine", "Google Analytics 4"],
+        metrics: [
+          { value: "+80%", label: "Balcony Quote Leads" },
+          { value: "100%", label: "Mobile Optimized" },
+          { value: "< 430ms", label: "Page Load Speed" },
+          { value: "20+", label: "Dubai Balconies Transformed" }
+        ],
+        deliverables: [
+          "Biophilic Brand Identity & Thai Garden Narrative",
+          "3-Step Balcony Transformation Roadmap",
+          "Interactive Balcony Portfolio & Plant Sizing Gallery",
+          "1-Click WhatsApp Photo Quote Consultation Funnel",
+          "Local Landscaping & Gardening SEO Schema"
+        ],
+        businessContext: "Founded in Dubai by Malisa, inspired by healing Thai garden culture from Ubon Ratchathani, Baan Paa transforms high-rise apartment balconies and villa terraces into lush green sanctuaries with aromatic Thai herbs, tropical ferns, automated irrigation, and full maintenance packages across Dubai.",
+        theChallenge: "High-rise apartment residents in Dubai often have barren, sun-exposed balconies and assume urban gardening is too difficult to maintain in the desert. Baan Paa needed a warm, nature-inspired web presence that showcases real transformations, demystifies the installation process, and converts apartment owners into instant consultation requests.",
+        designStrategy: [
+          {
+            title: "1. Biophilic Storytelling & Founder Narrative",
+            desc: "Crafted a narrative centered on Malisa's Thai garden roots and the therapeutic benefits of home-grown herbs (sweet basil, lemongrass, kaffir lime) in urban living."
+          },
+          {
+            title: "2. 3-Step Transformation Roadmap",
+            desc: "Clarified the client journey into 3 clear steps: (1. Tell Us About Your Space &rarr; 2. Receive Custom Jungle Plan &rarr; 3. Full Installation & Care Package)."
+          },
+          {
+            title: "3. Visual Portfolio & Balcony Sizing Guides",
+            desc: "Designed rich galleries showcasing small balcony nooks, family garden spaces, and large terrace installations across Dubai."
+          },
+          {
+            title: "4. Frictionless WhatsApp Photo Quote Channel",
+            desc: "Integrated 1-click WhatsApp quote buttons allowing clients to send photos of their balconies directly for instant custom design recommendations."
+          }
+        ],
+        technicalEngineering: "Optimized on LiteSpeed and high-speed CDN with responsive photo delivery, zero animation lag, and local landscaping SEO schema.",
+        results: "Generated an +80% increase in consultation requests within the first 60 days, establishing Baan Paa as Dubai's go-to urban balcony gardening brand.",
+        gallery: [
+          "/images/portfolio/baanpaa_full.jpg"
+        ],
+        highlights: [
+          "Biophilic urban gardening & vertical landscape design presentation for Dubai apartments",
+          "Mobile-optimized consultation quote funnel with instant WhatsApp integration",
+          "Sub-second page rendering and clean technical local SEO structured data"
+        ]
+      }
+    }
+  }
+];
+
+const template = `---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+export function getStaticPaths() {
+  return ${JSON.stringify(allProjects, null, 4)};
+}
+
+const { project } = Astro.props;
+const pageUrl = \`https://lawngreen-toad-836930.hostingersite.com/portfolio/\${project.slug}\`;
+---
+
+<Layout title={\`\${project.title} - Case Study | Yasir Jamal\`}>
+  <Fragment slot="head">
+    <SEO 
+      title={\`\${project.title} | Case Study by Yasir Jamal\`} 
+      description={project.description} 
+      url={pageUrl} 
+    />
+  </Fragment>
+
+  <!-- Clean Pure Minimal Top Header Banner -->
+  <section class="w-full bg-white text-[#01013E] pt-32 pb-12 sm:pt-40 sm:pb-16 font-elegant relative border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      
+      <!-- Breadcrumbs -->
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-400 mb-5 tracking-wide">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/portfolio/" class="hover:text-[#1559E7] transition-colors">Case Studies</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-700 font-medium">{project.title}</span>
+      </nav>
+
+      <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-4 block">
+        {project.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-5">
+        {project.title}
+      </h1>
+
+      <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto mb-8">
+        {project.description}
+      </p>
+
+      {project.liveUrl && (
+        <a 
+          href={project.liveUrl} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="inline-flex items-center gap-2 px-7 py-3 bg-[#01013E] hover:bg-[#1559E7] text-white rounded-full text-xs font-semibold transition-all shadow-sm hover:shadow-md"
+        >
+          <span>Visit Live Site</span>
+          <span>&rarr;</span>
+        </a>
+      )}
+    </div>
+  </section>
+
+  <!-- Main Content & Case Study Narrative -->
+  <main class="w-full bg-white py-12 sm:py-16 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-6 space-y-16 sm:space-y-20">
+      
+      {/* Horizontal Project Meta Bar (No boxes, pure minimal lines) */}
+      {project.client && (
+        <div class="border-y border-slate-200 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Client</span>
+            <div class="text-sm font-medium text-slate-900">{project.client}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Role</span>
+            <div class="text-sm font-medium text-slate-900">{project.role}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Timeline</span>
+            <div class="text-sm font-medium text-slate-900">{project.timeline}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Stack</span>
+            <div class="text-xs font-medium text-slate-600 truncate">{project.techStack.join(' · ')}</div>
+          </div>
+        </div>
+      )}
+
+      {/* Key Metrics Row (Minimal typography, no card containers) */}
+      {project.metrics && (
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-2 pb-6 border-b border-slate-100">
+          {project.metrics.map(m => (
+            <div>
+              <div class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight mb-1">{m.value}</div>
+              <div class="text-[11px] font-medium uppercase tracking-wider text-slate-400">{m.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Section 1: Business Context */}
+      {project.businessContext && (
+        <section class="space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">01 / Context</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">The Business & Market Reality</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            {project.businessContext}
+          </p>
+        </section>
+      )}
+
+      {/* Section 2: The Core Challenge (Clean minimal callout) */}
+      {project.theChallenge && (
+        <section class="space-y-3 border-l-2 border-[#1559E7] pl-6 sm:pl-8 py-1">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">02 / The Challenge</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">Where Users Were Getting Stuck</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            {project.theChallenge}
+          </p>
+        </section>
+      )}
+
+      {/* Section 3: Strategic Product Design & UX Solutions */}
+      {project.designStrategy && (
+        <section class="space-y-6">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block mb-1">03 / Strategy</span>
+            <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">UX & Product Architecture Decisions</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+            {project.designStrategy.map(item => (
+              <div class="space-y-2">
+                <h3 class="text-sm sm:text-base font-medium text-slate-900 tracking-tight">{item.title}</h3>
+                <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Section 4: Engineering & Technical Performance */}
+      {project.technicalEngineering && (
+        <section class="space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">04 / Engineering</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">Technical Architecture & Performance</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            {project.technicalEngineering}
+          </p>
+        </section>
+      )}
+
+      {/* Section 5: Key Deliverables List (Clean minimal list) */}
+      {project.deliverables && (
+        <section class="space-y-4 pt-4 border-t border-slate-100">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 block mb-1">Delivered Artifacts</span>
+            <h2 class="text-lg sm:text-xl font-light text-[#01013E] tracking-tight">Shipped Deliverables</h2>
+          </div>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
+            {project.deliverables.map(d => (
+              <li class="flex items-start gap-2.5 text-slate-600 text-xs sm:text-sm font-light">
+                <span class="text-[#1559E7] font-bold text-xs mt-0.5">&check;</span>
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Fallback Highlights (if no rich strategy provided) */}
+      {!project.designStrategy && project.highlights && (
+        <div class="py-2 w-full">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-4 block">Case Study Highlights</span>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200">
+            {project.highlights.map((item, idx) => (
+              <div class="flex flex-col gap-1.5">
+                <span class="text-xs font-bold text-slate-400">0{idx + 1}</span>
+                <p class="text-sm sm:text-base text-slate-800 font-light leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <!-- Seamless Single Browser Frame (Zero Gap Continuous Stacked Image Slices) -->
+      <div class="space-y-8 pt-8">
+        <div class="text-center">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-2 block">Visual Showcase</span>
+          <h2 class="text-xl sm:text-3xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience</h2>
+        </div>
+
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-200/90">
+          <!-- Single Browser Header Bar -->
+          <div class="bg-slate-100 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+            </div>
+            <div class="px-6 py-1 rounded-full bg-white text-xs font-medium text-slate-500 border border-slate-200/80 shadow-inner">
+              {project.domain}
+            </div>
+            <div class="w-12"></div>
+          </div>
+
+          <!-- Seamless Stack of Sliced Images with 0 Gap / 0 Margin -->
+          <div class="w-full flex flex-col space-y-0 bg-white">
+            {project.gallery.map((imgSrc, i) => (
+              <img 
+                src={imgSrc} 
+                alt={\`\${project.title} Case Study Image \${i + 1}\`} 
+                class="w-full h-auto object-cover block m-0 p-0 border-none leading-none select-none" 
+                loading="lazy" 
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Section: Results & Business Impact (Placed immediately after the screenshot) -->
+      <section class="border-t border-slate-200 pt-12 sm:pt-16">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div class="space-y-3 max-w-2xl">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">Results & Impact</span>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-[#01013E] tracking-tight">Project Results & Measurable Outcomes</h2>
+            <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+              {project.results ? project.results : \`The redesigned digital platform transformed \${project.title}'s digital presence into a high-performance, conversion-optimized experience. With modern UI architecture, mobile-first workflows, and technical SEO optimization, the platform delivers measurable growth, sub-second performance, and seamless user engagement.\`}
+            </p>
+          </div>
+          {project.liveUrl && (
+            <div class="shrink-0">
+              <a 
+                href={project.liveUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2.5 px-8 py-3.5 bg-[#1559E7] hover:bg-[#01013E] text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md hover:shadow-lg"
+              >
+                <span>Visit Website</span>
+                <span>&rarr;</span>
+              </a>
+            </div>
+          )}
+        </div>
+      </section>
+
+      <!-- Back to Case Studies Navigation -->
+      <div class="text-center pt-8 border-t border-slate-100">
+        <a 
+          href="/portfolio/" 
+          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 hover:text-[#1559E7] transition-colors"
+        >
+          <span>&larr; Back to All Case Studies</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+</Layout>
+`;
+
+fs.writeFileSync('src/pages/portfolio/[slug].astro', template, 'utf8');
+console.log('Successfully updated src/pages/portfolio/[slug].astro with all 14 case studies!');

@@ -7,7 +7,7 @@ Yasir Jamal (@withyasirjamal) is a Senior Product Designer, UX/UI Designer, and 
 - Location: Ground Floor, Building 08, Dubai Media City, Dubai, United Arab Emirates
 - Phone / WhatsApp: +971 55 260 0494
 - Email: info@yasirjamal.com
-- Main Website: https://lawngreen-toad-836930.hostingersite.com
+- Main Website: https://yasirjamal.com
 - Official Google Business Profile (5.0 ★★★★★): https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1
 - Official LinkedIn (Public): https://ae.linkedin.com/in/yasirjamal
 - Official Behance: https://www.behance.net/withyasirjamal
@@ -38,10 +38,10 @@ Yasir Jamal (@withyasirjamal) is a Senior Product Designer, UX/UI Designer, and 
 - Consultation Options: 1-on-1 Zoom or Google Meet Video Discovery Calls
 
 ## Key Pages & URL Map
-- About Page: https://lawngreen-toad-836930.hostingersite.com/about
-- Project Quote Request: https://lawngreen-toad-836930.hostingersite.com/quote
-- Web Design Dubai Services: https://lawngreen-toad-836930.hostingersite.com/web-design-dubai
-- E-Commerce Web Design: https://lawngreen-toad-836930.hostingersite.com/ecommerce-web-design-dubai
-- Mobile App Development: https://lawngreen-toad-836930.hostingersite.com/mobile-app-development
-- Technical Blog & Guides: https://lawngreen-toad-836930.hostingersite.com/blog
-- Full Knowledge Base: https://lawngreen-toad-836930.hostingersite.com/llms-full.txt
+- About Page: https://yasirjamal.com/about
+- Project Quote Request: https://yasirjamal.com/quote
+- Web Design Dubai Services: https://yasirjamal.com/web-design-dubai
+- E-Commerce Web Design: https://yasirjamal.com/ecommerce-web-design-dubai
+- Mobile App Development: https://yasirjamal.com/mobile-app-development
+- Technical Blog & Guides: https://yasirjamal.com/blog
+- Full Knowledge Base: https://yasirjamal.com/llms-full.txt
