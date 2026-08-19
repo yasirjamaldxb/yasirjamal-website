@@ -394,28 +394,28 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
     />
   </Fragment>
 
-  <!-- Clean Pure White Top Header Banner -->
-  <section class="w-full bg-white text-[#01013E] pt-32 pb-16 sm:pt-40 sm:pb-20 font-elegant relative border-b border-slate-200/80">
+  <!-- Clean Pure Minimal Top Header Banner -->
+  <section class="w-full bg-white text-[#01013E] pt-32 pb-12 sm:pt-40 sm:pb-16 font-elegant relative border-b border-slate-100">
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
       
       <!-- Breadcrumbs -->
-      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-6">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-400 mb-5 tracking-wide">
         <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
         <span>&rsaquo;</span>
         <a href="/portfolio/" class="hover:text-[#1559E7] transition-colors">Case Studies</a>
         <span>&rsaquo;</span>
-        <span class="text-slate-900 font-semibold">{project.title}</span>
+        <span class="text-slate-700 font-medium">{project.title}</span>
       </nav>
 
-      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100 text-[#1559E7] text-xs font-semibold uppercase tracking-widest mb-6 border border-slate-200/80">
+      <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-4 block">
         {project.category}
       </span>
 
-      <h1 class="text-3xl sm:text-5xl md:text-6xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-5">
         {project.title}
       </h1>
 
-      <p class="text-slate-600 text-base sm:text-xl font-light leading-relaxed max-w-3xl mx-auto mb-8">
+      <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed max-w-2xl mx-auto mb-8">
         {project.description}
       </p>
 
@@ -424,7 +424,7 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
           href={project.liveUrl} 
           target="_blank" 
           rel="noopener noreferrer" 
-          class="inline-flex items-center gap-2.5 px-9 py-4 bg-[#1559E7] hover:bg-[#01013E] text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-xl hover:shadow-2xl"
+          class="inline-flex items-center gap-2 px-7 py-3 bg-[#01013E] hover:bg-[#1559E7] text-white rounded-full text-xs font-semibold transition-all shadow-sm hover:shadow-md"
         >
           <span>Visit Live Site</span>
           <span>&rarr;</span>
@@ -434,120 +434,116 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
   </section>
 
   <!-- Main Content & Case Study Narrative -->
-  <main class="w-full bg-[#f8fafc] py-16 sm:py-24 font-elegant text-slate-800 leading-relaxed">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
+  <main class="w-full bg-white py-12 sm:py-16 font-elegant text-slate-800 leading-relaxed">
+    <div class="max-w-4xl mx-auto px-6 space-y-16 sm:space-y-20">
       
-      {/* Key Metrics Grid (if provided) */}
+      {/* Horizontal Project Meta Bar (No boxes, pure minimal lines) */}
+      {project.client && (
+        <div class="border-y border-slate-200 py-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Client</span>
+            <div class="text-sm font-medium text-slate-900">{project.client}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Role</span>
+            <div class="text-sm font-medium text-slate-900">{project.role}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Timeline</span>
+            <div class="text-sm font-medium text-slate-900">{project.timeline}</div>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 block mb-1">Stack</span>
+            <div class="text-xs font-medium text-slate-600 truncate">{project.techStack.join(' · ')}</div>
+          </div>
+        </div>
+      )}
+
+      {/* Key Metrics Row (Minimal typography, no card containers) */}
       {project.metrics && (
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-2 pb-6 border-b border-slate-100">
           {project.metrics.map(m => (
-            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.03)] text-center">
-              <div class="text-3xl sm:text-4xl font-bold text-[#1559E7] tracking-tight mb-1">{m.value}</div>
-              <div class="text-xs font-medium uppercase tracking-wider text-slate-500">{m.label}</div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight mb-1">{m.value}</div>
+              <div class="text-[11px] font-medium uppercase tracking-wider text-slate-400">{m.label}</div>
             </div>
           ))}
         </div>
       )}
 
-      {/* Project Meta Details (Client, Role, Timeline, Tech Stack) */}
-      {project.client && (
-        <div class="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200/80 shadow-[0_10px_30px_rgba(0,0,0,0.04)] grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-1">Client & Organization</span>
-            <div class="text-base font-semibold text-slate-900">{project.client}</div>
-            <div class="text-xs text-slate-500 mt-1">{project.domain}</div>
-          </div>
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-1">My Role</span>
-            <div class="text-base font-semibold text-slate-900">{project.role}</div>
-            <div class="text-xs text-slate-500 mt-1">{project.timeline}</div>
-          </div>
-          <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-slate-400 block mb-2">Technology Stack</span>
-            <div class="flex flex-wrap gap-1.5">
-              {project.techStack.map(t => (
-                <span class="px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 text-xs font-medium">
-                  {t}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Section 1: Business Context */}
       {project.businessContext && (
-        <div class="space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] block">01 / Business Context</span>
-          <h2 class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight">The Business & Market Reality</h2>
-          <p class="text-slate-600 text-base sm:text-lg font-light leading-relaxed">
+        <section class="space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">01 / Context</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">The Business & Market Reality</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
             {project.businessContext}
           </p>
-        </div>
+        </section>
       )}
 
-      {/* Section 2: The Core Challenge */}
+      {/* Section 2: The Core Challenge (Clean minimal callout) */}
       {project.theChallenge && (
-        <div class="space-y-4 bg-white rounded-3xl p-8 sm:p-12 border-l-4 border-[#1559E7] shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] block">02 / The Challenge</span>
-          <h2 class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight">Where Users Were Getting Stuck</h2>
-          <p class="text-slate-600 text-base sm:text-lg font-light leading-relaxed">
+        <section class="space-y-3 border-l-2 border-[#1559E7] pl-6 sm:pl-8 py-1">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">02 / The Challenge</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">Where Users Were Getting Stuck</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
             {project.theChallenge}
           </p>
-        </div>
+        </section>
       )}
 
       {/* Section 3: Strategic Product Design & UX Solutions */}
       {project.designStrategy && (
-        <div class="space-y-8">
+        <section class="space-y-6">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] block mb-1">03 / Design Strategy</span>
-            <h2 class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight">My UX & Product Architecture Decisions</h2>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block mb-1">03 / Strategy</span>
+            <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">UX & Product Architecture Decisions</h2>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
             {project.designStrategy.map(item => (
-              <div class="bg-white rounded-2xl p-7 border border-slate-200/80 shadow-[0_10px_25px_rgba(0,0,0,0.03)] space-y-3">
-                <h3 class="text-lg font-semibold text-slate-900 tracking-tight">{item.title}</h3>
-                <p class="text-slate-600 text-sm font-light leading-relaxed">{item.desc}</p>
+              <div class="space-y-2">
+                <h3 class="text-sm sm:text-base font-medium text-slate-900 tracking-tight">{item.title}</h3>
+                <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>
-        </div>
+        </section>
       )}
 
       {/* Section 4: Engineering & Technical Performance */}
       {project.technicalEngineering && (
-        <div class="space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] block">04 / Engineering</span>
-          <h2 class="text-2xl sm:text-3xl font-light text-[#01013E] tracking-tight">Technical Architecture & Core Web Vitals</h2>
-          <p class="text-slate-600 text-base sm:text-lg font-light leading-relaxed">
+        <section class="space-y-3">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">04 / Engineering</span>
+          <h2 class="text-xl sm:text-2xl font-light text-[#01013E] tracking-tight">Technical Architecture & Performance</h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
             {project.technicalEngineering}
           </p>
-        </div>
+        </section>
       )}
 
-      {/* Section 5: Key Deliverables List */}
+      {/* Section 5: Key Deliverables List (Clean minimal list) */}
       {project.deliverables && (
-        <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl space-y-6">
+        <section class="space-y-4 pt-4 border-t border-slate-100">
           <div>
-            <span class="text-xs font-bold uppercase tracking-widest text-[#F6CD0B] block mb-1">Delivered Artifacts</span>
-            <h2 class="text-xl sm:text-2xl font-light text-white tracking-tight">What I Shipped For This Project</h2>
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 block mb-1">Delivered Artifacts</span>
+            <h2 class="text-lg sm:text-xl font-light text-[#01013E] tracking-tight">Shipped Deliverables</h2>
           </div>
-          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
             {project.deliverables.map(d => (
-              <li class="flex items-start gap-3 text-slate-200 text-sm font-light">
-                <span class="text-[#F6CD0B] font-bold text-base">&check;</span>
+              <li class="flex items-start gap-2.5 text-slate-600 text-xs sm:text-sm font-light">
+                <span class="text-[#1559E7] font-bold text-xs mt-0.5">&check;</span>
                 <span>{d}</span>
               </li>
             ))}
           </ul>
-        </div>
+        </section>
       )}
 
       {/* Fallback Highlights (if no rich strategy provided) */}
       {!project.designStrategy && project.highlights && (
-        <div class="max-w-5xl mx-auto py-2 w-full">
-          <span class="text-[11px] font-bold text-[#1559E7] uppercase tracking-widest mb-4 block">Case Study Highlights</span>
+        <div class="py-2 w-full">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-4 block">Case Study Highlights</span>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-slate-200">
             {project.highlights.map((item, idx) => (
               <div class="flex flex-col gap-1.5">
@@ -560,13 +556,13 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
       )}
 
       <!-- Seamless Single Browser Frame (Zero Gap Continuous Stacked Image Slices) -->
-      <div class="space-y-10 max-w-7xl mx-auto pt-8">
+      <div class="space-y-8 pt-8">
         <div class="text-center">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] mb-2 block">Visual Showcase</span>
-          <h2 class="text-2xl sm:text-4xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience Artifacts</h2>
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-2 block">Visual Showcase</span>
+          <h2 class="text-xl sm:text-3xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience</h2>
         </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.08)] border border-slate-200/90">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-200/90">
           <!-- Single Browser Header Bar -->
           <div class="bg-slate-100 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between">
             <div class="flex items-center gap-2">
@@ -595,12 +591,12 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
       </div>
 
       <!-- Section: Results & Business Impact (Placed immediately after the screenshot) -->
-      <section class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-[0_15px_35px_rgba(0,0,0,0.04)]">
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-          <div class="space-y-4 max-w-3xl">
-            <span class="text-xs font-bold uppercase tracking-widest text-[#1559E7] block">Results & Impact</span>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-[#01013E] tracking-tight">Project Results & Measurable Outcomes</h2>
-            <p class="text-slate-600 text-base sm:text-lg font-light leading-relaxed">
+      <section class="border-t border-slate-200 pt-12 sm:pt-16">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+          <div class="space-y-3 max-w-2xl">
+            <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] block">Results & Impact</span>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-[#01013E] tracking-tight">Project Results & Measurable Outcomes</h2>
+            <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
               {project.results ? project.results : `The redesigned digital platform transformed ${project.title}'s digital presence into a high-performance, conversion-optimized experience. With modern UI architecture, mobile-first workflows, and technical SEO optimization, the platform delivers measurable growth, sub-second performance, and seamless user engagement.`}
             </p>
           </div>
@@ -610,7 +606,7 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
                 href={project.liveUrl} 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                class="inline-flex items-center gap-3 px-8 py-4.5 bg-[#1559E7] hover:bg-[#01013E] text-white rounded-full text-sm font-semibold transition-all shadow-xl hover:shadow-2xl hover:scale-105"
+                class="inline-flex items-center gap-2.5 px-8 py-3.5 bg-[#1559E7] hover:bg-[#01013E] text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-md hover:shadow-lg"
               >
                 <span>Visit Website</span>
                 <span>&rarr;</span>
@@ -621,10 +617,10 @@ const pageUrl = `https://lawngreen-toad-836930.hostingersite.com/portfolio/${pro
       </section>
 
       <!-- Back to Case Studies Navigation -->
-      <div class="text-center pt-8 border-t border-slate-200">
+      <div class="text-center pt-8 border-t border-slate-100">
         <a 
           href="/portfolio/" 
-          class="inline-flex items-center gap-2.5 px-10 py-4.5 bg-[#01013E] hover:bg-slate-900 text-white rounded-full text-xs sm:text-sm font-bold transition-all shadow-xl hover:scale-105"
+          class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 hover:text-[#1559E7] transition-colors"
         >
           <span>&larr; Back to All Case Studies</span>
         </a>
