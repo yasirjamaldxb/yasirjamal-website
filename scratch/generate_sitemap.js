@@ -26,7 +26,6 @@ const pages = [
   { url: 'blog/hiring-freelance-web-designer-vs-agency-dubai/', priority: '0.8', changefreq: 'monthly' },
   { url: 'blog/modern-web-design-trends-2026/', priority: '0.8', changefreq: 'monthly' },
   { url: 'blog/sub-second-ecommerce-architecture-gcc-scaling/', priority: '0.8', changefreq: 'monthly' },
-  { url: 'design-system/', priority: '0.6', changefreq: 'monthly' },
   { url: 'privacy-policy/', priority: '0.4', changefreq: 'yearly' },
   { url: 'terms/', priority: '0.4', changefreq: 'yearly' }
 ];
@@ -56,4 +55,4 @@ const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
 </sitemapindex>`;
 
 fs.writeFileSync('public/sitemap-index.xml', sitemapIndex, 'utf8');
-console.log('✓ Generated public/sitemap.xml, sitemap-0.xml, and sitemap-index.xml for yasirjamal.com');
+console.log('✓ Generated public/sitemap.xml without design-system');
