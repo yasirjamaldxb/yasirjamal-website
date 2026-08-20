@@ -15,11 +15,41 @@ const article = {
 };
 
 const pageUrl = `https://yasirjamal.com/blog/${article.slug}`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": article.title,
+  "description": article.description,
+  "image": article.image ? `https://yasirjamal.com${article.image}` : "https://yasirjamal.com/images/hero_v3.webp",
+  "datePublished": article.datePublished,
+  "dateModified": article.dateModified || article.datePublished,
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com/#yasirjamal",
+    "jobTitle": "Senior Product Designer & Web Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yasirjamal.com/images/logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  }
+};
 ---
 
 <Layout title={`${article.title} | Yasir Jamal Blog`} description={article.description}>
   <Fragment slot="head">
-    <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} />
+    <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} image={article.image} type="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </Fragment>
 
   <!-- Clean Light Mode Article Header Banner -->

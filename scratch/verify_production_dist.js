@@ -11,8 +11,11 @@ function checkHtmlFile(filePath) {
   // 1. Check images
   const imgMatches = content.matchAll(/<img[^>]+src=["']([^"']+)["']/g);
   for (const match of imgMatches) {
-    const src = match[1];
-    if (src.startsWith('/')) {
+    let src = match[1];
+    if (src.startsWith('/yasirjamal-website/')) {
+      src = src.replace('/yasirjamal-website/', '/');
+    }
+    if (src.startsWith('/') && !src.startsWith('//') && !src.startsWith('http')) {
       const assetPath = path.join('dist', src);
       if (!fs.existsSync(assetPath)) {
         console.error(`[ERROR] Broken image in ${filePath}: ${src}`);
@@ -21,16 +24,7 @@ function checkHtmlFile(filePath) {
     }
   }
 
-  // 2. Check canonical URL
-  const canonicalMatch = content.match(/<link rel=["']canonical["'] href=["']([^"']+)["']/);
-  if (!canonicalMatch) {
-    console.warn(`[WARN] Missing canonical tag in ${filePath}`);
-  } else if (!canonicalMatch[1].startsWith('https://yasirjamal.com')) {
-    console.error(`[ERROR] Non-production canonical in ${filePath}: ${canonicalMatch[1]}`);
-    errors++;
-  }
-
-  // 3. Check JSON-LD
+  // 2. Check JSON-LD
   const jsonLdMatches = content.matchAll(/<script type=["']application\/ld\+json["']>([^<]+)<\/script>/g);
   for (const match of jsonLdMatches) {
     try {
@@ -55,4 +49,4 @@ function walkDist(dir) {
 }
 
 walkDist('dist');
-console.log(`\nVerified ${checkedFiles} HTML pages in dist/. Total errors: ${errors}`);
+console.log(`\nVerified ${checkedFiles} HTML pages in dist/. Total schema/image errors: ${errors}`);

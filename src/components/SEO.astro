@@ -3,20 +3,36 @@ export interface Props {
   title: string;
   description: string;
   url: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title, description, url } = Astro.props;
+const { 
+  title, 
+  description, 
+  url, 
+  image = "https://yasirjamal.com/images/hero_v3.webp",
+  type = "website" 
+} = Astro.props;
+
+const ogImage = image.startsWith('http') ? image : `https://yasirjamal.com${image}`;
 ---
 
 <meta name="description" content={description} />
 <link rel="canonical" href={url} />
 
-<meta property="og:type" content="website" />
+<!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+<meta property="og:type" content={type} />
 <meta property="og:url" content={url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
 <meta property="og:site_name" content="Yasir Jamal" />
+<meta property="og:locale" content="en_US" />
 
+<!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={url} />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
