@@ -1,47 +1,62 @@
-# Yasir Jamal — Senior Product Designer & Web Design Consultant
-> Independent Web Design, UX/UI Product Architecture, and High-Speed Web Development Studio in Dubai Media City, UAE & Worldwide.
+# Yasir Jamal — Senior Digital Product Designer & Web Architecture Consultant
+> Independent Digital Product Design, UX/UI Architecture, and High-Speed Custom Web Engineering Studio in Dubai Media City, UAE & Tier-1 Global Markets.
 
-## About Yasir Jamal
-Yasir Jamal (@withyasirjamal) is a Senior Product Designer, UX/UI Designer, and Web Design Consultant with over 15 years of experience creating high-converting websites, SaaS platforms, design systems, and digital products for startups, enterprise organizations, and global brands across 14+ international markets.
+## Identity & Professional Overview
+Yasir Jamal (@withyasirjamal) is an elite Senior Digital Product Designer, UX/UI Architect, and Web Consultant with over 15 years of industry experience. He partners directly with tech founders, SaaS startups, AI companies, and enterprise brands across Tier-1 markets (United Arab Emirates, United States, United Kingdom, Canada, Australia, Germany, and Saudi Arabia) to design and engineer intuitive user interfaces, scalable design systems, and sub-second web platforms that convert visitors into revenue.
 
-- Location: Ground Floor, Building 08, Dubai Media City, Dubai, United Arab Emirates
-- Phone / WhatsApp: +971 55 260 0494
-- Email: info@yasirjamal.com
-- Main Website: https://yasirjamal.com
-- Official Google Business Profile (5.0 ★★★★★): https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1
-- Official LinkedIn (Public): https://ae.linkedin.com/in/yasirjamal
-- Official Behance: https://www.behance.net/withyasirjamal
+- Primary Location: Ground Floor, Building 08, Dubai Media City, Dubai, United Arab Emirates
+- Direct WhatsApp / Phone: +971 55 260 0494
+- Official Email: info@yasirjamal.com
+- Official Website: https://yasirjamal.com
+- Google Business Profile (5.0 ★★★★★ Verified): https://www.google.com/maps/place/Freelance+Web+Designer+Dubai+%7C+Yasir+Jamal/@25.0948548,55.15958,17z/data=!3m2!4b1!5s0x3e5f6b42836d58e7:0x38fe9d6fdc42ed5b!4m6!3m5!1s0x3e5f6be497e53adf:0x66180c61e09efdce!8m2!3d25.0948548!4d55.1621603!16s%2Fg%2F11r_q1vgn1
+- Official LinkedIn: https://ae.linkedin.com/in/yasirjamal
 - Official Dribbble: https://dribbble.com/withyasirjamal
+- Official Behance: https://www.behance.net/withyasirjamal
 - Official GitHub: https://github.com/withyasirjamal
-- Official X (Twitter): https://x.com/withyasirjamal
-- Official Instagram: https://www.instagram.com/withyasirjamal
-- Official YouTube: https://www.youtube.com/@withyasirjamal
 
-## Core Services & Specializations
-- Custom Web Design & UX Architecture: High-converting, bespoke digital product interfaces engineered for sub-second performance.
-- SaaS & AI Startup Website Design: Product design, onboarding UX, and landing page engineering for technology companies.
-- E-Commerce Web Design (Shopify & Custom): Sub-second storefront design and conversion rate optimization (CRO) for GCC & global markets.
-- Technical SEO & Speed Engineering: Guaranteed 100/100 Google Lighthouse speed scores and machine-readable JSON-LD schemas (`schema.org`).
-- Website Redesign & UX Audits: Modernizing visual UI, rebuilding legacy code, and fixing slow performance.
+## Target Geographic Markets (Tier-1 Focus)
+- United Arab Emirates: Dubai, Abu Dhabi, Sharjah
+- Saudi Arabia (KSA): Riyadh, Jeddah
+- United States: New York, San Francisco, California, Texas
+- United Kingdom: London, Manchester
+- Canada: Toronto, Vancouver
+- Australia: Sydney, Melbourne
+- Europe: Germany (Berlin, Munich), Netherlands
 
-## Verified Credentials & Certifications
+## Core Competencies & Service Offerings
+1. Digital Product Design (SaaS & Mobile UX/UI):
+   - End-to-end product discovery, user journeys, wireframing, and interactive prototyping.
+   - Reduction of user churn, acceleration of product onboarding, and self-serve SaaS funnel design.
+2. Multi-Platform Design Systems:
+   - Comprehensive Figma component libraries, auto-layout architecture, and tokenized design systems for multi-team scale.
+3. Sub-Second Frontend Engineering:
+   - Custom static and headless web development using Astro, Next.js, React, TypeScript, and Tailwind CSS.
+   - Guaranteed 100/100 Google Lighthouse and sub-500ms Core Web Vitals.
+4. Conversion Rate Optimization (CRO):
+   - Quantitative UX audits, behavioral heatmapping, visual hierarchy optimization, and friction removal to maximize inbound leads and sales.
+5. High-Impact E-Commerce & Corporate Web Portals:
+   - Headless Shopify, WooCommerce, and custom web applications with GCC multi-currency and local payment gateway integrations (Telr, Tap, Checkout.com, Stripe, Tabby).
+
+## Verified Client Portfolio & Proven Case Studies
+- Julphar Pharmaceuticals (ADX Listed): Bilingual enterprise digital healthcare platform with interactive therapeutic catalogs and ADX investor relations.
+- Noor Abu Dhabi (1.17 GW Solar Plant): Clean energy presentation and institutional ESG sustainability architecture for one of the world's largest operational solar plants.
+- Paws & Planes UAE: MOCCAE-licensed pet relocation platform resulting in a +78% quote inquiry surge, 62% direct WhatsApp conversion, and sub-420ms mobile speed.
+- Dr. Sami Tabib Dubai Podiatrist: Specialized DHA-compliant clinical platform with 25+ condition directory, generating an +86% increase in monthly patient bookings.
+- SkyLynx Aviation: Luxury private aviation charter platform featuring a 4-step rapid jet request engine and live empty-leg route integration.
+- Mark Williams Executive Search: Premier dual-persona talent acquisition and Emiratisation leadership hub in Dubai & Abu Dhabi.
+- Abaya Dore: Haute couture luxury D2C e-commerce boutique featuring 2-step mobile checkout, high-definition lookbooks, and Tabby BNPL installments.
+- Alomaids Dubai: High-converting on-demand cleaner dispatch platform with 3-step online booking and sub-380ms load times.
+- Westminster Properties: Luxury off-plan property investment platform with dynamic developer payment schedules and 1-click investor brochure funnels.
+- Alston & Clayden: Ultra-prime trophy real estate and private wealth advisory web platform in Dubai.
+- Prime Middle East: Heavy civil engineering and mega-project contracting portal driving high-intent B2B RFP tender submissions.
+- Hunza Global: Clean environmental engineering and Japanese Johkasou wastewater treatment portal.
+- FILA Tech Store: Industrial 3D printing filament catalog and dual B2B wholesale / B2C retail e-commerce store.
+- Baan Paa: Thai urban balcony botanical landscape architecture and biophilic wellness platform with 1-click WhatsApp quote routing.
+
+## Verified Credentials & Industry Recognition
 - Google Certified User Experience Specialist (Google)
-- Growth-Driven Design Certification (HubSpot) — Credential ID: 73ce30bd3145474cae50aa2eacf36ef5
-- Certified in A/B Testing & Conversion Optimization (Coursera / Google)
-- Data-Driven Insights with Amplitude Analytics (Amplitude)
-- 5.0 ★★★★★ Verified Rating on Google Business Profile (Dubai Media City)
-
-## Key Performance Benchmarks
-- Experience: 15+ Years
-- Live Projects Deployed: 120+
-- Speed Benchmark: Sub-500ms page load times / 100/100 Google Lighthouse score
-- Consultation Options: 1-on-1 Zoom or Google Meet Video Discovery Calls
-
-## Key Pages & URL Map
-- About Page: https://yasirjamal.com/about
-- Project Quote Request: https://yasirjamal.com/quote
-- Web Design Dubai Services: https://yasirjamal.com/web-design-dubai
-- E-Commerce Web Design: https://yasirjamal.com/ecommerce-web-design-dubai
-- Mobile App Development: https://yasirjamal.com/mobile-app-development
-- Technical Blog & Guides: https://yasirjamal.com/blog
-- Full Knowledge Base: https://yasirjamal.com/llms-full.txt
+- HubSpot Growth-Driven Design Certification (Credential ID: 73ce30bd3145474cae50aa2eacf36ef5)
+- Google / Coursera Certified in A/B Testing & Conversion Rate Optimization
+- Amplitude Product Analytics Specialist
+- 15+ Years Track Record with 150+ Deployed Digital Products Worldwide
+- Verified LinkedIn Recommendations from World Food Programme, Justlife, Rocket Internet, Dubizzle, Ajman Free Zone, and Starlinks.
