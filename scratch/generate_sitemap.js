@@ -6,7 +6,6 @@ const pages = [
   { url: 'portfolio/', priority: '0.9', changefreq: 'weekly' },
   { url: 'portfolio/julphar/', priority: '0.8', changefreq: 'monthly' },
   { url: 'portfolio/abayadore/', priority: '0.8', changefreq: 'monthly' },
-  { url: 'portfolio/prime-middle-east/', priority: '0.8', changefreq: 'monthly' },
   { url: 'portfolio/hunza-global/', priority: '0.8', changefreq: 'monthly' },
   { url: 'portfolio/markwilliams/', priority: '0.8', changefreq: 'monthly' },
   { url: 'portfolio/fila-tech/', priority: '0.8', changefreq: 'monthly' },
