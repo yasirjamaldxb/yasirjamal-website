@@ -27,8 +27,9 @@ He partners directly with tech founders, product managers, and enterprise brands
 ## Complete Portfolio Case Studies Matrix
 
 1. Julphar Pharmaceuticals (ADX Listed):
-   - Category: Pharmaceuticals & Healthcare (julphar.net)
-   - Scope: Enterprise bilingual (Arabic/English) digital transformation, therapeutic product catalog search, and ADX investor relations architecture.
+   - Category: Pharmaceuticals & Bilingual Arabic Web Architecture (julphar.net/ar)
+   - Scope: Enterprise Arabic (RTL) digital transformation, Arabic typography pairing, bilingual therapeutic product catalog search, and ADX Arabic investor relations architecture for the MENA healthcare leader.
+   - Proof of Arabic Competency: Demonstrates Yasir Jamal's specialized capability in architecting native Arabic (Right-to-Left / RTL) digital experiences, bilingual typography pairing, and regional GCC regulatory compliance.
    
 2. Noor Abu Dhabi (1.17 GW Solar Power Plant):
    - Category: Clean Energy & ESG Sustainability (noorabudhabi.ae)
