@@ -4,8 +4,8 @@ import path from 'path';
 
 const chromePath = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
 
-async function captureJulpharArabic() {
-  console.log('Launching Chrome to capture Julphar Arabic (https://www.julphar.net/ar/)...');
+async function captureJulpharClean() {
+  console.log('Launching Chrome to capture clean Julphar Arabic (https://www.julphar.net/ar/)...');
   const browser = await puppeteer.launch({
     executablePath: chromePath,
     headless: true,
@@ -39,24 +39,115 @@ async function captureJulpharArabic() {
     console.log('Navigation warning:', e.message);
   }
 
-  // Dismiss cookies or overlays if any
-  try {
-    await page.evaluate(() => {
-      const buttons = Array.from(document.querySelectorAll('button, a'));
-      const acceptBtn = buttons.find(b => 
-        b.textContent.includes('Accept') || 
-        b.textContent.includes('موافق') || 
-        b.textContent.includes('قبول') ||
-        b.id.includes('cookie') ||
-        b.className.includes('cookie')
-      );
-      if (acceptBtn) acceptBtn.click();
-    });
-  } catch (err) {
-    console.log('No cookie overlay found.');
-  }
+  // Helper function to thoroughly dismiss & remove all cookie banners, modals, popups, backdrops
+  const removeAllPopupsAndCookies = async () => {
+    return await page.evaluate(() => {
+      // 1. Click all accept / close / dismiss buttons
+      const buttons = Array.from(document.querySelectorAll('button, a, div[role="button"], span[role="button"]'));
+      buttons.forEach(b => {
+        const text = (b.innerText || b.textContent || '').trim().toLowerCase();
+        if (
+          text.includes('accept') ||
+          text.includes('agree') ||
+          text.includes('ok') ||
+          text.includes('got it') ||
+          text.includes('i agree') ||
+          text.includes('موافق') ||
+          text.includes('قبول') ||
+          text.includes('اوافق') ||
+          text.includes('إغلاق') ||
+          text.includes('close') ||
+          text === '✕' ||
+          text === '×'
+        ) {
+          try { b.click(); } catch(e) {}
+        }
+      });
 
-  // Inject CSS to ensure all Arabic RTL elements, fonts, and images render immediately
+      // 2. Selectively find and remove popup / cookie / modal DOM nodes
+      const selectorsToRemove = [
+        '#onetrust-consent-sdk',
+        '#onetrust-banner-sdk',
+        '.onetrust-pc-dark-filter',
+        '.cookie-banner',
+        '.cookie-notice',
+        '.cookie-consent',
+        '.cookie-law-info',
+        '#cookie-law-info-bar',
+        '.cc-banner',
+        '.cc-window',
+        '.cookie-alert',
+        '#cookie-bar',
+        '.modal-backdrop',
+        '.modal',
+        '.popup',
+        '.popup-overlay',
+        '.ui-dialog',
+        '[class*="cookie"]',
+        '[id*="cookie"]',
+        '[class*="popup"]',
+        '[id*="popup"]',
+        '[class*="modal"]',
+        '[id*="modal"]',
+        '[class*="gdpr"]',
+        '[id*="gdpr"]',
+        '[class*="consent"]',
+        '[id*="consent"]',
+        '[aria-modal="true"]',
+        '[role="dialog"]',
+        '[role="alertdialog"]'
+      ];
+
+      selectorsToRemove.forEach(sel => {
+        try {
+          document.querySelectorAll(sel).forEach(el => {
+            // Check if element is a fixed or absolute overlay/banner, or high z-index
+            const style = window.getComputedStyle(el);
+            if (
+              style.position === 'fixed' || 
+              style.position === 'sticky' || 
+              style.position === 'absolute' || 
+              parseInt(style.zIndex, 10) > 100
+            ) {
+              el.remove();
+            }
+          });
+        } catch(e) {}
+      });
+
+      // 3. Remove any remaining fixed/floating bottom or top bars that contain typical cookie terms
+      const allFixed = Array.from(document.querySelectorAll('*')).filter(el => {
+        try {
+          const style = window.getComputedStyle(el);
+          return (style.position === 'fixed' || style.position === 'sticky') && parseInt(style.zIndex, 10) > 50;
+        } catch(e) { return false; }
+      });
+
+      allFixed.forEach(el => {
+        const text = (el.innerText || '').toLowerCase();
+        if (
+          text.includes('cookie') || 
+          text.includes('cookies') || 
+          text.includes('ملفات تعريف الارتباط') || 
+          text.includes('سياسة الخصوصية') ||
+          text.includes('privacy policy')
+        ) {
+          el.remove();
+        }
+      });
+
+      // 4. Ensure body and html scrolling is completely unblocked
+      document.documentElement.style.overflow = 'auto';
+      document.body.style.overflow = 'auto';
+      document.documentElement.classList.remove('modal-open', 'cookie-open', 'no-scroll');
+      document.body.classList.remove('modal-open', 'cookie-open', 'no-scroll');
+    });
+  };
+
+  console.log('Removing cookie notices, popups, and dialogs...');
+  await removeAllPopupsAndCookies();
+
+  // Inject CSS to unhide all lazy-loaded elements and stop endless transition delays
   await page.evaluate(() => {
     const style = document.createElement('style');
     style.innerHTML = `
@@ -67,6 +158,11 @@ async function captureJulpharArabic() {
       img[loading="lazy"], img[data-src], img[data-lazy] {
         opacity: 1 !important;
         visibility: visible !important;
+      }
+      #onetrust-consent-sdk, .cookie-banner, .cookie-notice, [class*="cookie"] {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
       }
     `;
     document.head.appendChild(style);
@@ -92,19 +188,25 @@ async function captureJulpharArabic() {
     });
   });
 
-  console.log('Waiting 60 seconds (1 minute) for all dynamic assets, Arabic typography, and imagery to fully load and settle...');
+  console.log('Waiting 60 seconds (1 minute) for all dynamic assets, Arabic typography, and imagery to fully settle...');
   await new Promise((r) => setTimeout(r, 60000));
+
+  // Final cleanup pass to make sure no late-appearing popups exist
+  console.log('Performing final popup and cookie banner cleanup pass...');
+  await removeAllPopupsAndCookies();
+
+  // Wait 2 seconds
+  await new Promise((r) => setTimeout(r, 2000));
 
   const pageInfo = await page.evaluate(() => {
     return {
       title: document.title,
       scrollHeight: document.body.scrollHeight,
-      bodyWidth: document.body.scrollWidth,
-      dir: document.documentElement.dir || document.body.dir
+      bodyWidth: document.body.scrollWidth
     };
   });
 
-  console.log('Page ready:', pageInfo);
+  console.log('Page ready for clean screenshot:', pageInfo);
 
   const outputPath = path.resolve('public/images/portfolio/julphar_ar_full.jpg');
   const mainPath = path.resolve('public/images/portfolio/julphar.jpg');
@@ -125,11 +227,11 @@ async function captureJulpharArabic() {
     quality: 92
   });
 
-  console.log('✓ Successfully captured Julphar Arabic full-page screenshot after 1 minute full load!');
+  console.log('✓ Successfully captured 100% clean Julphar Arabic full-page screenshot without popups/cookies!');
   await browser.close();
 }
 
-captureJulpharArabic().catch((err) => {
+captureJulpharClean().catch((err) => {
   console.error('Fatal capture error:', err);
   process.exit(1);
 });
