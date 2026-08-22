@@ -1256,38 +1256,17 @@ const pageUrl = `https://yasirjamal.com/portfolio/${project.slug}`;
 
     </div>
 
-    <!-- Massive High-Impact Full-Width Visual Showcase Browser (Proportionally Large, No Distortion) -->
-    <div class="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
-      <div class="text-center mb-8 sm:mb-10">
-        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-2 block">Visual Showcase</span>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience</h2>
-      </div>
-
-      <div class="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.08)] border border-slate-200/90">
-        <!-- Single Browser Header Bar -->
-        <div class="bg-slate-100/90 backdrop-blur-sm px-6 py-4 border-b border-slate-200 flex items-center justify-between">
-          <div class="flex items-center gap-2">
-            <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
-            <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
-          </div>
-          <div class="px-6 py-1.5 rounded-full bg-white text-xs sm:text-sm font-medium text-slate-600 border border-slate-200/80 shadow-inner">
-            {project.domain}
-          </div>
-          <div class="w-12"></div>
-        </div>
-
-        <!-- Seamless Stack of Sliced Images with 0 Gap / 0 Margin & Natural Full Resolution Proportions -->
-        <div class="w-full flex flex-col space-y-0 bg-white">
-          {project.gallery.map((imgSrc, i) => (
-            <img 
-              src={imgSrc} 
-              alt={`${project.title} Case Study Image ${i + 1}`} 
-              class="w-full h-auto block m-0 p-0 border-none leading-none select-none" 
-              loading="lazy" 
-            />
-          ))}
-        </div>
+    <!-- Visual Showcase Images Only (Pure Full-Width Presentation, No Extra Banners) -->
+    <div class="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
+      <div class="w-full flex flex-col space-y-0 rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.06)] bg-white">
+        {project.gallery.map((imgSrc, i) => (
+          <img 
+            src={imgSrc} 
+            alt={`${project.title} Case Study Image ${i + 1}`} 
+            class="w-full h-auto block m-0 p-0 border-none leading-none select-none" 
+            loading="lazy" 
+          />
+        ))}
       </div>
     </div>
 
