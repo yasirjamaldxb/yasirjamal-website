@@ -93,6 +93,29 @@ const {
 			})();
 		</script>
     
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NPHBFFVZ');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google tag (gtag.js) GA4 & Google Ads -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CS5207YPC5');
+      gtag('config', 'AW-599518397');
+    </script>
+
+    <!-- Bing Webmaster Verification -->
+    <meta name="msvalidate.01" content="AB70C867106155B5F76EEC669747856C" />
+    
     <!-- Geo Meta Tags for Google Local & Maps Dominance -->
     <meta name="geo.region" content="AE-DU" />
     <meta name="geo.placename" content="Dubai Media City, Dubai, United Arab Emirates" />
@@ -103,18 +126,18 @@ const {
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Yasir Jamal | Senior Web Designer & Developer" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Senior Web Designer & Developer in Dubai engineering custom websites, eCommerce architectures & AI-indexed platforms for UAE & Tier-1 global clients." />
+    <meta property="og:description" content={description} />
     <meta property="og:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
-    <meta property="og:url" content="https://yasirjamal.com" />
+    <meta property="og:url" content={`https://yasirjamal.com${Astro.url.pathname}`} />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content="Senior Web Designer & Developer in Dubai engineering custom websites & eCommerce architectures for global Tier-1 clients." />
+    <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
 
-    <!-- Canonical Link to Prevent Duplicate Content Penalties -->
-    <link rel="canonical" href="https://yasirjamal.com/" />
+    <!-- Canonical Link -->
+    <link rel="canonical" href={`https://yasirjamal.com${Astro.url.pathname}`} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -1,7 +1,30 @@
-# Enable Clean Static Routing & Prevent Hostinger Staging Directory Redirect Blocks
+# Enable Clean Static Routing & Legacy 301 Redirects
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # 301 Redirects from Old WordPress URLs to New Astro Architecture
+  RewriteRule ^work/?$ /portfolio/ [R=301,L]
+  RewriteRule ^work/westminster-properties/?$ /portfolio/westminster-properties/ [R=301,L]
+  RewriteRule ^work/skylynx/?$ /portfolio/skylynx/ [R=301,L]
+  RewriteRule ^work/alston-clayden/?$ /portfolio/alston-clayden/ [R=301,L]
+  RewriteRule ^work/markwilliams/?$ /portfolio/markwilliams/ [R=301,L]
+  RewriteRule ^work/mark-williams/?$ /portfolio/markwilliams/ [R=301,L]
+  RewriteRule ^work/dubai-podiatrist/?$ /portfolio/dubai-podiatrist/ [R=301,L]
+  RewriteRule ^work/noor-abu-dhabi/?$ /portfolio/noor-abu-dhabi/ [R=301,L]
+  RewriteRule ^work/paws-and-planes/?$ /portfolio/paws-and-planes/ [R=301,L]
+  RewriteRule ^work/alomaids/?$ /portfolio/alomaids/ [R=301,L]
+  RewriteRule ^work/fila-tech/?$ /portfolio/fila-tech/ [R=301,L]
+  RewriteRule ^work/julphar/?$ /portfolio/julphar/ [R=301,L]
+  RewriteRule ^work/abayadore/?$ /portfolio/abayadore/ [R=301,L]
+  RewriteRule ^work/hunza-global/?$ /portfolio/hunza-global/ [R=301,L]
+  RewriteRule ^work/baanpaa/?$ /portfolio/baanpaa/ [R=301,L]
+  RewriteRule ^work/(.*)$ /portfolio/$1 [R=301,L]
+
+  RewriteRule ^contact-us/?$ /about/#contact [R=301,L]
+  RewriteRule ^contact/?$ /about/#contact [R=301,L]
+  RewriteRule ^feed/?$ / [R=301,L]
+  RewriteRule ^comments/feed/?$ / [R=301,L]
 
   # Serve existing files directly
   RewriteCond %{REQUEST_FILENAME} -f
@@ -14,6 +37,9 @@
   # Clean URL handling for HTML files without extension
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*)$ $1.html [L]
+
+  # Custom 404 Fallback
+  ErrorDocument 404 /404.html
 </IfModule>
 
 # Force AI Bot Access & Remove Bot Blocking Headers
