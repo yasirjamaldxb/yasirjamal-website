@@ -262,8 +262,8 @@ const faqs = [
 
   <main class="flex-grow flex flex-col items-center bg-slate-50 w-full font-elegant">
     
-    <!-- 1. 100% INTERACTIVE FLUID KINETIC CANVAS HERO SECTION -->
-    <section class="w-full min-h-screen relative flex flex-col justify-between overflow-hidden bg-[#03050d] text-white pt-28 sm:pt-36 pb-12 sm:pb-16 select-none cursor-crosshair">
+    <!-- 1. 100% HEIGHT INTERACTIVE CANVAS HERO SECTION (CLEAN MINIMAL TYPOGRAPHY) -->
+    <section class="w-full h-screen relative flex flex-col justify-end overflow-hidden bg-[#03050d] text-white pb-12 md:pb-20 select-none cursor-crosshair">
       
       <!-- Interactive Fluid Wave & Particle Canvas -->
       <canvas id="interactive-hero-canvas" class="absolute inset-0 z-0 w-full h-full"></canvas>
@@ -276,94 +276,22 @@ const faqs = [
       <!-- Precision Background Grid Lines -->
       <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
 
-      <!-- Main Content Container -->
-      <div class="w-full max-w-7xl mx-auto px-6 z-10 my-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center pointer-events-none">
+      <!-- Main Content Container (Bottom-Left Aligned, Pure Typography Only) -->
+      <div class="w-full max-w-7xl mx-auto px-6 z-10 flex flex-col justify-end items-start pointer-events-none">
         
-        <!-- Left: Master Headline, Subtitle & Interactive Controls -->
-        <div class="lg:col-span-8 text-left space-y-6 sm:space-y-8">
-          
-          <!-- Live Status & Specialty Pill -->
-          <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/[0.06] border border-white/10 backdrop-blur-md shadow-inner text-xs sm:text-sm font-medium text-slate-300 pointer-events-auto">
-            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
-            <span class="text-white font-semibold">Senior Product Designer &amp; UX Architect</span>
-            <span class="text-slate-400 hidden sm:inline">&bull; Dubai &amp; Global</span>
-          </div>
-
+        <div class="max-w-3xl text-left">
           <!-- Master Headline -->
-          <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white tracking-tight leading-[1.1] font-elegant">
-            Designing <span class="font-normal text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300">high-converting</span> digital products &amp; sub-second web experiences.
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.12] mb-5 font-elegant drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            Designing digital products &amp; high-converting web experiences.
           </h1>
 
-          <!-- Crisp Subtitle / Value Proposition -->
-          <p class="text-slate-300 text-sm sm:text-base md:text-lg font-light leading-relaxed max-w-2xl">
-            Partnering directly 1-on-1 with founders, high-growth SaaS platforms, and enterprise brands across the UAE, North America, Europe, and Australia to build high-performance web applications, scalable Figma design systems, and conversion-optimized interfaces.
+          <!-- Context Text / Subtitle -->
+          <p class="text-white text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+            Based in Dubai &bull; Partnering directly with founders, SaaS platforms, and enterprise brands across the UAE, North America, Europe, and Australia to build sub-second websites and intuitive user interfaces.
           </p>
-
-          <!-- Interactive Action Buttons -->
-          <div class="flex flex-wrap items-center gap-4 pt-2 pointer-events-auto">
-            <a 
-              href="#portfolio" 
-              class="inline-flex items-center gap-2.5 px-8 py-4 bg-[#1559E7] hover:bg-blue-600 text-white rounded-full text-sm font-semibold transition-all shadow-[0_10px_25px_rgba(21,89,231,0.4)] hover:shadow-[0_15px_35px_rgba(21,89,231,0.6)] hover:-translate-y-0.5"
-            >
-              <span>Explore Selected Works</span>
-              <span>&darr;</span>
-            </a>
-            
-            <a 
-              href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20discuss%20a%20new%20web%20design%20project" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              class="inline-flex items-center gap-2.5 px-7 py-4 bg-white/[0.08] hover:bg-white/[0.14] text-white border border-white/15 rounded-full text-sm font-medium backdrop-blur-sm transition-all hover:-translate-y-0.5"
-            >
-              <span>Start a Project</span>
-              <span class="text-emerald-400">&bull;</span>
-              <span class="text-xs text-slate-300 font-normal">WhatsApp 1-on-1</span>
-            </a>
-          </div>
-
-          <!-- Trust Badges & Verified Accreditations -->
-          <div class="pt-4 flex flex-wrap items-center gap-6 sm:gap-8 text-xs text-slate-400 font-light border-t border-white/10">
-            <div class="flex items-center gap-2">
-              <span class="text-[#1559E7] font-bold">&check;</span>
-              <span>15+ Years Experience</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[#1559E7] font-bold">&check;</span>
-              <span>150+ Shipped Products</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <span class="text-[#1559E7] font-bold">&check;</span>
-              <span>100/100 Core Web Vitals</span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Interactive Canvas Indicator Box -->
-        <div class="lg:col-span-4 hidden lg:flex flex-col items-end justify-center pointer-events-auto space-y-3">
-          <div class="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md shadow-2xl space-y-2 text-right">
-            <div class="flex items-center justify-end gap-2 text-xs text-cyan-300 font-mono">
-              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
-              <span>Live Interactive Physics</span>
-            </div>
-            <p class="text-[11px] text-slate-400 font-light max-w-[220px]">
-              Move your mouse or click anywhere on the background to generate fluid kinetic ripples.
-            </p>
-          </div>
         </div>
 
       </div>
-
-      <!-- Bottom Minimal Scroll Indicator -->
-      <div class="w-full text-center z-10 pt-4 pointer-events-auto">
-        <a href="#portfolio" class="inline-flex flex-col items-center gap-2 text-xs font-light text-slate-400 hover:text-white transition-colors">
-          <span class="tracking-widest uppercase text-[10px]">Scroll to Explore Portfolio</span>
-          <div class="w-5 h-8 rounded-full border border-white/20 flex items-start justify-center p-1">
-            <div class="w-1.5 h-2 bg-[#1559E7] rounded-full animate-bounce"></div>
-          </div>
-        </a>
-      </div>
-
     </section>
 
     <!-- Interactive Fluid Kinetic Physics Canvas Animation Script -->
