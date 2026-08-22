@@ -262,35 +262,321 @@ const faqs = [
 
   <main class="flex-grow flex flex-col items-center bg-slate-50 w-full font-elegant">
     
-    <!-- 1. 100% HEIGHT HERO SECTION -->
-    <section class="w-full h-screen relative flex flex-col justify-end overflow-hidden">
-      <!-- Background Image -->
-      <div class="absolute inset-0 z-0">
-        <img src="/images/hero_v3.webp" alt="Yasir Jamal - Freelance Web Designer Dubai" width="1200" height="800" loading="eager" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[center_35%]" />
-      </div>
+    <!-- 1. REFLECT-STYLE COSMIC GLOWING PORTAL & PRODUCT DASHBOARD HERO SECTION -->
+    <section class="w-full min-h-[920px] lg:min-h-screen relative flex flex-col justify-between items-center overflow-hidden bg-[#07040d] text-white pt-28 sm:pt-36 pb-0 select-none">
       
-      <!-- Subtle natural gradient for brightness and clarity -->
-      <div class="absolute inset-0 z-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent"></div>
-      <div class="absolute inset-0 z-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+      <!-- Top Radial Spotlight & Ambient Cosmic Lighting -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-gradient-to-b from-purple-900/20 via-indigo-900/10 to-transparent blur-[140px] pointer-events-none"></div>
       
-      <div class="w-full max-w-7xl mx-auto px-6 z-10 flex flex-col md:flex-row justify-between items-end pb-12 md:pb-20">
+      <!-- Center Content: Title, Pill & Subtitle -->
+      <div class="w-full max-w-5xl mx-auto px-6 z-20 text-center space-y-5 sm:space-y-6 pt-4">
         
-        <!-- Left: Hero Headline & Subtitle -->
-        <div class="max-w-3xl text-left mb-8 md:mb-0">
-          
-          <!-- Wow Minimalist Typography Headline -->
-          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-[1.12] mb-5 font-elegant drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            Designing digital products &amp; high-converting web experiences.
-          </h2>
-          
-          <!-- Subtitle / Bio (Crisp White with clear subtle shadow) -->
-          <p class="text-white text-sm sm:text-base md:text-lg font-normal leading-relaxed max-w-2xl drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-            Based in Dubai &bull; Partnering directly with founders, SaaS platforms, and enterprise brands across the UAE, North America, Europe, and Australia to build sub-second websites and intuitive user interfaces.
-          </p>
+        <!-- Pill Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/[0.04] border border-purple-500/30 backdrop-blur-md shadow-[0_0_20px_rgba(168,85,247,0.15)] text-xs font-medium text-purple-200">
+          <span class="text-purple-400">✨</span>
+          <span>Senior Product Designer &amp; UX Architect</span>
+          <span class="text-purple-400/50">&bull;</span>
+          <span class="text-slate-300 font-normal">Dubai &amp; Worldwide</span>
+        </div>
+
+        <!-- Master Headline -->
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tight leading-[1.08] font-sans">
+          Designing high-converting digital products &amp; web experiences.
+        </h1>
+
+        <!-- Crisp Subtitle -->
+        <p class="text-slate-400 text-sm sm:text-base md:text-lg font-light max-w-2xl mx-auto leading-relaxed">
+          Partnering directly 1-on-1 with founders, SaaS platforms, and enterprise teams to build sub-second websites and scalable user interfaces.
+        </p>
+
+        <!-- CTA Buttons Row -->
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <a 
+            href="#portfolio" 
+            class="inline-flex items-center gap-2 px-7 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-full text-xs sm:text-sm font-semibold transition-all shadow-[0_0_25px_rgba(168,85,247,0.4)] hover:shadow-[0_0_35px_rgba(168,85,247,0.7)] hover:-translate-y-0.5"
+          >
+            <span>Explore Selected Work</span>
+            <span>&darr;</span>
+          </a>
+          <a 
+            href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20discuss%20a%20new%20web%20design%20project" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white/[0.05] hover:bg-white/[0.1] text-slate-200 border border-white/10 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm transition-all hover:-translate-y-0.5"
+          >
+            <span>Start a Project</span>
+            <span class="text-emerald-400">&bull;</span>
+            <span class="text-xs text-slate-400 font-normal">WhatsApp 1-on-1</span>
+          </a>
         </div>
 
       </div>
+
+      <!-- Glowing Event Horizon & Animated Portal Graphic + Dashboard Window Container -->
+      <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 relative z-10 mt-12 sm:mt-16 flex flex-col items-center">
+        
+        <!-- Radiant Cosmic Event Horizon Canvas / Glow Arc -->
+        <div class="relative w-full flex items-center justify-center">
+          
+          <!-- Interactive Repeating Omni Canvas for Event Horizon Glow & Particles -->
+          <canvas id="omni-portal-canvas" class="absolute -top-48 sm:-top-64 left-1/2 -translate-x-1/2 w-[700px] sm:w-[1000px] h-[350px] sm:h-[450px] pointer-events-none z-0"></canvas>
+          
+          <!-- Concentric Ambient Portal Halo Background Elements -->
+          <div class="absolute -top-24 sm:-top-32 w-72 sm:w-[480px] h-36 sm:h-[240px] rounded-t-full bg-gradient-to-t from-purple-500/40 via-indigo-500/20 to-transparent blur-2xl pointer-events-none animate-pulse"></div>
+          <div class="absolute -top-16 sm:-top-20 w-52 sm:w-[320px] h-24 sm:h-[160px] rounded-t-full bg-white/50 blur-lg pointer-events-none"></div>
+          
+          <!-- Ultra-Bright Horizon Rim Light -->
+          <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-48 sm:w-80 h-1.5 bg-white rounded-full blur-[2px] shadow-[0_0_30px_10px_rgba(216,180,254,0.9)] z-10 pointer-events-none"></div>
+        </div>
+
+        <!-- Glassmorphic Product Workspace Dashboard (Reflect Style) -->
+        <div class="w-full rounded-t-2xl sm:rounded-t-3xl bg-[#0e0a17]/90 border-t border-x border-purple-500/30 backdrop-blur-2xl shadow-[0_-20px_60px_rgba(168,85,247,0.25),0_30px_90px_rgba(0,0,0,0.9)] overflow-hidden relative z-20">
+          
+          <!-- Top Window App Bar -->
+          <div class="px-5 py-3.5 border-b border-purple-500/15 bg-black/40 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div class="w-3 h-3 rounded-full bg-[#ff5f56]/80"></div>
+              <div class="w-3 h-3 rounded-full bg-[#ffbd2e]/80"></div>
+              <div class="w-3 h-3 rounded-full bg-[#27c93f]/80"></div>
+            </div>
+            
+            <div class="flex items-center gap-2 px-3 py-1 rounded-lg bg-white/[0.04] border border-white/5 text-xs text-slate-400 w-64 sm:w-80">
+              <svg class="w-3.5 h-3.5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+              <span>Search components, design tokens, case studies...</span>
+              <kbd class="ml-auto text-[10px] font-mono px-1.5 py-0.5 rounded bg-white/10 text-slate-400">&#8984;K</kbd>
+            </div>
+
+            <div class="flex items-center gap-3 text-xs text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span class="hidden sm:inline font-mono text-[11px]">Sub-380ms Edge CDN</span>
+            </div>
+          </div>
+
+          <!-- Main App Workspace Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-12 min-h-[300px] sm:min-h-[360px] text-xs font-sans">
+            
+            <!-- Left App Navigation (3 cols) -->
+            <div class="md:col-span-3 border-r border-purple-500/10 p-4 space-y-4 hidden md:block bg-black/20">
+              <div class="space-y-1">
+                <div class="px-2 py-1.5 rounded-lg bg-purple-600/20 text-purple-200 font-medium flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  <span>Product Roadmap</span>
+                </div>
+                <div class="px-2 py-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+                  <span>Design Systems</span>
+                </div>
+                <div class="px-2 py-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  <span>Lighthouse 100/100</span>
+                </div>
+                <div class="px-2 py-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors flex items-center gap-2.5">
+                  <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                  <span>Shipped Work (12)</span>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-white/5">
+                <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 block mb-2">Live Sprint</span>
+                <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/5 space-y-1.5">
+                  <div class="text-[11px] font-medium text-slate-200">High-Conversion UX Sprint</div>
+                  <div class="w-full bg-white/10 h-1 rounded-full overflow-hidden">
+                    <div class="bg-purple-500 h-full w-4/5 rounded-full"></div>
+                  </div>
+                  <div class="text-[10px] text-slate-400 flex justify-between">
+                    <span>Phase: Production</span>
+                    <span class="text-purple-300 font-mono">Week 2/3</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Center Editor Area (6 cols) -->
+            <div class="md:col-span-6 p-5 sm:p-6 space-y-4 bg-black/10">
+              <div class="flex items-center justify-between text-xs text-slate-400 border-b border-white/5 pb-2">
+                <span class="font-medium text-slate-300 flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-purple-400"></span>
+                  <span>Q3 / 2026 Core Deliverables</span>
+                </span>
+                <span class="font-mono text-[11px] text-purple-300">Auto-Synced</span>
+              </div>
+
+              <div class="space-y-3 font-light text-slate-300 text-xs sm:text-sm leading-relaxed">
+                <p>
+                  <strong class="text-white font-medium">Design Philosophy:</strong> Sub-second speed, zero bloat, high conversion empathy, and clean typography.
+                </p>
+                <div class="space-y-1.5 pl-3 border-l border-purple-500/40">
+                  <div class="text-slate-200">&bull; <span class="text-purple-300 font-mono text-xs">Figma Design System:</span> 8pt spatial grid with scalable auto-layout design tokens.</div>
+                  <div class="text-slate-200">&bull; <span class="text-purple-300 font-mono text-xs">Astro &amp; Edge Delivery:</span> 100/100 Core Web Vitals with sub-380ms load times.</div>
+                  <div class="text-slate-200">&bull; <span class="text-purple-300 font-mono text-xs">Conversion Optimization:</span> Frictionless checkout and lead-generation flows.</div>
+                </div>
+              </div>
+
+              <!-- Interactive Designer Pointer Tag -->
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-[11px] text-purple-200 shadow-lg">
+                <div class="w-4 h-4 rounded-full bg-purple-500 flex items-center justify-center text-[9px] font-bold text-white">YJ</div>
+                <span>Yasir Jamal editing typography system...</span>
+              </div>
+            </div>
+
+            <!-- Right Calendar & Metrics Panel (3 cols) -->
+            <div class="md:col-span-3 border-l border-purple-500/10 p-4 space-y-4 hidden md:block bg-black/20">
+              <div class="text-center pb-2 border-b border-white/5">
+                <span class="text-xs font-semibold text-slate-200">Delivery Sprint Calendar</span>
+              </div>
+
+              <!-- Mini Calendar Matrix -->
+              <div class="space-y-2">
+                <div class="grid grid-cols-7 gap-1 text-[10px] text-center text-slate-500 font-mono">
+                  <span>Mo</span><span>Tu</span><span>We</span><span>Th</span><span>Fr</span><span>Sa</span><span>Su</span>
+                </div>
+                <div class="grid grid-cols-7 gap-1 text-[11px] text-center font-mono text-slate-400">
+                  <span class="p-1 rounded opacity-30">29</span>
+                  <span class="p-1 rounded opacity-30">30</span>
+                  <span class="p-1 rounded">1</span>
+                  <span class="p-1 rounded bg-purple-600/40 text-purple-200 font-bold border border-purple-400/40">2</span>
+                  <span class="p-1 rounded">3</span>
+                  <span class="p-1 rounded">4</span>
+                  <span class="p-1 rounded">5</span>
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-white/5 space-y-2">
+                <span class="text-[10px] uppercase font-mono tracking-widest text-slate-500 block">Engineering Status</span>
+                <div class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                  <span>&check;</span>
+                  <span>100% Mobile Ready</span>
+                </div>
+                <div class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+                  <span>&check;</span>
+                  <span>Zero JS Bloat</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
+
+    <!-- Omni Repeating Cosmic Event Horizon Animation Canvas -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const canvas = document.getElementById('omni-portal-canvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d');
+        let width, height, animationFrameId;
+
+        const resize = () => {
+          const dpr = window.devicePixelRatio || 1;
+          width = canvas.parentElement.clientWidth || 800;
+          height = canvas.parentElement.clientHeight || 400;
+          canvas.width = width * dpr;
+          canvas.height = height * dpr;
+          ctx.scale(dpr, dpr);
+        };
+
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Cosmic Particle Ring Generator
+        const particleCount = 65;
+        const particles = [];
+
+        for (let i = 0; i < particleCount; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const distance = Math.random() * 180 + 60;
+          particles.push({
+            angle,
+            distance,
+            speed: (Math.random() * 0.006 + 0.003) * (Math.random() > 0.5 ? 1 : -1),
+            size: Math.random() * 2 + 0.8,
+            alpha: Math.random() * 0.7 + 0.3,
+            color: i % 2 === 0 ? '#d8b4fe' : '#c084fc'
+          });
+        }
+
+        let time = 0;
+
+        function renderPortal() {
+          ctx.clearRect(0, 0, width, height);
+          time += 0.015;
+
+          const cx = width / 2;
+          const cy = height - 40; // Horizon base
+
+          // 1. Draw Multi-Layer Cosmic Light Flare Arc
+          const gradient = ctx.createRadialGradient(cx, cy, 30, cx, cy, 260);
+          gradient.addColorStop(0, 'rgba(255, 255, 255, 0.95)');
+          gradient.addColorStop(0.18, 'rgba(216, 180, 254, 0.8)');
+          gradient.addColorStop(0.45, 'rgba(168, 85, 247, 0.45)');
+          gradient.addColorStop(0.75, 'rgba(107, 33, 168, 0.15)');
+          gradient.addColorStop(1, 'rgba(7, 4, 13, 0)');
+
+          ctx.beginPath();
+          ctx.ellipse(cx, cy, 280 + Math.sin(time) * 15, 140 + Math.cos(time) * 8, 0, Math.PI, Math.PI * 2);
+          ctx.fillStyle = gradient;
+          ctx.fill();
+
+          // 2. Inner Black Hole Void Core
+          ctx.beginPath();
+          ctx.ellipse(cx, cy + 10, 110, 55, 0, Math.PI, Math.PI * 2);
+          ctx.fillStyle = '#07040d';
+          ctx.fill();
+
+          // 3. Glowing Accretion Ring Arch
+          ctx.beginPath();
+          ctx.ellipse(cx, cy + 10, 112, 57, 0, Math.PI, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.9)';
+          ctx.lineWidth = 3.5;
+          ctx.shadowColor = '#c084fc';
+          ctx.shadowBlur = 25;
+          ctx.stroke();
+          ctx.shadowBlur = 0; // reset
+
+          // 4. Orbital Concentric Ring Guides
+          for (let r = 1; r <= 3; r++) {
+            ctx.beginPath();
+            ctx.ellipse(cx, cy, 140 * r, 65 * r, 0, Math.PI, Math.PI * 2);
+            ctx.strokeStyle = `rgba(192, 132, 252, ${0.08 / r})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+
+          // 5. Floating Orbital Starlight Particles
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            p.angle += p.speed;
+
+            const px = cx + Math.cos(p.angle) * p.distance;
+            const py = cy + Math.sin(p.angle) * (p.distance * 0.42);
+
+            // Only draw particles above the horizon
+            if (py < cy + 10) {
+              ctx.beginPath();
+              ctx.arc(px, py, p.size, 0, Math.PI * 2);
+              ctx.fillStyle = p.color;
+              ctx.globalAlpha = p.alpha * (1 - (cy - py) / 250);
+              ctx.fill();
+              ctx.globalAlpha = 1.0;
+            }
+          }
+
+          animationFrameId = requestAnimationFrame(renderPortal);
+        }
+
+        renderPortal();
+
+        window.addEventListener('beforeunload', () => {
+          cancelAnimationFrame(animationFrameId);
+        });
+      });
+    </script>
+
 
     <!-- 2. CLIENT & PARTNER LOGO TICKER (18 REAL CLIENT LOGOS IN SOLID BLACK) -->
     <section class="w-full bg-white border-b border-slate-100 py-10 overflow-hidden relative font-elegant">
