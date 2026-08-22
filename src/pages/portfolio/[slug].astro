@@ -1254,42 +1254,46 @@ const pageUrl = `https://yasirjamal.com/portfolio/${project.slug}`;
         </div>
       )}
 
-      <!-- Seamless Single Browser Frame (Zero Gap Continuous Stacked Image Slices) -->
-      <div class="space-y-8 pt-8">
-        <div class="text-center">
-          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-2 block">Visual Showcase</span>
-          <h2 class="text-xl sm:text-3xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience</h2>
-        </div>
+    </div>
 
-        <div class="bg-white rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-200/90">
-          <!-- Single Browser Header Bar -->
-          <div class="bg-slate-100 px-6 py-3.5 border-b border-slate-200 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
-              <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
-            </div>
-            <div class="px-6 py-1 rounded-full bg-white text-xs font-medium text-slate-500 border border-slate-200/80 shadow-inner">
-              {project.domain}
-            </div>
-            <div class="w-12"></div>
-          </div>
-
-          <!-- Seamless Stack of Sliced Images with 0 Gap / 0 Margin -->
-          <div class="w-full flex flex-col space-y-0 bg-white">
-            {project.gallery.map((imgSrc, i) => (
-              <img 
-                src={imgSrc} 
-                alt={`${project.title} Case Study Image ${i + 1}`} 
-                class="w-full h-auto object-cover block m-0 p-0 border-none leading-none select-none" 
-                loading="lazy" 
-              />
-            ))}
-          </div>
-        </div>
+    <!-- Massive High-Impact Full-Width Visual Showcase Browser (Proportionally Large, No Distortion) -->
+    <div class="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20">
+      <div class="text-center mb-8 sm:mb-10">
+        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-[#1559E7] mb-2 block">Visual Showcase</span>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-[#01013E] tracking-tight">Full Page Design & Experience</h2>
       </div>
 
-      <!-- Section: Results & Business Impact (Placed immediately after the screenshot) -->
+      <div class="bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.08)] border border-slate-200/90">
+        <!-- Single Browser Header Bar -->
+        <div class="bg-slate-100/90 backdrop-blur-sm px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-400 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-400 inline-block"></span>
+          </div>
+          <div class="px-6 py-1.5 rounded-full bg-white text-xs sm:text-sm font-medium text-slate-600 border border-slate-200/80 shadow-inner">
+            {project.domain}
+          </div>
+          <div class="w-12"></div>
+        </div>
+
+        <!-- Seamless Stack of Sliced Images with 0 Gap / 0 Margin & Natural Full Resolution Proportions -->
+        <div class="w-full flex flex-col space-y-0 bg-white">
+          {project.gallery.map((imgSrc, i) => (
+            <img 
+              src={imgSrc} 
+              alt={`${project.title} Case Study Image ${i + 1}`} 
+              class="w-full h-auto block m-0 p-0 border-none leading-none select-none" 
+              loading="lazy" 
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Results & Business Impact + Back Navigation Container -->
+    <div class="max-w-4xl mx-auto px-6 pt-16 sm:pt-20 space-y-12">
+      <!-- Section: Results & Business Impact -->
       <section class="border-t border-slate-200 pt-12 sm:pt-16">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
           <div class="space-y-3 max-w-2xl">
@@ -1316,7 +1320,7 @@ const pageUrl = `https://yasirjamal.com/portfolio/${project.slug}`;
       </section>
 
       <!-- Back to Case Studies Navigation -->
-      <div class="text-center pt-8 border-t border-slate-100">
+      <div class="text-center pt-6 border-t border-slate-100">
         <a 
           href="/portfolio/" 
           class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 hover:text-[#1559E7] transition-colors"
@@ -1324,7 +1328,6 @@ const pageUrl = `https://yasirjamal.com/portfolio/${project.slug}`;
           <span>&larr; Back to All Case Studies</span>
         </a>
       </div>
-
     </div>
   </main>
 </Layout>
