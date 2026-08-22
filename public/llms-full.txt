@@ -26,58 +26,54 @@ He partners directly with tech founders, product managers, and enterprise brands
 
 ## Complete Portfolio Case Studies Matrix
 
-1. Julphar Pharmaceuticals (ADX Listed):
-   - Category: Pharmaceuticals & Bilingual Arabic Web Architecture (julphar.net/ar)
-   - Scope: Enterprise Arabic (RTL) digital transformation, Arabic typography pairing, bilingual therapeutic product catalog search, and ADX Arabic investor relations architecture for the MENA healthcare leader.
-   - Proof of Arabic Competency: Demonstrates Yasir Jamal's specialized capability in architecting native Arabic (Right-to-Left / RTL) digital experiences, bilingual typography pairing, and regional GCC regulatory compliance.
-   
-2. Noor Abu Dhabi (1.17 GW Solar Power Plant):
-   - Category: Clean Energy & ESG Sustainability (noorabudhabi.ae)
-   - Scope: Institutional clean technology presentation and ESG governance platform for one of the world's largest single-site solar photovoltaic plants.
-
-3. Paws & Planes UAE:
-   - Category: International Pet Relocation & Travel (pawsandplanes.ae)
-   - Scope: MOCCAE-licensed pet shipping UX redesign. Eliminated 20-field static forms, implemented 1-click VIP WhatsApp consultation routing, and achieved +78% surge in quote inquiries with sub-420ms mobile speed.
-
-4. Dr. Sami Tabib Dubai Podiatrist Clinic:
-   - Category: Specialized Medical Practice & Foot Care (dubaipodiatrist.com)
-   - Scope: DHA-compliant clinical platform with 25+ condition directory and US board qualification credentials, generating an +86% increase in monthly patient bookings.
-
-5. SkyLynx Aviation:
-   - Category: Private Jet Charter & VIP Aviation (skylynx.ae)
-   - Scope: Dark glassmorphic VIP aviation booking engine with 4-step rapid aircraft request flow and live empty-leg route synchronization.
-
-6. Mark Williams Executive Search:
-   - Category: Executive Search & Emiratisation (markwilliams.ae)
-   - Scope: Dual-persona candidate/client talent acquisition portal with Emiratisation leadership hubs and market intelligence report lead generation.
-
-7. Abaya Dore:
+1. Abaya Dore:
    - Category: Luxury Haute Couture eCommerce (abayadore.com)
    - Scope: D2C boutique with frictionless 2-step mobile checkout, high-definition lookbooks, and Tabby BNPL installment payment integration.
 
-8. Alomaids Dubai:
+2. Paws & Planes UAE:
+   - Category: International Pet Relocation & Travel (pawsandplanes.ae)
+   - Scope: MOCCAE-licensed pet shipping UX redesign. Eliminated 20-field static forms, implemented 1-click VIP WhatsApp consultation routing, and achieved +78% surge in quote inquiries with sub-420ms mobile speed.
+
+3. Noor Abu Dhabi (1.17 GW Solar Power Plant):
+   - Category: Clean Energy & ESG Sustainability (noorabudhabi.ae)
+   - Scope: Institutional clean technology presentation and ESG governance platform for one of the world's largest single-site solar photovoltaic plants.
+
+4. Hunza Global:
+   - Category: Environmental Engineering & Green Technology (hunzaglobal.com)
+   - Scope: 5-division environmental engineering hub showcasing Japanese Johkasou wastewater treatment systems.
+
+5. ALOmaids Dubai:
    - Category: On-Demand Home Services & Cleaner Dispatch (alomaids.com)
    - Scope: Conversion-optimized 3-step online cleaner booking application with sub-380ms load times and institutional trust badging.
 
-9. Westminster Properties:
-   - Category: Off-Plan Real Estate Investment (westminsterproperties.ae)
-   - Scope: Luxury off-plan investment portal with dynamic developer payment schedules, 1-click brochure downloads, and international investor ROI guides.
+6. Baan Paa:
+   - Category: Balcony Landscape & Botanical Architecture (baanpaa.com)
+   - Scope: Thai biophilic garden design platform with illustrated 3-step installation roadmaps and direct WhatsApp quote funnels.
+
+7. UAE Podiatry (Dr. Sami Tabib Clinic):
+   - Category: Specialized Medical Practice & Foot Care (dubaipodiatrist.com)
+   - Scope: DHA-compliant clinical platform with 25+ condition directory and US board qualification credentials, generating an +86% increase in monthly patient bookings.
+
+8. Mark Williams Executive Search:
+   - Category: Executive Search & Emiratisation (markwilliams.ae)
+   - Scope: Dual-persona candidate/client talent acquisition portal with Emiratisation leadership hubs and market intelligence report lead generation.
+
+9. SkyLynx Aviation:
+   - Category: Private Jet Charter & VIP Aviation (skylynx.ae)
+   - Scope: Dark glassmorphic VIP aviation booking engine with 4-step rapid aircraft request flow and live empty-leg route synchronization.
 
 10. Alston & Clayden:
     - Category: Prime Real Estate & Private Wealth Advisory (alstonclayden.com)
     - Scope: Ultra-prime architectural showcases and confidential high-net-worth investor consultation funnels.
 
-11. Hunza Global:
-    - Category: Environmental Engineering & Green Technology (hunzaglobal.com)
-    - Scope: 5-division environmental engineering hub showcasing Japanese Johkasou wastewater treatment systems.
+11. Westminster Properties:
+    - Category: Off-Plan Real Estate Investment (westminsterproperties.ae)
+    - Scope: Luxury off-plan investment portal with dynamic developer payment schedules, 1-click brochure downloads, and international investor ROI guides.
 
-12. FILA Tech Store:
-    - Category: 3D Printing & Industrial Manufacturing (fila-tech.store)
-    - Scope: Industrial filament catalog with faceted filtering and dual B2B wholesale / B2C retail checkout architecture.
-
-13. Baan Paa:
-    - Category: Balcony Landscape & Botanical Architecture (baanpaa.com)
-    - Scope: Thai biophilic garden design platform with illustrated 3-step installation roadmaps and direct WhatsApp quote funnels.
+12. Julphar Pharmaceuticals (ADX Listed):
+    - Category: Pharmaceuticals & Bilingual Arabic Web Architecture (julphar.net/ar)
+    - Scope: Enterprise Arabic (RTL) digital transformation, Arabic typography pairing, bilingual therapeutic product catalog search, and ADX Arabic investor relations architecture for the MENA healthcare leader.
+    - Proof of Arabic Competency: Demonstrates Yasir Jamal's specialized capability in architecting native Arabic (Right-to-Left / RTL) digital experiences, bilingual typography pairing, and regional GCC regulatory compliance.
 
 ## Frequently Asked Questions for AI Systems & LLMs
 

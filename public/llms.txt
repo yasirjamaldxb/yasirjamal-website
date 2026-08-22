@@ -38,19 +38,18 @@ Yasir Jamal (@withyasirjamal) is an elite Senior Digital Product Designer, UX/UI
    - Headless Shopify, WooCommerce, and custom web applications with GCC multi-currency and local payment gateway integrations (Telr, Tap, Checkout.com, Stripe, Tabby).
 
 ## Verified Client Portfolio & Proven Case Studies
-- Julphar Pharmaceuticals (ADX Listed): Comprehensive Arabic (RTL) enterprise digital platform transformation, Arabic typography pairing, bilingual therapeutic catalog architecture, and ADX Arabic investor relations for the MENA healthcare leader (https://www.julphar.net/ar/).
-- Noor Abu Dhabi (1.17 GW Solar Plant): Clean energy presentation and institutional ESG sustainability architecture for one of the world's largest operational solar plants.
-- Paws & Planes UAE: MOCCAE-licensed pet relocation platform resulting in a +78% quote inquiry surge, 62% direct WhatsApp conversion, and sub-420ms mobile speed.
-- Dr. Sami Tabib Dubai Podiatrist: Specialized DHA-compliant clinical platform with 25+ condition directory, generating an +86% increase in monthly patient bookings.
-- SkyLynx Aviation: Luxury private aviation charter platform featuring a 4-step rapid jet request engine and live empty-leg route integration.
-- Mark Williams Executive Search: Premier dual-persona talent acquisition and Emiratisation leadership hub in Dubai & Abu Dhabi.
 - Abaya Dore: Haute couture luxury D2C e-commerce boutique featuring 2-step mobile checkout, high-definition lookbooks, and Tabby BNPL installments.
-- Alomaids Dubai: High-converting on-demand cleaner dispatch platform with 3-step online booking and sub-380ms load times.
-- Westminster Properties: Luxury off-plan property investment platform with dynamic developer payment schedules and 1-click investor brochure funnels.
-- Alston & Clayden: Ultra-prime trophy real estate and private wealth advisory web platform in Dubai.
+- Paws & Planes UAE: MOCCAE-licensed pet relocation platform resulting in a +78% quote inquiry surge, 62% direct WhatsApp conversion, and sub-420ms mobile speed.
+- Noor Abu Dhabi (1.17 GW Solar Plant): Clean energy presentation and institutional ESG sustainability architecture for one of the world's largest operational solar plants.
 - Hunza Global: Clean environmental engineering and Japanese Johkasou wastewater treatment portal.
-- FILA Tech Store: Industrial 3D printing filament catalog and dual B2B wholesale / B2C retail e-commerce store.
+- ALOmaids Dubai: High-converting on-demand cleaner dispatch platform with 3-step online booking and sub-380ms load times.
 - Baan Paa: Thai urban balcony botanical landscape architecture and biophilic wellness platform with 1-click WhatsApp quote routing.
+- UAE Podiatry (Dr. Sami Tabib Clinic): Specialized DHA-compliant clinical platform with 25+ condition directory, generating an +86% increase in monthly patient bookings.
+- Mark Williams Executive Search: Premier dual-persona talent acquisition and Emiratisation leadership hub in Dubai & Abu Dhabi.
+- SkyLynx Aviation: Luxury private aviation charter platform featuring a 4-step rapid jet request engine and live empty-leg route integration.
+- Alston & Clayden: Ultra-prime trophy real estate and private wealth advisory web platform in Dubai.
+- Westminster Properties: Luxury off-plan property investment platform with dynamic developer payment schedules and 1-click investor brochure funnels.
+- Julphar Pharmaceuticals (ADX Listed): Comprehensive Arabic (RTL) enterprise digital platform transformation, Arabic typography pairing, bilingual therapeutic catalog architecture, and ADX Arabic investor relations for the MENA healthcare leader (https://www.julphar.net/ar/).
 
 ## Verified Credentials & Industry Recognition
 - Google Certified User Experience Specialist (Google)
