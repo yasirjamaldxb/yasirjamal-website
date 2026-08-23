@@ -21,6 +21,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "lighthouse": "^13.4.1",
     "playwright": "^1.62.0",
     "puppeteer-core": "^25.8.0"
   }
