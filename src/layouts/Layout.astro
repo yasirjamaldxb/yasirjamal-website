@@ -32,24 +32,41 @@ const {
 		<link rel="alternate" type="text/plain" href="https://yasirjamal.com/llms.txt" title="LLMs Discovery" />
 		<link rel="llms-txt" href="https://yasirjamal.com/llms.txt" />
     
-    <!-- Google Tag Manager -->
-    <script is:inline>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-NPHBFFVZ');
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google tag (gtag.js) GA4 & Google Ads -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5"></script>
+    <!-- Non-Blocking Google Analytics & Tag Manager (Deferred to First Interaction/Idle) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CS5207YPC5');
-      gtag('config', 'AW-599518397');
+      
+      function initAnalytics() {
+        if (window.__analyticsLoaded) return;
+        window.__analyticsLoaded = true;
+        
+        // GTM
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NPHBFFVZ');
+
+        // GA4 & Google Ads
+        var gascript = document.createElement('script');
+        gascript.async = true;
+        gascript.src = 'https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5';
+        document.head.appendChild(gascript);
+        
+        gtag('js', new Date());
+        gtag('config', 'G-CS5207YPC5');
+        gtag('config', 'AW-599518397');
+      }
+
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(initAnalytics, { timeout: 2000 });
+      } else {
+        setTimeout(initAnalytics, 1200);
+      }
+      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(e) {
+        window.addEventListener(e, initAnalytics, { once: true, passive: true });
+      });
     </script>
 
     <!-- Google Search Console (Webmaster Tools) Verification -->
@@ -81,9 +98,14 @@ const {
     <!-- Canonical Link -->
     <link rel="canonical" href={`https://yasirjamal.com${Astro.url.pathname}`} />
 
+    <!-- High-Performance Asynchronous Google Fonts (Zero Render Blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" />
+    </noscript>
 		<title>{title}</title>
     
     <!-- Comprehensive GEO & AISO Independent Verification Schema for Gemini, ChatGPT, Claude & Perplexity -->
