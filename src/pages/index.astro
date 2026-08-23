@@ -723,9 +723,9 @@ const faqs = [
       </div>
     </section>
 
-    <!-- Interactive Mouse Ambient Glow & Seamless Infinite Auto-Scroll Engine Script -->
+    <!-- Interactive Mouse Ambient Glow & Seamless Infinite Auto-Scroll Engine Script (Zero Forced Reflows) -->
     <script is:inline>
-      document.addEventListener('DOMContentLoaded', () => {
+      function initPortfolioEngine() {
         const portfolioSection = document.getElementById('portfolio');
         const glowBg = document.getElementById('portfolio-interactive-glow');
         const carousel = document.getElementById('portfolio-carousel');
@@ -733,104 +733,105 @@ const faqs = [
         const prevBtn = document.getElementById('portfolio-prev');
         const nextBtn = document.getElementById('portfolio-next');
 
-        // Permanent Modern Mesh Gradient with Smooth Interactive Mouse Tracking
-        if (portfolioSection && glowBg) {
-          const rect = portfolioSection.getBoundingClientRect();
-          let mouseX = rect.width / 2;
-          let mouseY = rect.height / 2;
-          let currentX = rect.width / 2;
-          let currentY = rect.height / 2;
-          let hasMovedMouse = false;
+        if (!portfolioSection) return;
 
+        // 1. Zero-Reflow Interactive Glow (Event-Driven, Zero Animation Loops)
+        if (glowBg) {
+          let rafPending = false;
           portfolioSection.addEventListener('mousemove', (e) => {
-            const currentRect = portfolioSection.getBoundingClientRect();
-            mouseX = e.clientX - currentRect.left;
-            mouseY = e.clientY - currentRect.top;
-            hasMovedMouse = true;
-          });
-
-          function animateGradient() {
-            if (!hasMovedMouse) {
-              const time = Date.now() * 0.0015;
-              const currentRect = portfolioSection.getBoundingClientRect();
-              mouseX = (currentRect.width / 2) + Math.sin(time) * 120;
-              mouseY = (currentRect.height / 2) + Math.cos(time * 0.8) * 80;
+            if (!rafPending) {
+              rafPending = true;
+              requestAnimationFrame(() => {
+                glowBg.style.background = `radial-gradient(800px circle at ${e.offsetX}px ${e.offsetY}px, rgba(217, 226, 236, 0.75) 0%, rgba(241, 245, 249, 0.38) 45%, rgba(255, 255, 255, 0) 80%)`;
+                rafPending = false;
+              });
             }
-
-            currentX += (mouseX - currentX) * 0.06;
-            currentY += (mouseY - currentY) * 0.06;
-
-            if (glowBg) {
-              glowBg.style.background = `radial-gradient(800px circle at ${currentX}px ${currentY}px, rgba(217, 226, 236, 0.75) 0%, rgba(241, 245, 249, 0.38) 45%, rgba(255, 255, 255, 0) 80%)`;
-            }
-
-            requestAnimationFrame(animateGradient);
-          }
-
-          animateGradient();
+          }, { passive: true });
         }
 
         if (!carousel || cards.length === 0) return;
 
-        // Pixel-Perfect Seamless Infinite Auto-Scroll Engine
+        // 2. Zero-Reflow Infinite Auto-Scroll Engine with Cached Geometry
         let isUserInteracting = false;
-        let autoScrollSpeed = 0.85; // smooth continuous movement speed
+        let isSectionVisible = false;
+        const autoScrollSpeed = 0.85;
         let autoScrollAnimationId = null;
+        let cachedSet1Width = 3500;
+        let cachedCardStep = 580;
 
-        function getSet1Width() {
-          const clones = carousel.querySelectorAll('.portfolio-card[aria-hidden="true"]');
+        function updateCachedGeometry() {
           const firstCard = cards[0];
-          if (clones.length > 0 && firstCard) {
-            return clones[0].offsetLeft - firstCard.offsetLeft;
+          const secondCard = cards[1];
+          if (firstCard && secondCard) {
+            cachedCardStep = (secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left) || 580;
           }
-          return (carousel.scrollWidth / 2);
+          cachedSet1Width = (carousel.scrollWidth / 2) || 3500;
         }
 
-        function autoScrollLoop() {
-          if (!isUserInteracting && carousel) {
-            carousel.scrollLeft += autoScrollSpeed;
+        window.addEventListener('resize', updateCachedGeometry, { passive: true });
+        setTimeout(updateCachedGeometry, 100);
 
-            const set1Width = getSet1Width();
-            if (carousel.scrollLeft >= set1Width) {
-              carousel.scrollLeft -= set1Width; // Seamless pixel-perfect reset with zero jump!
+        function autoScrollLoop() {
+          if (isSectionVisible && !isUserInteracting && carousel) {
+            carousel.scrollLeft += autoScrollSpeed;
+            if (carousel.scrollLeft >= cachedSet1Width) {
+              carousel.scrollLeft -= cachedSet1Width;
             }
           }
+          if (isSectionVisible) {
+            autoScrollAnimationId = requestAnimationFrame(autoScrollLoop);
+          } else {
+            autoScrollAnimationId = null;
+          }
+        }
+
+        // Only run auto-scroll when the section is visible
+        if ('IntersectionObserver' in window) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              isSectionVisible = entry.isIntersecting;
+              if (isSectionVisible && !autoScrollAnimationId) {
+                autoScrollAnimationId = requestAnimationFrame(autoScrollLoop);
+              }
+            });
+          }, { threshold: 0.05 });
+          observer.observe(portfolioSection);
+        } else {
+          isSectionVisible = true;
           autoScrollAnimationId = requestAnimationFrame(autoScrollLoop);
         }
 
-        // Start auto-scroll engine
-        autoScrollAnimationId = requestAnimationFrame(autoScrollLoop);
-
-        // Pause on mouse hover / touch start so user can inspect any card smoothly
-        carousel.addEventListener('mouseenter', () => { isUserInteracting = true; });
-        carousel.addEventListener('mouseleave', () => { isUserInteracting = false; });
+        // Pause on mouse hover / touch
+        carousel.addEventListener('mouseenter', () => { isUserInteracting = true; }, { passive: true });
+        carousel.addEventListener('mouseleave', () => { isUserInteracting = false; }, { passive: true });
         carousel.addEventListener('touchstart', () => { isUserInteracting = true; }, { passive: true });
         carousel.addEventListener('touchend', () => {
           setTimeout(() => { isUserInteracting = false; }, 2000);
         }, { passive: true });
 
-        // Arrow Navigation Controls
-        const getScrollStep = () => {
-          const firstCard = cards[0];
-          return firstCard ? firstCard.offsetWidth + 28 : 500;
-        };
-
+        // Navigation Controls using cached step
         if (prevBtn) {
           prevBtn.addEventListener('click', () => {
             isUserInteracting = true;
-            carousel.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
-            setTimeout(() => { isUserInteracting = false; }, 3500);
-          });
+            carousel.scrollBy({ left: -cachedCardStep, behavior: 'smooth' });
+            setTimeout(() => { isUserInteracting = false; }, 3000);
+          }, { passive: true });
         }
 
         if (nextBtn) {
           nextBtn.addEventListener('click', () => {
             isUserInteracting = true;
-            carousel.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
-            setTimeout(() => { isUserInteracting = false; }, 3500);
-          });
+            carousel.scrollBy({ left: cachedCardStep, behavior: 'smooth' });
+            setTimeout(() => { isUserInteracting = false; }, 3000);
+          }, { passive: true });
         }
-      });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(initPortfolioEngine, 50));
+      } else {
+        setTimeout(initPortfolioEngine, 50);
+      }
     </script>
 
 
