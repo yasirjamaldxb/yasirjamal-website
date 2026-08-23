@@ -1,9 +1,9 @@
-# Enable Clean Static Routing & Legacy 301 Redirects
+# Enable Clean Static Routing & Comprehensive Legacy 301 Redirects
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # 301 Redirects from Old WordPress URLs to New Astro Architecture
+  # 1. Portfolio & Work Redirects
   RewriteRule ^work/?$ /portfolio/ [R=301,L]
   RewriteRule ^work/westminster-properties/?$ /portfolio/westminster-properties/ [R=301,L]
   RewriteRule ^work/skylynx/?$ /portfolio/skylynx/ [R=301,L]
@@ -20,25 +20,54 @@
   RewriteRule ^work/hunza-global/?$ /portfolio/hunza-global/ [R=301,L]
   RewriteRule ^work/baanpaa/?$ /portfolio/baanpaa/ [R=301,L]
   RewriteRule ^work/(.*)$ /portfolio/$1 [R=301,L]
+  RewriteRule ^case-studies/?$ /portfolio/ [R=301,L]
+  RewriteRule ^case-studies/(.*)$ /portfolio/$1 [R=301,L]
+  RewriteRule ^portfolio-item/(.*)$ /portfolio/$1 [R=301,L]
+  RewriteRule ^portfolio-category/(.*)$ /portfolio/ [R=301,L]
 
+  # 2. About, Who Is & Services Redirects
+  RewriteRule ^who-is-yasir-jamal/?$ /about/ [R=301,L]
+  RewriteRule ^about-us/?$ /about/ [R=301,L]
+  RewriteRule ^about-me/?$ /about/ [R=301,L]
+  RewriteRule ^services/?$ /about/ [R=301,L]
+  RewriteRule ^our-services/?$ /about/ [R=301,L]
+  RewriteRule ^pricing/?$ /about/#faq [R=301,L]
+
+  # 3. Contact & Quote Redirects
   RewriteRule ^contact-us/?$ /about/#contact [R=301,L]
   RewriteRule ^contact/?$ /about/#contact [R=301,L]
+  RewriteRule ^quote/?$ /about/#contact [R=301,L]
+  RewriteRule ^send-enquiry/?$ /about/#contact [R=301,L]
+
+  # 4. Blog & Category Redirects
+  RewriteRule ^category/(.*)$ /blog/ [R=301,L]
+  RewriteRule ^tag/(.*)$ /blog/ [R=301,L]
+  RewriteRule ^author/(.*)$ /about/ [R=301,L]
   RewriteRule ^feed/?$ / [R=301,L]
   RewriteRule ^comments/feed/?$ / [R=301,L]
 
-  # Serve existing files directly
+  # Direct Blog Slug Redirects (if accessed without /blog/ prefix)
+  RewriteRule ^astro-vs-wordpress-speed-performance-guide/?$ /blog/astro-vs-wordpress-speed-performance-guide/ [R=301,L]
+  RewriteRule ^conversion-rate-optimization-cro-lead-generation/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
+  RewriteRule ^dubai-technical-seo-audit-ranking-guide/?$ /blog/dubai-technical-seo-audit-ranking-guide/ [R=301,L]
+  RewriteRule ^generative-engine-optimization-geo-ai-search/?$ /blog/generative-engine-optimization-geo-ai-search/ [R=301,L]
+  RewriteRule ^hiring-freelance-web-designer-vs-agency-dubai/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
+  RewriteRule ^modern-web-design-trends-2026/?$ /blog/modern-web-design-trends-2026/ [R=301,L]
+  RewriteRule ^sub-second-ecommerce-architecture-gcc-scaling/?$ /blog/sub-second-ecommerce-architecture-gcc-scaling/ [R=301,L]
+
+  # 5. Serve existing files directly
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Serve existing directory index.html files directly without redirect loops
+  # 6. Serve existing directory index.html files directly without redirect loops
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.*)$ $1/index.html [L]
 
-  # Clean URL handling for HTML files without extension
+  # 7. Clean URL handling for HTML files without extension
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.*)$ $1.html [L]
 
-  # Custom 404 Fallback
+  # 8. Custom 404 Fallback
   ErrorDocument 404 /404.html
 </IfModule>
 
