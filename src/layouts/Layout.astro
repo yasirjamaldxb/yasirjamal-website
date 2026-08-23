@@ -32,7 +32,7 @@ const {
 		<link rel="alternate" type="text/plain" href="https://yasirjamal.com/llms.txt" title="LLMs Discovery" />
 		<link rel="llms-txt" href="https://yasirjamal.com/llms.txt" />
     
-    <!-- Non-Blocking Google Analytics & Tag Manager (Deferred to First Interaction/Idle) -->
+    <!-- Non-Blocking Google Analytics (Deferred to First Interaction/Idle) -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -40,13 +40,6 @@ const {
       function initAnalytics() {
         if (window.__analyticsLoaded) return;
         window.__analyticsLoaded = true;
-        
-        // GTM
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NPHBFFVZ');
 
         // GA4 & Google Ads
         var gascript = document.createElement('script');
