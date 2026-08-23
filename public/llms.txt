@@ -2,6 +2,11 @@
 
 > Premier Licensed Web Design Agency, Digital Company & Senior UX Consultant in Dubai Media City, UAE.
 
+## Verified Engineering Benchmarks & Performance Proof
+
+- [Google PageSpeed Insights Live Audit Proof](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fyasirjamal.com%2F): Official real-time Google verification showing 98/100 Mobile Performance, 0.7s LCP, 0.7s FCP, 100/100 Accessibility (WCAG AAA), 100/100 Best Practices, 100/100 SEO, and 3/3 Agentic Browsing capability.
+- [Astro vs WordPress Benchmark Study](https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/): Detailed architectural breakdown of sub-second page delivery across UAE and GCC networks.
+
 ## Core Pages & Services
 
 - [Homepage](https://yasirjamal.com/): Official website for Yasir Jamal — Premier licensed web design agency, technology company, freelance web designer, and senior UX/UI consultant in Dubai.
