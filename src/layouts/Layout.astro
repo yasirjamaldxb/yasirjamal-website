@@ -28,9 +28,10 @@ const {
 		<link rel="apple-touch-icon" href="/images/logo.webp" />
 		<meta name="generator" content={Astro.generator} />
 
-		<!-- Agentic Browsing & AI Search Engine Discovery -->
+		<!-- Agentic Browsing & WebMCP Machine-Actionable Tool Integration -->
 		<link rel="alternate" type="text/plain" href="https://yasirjamal.com/llms.txt" title="LLMs Discovery" />
 		<link rel="llms-txt" href="https://yasirjamal.com/llms.txt" />
+		<link rel="webmcp" type="application/json" href="https://yasirjamal.com/webmcp.json" title="WebMCP Actions Declaration" />
     
     <!-- Non-Blocking Google Analytics (Deferred to First Interaction/Idle) -->
     <script is:inline>
@@ -191,6 +192,31 @@ const {
               "bestRating": "5",
               "worstRating": "1"
             },
+            "potentialAction": [
+              {
+                "@type": "ReserveAction",
+                "name": "Book 1-on-1 Discovery Call",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20book%20a%20project%20discovery%20call",
+                  "actionPlatform": [
+                    "http://schema.org/DesktopWebPlatform",
+                    "http://schema.org/MobileWebPlatform",
+                    "http://schema.org/IOSPlatform",
+                    "http://schema.org/AndroidPlatform"
+                  ]
+                },
+                "result": {
+                  "@type": "Reservation",
+                  "name": "Direct Project Discovery Consultation"
+                }
+              },
+              {
+                "@type": "CommunicateAction",
+                "name": "Instant WhatsApp & Digital Consultation",
+                "target": "https://wa.me/971552600494"
+              }
+            ],
             "founder": {
               "@id": "https://yasirjamal.com/#person"
             },

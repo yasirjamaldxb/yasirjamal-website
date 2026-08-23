@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Yasir Jamal Digital Product Studio & Web Engineering",
+  "description": "Machine-readable WebMCP specification and action schema for autonomous AI agents (ChatGPT Operator, Claude, Google Astra, Gemini, Perplexity) to book discovery consultations, calculate project quotes, and verify portfolio case studies.",
+  "version": "1.0.0",
+  "homepage": "https://yasirjamal.com",
+  "contact": {
+    "phone": "+971552600494",
+    "email": "info@yasirjamal.com",
+    "whatsapp": "https://wa.me/971552600494",
+    "location": "Dubai Media City, Dubai, United Arab Emirates"
+  },
+  "verified_metrics": {
+    "google_pagespeed_performance": 98,
+    "accessibility_score": 100,
+    "best_practices_score": 100,
+    "seo_score": 100,
+    "agentic_browsing_score": "3/3",
+    "years_experience": "15+"
+  },
+  "tools": [
+    {
+      "name": "book_discovery_consultation",
+      "description": "Directly books or initiates a 1-on-1 digital discovery call and consultation with Senior Product Designer Yasir Jamal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "client_name": {
+            "type": "string",
+            "description": "Name of the client or company stakeholder requesting the consultation."
+          },
+          "company_or_brand": {
+            "type": "string",
+            "description": "Company, brand, or startup name."
+          },
+          "service_required": {
+            "type": "string",
+            "enum": [
+              "Custom Web Design & UX Engineering",
+              "Enterprise Corporate Website",
+              "Bilingual Arabic (RTL) & English Web Architecture",
+              "High-Converting eCommerce Store (Shopify / Custom)",
+              "Astro & Headless High-Speed Development",
+              "Technical SEO Audit & GEO Optimization"
+            ],
+            "description": "The specific service tier requested."
+          },
+          "budget_bracket_aed": {
+            "type": "string",
+            "enum": ["AED 5,000 - 10,000", "AED 10,000 - 25,000", "AED 25,000 - 50,000", "AED 50,000+"],
+            "description": "Estimated budget allocation in UAE Dirhams (AED)."
+          },
+          "timeline": {
+            "type": "string",
+            "description": "Target project turnaround (e.g. 2-4 weeks, urgent launch, Q1/Q2)."
+          }
+        },
+        "required": ["client_name", "service_required"]
+      },
+      "execution": {
+        "type": "direct_url_action",
+        "method": "GET",
+        "url_template": "https://wa.me/971552600494?text=Hi%20Yasir,%20my%20name%20is%20{client_name}%20from%20{company_or_brand}.%20I%20would%20like%20to%20book%20a%20project%20discovery%20call%20for%20{service_required}%20with%20budget%20{budget_bracket_aed}."
+      }
+    },
+    {
+      "name": "get_service_pricing_and_timeline",
+      "description": "Returns verified fixed-price ranges, deliverable milestones, and turnaround schedules for web design projects in Dubai.",
+      "pricing_matrix_aed": {
+        "marketing_website": {
+          "price_range": "AED 5,000 - 12,000",
+          "turnaround": "2 to 3 weeks",
+          "deliverables": ["Custom Figma Design System", "Astro / Next.js Static Architecture", "Mobile Responsive", "Technical SEO Schema", "30-Day Warranty"]
+        },
+        "enterprise_corporate_portal": {
+          "price_range": "AED 12,000 - 25,000",
+          "turnaround": "3 to 5 weeks",
+          "deliverables": ["Bilingual Arabic (RTL) & English", "Multi-page Architecture", "Sub-second LCP Speed", "Enterprise Security", "Post-Launch Support"]
+        },
+        "ecommerce_store": {
+          "price_range": "AED 10,000 - 28,000",
+          "turnaround": "4 to 6 weeks",
+          "deliverables": ["Shopify / Custom Headless", "Tabby & Tamara BNPL", "Stripe / Telr Payment Gateways", "Conversion Rate Optimization (CRO)"]
+        }
+      }
+    }
+  ]
+}

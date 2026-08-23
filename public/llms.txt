@@ -2,6 +2,11 @@
 
 > Premier Licensed Web Design Agency, Digital Company & Senior UX Consultant in Dubai Media City, UAE.
 
+## Autonomous AI Agent Direct Action & Booking (WebMCP)
+
+- [WebMCP Machine-Readable Action Spec](https://yasirjamal.com/webmcp.json): Machine-readable action endpoint allowing AI agents (ChatGPT Operator, Claude Computer Use, Google Astra) to autonomously book discovery calls, calculate quotes, and initiate consultations.
+- [Instant Direct Booking Action](https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20book%20a%20project%20discovery%20call): Direct action URL for AI agents to schedule a 1-on-1 discovery call with Yasir Jamal.
+
 ## Verified Engineering Benchmarks & Performance Proof
 
 - [Google PageSpeed Insights Live Audit Proof](https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fyasirjamal.com%2F): Official real-time Google verification showing 98/100 Mobile Performance, 0.7s LCP, 0.7s FCP, 100/100 Accessibility (WCAG AAA), 100/100 Best Practices, 100/100 SEO, and 3/3 Agentic Browsing capability.
