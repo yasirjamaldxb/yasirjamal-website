@@ -1,0 +1,259 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "GoHighLevel Hidden Costs Explained (2026): Exact LC Phone, Email, Twilio & Usage Calculator",
+  slug: "gohighlevel-hidden-costs-pricing-calculator",
+  category: "Agency Software & SaaS",
+  datePublished: "2026-08-24",
+  dateModified: "2026-08-24",
+  readTime: "11 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/geo-ai-search.jpg",
+  description: "A transparent breakdown of GoHighLevel true monthly costs in 2026. Exact pricing for LC Email, SMS, Twilio, A2P 10DLC phone registration, Content AI, and real agency billing scenarios."
+};
+
+const pageUrl = `https://yasirjamal.com/blog/${article.slug}/`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": article.title,
+  "description": article.description,
+  "image": `https://yasirjamal.com${article.image}`,
+  "datePublished": article.datePublished,
+  "dateModified": article.dateModified,
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com/#yasirjamal",
+    "jobTitle": "Senior Product Designer & Web Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yasirjamal.com/images/logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  }
+};
+---
+
+<Layout title={`${article.title} | Yasir Jamal`} description={article.description}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal`} description={article.description} url={pageUrl} image={article.image} type="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <!-- Article Header Banner -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">{article.author}</span>
+          <span class="text-xs text-slate-500">{article.datePublished} • {article.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="w-full bg-white py-16 font-elegant text-slate-800">
+    <article class="max-w-3xl mx-auto px-6 space-y-10 leading-relaxed text-base sm:text-lg font-light">
+      
+      <!-- Transparency Summary Box -->
+      <div class="bg-amber-50/80 border border-amber-200/80 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-amber-600 text-white text-xs font-bold uppercase">True Cost Reality</span>
+          <span class="text-xs text-slate-600 font-medium">Real-World Billing Data</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900">Base Price vs. Pay-As-You-Go Usage</h3>
+        <p class="text-sm text-slate-700 leading-relaxed font-normal">
+          While GoHighLevel starts at $97 or $297 per month, you will also pay direct wholesale carrier costs for SMS messages, phone numbers, and outgoing emails. Understanding these micro-fees upfront prevents billing surprises and allows you to rebill clients profitably.
+        </p>
+      </div>
+
+      <!-- Section 1: Itemized Fee Table -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          1. The Complete Itemized Pay-As-You-Go Fee Breakdown (2026)
+        </h2>
+        <p>
+          GoHighLevel uses direct wholesale pricing via LeadConnector (LC) or Twilio. Here is the exact fee table across all variable communication services:
+        </p>
+
+        <div class="overflow-x-auto pt-2">
+          <table class="w-full text-left border border-slate-200 rounded-xl overflow-hidden text-sm">
+            <thead class="bg-slate-100 text-slate-900 font-semibold">
+              <tr>
+                <th class="p-3.5 border-b border-slate-200">Service</th>
+                <th class="p-3.5 border-b border-slate-200">Wholesale Cost</th>
+                <th class="p-3.5 border-b border-slate-200">What $10 Gets You</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">LC Email (Outbound)</td>
+                <td class="p-3.5">$0.675 per 1,000 emails</td>
+                <td class="p-3.5">~14,800 sent emails</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Outbound SMS (US/Canada)</td>
+                <td class="p-3.5">~$0.0079 per text segment</td>
+                <td class="p-3.5">~1,265 SMS messages</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Inbound SMS</td>
+                <td class="p-3.5">~$0.0075 per text segment</td>
+                <td class="p-3.5">~1,330 received messages</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Local Phone Number</td>
+                <td class="p-3.5">$1.15 / month per number</td>
+                <td class="p-3.5">8 dedicated local lines</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Toll-Free Phone Number</td>
+                <td class="p-3.5">$2.15 / month per number</td>
+                <td class="p-3.5">4 dedicated toll-free lines</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Outbound Voice Calls</td>
+                <td class="p-3.5">$0.014 / minute</td>
+                <td class="p-3.5">~714 calling minutes</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Content AI Generation</td>
+                <td class="p-3.5">$0.09 per 1,000 words</td>
+                <td class="p-3.5">~111,000 words generated</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 2: Three Real-World Scenarios -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          2. Real-World Monthly Bill Calculations by Business Size
+        </h2>
+        <p>
+          To help you budget accurately, here are three realistic monthly billing scenarios including both the base subscription and variable usage:
+        </p>
+
+        <div class="space-y-4 pt-2">
+          <!-- Scenario A -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-base font-bold text-slate-900">Scenario A: Solo Consultant / Freelance Studio</h4>
+              <span class="text-xs font-bold text-[#1559E7] bg-blue-100 px-3 py-1 rounded-full">Estimated: ~$104 / mo</span>
+            </div>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• Base Plan: <strong>$97 / month</strong> (Starter Plan)</li>
+              <li>• 1 Dedicated Local Phone Line: <strong>$1.15 / mo</strong></li>
+              <li>• 5,000 Outbound Marketing Emails: <strong>$3.38 / mo</strong></li>
+              <li>• 300 Two-Way SMS Follow-Ups: <strong>$2.37 / mo</strong></li>
+              <li><strong>Total Expected Cost:</strong> ~$103.90 per month.</li>
+            </ul>
+          </div>
+
+          <!-- Scenario B -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-3">
+            <div class="flex items-center justify-between">
+              <h4 class="text-base font-bold text-slate-900">Scenario B: Boutique Agency (10 Active Clients)</h4>
+              <span class="text-xs font-bold text-[#1559E7] bg-blue-100 px-3 py-1 rounded-full">Estimated: ~$348 / mo</span>
+            </div>
+            <ul class="text-sm text-slate-600 space-y-1">
+              <li>• Base Plan: <strong>$297 / month</strong> (Unlimited Sub-Accounts)</li>
+              <li>• 10 Dedicated Client Phone Numbers: <strong>$11.50 / mo</strong></li>
+              <li>• 40,000 Outbound Client Emails: <strong>$27.00 / mo</strong></li>
+              <li>• 1,500 Automated SMS Appointments: <strong>$11.85 / mo</strong></li>
+              <li><strong>Total Expected Cost:</strong> ~$347.35 per month (vs. $1,600+/mo on HubSpot).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: A2P 10DLC Fees -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          3. Mandatory Regulatory Fees: A2P 10DLC Registration
+        </h2>
+        <p>
+          If you send SMS to United States phone numbers, mobile carriers require carrier registration:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-slate-700 pl-2 text-sm sm:text-base">
+          <li><strong>Sole Proprietor Brand Registration:</strong> $4.00 one-time fee.</li>
+          <li><strong>Standard Company Brand Vetting:</strong> $44.00 one-time fee.</li>
+          <li><strong>Monthly Campaign Fee:</strong> $1.50 to $10.00 / month depending on campaign use case.</li>
+        </ul>
+        <p class="text-sm text-slate-600">
+          These fees go directly to telecom verification bodies (The Campaign Registry) and are charged across all platforms, including Twilio, HubSpot, and ActiveCampaign.
+        </p>
+      </section>
+
+      <!-- Section 4: Turning Costs into Profit -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          4. How to Make GoHighLevel 100% Free via Usage Rebilling
+        </h2>
+        <p>
+          If you are on the <strong>$497 SaaS Pro plan</strong>, GoHighLevel allows you to rebill all phone, email, and AI usage back to your client sub-accounts with a built-in markup (e.g., 2x or 3x).
+        </p>
+        <p>
+          Example: You pay $0.675 per 1,000 emails and rebill your clients at $1.50 per 1,000. With 15 active clients sending regular newsletters and appointment reminders, the rebilling markup covers your software bill completely.
+        </p>
+      </section>
+
+      <!-- Final CTA Box -->
+      <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 space-y-4 text-center shadow-xl">
+        <span class="px-3 py-1 rounded-full bg-[#F6CD0B] text-slate-900 text-xs font-bold uppercase tracking-wider">
+          Test the Software Risk-Free
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-white">
+          Compare the Total Cost of Ownership Yourself
+        </h3>
+        <p class="text-slate-300 text-sm font-light max-w-xl mx-auto leading-relaxed">
+          Even with wholesale usage fees, GoHighLevel saves growing agencies an average of \$800 to \$2,000 per month compared to stitching separate SaaS tools together.
+        </p>
+        <div class="pt-2">
+          <a 
+            href="https://www.gohighlevel.com/?fp_ref=yasirjamal" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-4 rounded-full bg-[#1559E7] text-white text-sm font-bold hover:bg-blue-600 transition-all shadow-lg"
+          >
+            Start Your 30-Day Free Trial &rarr;
+          </a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+</Layout>

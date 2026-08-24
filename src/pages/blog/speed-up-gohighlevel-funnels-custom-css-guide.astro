@@ -1,0 +1,211 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "How to Build Sub-Second, High-Converting Funnels in GoHighLevel (Custom CSS & Performance Blueprint)",
+  slug: "speed-up-gohighlevel-funnels-custom-css-guide",
+  category: "Frontend & Funnel Engineering",
+  datePublished: "2026-08-24",
+  dateModified: "2026-08-24",
+  readTime: "10 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/astro-vs-wordpress.jpg",
+  description: "A senior web designer's technical guide to optimizing GoHighLevel landing page load speed. Custom CSS snippets, image compression pipelines, font asset caching, and mobile CRO best practices."
+};
+
+const pageUrl = `https://yasirjamal.com/blog/${article.slug}/`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": article.title,
+  "description": article.description,
+  "image": `https://yasirjamal.com${article.image}`,
+  "datePublished": article.datePublished,
+  "dateModified": article.dateModified,
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com/#yasirjamal",
+    "jobTitle": "Senior Product Designer & Web Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yasirjamal.com/images/logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  }
+};
+---
+
+<Layout title={`${article.title} | Yasir Jamal`} description={article.description}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal`} description={article.description} url={pageUrl} image={article.image} type="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <!-- Article Header Banner -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">{article.author}</span>
+          <span class="text-xs text-slate-500">{article.datePublished} • {article.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="w-full bg-white py-16 font-elegant text-slate-800">
+    <article class="max-w-3xl mx-auto px-6 space-y-10 leading-relaxed text-base sm:text-lg font-light">
+      
+      <!-- Summary Box -->
+      <div class="bg-blue-50/80 border border-blue-200/80 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-[#1559E7] text-white text-xs font-bold uppercase">Performance Fact</span>
+          <span class="text-xs text-slate-600 font-medium">Core Web Vitals Impact</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900">Why Funnel Speed Dictates Conversion Rate</h3>
+        <p class="text-sm text-slate-700 leading-relaxed font-normal">
+          Every 1-second delay in mobile landing page load time causes an average 7% reduction in lead conversion. Standard GoHighLevel pages often score between 40 and 60 on Google PageSpeed because of uncompressed images, font bloat, and custom tracking scripts. Here is how to fix it and reach sub-second speeds.
+        </p>
+      </div>
+
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          1. The 4 Root Causes of Slow GoHighLevel Landing Pages
+        </h2>
+        <p>
+          Before adding custom code, audit these four common bottlenecks inside your funnel settings:
+        </p>
+        <div class="space-y-3">
+          <p>
+            <strong>1. Heavy WebP / PNG Image Assets:</strong> Uploading 2MB uncompressed hero banners directly from Canva or Figma freezes mobile browser rendering. Always compress assets to WebP format under 150KB before uploading to the GHL media library.
+          </p>
+          <p>
+            <strong>2. Multiple Google Font Weights:</strong> Selecting 5 different font families and 8 weights forces the browser to make separate render-blocking font requests. Stick to 1 primary system font or preloaded Google Font.
+          </p>
+          <p>
+            <strong>3. Unoptimized Tracking Pixels:</strong> Stacking Meta Pixel, TikTok Pixel, Google Tag Manager, and Hotjar directly in the page header without deferring execution slows down First Contentful Paint (FCP).
+          </p>
+          <p>
+            <strong>4. Builder Nesting Bloat:</strong> Creating sections inside rows inside columns unnecessarily bloats the Document Object Model (DOM) tree. Keep layouts flat with minimal container nesting.
+          </p>
+        </div>
+      </section>
+
+      <!-- Section 2: Custom CSS Snippets -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          2. Essential Custom CSS for Clean, Modern Funnel UI
+        </h2>
+        <p>
+          Paste these clean CSS snippets into your Funnel Page Settings &rarr; Custom CSS to instantly elevate typography, smooth scrolling, and form styling:
+        </p>
+
+        <div class="space-y-4 pt-2">
+          <div class="bg-slate-900 text-slate-100 rounded-xl p-5 overflow-x-auto text-xs font-mono leading-relaxed">
+<pre><code>/* 1. Global Smooth Scrolling & Crisp Font Rendering */
+html &#123;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+&#125;
+
+/* 2. Modern High-Converting CTA Button Hover Animation */
+.c-btn, .ghl-btn, .elButton &#123;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease !important;
+&#125;
+.c-btn:hover, .ghl-btn:hover, .elButton:hover &#123;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px -5px rgba(21, 89, 231, 0.4) !important;
+&#125;
+
+/* 3. Clean Modern Form Input Styling */
+.form-builder--input input, 
+.form-builder--input textarea &#123;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  padding: 14px 16px !important;
+  font-size: 15px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+&#125;
+.form-builder--input input:focus &#123;
+  border-color: #1559E7 !important;
+  box-shadow: 0 0 0 3px rgba(21, 89, 231, 0.15) !important;
+&#125;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Headless Strategy -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          3. The Ultimate Hybrid Architecture: Static Frontend + GHL Backend
+        </h2>
+        <p>
+          For high-ticket brands where absolute maximum speed is required (0.5s load times), consider the <strong>Hybrid Architecture</strong>:
+        </p>
+        <p>
+          Build your marketing frontend using a clean, static framework (like Astro or Next.js) hosted on high-speed global CDNs (Cloudflare / Hostinger), and connect your lead capture forms directly into GoHighLevel via <strong>native Webhooks or embedded GHL forms</strong>.
+        </p>
+        <p>
+          This gives you the best of both worlds: <strong>100/100 Google Lighthouse speed</strong> on your front-end, with <strong>100% of the CRM automation, pipeline tracking, and SMS follow-ups</strong> running seamlessly on the GoHighLevel backend.
+        </p>
+      </section>
+
+      <!-- CTA Box -->
+      <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 space-y-4 text-center shadow-xl">
+        <span class="px-3 py-1 rounded-full bg-[#F6CD0B] text-slate-900 text-xs font-bold uppercase tracking-wider">
+          Experience High-Performance GHL
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-white">
+          Build Your Agency Funnels on GoHighLevel Today
+        </h3>
+        <p class="text-slate-300 text-sm font-light max-w-xl mx-auto leading-relaxed">
+          Test the platform with an extended 30-day trial and build high-converting, sub-second funnels for your agency and clients.
+        </p>
+        <div class="pt-2">
+          <a 
+            href="https://www.gohighlevel.com/?fp_ref=yasirjamal" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-4 rounded-full bg-[#1559E7] text-white text-sm font-bold hover:bg-blue-600 transition-all shadow-lg"
+          >
+            Start Your 30-Day Free Trial &rarr;
+          </a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+</Layout>

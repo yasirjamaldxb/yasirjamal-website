@@ -1,0 +1,257 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "GoHighLevel 30-Day Free Trial (2026): Complete Agency Setup & Onboarding Blueprint",
+  slug: "gohighlevel-30-day-free-trial-agency-setup-guide",
+  category: "Agency Software & SaaS",
+  datePublished: "2026-08-24",
+  dateModified: "2026-08-24",
+  readTime: "12 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/geo-ai-search.jpg",
+  description: "The complete 2026 step-by-step agency guide to claiming the GoHighLevel 30-day extended free trial, setting up sub-accounts, configuring dedicated sending domains, and deploying high-converting client pipelines."
+};
+
+const pageUrl = `https://yasirjamal.com/blog/${article.slug}/`;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": article.title,
+  "description": article.description,
+  "image": `https://yasirjamal.com${article.image}`,
+  "datePublished": article.datePublished,
+  "dateModified": article.dateModified,
+  "author": {
+    "@type": "Person",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com/#yasirjamal",
+    "jobTitle": "Senior Product Designer & Web Architect"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yasir Jamal",
+    "url": "https://yasirjamal.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://yasirjamal.com/images/logo.webp"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": pageUrl
+  }
+};
+---
+
+<Layout title={`${article.title} | Yasir Jamal`} description={article.description}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal`} description={article.description} url={pageUrl} image={article.image} type="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <!-- Article Header Banner -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">{article.author}</span>
+          <span class="text-xs text-slate-500">{article.datePublished} • {article.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="w-full bg-white py-16 font-elegant text-slate-800">
+    <article class="max-w-3xl mx-auto px-6 space-y-10 leading-relaxed text-base sm:text-lg font-light">
+      
+      <!-- Key Takeaways & Affiliate Callout Box -->
+      <div class="bg-blue-50/80 border border-blue-200/80 rounded-2xl p-6 sm:p-8 space-y-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="px-2.5 py-1 rounded bg-[#1559E7] text-white text-xs font-bold uppercase">Quick Summary</span>
+          <span class="text-xs text-slate-600 font-medium">Updated for 2026 Agency Operations</span>
+        </div>
+        <h3 class="text-xl font-semibold text-slate-900">Standard 14-Day vs. Extended 30-Day Free Trial</h3>
+        <p class="text-sm text-slate-700 leading-relaxed font-normal">
+          The public GoHighLevel homepage gives a standard 14-day trial, which is rarely enough time to connect DNS records, complete A2P 10DLC phone registration, and launch client pipelines before being billed. An extended 30-day trial gives you a full month to onboard your first paying client so the software pays for itself before your first billing cycle.
+        </p>
+        <div class="pt-2">
+          <a 
+            href="#trial-link" 
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1559E7] text-white text-sm font-semibold hover:bg-[#01013E] transition-all shadow-md"
+          >
+            Claim the Official 30-Day Free Trial &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          1. Why 14 Days Isn't Enough (And How 30 Days Changes Everything)
+        </h2>
+        <p>
+          Most agencies and service providers who start a GoHighLevel trial make the same mistake: they sign up, get overwhelmed by the sheer number of features, and let the 14 days run out before connecting a single domain or sending a single campaign.
+        </p>
+        <p>
+          GoHighLevel is not just an email tool or a simple landing page builder; it is an entire business operating system designed to replace HubSpot, ActiveCampaign, ClickFunnels, Calendly, Zapier, and CallRail.
+        </p>
+        <p>
+          With a 30-day runway, you can follow a structured 4-week timeline without rushing:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-slate-700 pl-2">
+          <li><strong>Week 1: Core Setup</strong> — Custom agency domain, white-label login, and dedicated sending email via Cloudflare.</li>
+          <li><strong>Week 2: Phone & A2P Compliance</strong> — Submitting your business registration for brand vetting and 10DLC approval.</li>
+          <li><strong>Week 3: Pipeline & Funnel Architecture</strong> — Building your lead capture forms, calendar booking flow, and automated follow-ups.</li>
+          <li><strong>Week 4: Client Onboarding</strong> — Launching your first sub-account and securing a recurring client before day 30.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2: Step-by-Step Setup -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          2. The Essential First-Day Technical Setup Checklist
+        </h2>
+        <p>
+          To prevent email deliverability issues and carrier SMS blocks, follow this exact technical order of operations on day one:
+        </p>
+
+        <div class="space-y-4 pt-2">
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Step 1: Dedicated Email Subdomain (LC Email / Mailgun)</h4>
+            <p class="text-sm text-slate-600">
+              Never send marketing emails from your root apex domain (e.g., <code>yourcompany.com</code>). Instead, create a dedicated sending subdomain like <code>mail.yourcompany.com</code> or <code>mg.yourcompany.com</code> in Cloudflare or Hostinger DNS. Configure your SPF, DKIM, DMARC, and MX records properly to keep your primary business domain safe.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Step 2: Custom White-Label Portal & SSL</h4>
+            <p class="text-sm text-slate-600">
+              In Agency Settings &rarr; Company &rarr; White Label Domain, create a CNAME record pointing <code>app.yourdomain.com</code> to <code>app.gohighlevel.com</code>. This ensures your team and clients log into your branded portal without seeing third-party logos.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Step 3: Sub-Account Architecture</h4>
+            <p class="text-sm text-slate-600">
+              Separate your internal agency operations from your client work. Create one dedicated sub-account for your own marketing, lead capture, and sales pipeline. Each client you sign should get their own isolated sub-account with separate contact databases and permissions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Plan Comparison Table -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          3. Which Plan Should You Start Your Trial On?
+        </h2>
+        <p>
+          GoHighLevel offers three main plans during trial signup. Here is how to choose the right one for your business size:
+        </p>
+
+        <div class="overflow-x-auto pt-2">
+          <table class="w-full text-left border border-slate-200 rounded-xl overflow-hidden text-sm">
+            <thead class="bg-slate-100 text-slate-900 font-semibold">
+              <tr>
+                <th class="p-3.5 border-b border-slate-200">Plan</th>
+                <th class="p-3.5 border-b border-slate-200">Price</th>
+                <th class="p-3.5 border-b border-slate-200">Sub-Accounts</th>
+                <th class="p-3.5 border-b border-slate-200">Best For</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Starter</td>
+                <td class="p-3.5">$97 / month</td>
+                <td class="p-3.5">Up to 3</td>
+                <td class="p-3.5">Solo consultants, small businesses, single brand operators.</td>
+              </tr>
+              <tr class="bg-blue-50/50">
+                <td class="p-3.5 font-bold text-[#1559E7]">Agency Unlimited</td>
+                <td class="p-3.5 font-bold text-[#1559E7]">$297 / month</td>
+                <td class="p-3.5 font-bold text-[#1559E7]">Unlimited</td>
+                <td class="p-3.5">Marketing agencies, web designers managing multiple clients.</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">SaaS Pro</td>
+                <td class="p-3.5">$497 / month</td>
+                <td class="p-3.5">Unlimited</td>
+                <td class="p-3.5">Software re-sellers wanting automatic Stripe billing & markups.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 4: Avoiding Common Trial Mistakes -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          4. Three Critical Mistakes to Avoid During Your Free Trial
+        </h2>
+        <p>
+          Over our 15 years of consulting with growing agencies, these are the three most common traps that waste time during software evaluations:
+        </p>
+        <div class="space-y-3">
+          <p>
+            <strong>Mistake 1: Importing cold, unverified email lists.</strong> Running a 20,000-contact unverified cold list on day two will damage your sending reputation and trigger automated deliverability throttles. Always run your list through an email validation tool (like NeverBounce or ZeroBounce) before importing.
+          </p>
+          <p>
+            <strong>Mistake 2: Delaying A2P 10DLC registration.</strong> US and international carriers now strictly filter unregistered business SMS. Start the registration process on day one so your phone numbers are cleared for two-way texting when you launch.
+          </p>
+          <p>
+            <strong>Mistake 3: Trying to build custom workflows from scratch.</strong> Use pre-built snapshots for your industry (real estate, dental, agency lead gen) as a foundation, then customize them rather than building every trigger from a blank canvas.
+          </p>
+        </div>
+      </section>
+
+      <!-- Final CTA Box -->
+      <div id="trial-link" class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 space-y-4 text-center shadow-xl">
+        <span class="px-3 py-1 rounded-full bg-[#F6CD0B] text-slate-900 text-xs font-bold uppercase tracking-wider">
+          Official 30-Day Extended Offer
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-white">
+          Ready to Test GoHighLevel for a Full 30 Days?
+        </h3>
+        <p class="text-slate-300 text-sm font-light max-w-xl mx-auto leading-relaxed">
+          Lock in a full month of unrestricted access to build your agency infrastructure, connect client sub-accounts, and launch automated pipelines.
+        </p>
+        <div class="pt-2">
+          <a 
+            href="https://www.gohighlevel.com/?fp_ref=yasirjamal" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-block px-8 py-4 rounded-full bg-[#1559E7] text-white text-sm font-bold hover:bg-blue-600 transition-all shadow-lg"
+          >
+            Start Your 30-Day Free Trial &rarr;
+          </a>
+        </div>
+        <p class="text-[11px] text-slate-400 font-light pt-2">
+          *Cancel anytime with zero commitments before day 30 inside your billing portal.
+        </p>
+      </div>
+
+    </article>
+  </main>
+</Layout>
