@@ -39,11 +39,26 @@
   RewriteRule ^quote/?$ /about/#contact [R=301,L]
   RewriteRule ^send-enquiry/?$ /about/#contact [R=301,L]
 
-  # 4. Blog & Category Redirects
+  # 4. Legacy WordPress Blog & Taxonomy 301 Redirects
+  RewriteRule ^blog/my-design-process/?$ /about/ [R=301,L]
+  RewriteRule ^blog/side-hustle/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
+  RewriteRule ^blog/tmd-hosting-review/?$ /blog/astro-vs-wordpress-speed-performance-guide/ [R=301,L]
+  RewriteRule ^blog/category/(.*)$ /blog/ [R=301,L]
   RewriteRule ^category/(.*)$ /blog/ [R=301,L]
+  RewriteRule ^blog/tag/(.*)$ /blog/ [R=301,L]
   RewriteRule ^tag/(.*)$ /blog/ [R=301,L]
+  RewriteRule ^blog/author/(.*)$ /about/ [R=301,L]
   RewriteRule ^author/(.*)$ /about/ [R=301,L]
+  RewriteRule ^blog/ecommerce-business-dubai-uae/?$ /blog/sub-second-ecommerce-architecture-gcc-scaling/ [R=301,L]
+  RewriteRule ^blog/failed-websites/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
+  RewriteRule ^blog/how-to-have-a-successful-online-business/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
+  RewriteRule ^blog/ux-design-challenge-for-beginners/?$ /about/ [R=301,L]
+  RewriteRule ^blog/web-design-in-2024/?$ /blog/modern-web-design-trends-2026/ [R=301,L]
+  RewriteRule ^blog/why-hire-a-freelance-web-designer/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
+  RewriteRule ^blog/page/(.*)$ /blog/ [R=301,L]
+  RewriteRule ^page/(.*)$ /blog/ [R=301,L]
   RewriteRule ^feed/?$ / [R=301,L]
+  RewriteRule ^blog/feed/?$ / [R=301,L]
   RewriteRule ^comments/feed/?$ / [R=301,L]
 
   # Direct Blog Slug Redirects (if accessed without /blog/ prefix)

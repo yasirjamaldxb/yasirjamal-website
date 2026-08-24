@@ -1,0 +1,149 @@
+[
+  {
+    "url": "https://yasirjamal.com/",
+    "status": 200,
+    "location": "",
+    "clicks": 2,
+    "impressions": 70
+  },
+  {
+    "url": "https://yasirjamal.com/blog/my-design-process/",
+    "status": 301,
+    "location": "https://yasirjamal.com/about/",
+    "clicks": 1,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/blog/side-hustle/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/",
+    "clicks": 1,
+    "impressions": 3
+  },
+  {
+    "url": "https://yasirjamal.com/blog/tmd-hosting-review/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/",
+    "clicks": 1,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/work/alomaids/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/alomaids/",
+    "clicks": 1,
+    "impressions": 2
+  },
+  {
+    "url": "https://yasirjamal.com/blog/",
+    "status": 200,
+    "location": "",
+    "clicks": 0,
+    "impressions": 6
+  },
+  {
+    "url": "https://yasirjamal.com/blog/category/guides/digital-marketing/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/blog/ecommerce-business-dubai-uae/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/blog/failed-websites/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/blog/how-to-have-a-successful-online-business/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/",
+    "clicks": 0,
+    "impressions": 3
+  },
+  {
+    "url": "https://yasirjamal.com/blog/ux-design-challenge-for-beginners/",
+    "status": 301,
+    "location": "https://yasirjamal.com/about/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/blog/web-design-in-2024/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/modern-web-design-trends-2026/",
+    "clicks": 0,
+    "impressions": 7
+  },
+  {
+    "url": "https://yasirjamal.com/blog/why-hire-a-freelance-web-designer/",
+    "status": 301,
+    "location": "https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/",
+    "clicks": 0,
+    "impressions": 10
+  },
+  {
+    "url": "https://yasirjamal.com/contact-us/",
+    "status": 301,
+    "location": "https://yasirjamal.com/about/#contact",
+    "clicks": 0,
+    "impressions": 4
+  },
+  {
+    "url": "https://yasirjamal.com/privacy-policy/",
+    "status": 200,
+    "location": "",
+    "clicks": 0,
+    "impressions": 5
+  },
+  {
+    "url": "https://yasirjamal.com/terms/",
+    "status": 200,
+    "location": "",
+    "clicks": 0,
+    "impressions": 3
+  },
+  {
+    "url": "https://yasirjamal.com/work/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/",
+    "clicks": 0,
+    "impressions": 3
+  },
+  {
+    "url": "https://yasirjamal.com/work/alston-clayden/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/alston-clayden/",
+    "clicks": 0,
+    "impressions": 2
+  },
+  {
+    "url": "https://yasirjamal.com/work/dubai-podiatrist/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/dubai-podiatrist/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/work/skylynx/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/skylynx/",
+    "clicks": 0,
+    "impressions": 1
+  },
+  {
+    "url": "https://yasirjamal.com/work/westminster-properties/",
+    "status": 301,
+    "location": "https://yasirjamal.com/portfolio/westminster-properties/",
+    "clicks": 0,
+    "impressions": 1
+  }
+]
