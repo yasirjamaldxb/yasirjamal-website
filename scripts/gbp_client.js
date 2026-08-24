@@ -48,14 +48,8 @@ export async function listAccountsAndLocations() {
       })));
     }
   } catch (err) {
-    if (err.message?.includes('API has not been used') || err.status === 403 || err.status === 404) {
-      console.log('\n📌 Google Business Profile API requires enabling in your Google Cloud Project:');
-      console.log('1. Go to Google Cloud Console (console.cloud.google.com).');
-      console.log('2. Search for "My Business Business Information API" and "My Business Account Management API" and click Enable.');
-      console.log('3. In Google Business Profile Manager (business.google.com), go to Settings > People and access > Add gsc-agent@gen-lang-client-0085760870.iam.gserviceaccount.com as Manager.\n');
-    } else {
-      console.error('Error querying Google Business Profile:', err.message);
-    }
+    console.error('API Status:', err.status || err.response?.status);
+    console.error('API Error Details:', JSON.stringify(err.response?.data || err.message, null, 2));
   }
 }
 
