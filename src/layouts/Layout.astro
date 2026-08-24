@@ -23,9 +23,14 @@ const {
 		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Expires" content="0" />
-		<link rel="icon" type="image/webp" id="favicon-link" href="/images/logo.webp" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
-		<link rel="apple-touch-icon" href="/images/logo.webp" />
+		<!-- Multi-Size Google Search & High-DPI Favicon Specification -->
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 
 		<!-- Agentic Browsing & WebMCP Machine-Actionable Tool Integration -->
@@ -75,9 +80,11 @@ const {
     <meta name="geo.position" content="25.0934;55.1561" />
     <meta name="ICBM" content="25.0934, 55.1561" />
 
-    <!-- Open Graph / Social Media Meta Tags for AI & Social Citation -->
+    <!-- Open Graph / Google Search Site Name Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Yasir Jamal | Senior Web Designer & Developer" />
+    <meta property="og:site_name" content="Web Design Dubai | Yasir Jamal" />
+    <meta name="application-name" content="Web Design Dubai | Yasir Jamal" />
+    <meta name="apple-mobile-web-app-title" content="Web Design Dubai | Yasir Jamal" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
@@ -107,6 +114,22 @@ const {
       {
         "@context": "https://schema.org",
         "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://yasirjamal.com/#website",
+            "url": "https://yasirjamal.com/",
+            "name": "Web Design Dubai | Yasir Jamal",
+            "alternateName": [
+              "Web Design Dubai",
+              "Yasir Jamal",
+              "Yasir Jamal - Web Design Dubai",
+              "Yasir Jamal Digital",
+              "Web Design Agency Dubai"
+            ],
+            "publisher": {
+              "@id": "https://yasirjamal.com/#localbusiness"
+            }
+          },
           {
             "@type": "Person",
             "@id": "https://yasirjamal.com/#person",
