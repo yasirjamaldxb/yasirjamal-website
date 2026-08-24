@@ -1,0 +1,38 @@
+{
+  "lastUpdated": "2026-08-24",
+  "programs": [
+    {
+      "name": "GoHighLevel (HighLevel / GHL)",
+      "category": "All-in-One Agency CRM & Marketing Automation",
+      "affiliateLink": "https://www.gohighlevel.com/?fp_ref=discounted00011",
+      "commissionStructure": "40% Recurring Monthly Commission ($38 - $198/month per active subscriber)",
+      "offers": [
+        "30-Day Extended Free Trial",
+        "Starter ($97/mo), Unlimited ($297/mo), SaaS Pro ($497/mo)"
+      ],
+      "activePages": [
+        "/blog/gohighlevel-30-day-free-trial-agency-setup-guide/",
+        "/blog/gohighlevel-hidden-costs-pricing-calculator/",
+        "/blog/speed-up-gohighlevel-funnels-custom-css-guide/"
+      ]
+    },
+    {
+      "name": "Hostinger",
+      "category": "Web Hosting, Cloud & VPS",
+      "affiliateLink": "PENDING_USER_LINK",
+      "commissionStructure": "High-volume CPA / Bounty per active hosting plan",
+      "activePages": [
+        "/blog/astro-vs-wordpress-speed-performance-guide/"
+      ]
+    },
+    {
+      "name": "TMD Hosting",
+      "category": "Cloud & Managed Hosting",
+      "affiliateLink": "PENDING_USER_LINK",
+      "commissionStructure": "High-paying hosting bounty",
+      "activePages": [
+        "/blog/astro-vs-wordpress-speed-performance-guide/"
+      ]
+    }
+  ]
+}
