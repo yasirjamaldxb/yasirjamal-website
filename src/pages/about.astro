@@ -3,88 +3,106 @@ import Layout from '../layouts/Layout.astro';
 import Schema from '../components/Schema.astro';
 import SEO from '../components/SEO.astro';
 
-const seoTitle = "Digital Product Designer Dubai | Senior Product Designer | Yasir Jamal";
-const seoDescription = "Looking for a Digital Product Designer in Dubai? Yasir Jamal is a Senior Product Designer with 15+ years of experience designing SaaS platforms, mobile apps, design systems, and high-converting digital products across Dubai, UAE, and globally.";
+const seoTitle = "Product Designer in Dubai | Senior UX/UI & Digital Product Designer | Yasir Jamal";
+const seoDescription = "Looking for a top Product Designer in Dubai? Yasir Jamal is a Senior Product Designer & UX Consultant in Dubai Media City with 15+ years experience crafting high-converting SaaS platforms, mobile apps, and enterprise design systems across the UAE and globally.";
 const pageUrl = "https://yasirjamal.com/about";
 
 const aboutFaqs = [
   {
-    q: "Why do clients choose to work with Yasir Jamal?",
-    a: "Clients choose to work with me because I combine business strategy, user experience, visual design, SEO, and technical understanding into a single unified design process."
+    q: "Why hire Yasir Jamal as your Senior Product Designer in Dubai?",
+    a: "Yasir Jamal combines 15+ years of digital product design leadership with commercial growth strategy. Rather than just designing visual layouts, Yasir architects end-to-end SaaS platforms, complex web applications, and intuitive design systems that reduce user churn and maximize revenue."
   },
   {
-    q: "What are Yasir Jamal's core professional credentials and background?",
-    a: "Yasir Jamal is a Senior Product Designer and Web Engineer based in Dubai Media City with over 15 years of continuous experience. Since 2010, he has delivered over 150 digital products, SaaS dashboards, and websites for clients across Dubai, Abu Dhabi, Saudi Arabia, Europe, and North America."
+    q: "What does a Senior Product Designer in Dubai do?",
+    a: "A Senior Product Designer conducts user research, maps information architecture, crafts high-fidelity interactive Figma prototypes, validates product-market fit, and collaborates directly with engineering teams to build scalable, high-converting digital products."
   },
   {
-    q: "What third-party licenses and professional certifications does Yasir hold?",
+    q: "What are Yasir Jamal's verified certifications and credentials?",
     a: "Yasir holds verified credentials including Google Certified User Experience Specialist, HubSpot Growth-Driven Design Certification (ID: 73ce30bd3145), Coursera / Google A/B Testing & CRO, and Amplitude Product Analytics."
   },
   {
-    q: "What is Yasir Jamal's specialized 6-phase design methodology?",
-    a: "Yasir follows a systematic 6-phase approach: 1) Business & UX Discovery, 2) Strategy & Information Architecture, 3) Figma Wireframing & High-Fidelity UI Design, 4) Custom Sub-Second Code Development, 5) Technical SEO & Schema Integration, and 6) Cloud Deployment & Growth Audit."
+    q: "What is Yasir Jamal's 6-phase product design methodology?",
+    a: "Yasir follows a proven 6-phase framework: 1) Business & User Discovery, 2) Information Architecture & User Journeys, 3) Figma Wireframing & Interactive UI Design, 4) Component Design Systems & Tokens, 5) Usability Testing & Conversion Engineering, and 6) High-Performance Engineering Handoff."
   },
   {
-    q: "Which client types and industry sectors does Yasir Jamal work with?",
-    a: "Yasir partners with SaaS Startups, AI Companies, Growth-Stage Tech Businesses, Enterprise Brands, Marketing Agencies, and Founders across sectors including Artificial Intelligence, FinTech, Healthcare & MedTech, Real Estate & PropTech, E-Commerce, Education, and Logistics."
+    q: "Which industries in Dubai and the UAE does Yasir design products for?",
+    a: "Yasir specializes in digital product design for Artificial Intelligence (AI) platforms, FinTech, Luxury Real Estate (PropTech), Healthcare & MedTech, B2B SaaS, and Enterprise E-Commerce."
   },
   {
-    q: "What is Yasir Jamal's global market reach and international collaboration workflow?",
-    a: "Yasir has delivered 150+ digital products across 14+ international markets on 4 continents—including Dubai, Abu Dhabi, Saudi Arabia (Riyadh), the United States (New York, California), Canada, United Kingdom (London), Germany, and Australia. Collaboration is 100% direct via Zoom, Google Meet, Figma, and WhatsApp."
+    q: "Can Dubai and UAE companies hire Yasir for contract or fractional Product Design?",
+    a: "Yes. Yasir offers fixed-price product design sprints, fractional Senior Product Designer retainers, and strategic UX advisory for growth-stage startups and enterprise brands in Dubai, Abu Dhabi, and globally."
   },
   {
-    q: "How does Yasir integrate AI tools into the web design and development process?",
-    a: "Yasir uses AI-assisted workflows (ChatGPT, Claude, Codex, Midjourney) during UX research, data synthesis, and rapid prototyping. This compresses project delivery timelines by up to 50% without compromising human craftsmanship or design precision."
+    q: "How does the 1-on-1 digital product design collaboration work?",
+    a: "Yasir provides direct 1-on-1 senior collaboration without junior intermediaries. Work is conducted via real-time Figma canvases, interactive prototypes, Loom walkthroughs, and weekly Zoom/Google Meet design sprints."
   },
   {
-    q: "What design, prototyping, and product tools does Yasir Jamal use daily?",
-    a: "Yasir relies on Figma and FigJam as core environments for wireframing, high-fidelity UI design, and design token architecture, complemented by Linear, Notion, Framer, and Miro. For technical implementation, he works with Webflow, WordPress, GitHub, Vercel, Supabase, HTML5, CSS3, and Tailwind CSS."
+    q: "What design tools and technical stacks does Yasir use?",
+    a: "Yasir works daily in Figma, FigJam, Linear, Notion, and Framer for UX/UI design. For front-end technical execution, he leverages Astro, Next.js, Tailwind CSS, TypeScript, Webflow, and modern Headless CMS architectures."
   },
   {
-    q: "Does Yasir Jamal offer full-time, contract, or fractional Product Designer services?",
-    a: "Yes. In addition to fixed-price project engagements, Yasir is available for fractional Senior Product Designer retainers, contract UX consulting, and strategic advisory roles for growing companies."
+    q: "What makes Yasir's product design conversion-rate focused (CRO)?",
+    a: "Every interface hierarchy, user flow, and interaction pattern is engineered with behavioral psychology and UX analytics to reduce cognitive friction and maximize conversion metrics."
   },
   {
-    q: "What makes Yasir's design process conversion-rate focused (CRO)?",
-    a: "Every visual element, typography hierarchy, button placement, and form length is justified by behavioral psychology and UX analytics to reduce cognitive load and guide visitors toward primary conversion goals."
+    q: "Where is Yasir Jamal located, and which UAE areas are covered?",
+    a: "Yasir is based in Dubai Media City, UAE, serving technology hubs including DIFC, Downtown Dubai, Business Bay, Dubai Internet City, Dubai Design District (d3), and Abu Dhabi Global Market (ADGM)."
   },
   {
-    q: "Where is Yasir Jamal located in Dubai, and can we meet in person?",
-    a: "Yasir is registered in Dubai Media City, UAE. In-person meetings are available for Dubai and Abu Dhabi clients, alongside seamless remote video collaboration for international teams."
+    q: "What is the difference between a graphic designer and a digital product designer?",
+    a: "Graphic designers focus on static marketing visuals. A Digital Product Designer designs functional software systems, interactive mobile/web applications, complex workflows, and scalable design token libraries that drive measurable user retention."
   },
   {
-    q: "What is the difference between a graphic designer and a Senior Product Designer like Yasir?",
-    a: "Graphic designers focus purely on static aesthetics. A Senior Product Designer combines user research, business strategy, technical architecture, interaction design, and conversion analytics to build functional digital products that drive measurable revenue."
-  },
-  {
-    q: "How does Yasir ensure websites comply with UAE accessibility and enterprise standards?",
-    a: "Every site is built adhering to WCAG 2.1 AA accessibility guidelines, semantic HTML landmarks, responsive mobile breakpoints, and high contrast ratios for universal usability across devices."
-  },
-  {
-    q: "Has Yasir worked with notable international companies and regional UAE brands?",
-    a: "Yes. Yasir's career includes work and verified recommendations from World Food Programme, Justlife, Rocket Internet, Dubizzle, Ajman Free Zone, Starlinks, and international startups across 14+ markets."
+    q: "Has Yasir worked with notable international brands and regional UAE enterprises?",
+    a: "Yes. Yasir has designed digital products and enterprise platforms for organizations including Julphar Pharmaceuticals (ADX listed), Westminster Properties, SkyLynx Aviation, World Food Programme, Dubizzle, and high-growth SaaS startups across 14+ markets."
   }
 ];
 
-const faqSchema = {
+const aboutPageSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": aboutFaqs.map(faq => ({
-    "@type": "Question",
-    "name": faq.q,
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": faq.a
+  "@graph": [
+    {
+      "@type": "ProfilePage",
+      "@id": "https://yasirjamal.com/about#profilepage",
+      "url": "https://yasirjamal.com/about",
+      "name": seoTitle,
+      "description": seoDescription,
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "https://yasirjamal.com/#person",
+        "name": "Yasir Jamal",
+        "jobTitle": "Senior Product Designer & Web Design Consultant",
+        "knowsAbout": [
+          "Product Design Dubai",
+          "Senior Product Designer Dubai",
+          "Digital Product Designer Dubai",
+          "UI/UX Design Dubai",
+          "SaaS Product Design",
+          "Figma Design Systems",
+          "Conversion Rate Optimization"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://yasirjamal.com/about#faq",
+      "mainEntity": aboutFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a
+        }
+      }))
     }
-  }))
+  ]
 };
 ---
 
 <Layout title={seoTitle} description={seoDescription}>
   <Fragment slot="head">
     <SEO title={seoTitle} description={seoDescription} url={pageUrl} />
-    <Schema title={seoTitle} description={seoDescription} url={pageUrl} type="LocalBusiness" />
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(aboutPageSchema)} />
   </Fragment>
 
   <main class="w-full bg-[#f8fafc] text-slate-900 font-elegant selection:bg-[#1559E7] selection:text-white">
