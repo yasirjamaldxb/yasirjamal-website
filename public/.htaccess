@@ -42,7 +42,6 @@
   # 4. Legacy WordPress Blog & Taxonomy 301 Redirects
   RewriteRule ^blog/my-design-process/?$ /about/ [R=301,L]
   RewriteRule ^blog/side-hustle/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
-  RewriteRule ^blog/tmd-hosting-review/?$ /blog/astro-vs-wordpress-speed-performance-guide/ [R=301,L]
   RewriteRule ^blog/category/(.*)$ /blog/ [R=301,L]
   RewriteRule ^category/(.*)$ /blog/ [R=301,L]
   RewriteRule ^blog/tag/(.*)$ /blog/ [R=301,L]
