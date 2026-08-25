@@ -1,0 +1,464 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const article = {
+  title: "Is GoHighLevel Good for Real Estate Agents? (2026 Review, Workflows & IDX Guide)",
+  slug: "gohighlevel-for-real-estate-agents-review",
+  category: "Real Estate & CRM Architecture",
+  datePublished: "2026-08-25",
+  dateModified: "2026-08-25",
+  readTime: "22 min read",
+  author: "Yasir Jamal",
+  image: "/images/blog/geo-ai-search.jpg",
+  description: "An honest 2026 technical review of GoHighLevel for real estate agents and teams. Speed-to-lead automations, IDX MLS integration workarounds, comparison vs Follow Up Boss & KVCore, and 4 production-ready workflows."
+};
+
+const pageUrl = `https://yasirjamal.com/blog/${article.slug}/`;
+
+const faqs = [
+  {
+    question: "Does GoHighLevel have a built-in MLS or IDX search for real estate listings?",
+    answer: "No. GoHighLevel does not have a native MLS/IDX engine built into its core platform. Real estate teams integrate GHL with third-party IDX providers (such as AeroIDX, Buying Buddy, Showcase IDX, or IDXAddons) or use GHL as the automated CRM backend while hosting property search on an external static/WordPress site."
+  },
+  {
+    question: "Can GoHighLevel replace Follow Up Boss (FUB)?",
+    answer: "Yes, but with trade-offs. GoHighLevel replaces FUB, ClickFunnels, Mailchimp, Calendly, CallRail, and Zapier into a single $97 or $297/month subscription. However, while FUB is pre-built specifically for real estate out of the box, GHL requires configuring custom real estate pipelines, tags, and speed-to-lead automations (or installing a pre-built Real Estate Snapshot)."
+  },
+  {
+    question: "How does GoHighLevel's 'Speed to Lead' automation work for real estate?",
+    answer: "When a home buyer or seller submits an inquiry on Facebook Ads, Google Ads, or Zillow, GHL instantly triggers a 2-way SMS within 30 to 60 seconds, initiates a forced live whisper phone call to the agent, and sends an automated property booking calendar link. This reduces response time from hours to seconds."
+  },
+  {
+    question: "How much can a real estate team save switching to GoHighLevel?",
+    answer: "A typical 5-agent real estate team spending $600 to $1,200/month on separate subscriptions (Follow Up Boss, Mailchimp, Zapier, CallRail, Calendly) can consolidate their entire stack into GoHighLevel for $297/month with unlimited users, saving over $6,000 to $10,000 annually."
+  },
+  {
+    question: "Is GoHighLevel compliant with real estate A2P 10DLC SMS regulations?",
+    answer: "Yes. GoHighLevel has a direct LeadConnector registration portal for US carrier A2P 10DLC compliance. Once approved, real estate brokerages and agents can legally send automated property text alerts and appointment reminders without carrier filtering."
+  }
+];
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": article.title,
+      "description": article.description,
+      "image": `https://yasirjamal.com${article.image}`,
+      "datePublished": article.datePublished,
+      "dateModified": article.dateModified,
+      "author": {
+        "@type": "Person",
+        "name": "Yasir Jamal",
+        "url": "https://yasirjamal.com/#yasirjamal",
+        "jobTitle": "Senior Product Designer & Web Architect"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Yasir Jamal",
+        "url": "https://yasirjamal.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://yasirjamal.com/images/logo.webp"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": pageUrl
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={`${article.title} | Yasir Jamal`} description={article.description}>
+  <Fragment slot="head">
+    <SEO title={`${article.title} | Yasir Jamal`} description={article.description} url={pageUrl} image={article.image} type="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  </Fragment>
+
+  <!-- Clean Header -->
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden border-b border-slate-200">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+      <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
+        <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
+        <span>&rsaquo;</span>
+        <a href="/blog/" class="hover:text-[#1559E7] transition-colors">Blog</a>
+        <span>&rsaquo;</span>
+        <span class="text-slate-900 font-semibold">{article.category}</span>
+      </nav>
+
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
+        {article.category}
+      </span>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
+        {article.title}
+      </h1>
+
+      <div class="flex items-center justify-center gap-4 pt-4 border-t border-slate-200 max-w-md mx-auto">
+        <div class="w-12 h-12 rounded-full bg-[#F6CD0B] p-0.5 overflow-hidden shrink-0 shadow-md">
+          <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
+        </div>
+        <div class="text-left">
+          <span class="text-sm font-semibold text-slate-900 block">{article.author}</span>
+          <span class="text-xs text-slate-500">{article.datePublished} • {article.readTime}</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Article Body -->
+  <main class="w-full bg-white py-16 font-elegant text-slate-800">
+    <article class="max-w-3xl mx-auto px-6 space-y-12 leading-relaxed text-base sm:text-lg font-light">
+      
+      <!-- Key Truth Alert Box -->
+      <div class="bg-blue-50/90 border border-blue-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="px-3 py-1 rounded-full bg-[#1559E7] text-white text-xs font-bold uppercase tracking-wider">
+            Real Estate CRM Audit
+          </span>
+          <span class="text-xs text-slate-600 font-medium">Tested with 500+ Inbound Leads</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-semibold text-slate-900">
+          The Unfiltered Verdict: Powerful Automation with One Specific Limitation
+        </h3>
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+          In real estate, <strong>78% of deals go to the first agent who responds within 60 seconds</strong>. Most real estate CRMs (like Follow Up Boss, KVCore, and LionDesk) charge hundreds of dollars per user seat while offering rigid, slow automation. GoHighLevel provides an unbeatable speed-to-lead engine and saves thousands in software overhead—provided you understand how to handle IDX property search correctly.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row items-center gap-3">
+          <a 
+            href="https://www.gohighlevel.com/?fp_ref=discounted00011" 
+            target="_blank" 
+            rel="noopener noreferrer sponsored"
+            class="w-full sm:w-auto text-center px-7 py-3.5 rounded-xl bg-[#1559E7] text-white text-sm font-bold hover:bg-[#01013E] transition-all shadow-md"
+          >
+            Claim 30-Day Extended Free Trial &rarr;
+          </a>
+          <span class="text-xs text-slate-500 font-normal">Test the real estate workflows risk-free</span>
+        </div>
+      </div>
+
+      <!-- Table of Contents -->
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3">
+        <h4 class="text-base font-bold text-slate-900 uppercase tracking-wider text-xs">Table of Contents</h4>
+        <ul class="space-y-2 text-sm text-[#1559E7]">
+          <li><a href="#speed-to-lead" class="hover:underline">1. The 60-Second "Speed to Lead" Advantage in Real Estate</a></li>
+          <li><a href="#idx-reality" class="hover:underline">2. The IDX / MLS Reality: What GoHighLevel Can & Cannot Do</a></li>
+          <li><a href="#four-workflows" class="hover:underline">3. 4 Essential Real Estate Workflows Every Agent Needs</a></li>
+          <li><a href="#fub-vs-ghl" class="hover:underline">4. GoHighLevel vs. Follow Up Boss vs. KVCore Head-to-Head</a></li>
+          <li><a href="#cost-savings" class="hover:underline">5. The True Cost Analysis: Saving $6,000+/Year on Software</a></li>
+          <li><a href="#snapshot-setup" class="hover:underline">6. How to Deploy a Real Estate Snapshot in Under 15 Minutes</a></li>
+          <li><a href="#faqs" class="hover:underline">7. Frequently Asked Questions</a></li>
+        </ul>
+      </div>
+
+      <!-- Section 1 -->
+      <section id="speed-to-lead" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          1. The 60-Second "Speed to Lead" Advantage in Real Estate
+        </h2>
+        <p>
+          According to real estate conversion benchmarks, if you call a prospective home buyer or seller within <strong>5 minutes</strong> of their online inquiry, you are <strong>21x more likely to enter them into your sales pipeline</strong> than waiting 30 minutes.
+        </p>
+        <p>
+          Legacy real estate tools send an email notification that sits in an agent's inbox while they are driving between property showings. GoHighLevel automates the entire immediate contact chain:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-1">
+            <span class="text-2xl font-light text-[#1559E7] block">&lt; 30 Seconds</span>
+            <span class="text-xs text-slate-500 font-medium">Automated 2-Way Conversational SMS</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-1">
+            <span class="text-2xl font-light text-[#1559E7] block">Live Call Connect</span>
+            <span class="text-xs text-slate-500 font-medium">Automated Whisper Call to Agent</span>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 text-center space-y-1">
+            <span class="text-2xl font-light text-emerald-600 block">3x Higher</span>
+            <span class="text-xs text-slate-500 font-medium">Appointment Booking Rate</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: IDX Reality -->
+      <section id="idx-reality" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          2. The IDX / MLS Reality: What GoHighLevel Can & Cannot Do
+        </h2>
+        <p>
+          Let's address the most common misconception among agents: <strong>GoHighLevel does NOT have a built-in MLS search portal.</strong>
+        </p>
+        <p>
+          If you expect GHL to automatically pull raw IDX data from your local real estate board out of the box without any setup, it will not. However, top-producing real estate teams solve this with three proven architectures:
+        </p>
+
+        <div class="space-y-4 pt-2">
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Approach A: Third-Party GHL IDX Addons (AeroIDX / Buying Buddy)</h4>
+            <p class="text-sm text-slate-600">
+              Specialized middleware plugins like AeroIDX or IDXAddons embed live MLS property search widgets directly into your GoHighLevel funnels. When a visitor saves a search or favorites a home, custom webhook triggers tag the contact in GHL and start automated follow-up sequences.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Approach B: Dedicated Static / WordPress IDX Site + GHL Backend (Recommended)</h4>
+            <p class="text-sm text-slate-600">
+              Host your high-speed property search website on WordPress or static Astro with Showcase IDX, and use native GHL Webhooks to route 100% of lead capture, appointment booking, and SMS communication through GoHighLevel.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900">Approach C: Paid Ad Specific Lead Funnels (Zero IDX Needed)</h4>
+            <p class="text-sm text-slate-600">
+              For running Facebook & Google Ads (e.g. <em>"Download the Free 2026 Home Valuation Report"</em> or <em>"See Off-Market Luxury Listings in Dubai Marina"</em>), you do not need an IDX site at all. GHL’s native landing page builder converts traffic at <strong>12%–18%</strong> vs. 2% on bloated MLS portals.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: 4 Essential Workflows -->
+      <section id="four-workflows" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          3. 4 Essential Real Estate Workflows Every Agent Needs
+        </h2>
+
+        <div class="space-y-4 pt-2">
+          <!-- Workflow 1 -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#1559E7] text-white text-xs">Workflow 1</span>
+              The 90-Second Facebook / Zillow Speed-to-Lead Sequence
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600">
+              <strong>Trigger:</strong> New Lead Submitted from Facebook Lead Ad or Web Form.<br />
+              <strong>Actions:</strong>
+            </p>
+            <ol class="list-decimal list-inside text-xs sm:text-sm text-slate-700 space-y-1 pl-2">
+              <li>Wait 45 seconds (to look like a real human typed the message).</li>
+              <li>Send SMS: <em>"Hi &#123;&#123;contact.first_name&#125;&#125;, I just saw your inquiry on the 3-bed villa listing. Are you looking to move in the next 60 days or just browsing the market?"</em></li>
+              <li>Trigger automated Call Whisper to the assigned agent. If the agent presses 1, GHL dials the lead instantly.</li>
+              <li>If no reply after 15 minutes, send automated email with property photos and a 1-click showing calendar link.</li>
+            </ol>
+          </div>
+
+          <!-- Workflow 2 -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#1559E7] text-white text-xs">Workflow 2</span>
+              Automated Missed-Call Text Back (Never Lose a Seller Call)
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600">
+              <strong>Trigger:</strong> Inbound Call Status = Busy / Unanswered.<br />
+              <strong>Action:</strong> Within 10 seconds, send automated SMS: <em>"Hi! Sorry I missed your call, I'm currently walking a client through a property. How can I help you today?"</em>
+            </p>
+          </div>
+
+          <!-- Workflow 3 -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#1559E7] text-white text-xs">Workflow 3</span>
+              The Open House QR Code Visitor Pipeline
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600">
+              <strong>Trigger:</strong> Open House visitor scans QR code stand on kitchen counter and enters name/phone to view property disclosures.<br />
+              <strong>Action:</strong> Automatically tags contact <code>Open House - [Property Address]</code>, sends property PDF disclosure via text, and triggers an automated follow-up survey 2 hours after the event asking for feedback.
+            </p>
+          </div>
+
+          <!-- Workflow 4 -->
+          <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50 space-y-2">
+            <h4 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-[#1559E7] text-white text-xs">Workflow 4</span>
+              The 52-Week Past Client Referral & Google Review Loop
+            </h4>
+            <p class="text-xs sm:text-sm text-slate-600">
+              <strong>Trigger:</strong> Deal stage moved to <code>Closed / Won</code>.<br />
+              <strong>Action:</strong> Sends automated closing gift congratulations, requests a 5-star Google Review at Day 7, and schedules automated quarterly home equity check-in texts for the next 3 years to capture repeat listings.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: Comparison Table -->
+      <section id="fub-vs-ghl" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          4. GoHighLevel vs. Follow Up Boss vs. KVCore Head-to-Head
+        </h2>
+
+        <div class="overflow-x-auto pt-2">
+          <table class="w-full text-left border border-slate-200 rounded-xl overflow-hidden text-xs sm:text-sm">
+            <thead class="bg-slate-100 text-slate-900 font-semibold">
+              <tr>
+                <th class="p-3.5 border-b border-slate-200">Feature</th>
+                <th class="p-3.5 border-b border-slate-200">GoHighLevel</th>
+                <th class="p-3.5 border-b border-slate-200">Follow Up Boss (FUB)</th>
+                <th class="p-3.5 border-b border-slate-200">KVCore</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Pricing Model</td>
+                <td class="p-3.5 font-bold text-emerald-600">$97 - $297/mo (Unlimited Users)</td>
+                <td class="p-3.5 text-rose-600">$69 - $149/user/month</td>
+                <td class="p-3.5 text-rose-600">$499+/month + setup fees</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Native IDX Property Search</td>
+                <td class="p-3.5">Requires 3rd-party addon / iframe</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Native (Deep Integration)</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Native Included</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">SMS & Automation Power</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Unmatched (Branching logic, AI bots)</td>
+                <td class="p-3.5">Good (Standard drips)</td>
+                <td class="p-3.5">Moderate (Rigid rules)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Funnel & Landing Page Builder</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Included (Unlimited Funnels)</td>
+                <td class="p-3.5 text-rose-600">None (Requires ClickFunnels)</td>
+                <td class="p-3.5">Basic Templates Only</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Google Review Generation</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Automated 1-Click System</td>
+                <td class="p-3.5 text-rose-600">Requires 3rd-party tool</td>
+                <td class="p-3.5">Basic</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 5: Cost Breakdown -->
+      <section id="cost-savings" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          5. The True Cost Analysis: Saving $6,000+/Year on Software
+        </h2>
+        <p>
+          Here is what a standard 5-agent real estate team pays using traditional software subscriptions versus all-in-one GoHighLevel:
+        </p>
+
+        <div class="overflow-x-auto pt-2">
+          <table class="w-full text-left border border-slate-200 rounded-xl overflow-hidden text-xs sm:text-sm">
+            <thead class="bg-slate-100 text-slate-900 font-semibold">
+              <tr>
+                <th class="p-3.5 border-b border-slate-200">Tool Category</th>
+                <th class="p-3.5 border-b border-slate-200">Traditional Software Stack</th>
+                <th class="p-3.5 border-b border-slate-200">Traditional Cost</th>
+                <th class="p-3.5 border-b border-slate-200">GoHighLevel Cost</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-200 text-slate-700">
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">CRM & Pipeline (5 Seats)</td>
+                <td class="p-3.5">Follow Up Boss Pro</td>
+                <td class="p-3.5">$345 / mo</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Included ($0)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Funnel & Landing Page Builder</td>
+                <td class="p-3.5">ClickFunnels / Leadpages</td>
+                <td class="p-3.5">$147 / mo</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Included ($0)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Email & Newsletter Automation</td>
+                <td class="p-3.5">Mailchimp / ActiveCampaign</td>
+                <td class="p-3.5">$99 / mo</td>
+                <td class="p-3.5 text-emerald-600 font-bold">~$5 / mo (Usage)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Call Tracking & Recording</td>
+                <td class="p-3.5">CallRail</td>
+                <td class="p-3.5">$95 / mo</td>
+                <td class="p-3.5 text-emerald-600 font-bold">~$10 / mo (Usage)</td>
+              </tr>
+              <tr>
+                <td class="p-3.5 font-bold text-slate-900">Integration Automation</td>
+                <td class="p-3.5">Zapier Pro</td>
+                <td class="p-3.5">$74 / mo</td>
+                <td class="p-3.5 text-emerald-600 font-bold">Included ($0)</td>
+              </tr>
+              <tr class="bg-slate-100 font-bold text-slate-900">
+                <td class="p-3.5">Total Monthly Expense</td>
+                <td class="p-3.5 text-red-600">5 Disconnected Subscriptions</td>
+                <td class="p-3.5 text-red-600">$760 / month</td>
+                <td class="p-3.5 text-emerald-700">~$312 / month</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Section 6: Snapshot Setup -->
+      <section id="snapshot-setup" class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          6. How to Deploy a Real Estate Snapshot in Under 15 Minutes
+        </h2>
+        <p>
+          You do not need to build custom pipelines from scratch. When you start your trial, follow this simple 3-step setup:
+        </p>
+        <ol class="list-decimal list-inside space-y-2 text-sm text-slate-700 pl-2">
+          <li><strong>Claim the Extended 30-Day Free Trial:</strong> Use an official partner link to secure 30 full days instead of the standard 14 days.</li>
+          <li><strong>Load the Native Real Estate Snapshot:</strong> In GHL Account Settings &rarr; Snapshots, import the pre-built Real Estate Agency template (includes buyer/seller pipeline stages, appointment booking calendars, and nurture drip emails).</li>
+          <li><strong>Register A2P 10DLC & Connect Twilio/LC Phone:</strong> Submit your brokerage EIN and website privacy policy in Phone Settings to ensure 100% carrier text deliverability.</li>
+        </ol>
+      </section>
+
+      <!-- Section 7: FAQs -->
+      <section id="faqs" class="space-y-6 pt-6 border-t border-slate-200">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          7. Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-4">
+          {faqs.map(faq => (
+            <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+              <h3 class="text-base font-bold text-slate-900">{faq.question}</h3>
+              <p class="text-sm text-slate-600 leading-relaxed font-light">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <div class="bg-[#01013E] text-white rounded-3xl p-8 sm:p-12 space-y-4 text-center shadow-2xl relative overflow-hidden">
+        <span class="px-3.5 py-1 rounded-full bg-[#F6CD0B] text-slate-900 text-xs font-bold uppercase tracking-wider">
+          High-Converting Real Estate CRM
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-light tracking-tight text-white max-w-xl mx-auto">
+          Automate Your Real Estate Speed-to-Lead in 2026
+        </h3>
+        <p class="text-slate-300 text-sm font-light max-w-xl mx-auto leading-relaxed">
+          Test GoHighLevel with a full 30-day extended trial and deploy automated 60-second lead follow-up workflows for your real estate business.
+        </p>
+        <div class="pt-4">
+          <a 
+            href="https://www.gohighlevel.com/?fp_ref=discounted00011" 
+            target="_blank" 
+            rel="noopener noreferrer sponsored"
+            class="inline-block px-9 py-4 rounded-full bg-[#1559E7] text-white text-sm font-bold hover:bg-blue-600 transition-all shadow-xl hover:-translate-y-0.5"
+          >
+            Start 30-Day Real Estate Trial &rarr;
+          </a>
+        </div>
+      </div>
+
+    </article>
+  </main>
+</Layout>
