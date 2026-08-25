@@ -10,7 +10,7 @@ const article = {
   dateModified: "2026-08-25",
   readTime: "22 min read",
   author: "Yasir Jamal",
-  image: "/images/blog/geo-ai-search.jpg",
+  image: "/images/blog/ghl-real-estate-crm.webp",
   description: "An honest 2026 technical review of GoHighLevel for real estate agents and teams. Speed-to-lead automations, IDX MLS integration workarounds, comparison vs Follow Up Boss & KVCore, and 4 production-ready workflows."
 };
 
@@ -125,6 +125,16 @@ const articleSchema = {
   <main class="w-full bg-white py-16 font-elegant text-slate-800">
     <article class="max-w-3xl mx-auto px-6 space-y-12 leading-relaxed text-base sm:text-lg font-light">
       
+      <!-- Hero Feature Image -->
+      <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+        <img 
+          src={article.image} 
+          alt={article.title} 
+          class="w-full h-auto object-cover max-h-[440px]" 
+          loading="eager"
+        />
+      </div>
+
       <!-- Key Truth Alert Box -->
       <div class="bg-blue-50/90 border border-blue-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
         <div class="flex items-center justify-between">
