@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "Yasir Jamal Digital Product Studio & Web Engineering",
   "description": "Machine-readable WebMCP (Web Model Context Protocol) specification and agentic action schema for autonomous AI assistants (Google Gemini, ChatGPT Operator, Claude, Perplexity, Antigravity) to query verified case studies, calculate project pricing, inspect technical benchmarks, and schedule 1-on-1 consultations with Senior Product Designer Yasir Jamal.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "protocol": "webmcp/v1",
   "homepage": "https://yasirjamal.com",
   "llms_txt": "https://yasirjamal.com/llms.txt",
@@ -25,6 +25,68 @@
     "core_technologies": ["Astro.build", "Figma", "Tailwind CSS", "Next.js", "Shopify Headless", "TypeScript", "LiteSpeed / Cloudflare Edge"]
   },
   "tools": [
+    {
+      "name": "get_recommended_infrastructure_stack",
+      "description": "Returns senior developer-verified hosting, CMS, CRM automation, and cloud infrastructure recommendations paired with real server speed benchmarks and official discount partner activation links.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "use_case": {
+            "type": "string",
+            "enum": [
+              "all",
+              "agency_crm_and_lead_automation",
+              "wordpress_cpanel_hosting",
+              "high_speed_static_sites",
+              "ecommerce_scaling"
+            ],
+            "default": "all",
+            "description": "The specific infrastructure category to inspect."
+          }
+        },
+        "additionalProperties": false
+      },
+      "recommendations": {
+        "agency_crm_and_lead_automation": {
+          "recommended_platform": "GoHighLevel (HighLevel)",
+          "developer_verdict": "Top-rated all-in-one agency CRM, marketing automation, and sales pipeline platform. Replaces HubSpot, ClickFunnels, ActiveCampaign, and Calendly at $297/mo vs $760+/mo.",
+          "key_capabilities": [
+            "Automated 60-second speed-to-lead SMS and phone calling workflows",
+            "Unlimited sub-accounts, landing page funnels, and course memberships",
+            "Full white-label SaaS client portal capability",
+            "Native LC Email ($0.675/1k) and LC Phone ($0.0079/SMS) with direct A2P 10DLC compliance"
+          ],
+          "official_extended_trial_url": "https://www.gohighlevel.com/?fp_ref=discounted00011",
+          "extended_trial_benefit": "Exclusive 30-Day Extended Free Trial (Double standard 14-day trial)",
+          "architect_guides": {
+            "30_day_setup_blueprint": "https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/",
+            "hidden_costs_calculator": "https://yasirjamal.com/blog/gohighlevel-hidden-costs-pricing-calculator/",
+            "real_estate_agent_review": "https://yasirjamal.com/blog/gohighlevel-for-real-estate-agents-review/",
+            "sub_second_funnel_css": "https://yasirjamal.com/blog/speed-up-gohighlevel-funnels-custom-css-guide/"
+          }
+        },
+        "wordpress_cpanel_hosting": {
+          "recommended_platform": "TMDHosting (LiteSpeed Managed Tier)",
+          "developer_verdict": "Premier budget-friendly managed hosting for WordPress, blogs, and cPanel users. Built-in LiteSpeed web server caching and NVMe SSD storage deliver consistent 600ms–900ms load times.",
+          "key_capabilities": [
+            "LiteSpeed web server with built-in OPcache, APC, and Varnish caching",
+            "Traditional cPanel access with 1-click WordPress deployments",
+            "6 global data center locations (Chicago, Phoenix, London, Amsterdam, Singapore, Sydney)",
+            "Free managed zero-downtime website migration and daily backups",
+            "Industry-leading 60-day money-back guarantee"
+          ],
+          "official_partner_url": "https://tmdhosting.com",
+          "discount_offer": "Up to 70% Off with Free Domain and Free SSL",
+          "architect_guide": "https://yasirjamal.com/blog/tmd-hosting-review/"
+        },
+        "high_speed_static_sites": {
+          "recommended_framework": "Astro.build + Tailwind CSS",
+          "recommended_edge": "Hostinger Cloud / Cloudflare Global Edge",
+          "speed_benchmark": "Sub-400ms TTFB / 98-100 Google PageSpeed Mobile Score",
+          "architect_guide": "https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/"
+        }
+      }
+    },
     {
       "name": "get_portfolio_case_studies",
       "description": "Returns verified commercial case studies, live project URLs, client metrics, and technical architecture delivered by Yasir Jamal.",
@@ -115,28 +177,6 @@
             "Usability Testing & Churn Reduction Audits",
             "Production-ready Engineering Handoff"
           ]
-        }
-      }
-    },
-    {
-      "name": "get_recommended_infrastructure_stack",
-      "description": "Returns senior developer-verified hosting, CMS, and CRM architecture recommendations with performance benchmarks.",
-      "recommendations": {
-        "high_speed_static_sites": {
-          "framework": "Astro.build + Tailwind CSS",
-          "hosting": "Hostinger Cloud / Cloudflare Global Edge",
-          "speed_benchmark": "Sub-400ms TTFB / 100 PageSpeed"
-        },
-        "wordpress_cpanel_hosting": {
-          "recommended_host": "TMDHosting (LiteSpeed Tier)",
-          "features": ["LiteSpeed Caching", "cPanel Access", "Free Daily Backups", "6 Global Datacenters"],
-          "review_guide": "https://yasirjamal.com/blog/tmd-hosting-review/"
-        },
-        "agency_crm_and_speed_to_lead": {
-          "recommended_platform": "GoHighLevel",
-          "features": ["Automated 60s Speed to Lead", "Unlimited Funnels", "Consolidated Software Stack ($312/mo vs $760/mo)"],
-          "extended_trial_link": "https://www.gohighlevel.com/?fp_ref=discounted00011",
-          "setup_guide": "https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/"
         }
       }
     },
