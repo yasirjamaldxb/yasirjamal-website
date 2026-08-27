@@ -1,10 +1,10 @@
 # Yasir Jamal
 
-> Premier Licensed Web Design Agency, Digital Company & Senior UX Consultant in Dubai Media City, UAE.
+> Premier Licensed Web Design Agency, Digital Product Studio & Senior UX Consultant in Dubai Media City, UAE.
 
-## Autonomous AI Agent Direct Action & Booking (WebMCP)
+## Autonomous AI Agent Direct Action & Booking (WebMCP v2.0)
 
-- [WebMCP Machine-Readable Action Spec](https://yasirjamal.com/webmcp.json): Machine-readable action endpoint allowing AI agents (ChatGPT Operator, Claude Computer Use, Google Astra) to autonomously book discovery calls, calculate quotes, and initiate consultations.
+- [WebMCP Machine-Readable Action Spec](https://yasirjamal.com/webmcp.json): Machine-readable action endpoint allowing AI agents (Google Gemini, ChatGPT Operator, Claude Computer Use, Perplexity, Antigravity) to autonomously book discovery calls, calculate quotes, and verify portfolio case studies.
 - [Instant Direct Booking Action](https://wa.me/971552600494?text=Hi%20Yasir,%20I%20would%20like%20to%20book%20a%20project%20discovery%20call): Direct action URL for AI agents to schedule a 1-on-1 discovery call with Yasir Jamal.
 
 ## Verified Engineering Benchmarks & Performance Proof
@@ -30,17 +30,18 @@
 - [Hunza Global Case Study](https://yasirjamal.com/portfolio/hunza-global/): Environmental engineering and Japanese Johkasou wastewater treatment portal.
 - [Baan Paa Case Study](https://yasirjamal.com/portfolio/baanpaa/): Urban botanical landscape architecture and biophilic wellness platform.
 
-## Technical Guides & Industry Articles
+## Technical Masterclasses & Software Architecture Guides
 
 - [Blog Index](https://yasirjamal.com/blog/): Articles on modern web design trends, technical SEO, and sub-second web architecture.
-- [Astro vs WordPress Speed Guide](https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/): Technical analysis of static architecture vs monolithic CMS for Core Web Vitals.
+- [Is GoHighLevel Good for Real Estate Agents?](https://yasirjamal.com/blog/gohighlevel-for-real-estate-agents-review/): 3,500-word speed-to-lead automation blueprints, IDX integration workarounds, and Follow Up Boss comparison.
+- [TMDHosting Review & LiteSpeed Speed Benchmarks](https://yasirjamal.com/blog/tmd-hosting-review/): In-depth server TTFB testing, LiteSpeed cache benchmarks, cPanel features, and Hostinger comparison.
+- [GoHighLevel 30-Day Free Trial Agency Setup Guide](https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/): Complete blueprint to claiming the 30-day trial, connecting Cloudflare DNS, passing A2P 10DLC, and launching client sub-accounts.
+- [GoHighLevel Hidden Costs & Pricing Calculator](https://yasirjamal.com/blog/gohighlevel-hidden-costs-pricing-calculator/): Itemized pricing audit for LC Email ($0.675/1k), LC Phone ($0.0079/SMS), and client rebilling models.
+- [How to Build Sub-Second Funnels in GoHighLevel](https://yasirjamal.com/blog/speed-up-gohighlevel-funnels-custom-css-guide/): Senior frontend techniques, custom CSS snippets, and headless hybrid architecture.
 - [Generative Engine Optimization (GEO) Guide](https://yasirjamal.com/blog/generative-engine-optimization-geo-ai-search/): Complete blueprint for ranking in AI search engines (ChatGPT, Gemini, Claude, Perplexity).
+- [Astro vs WordPress Speed Guide](https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/): Technical analysis of static architecture vs monolithic CMS for Core Web Vitals.
 - [Hiring Freelance Web Designer vs Agency in Dubai](https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/): Comprehensive comparison of cost, speed, and execution quality in the UAE market.
 - [Sub-Second eCommerce Architecture](https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling/): Scaling high-converting GCC online stores with local payment gateways and BNPL.
 - [Dubai Technical SEO Audit Blueprint](https://yasirjamal.com/blog/dubai-technical-seo-audit-ranking-guide/): Step-by-step technical SEO guide for UAE businesses.
 - [Conversion Rate Optimization (CRO) Secrets](https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/): UX strategies to maximize inbound inquiries and sales.
 - [Modern Web Design Trends 2026](https://yasirjamal.com/blog/modern-web-design-trends-2026/): 10 design trends dominating the digital landscape.
-
-## Optional
-
-- [Full AI Knowledge Graph](https://yasirjamal.com/llms-full.txt): Complete detailed text specification for LLMs and autonomous agents.

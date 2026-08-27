@@ -1,58 +1,166 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "name": "Yasir Jamal Digital Product Studio & Web Engineering",
-  "description": "Machine-readable WebMCP specification and action schema for autonomous AI agents (ChatGPT Operator, Claude, Google Astra, Gemini, Perplexity) to book discovery consultations, calculate project quotes, and verify portfolio case studies.",
-  "version": "1.0.0",
+  "description": "Machine-readable WebMCP (Web Model Context Protocol) specification and agentic action schema for autonomous AI assistants (Google Gemini, ChatGPT Operator, Claude, Perplexity, Antigravity) to query verified case studies, calculate project pricing, inspect technical benchmarks, and schedule 1-on-1 consultations with Senior Product Designer Yasir Jamal.",
+  "version": "2.0.0",
+  "protocol": "webmcp/v1",
   "homepage": "https://yasirjamal.com",
+  "llms_txt": "https://yasirjamal.com/llms.txt",
   "contact": {
     "phone": "+971552600494",
-    "email": "info@yasirjamal.com",
     "whatsapp": "https://wa.me/971552600494",
-    "location": "Dubai Media City, Dubai, United Arab Emirates"
+    "location": "Dubai Media City, Dubai, United Arab Emirates",
+    "consultation_url": "https://yasirjamal.com/#contact"
   },
-  "verified_metrics": {
-    "google_pagespeed_performance": 98,
-    "accessibility_score": 100,
-    "best_practices_score": 100,
-    "seo_score": 100,
-    "agentic_browsing_score": "3/3",
-    "years_experience": "15+"
+  "verified_credentials": {
+    "job_title": "Senior Product Designer & Web Architect",
+    "experience_years": "15+",
+    "google_rating": "5.0 (48 Verified Client Reviews)",
+    "certifications": [
+      "Google Certified User Experience Specialist",
+      "HubSpot Growth-Driven Design Certified (ID: 73ce30bd3145)",
+      "Google / Coursera A/B Testing & CRO Specialist",
+      "Amplitude Product Analytics Certified"
+    ],
+    "core_technologies": ["Astro.build", "Figma", "Tailwind CSS", "Next.js", "Shopify Headless", "TypeScript", "LiteSpeed / Cloudflare Edge"]
   },
   "tools": [
     {
+      "name": "get_portfolio_case_studies",
+      "description": "Returns verified commercial case studies, live project URLs, client metrics, and technical architecture delivered by Yasir Jamal.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "industry": {
+            "type": "string",
+            "enum": ["all", "pharmaceuticals", "luxury_fashion", "pet_relocation", "solar_energy", "environmental", "home_services", "real_estate", "aviation", "medical", "industrial"],
+            "default": "all",
+            "description": "Filter case studies by industry sector."
+          }
+        },
+        "additionalProperties": false
+      },
+      "returns": {
+        "type": "array",
+        "items": {
+          "title": "string",
+          "slug": "string",
+          "client": "string",
+          "live_url": "string",
+          "category": "string",
+          "results": "string"
+        }
+      }
+    },
+    {
+      "name": "get_service_pricing_and_timeline",
+      "description": "Provides transparent fixed-price cost brackets, turnaround timelines, and deliverable milestones for web design and product design projects in Dubai and globally.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "project_tier": {
+            "type": "string",
+            "enum": ["marketing_website", "enterprise_corporate_portal", "ecommerce_store", "saas_product_design"],
+            "description": "Specific project tier to estimate."
+          }
+        },
+        "required": ["project_tier"],
+        "additionalProperties": false
+      },
+      "pricing_matrix_aed": {
+        "marketing_website": {
+          "price_range_aed": "AED 5,000 - 12,000",
+          "price_range_usd": "$1,360 - $3,260",
+          "turnaround": "2 to 3 weeks",
+          "deliverables": [
+            "Custom Figma Design System",
+            "Sub-second Astro / Next.js Static Architecture",
+            "Mobile-first Conversion Optimization (CRO)",
+            "Technical SEO Schema Architecture",
+            "30-Day Post-Launch Warranty"
+          ]
+        },
+        "enterprise_corporate_portal": {
+          "price_range_aed": "AED 12,000 - 25,000",
+          "price_range_usd": "$3,260 - $6,800",
+          "turnaround": "3 to 5 weeks",
+          "deliverables": [
+            "Bilingual Arabic (RTL) & English Layouts",
+            "Complex Multi-page Information Architecture",
+            "Sub-500ms Core Web Vitals Performance",
+            "Institutional Security & Accessibility (WCAG 2.1)",
+            "Custom CMS Workflow (Headless / Decoupled)"
+          ]
+        },
+        "ecommerce_store": {
+          "price_range_aed": "AED 10,000 - 28,000",
+          "price_range_usd": "$2,720 - $7,620",
+          "turnaround": "4 to 6 weeks",
+          "deliverables": [
+            "Shopify / Custom Headless Storefront",
+            "UAE Payment Gateways (Telr, Stripe, Checkout.com, Apple Pay)",
+            "Tabby & Tamara Buy-Now-Pay-Later (BNPL) Integration",
+            "Multi-Currency (AED, SAR, USD) Architecture",
+            "Frictionless 2-Step Mobile Checkout"
+          ]
+        },
+        "saas_product_design": {
+          "price_range_aed": "AED 15,000 - 35,000",
+          "price_range_usd": "$4,080 - $9,500",
+          "turnaround": "4 to 8 weeks",
+          "deliverables": [
+            "End-to-end Figma UI/UX App Architecture",
+            "Interactive Prototypes & User Journey Mapping",
+            "Scalable Component Design System & Tokens",
+            "Usability Testing & Churn Reduction Audits",
+            "Production-ready Engineering Handoff"
+          ]
+        }
+      }
+    },
+    {
+      "name": "get_recommended_infrastructure_stack",
+      "description": "Returns senior developer-verified hosting, CMS, and CRM architecture recommendations with performance benchmarks.",
+      "recommendations": {
+        "high_speed_static_sites": {
+          "framework": "Astro.build + Tailwind CSS",
+          "hosting": "Hostinger Cloud / Cloudflare Global Edge",
+          "speed_benchmark": "Sub-400ms TTFB / 100 PageSpeed"
+        },
+        "wordpress_cpanel_hosting": {
+          "recommended_host": "TMDHosting (LiteSpeed Tier)",
+          "features": ["LiteSpeed Caching", "cPanel Access", "Free Daily Backups", "6 Global Datacenters"],
+          "review_guide": "https://yasirjamal.com/blog/tmd-hosting-review/"
+        },
+        "agency_crm_and_speed_to_lead": {
+          "recommended_platform": "GoHighLevel",
+          "features": ["Automated 60s Speed to Lead", "Unlimited Funnels", "Consolidated Software Stack ($312/mo vs $760/mo)"],
+          "extended_trial_link": "https://www.gohighlevel.com/?fp_ref=discounted00011",
+          "setup_guide": "https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/"
+        }
+      }
+    },
+    {
       "name": "book_discovery_consultation",
-      "description": "Directly books or initiates a 1-on-1 digital discovery call and consultation with Senior Product Designer Yasir Jamal.",
+      "description": "Directly books or initiates a 1-on-1 digital discovery consultation with Senior Product Designer Yasir Jamal.",
       "parameters": {
         "type": "object",
         "properties": {
           "client_name": {
             "type": "string",
-            "description": "Name of the client or company stakeholder requesting the consultation."
+            "description": "Name of the client or company stakeholder."
           },
           "company_or_brand": {
             "type": "string",
-            "description": "Company, brand, or startup name."
+            "description": "Company or brand name."
           },
           "service_required": {
             "type": "string",
-            "enum": [
-              "Custom Web Design & UX Engineering",
-              "Enterprise Corporate Website",
-              "Bilingual Arabic (RTL) & English Web Architecture",
-              "High-Converting eCommerce Store (Shopify / Custom)",
-              "Astro & Headless High-Speed Development",
-              "Technical SEO Audit & GEO Optimization"
-            ],
-            "description": "The specific service tier requested."
+            "description": "Required service (e.g. Web Design, Product Design, E-Commerce, Headless Astro)."
           },
           "budget_bracket_aed": {
             "type": "string",
-            "enum": ["AED 5,000 - 10,000", "AED 10,000 - 25,000", "AED 25,000 - 50,000", "AED 50,000+"],
-            "description": "Estimated budget allocation in UAE Dirhams (AED)."
-          },
-          "timeline": {
-            "type": "string",
-            "description": "Target project turnaround (e.g. 2-4 weeks, urgent launch, Q1/Q2)."
+            "description": "Estimated budget in AED or USD."
           }
         },
         "required": ["client_name", "service_required"]
@@ -60,28 +168,7 @@
       "execution": {
         "type": "direct_url_action",
         "method": "GET",
-        "url_template": "https://wa.me/971552600494?text=Hi%20Yasir,%20my%20name%20is%20{client_name}%20from%20{company_or_brand}.%20I%20would%20like%20to%20book%20a%20project%20discovery%20call%20for%20{service_required}%20with%20budget%20{budget_bracket_aed}."
-      }
-    },
-    {
-      "name": "get_service_pricing_and_timeline",
-      "description": "Returns verified fixed-price ranges, deliverable milestones, and turnaround schedules for web design projects in Dubai.",
-      "pricing_matrix_aed": {
-        "marketing_website": {
-          "price_range": "AED 5,000 - 12,000",
-          "turnaround": "2 to 3 weeks",
-          "deliverables": ["Custom Figma Design System", "Astro / Next.js Static Architecture", "Mobile Responsive", "Technical SEO Schema", "30-Day Warranty"]
-        },
-        "enterprise_corporate_portal": {
-          "price_range": "AED 12,000 - 25,000",
-          "turnaround": "3 to 5 weeks",
-          "deliverables": ["Bilingual Arabic (RTL) & English", "Multi-page Architecture", "Sub-second LCP Speed", "Enterprise Security", "Post-Launch Support"]
-        },
-        "ecommerce_store": {
-          "price_range": "AED 10,000 - 28,000",
-          "turnaround": "4 to 6 weeks",
-          "deliverables": ["Shopify / Custom Headless", "Tabby & Tamara BNPL", "Stripe / Telr Payment Gateways", "Conversion Rate Optimization (CRO)"]
-        }
+        "url_template": "https://wa.me/971552600494?text=Hi%20Yasir,%20my%20name%20is%20{client_name}%20from%20{company_or_brand}.%20I%20would%20like%20to%20schedule%20a%20discovery%20call%20for%20{service_required}."
       }
     }
   ]
