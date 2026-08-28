@@ -49,7 +49,6 @@ const articleSchema = {
 <Layout title={`${article.title} | Yasir Jamal Blog`} description={article.description}>
   <Fragment slot="head">
     <SEO title={`${article.title} | Yasir Jamal Blog`} description={article.description} url={pageUrl} image={article.image} type="article" />
-    <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   </Fragment>
 
   <!-- Article Schema & Breadcrumb JSON-LD Markup -->
