@@ -1,0 +1,70 @@
+========================================================
+📊 GOOGLE SEARCH CONSOLE - WEEKLY TRAFFIC & RANKINGS REPORT
+========================================================
+
+Analyzing GSC Date Range: 2026-08-20 to 2026-08-27
+
+📈 OVERALL 7-DAY PERFORMANCE:
+   - Total Clicks: 13
+   - Total Impressions: 681
+   - Average CTR: 1.91%
+   - Average Position: 29.0
+--------------------------------------------------------
+
+🔑 TOP SEARCH QUERIES THIS WEEK:
+   1. "freelance web designer dubai" | Clicks: 4 | Impr: 112 | CTR: 3.6% | Pos: #8.6
+   2. "julphar" | Clicks: 1 | Impr: 1 | CTR: 100.0% | Pos: #9.0
+   3. "web development companies in dubai internet city" | Clicks: 1 | Impr: 1 | CTR: 100.0% | Pos: #6.0
+   4. ""rocket internet" -"africa" -"asia" -"europe" -"germany" -"finance" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #4.0
+   5. "alomaids" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #9.0
+   6. "best freelance web developer in dubai" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #27.0
+   7. "best website design company dubai" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #56.0
+   8. "brand and web designer" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #21.0
+   9. "brand design trends dubai 2026" | Clicks: 0 | Impr: 2 | CTR: 0.0% | Pos: #99.0
+   10. "dubai freelance web designer" | Clicks: 0 | Impr: 4 | CTR: 0.0% | Pos: #18.0
+   11. "dubai freelance web developer" | Clicks: 0 | Impr: 4 | CTR: 0.0% | Pos: #12.3
+   12. "dubai frontend experts" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #68.0
+   13. "dubai web designer" | Clicks: 0 | Impr: 9 | CTR: 0.0% | Pos: #51.0
+   14. "dubai web designing" | Clicks: 0 | Impr: 3 | CTR: 0.0% | Pos: #62.3
+   15. "dubai web developers" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #40.0
+   16. "dubai website designers" | Clicks: 0 | Impr: 2 | CTR: 0.0% | Pos: #60.5
+   17. "ecommerce website development dubai" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #1.0
+   18. "freelance ui developer in dubai" | Clicks: 0 | Impr: 3 | CTR: 0.0% | Pos: #14.7
+   19. "freelance web" | Clicks: 0 | Impr: 2 | CTR: 0.0% | Pos: #50.5
+   20. "freelance web design" | Clicks: 0 | Impr: 6 | CTR: 0.0% | Pos: #40.7
+   21. "freelance web design ajman" | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #35.0
+   22. "freelance web design dubai" | Clicks: 0 | Impr: 8 | CTR: 0.0% | Pos: #13.3
+   23. "freelance web design jobs dubai" | Clicks: 0 | Impr: 4 | CTR: 0.0% | Pos: #32.0
+   24. "freelance web designer" | Clicks: 0 | Impr: 9 | CTR: 0.0% | Pos: #38.8
+   25. "freelance web designer in dubai" | Clicks: 0 | Impr: 11 | CTR: 0.0% | Pos: #9.3
+--------------------------------------------------------
+
+📄 TOP PERFORMING PAGES THIS WEEK:
+   1. / | Clicks: 5 | Impr: 559 | CTR: 0.9% | Pos: #25.7
+   2. /blog/tmd-hosting-review/ | Clicks: 3 | Impr: 24 | CTR: 12.5% | Pos: #32.1
+   3. /blog/my-design-process/ | Clicks: 2 | Impr: 15 | CTR: 13.3% | Pos: #19.3
+   4. /blog/speed-up-gohighlevel-funnels-custom-css-guide/ | Clicks: 2 | Impr: 20 | CTR: 10.0% | Pos: #38.1
+   5. https://www.yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide | Clicks: 1 | Impr: 11 | CTR: 9.1% | Pos: #44.0
+   6. https://www.yasirjamal.com/portfolio/julphar/ | Clicks: 1 | Impr: 5 | CTR: 20.0% | Pos: #17.4
+   7. https://www.yasirjamal.com/portfolio/markwilliams/ | Clicks: 1 | Impr: 2 | CTR: 50.0% | Pos: #17.0
+   8. /blog/failed-websites/ | Clicks: 1 | Impr: 16 | CTR: 6.3% | Pos: #27.8
+   9. /blog/side-hustle/ | Clicks: 1 | Impr: 14 | CTR: 7.1% | Pos: #15.9
+   10. /work/alomaids/ | Clicks: 1 | Impr: 15 | CTR: 6.7% | Pos: #10.0
+   11. https://www.yasirjamal.com/about/ | Clicks: 0 | Impr: 14 | CTR: 0.0% | Pos: #6.9
+   12. https://www.yasirjamal.com/blog | Clicks: 0 | Impr: 1 | CTR: 0.0% | Pos: #64.0
+   13. https://www.yasirjamal.com/blog/generative-engine-optimization-geo-ai-search | Clicks: 0 | Impr: 2 | CTR: 0.0% | Pos: #34.0
+   14. https://www.yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/ | Clicks: 0 | Impr: 12 | CTR: 0.0% | Pos: #27.0
+   15. https://www.yasirjamal.com/blog/modern-web-design-trends-2026 | Clicks: 0 | Impr: 14 | CTR: 0.0% | Pos: #45.6
+   16. https://www.yasirjamal.com/portfolio | Clicks: 0 | Impr: 10 | CTR: 0.0% | Pos: #12.7
+   17. https://www.yasirjamal.com/portfolio/alomaids/ | Clicks: 0 | Impr: 2 | CTR: 0.0% | Pos: #19.0
+   18. https://www.yasirjamal.com/portfolio/baanpaa/ | Clicks: 0 | Impr: 10 | CTR: 0.0% | Pos: #19.3
+   19. https://www.yasirjamal.com/portfolio/dubai-podiatrist/ | Clicks: 0 | Impr: 12 | CTR: 0.0% | Pos: #25.4
+   20. https://www.yasirjamal.com/portfolio/hunza-global/ | Clicks: 0 | Impr: 13 | CTR: 0.0% | Pos: #21.8
+--------------------------------------------------------
+
+📅 28-DAY AGGREGATE BASELINE:
+   - 28-Day Clicks: 13
+   - 28-Day Impressions: 681
+   - 28-Day Avg Position: 29.0
+========================================================
+
