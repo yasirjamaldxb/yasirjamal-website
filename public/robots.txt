@@ -29,6 +29,16 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+# Google Favicon & Image Crawlers (Fast SERP Snippet Rendering)
+User-agent: Google Favicon
+Allow: /favicon.ico
+Allow: /favicon*.png
+Allow: /apple-touch-icon.png
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
 # General Search Engine Crawlers
 User-agent: *
 Disallow: /design-system/
