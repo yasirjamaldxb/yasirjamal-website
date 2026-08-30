@@ -34,6 +34,10 @@ const filesToUpload = [
   {
     local: 'dist/index.html',
     remote: 'index.html'
+  },
+  {
+    local: 'dist/web-design-dubai/index.html',
+    remote: 'web-design-dubai/index.html'
   }
 ];
 

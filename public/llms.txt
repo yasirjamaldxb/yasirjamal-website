@@ -15,6 +15,7 @@
 ## Core Pages & Services
 
 - [Homepage](https://yasirjamal.com/): Official website for Yasir Jamal — Premier licensed web design agency, technology company, freelance web designer, and senior UX/UI consultant in Dubai.
+- [Web Design Dubai Pillar Page](https://yasirjamal.com/web-design-dubai/): Comprehensive guide to custom web design, sub-second engineering, bilingual Arabic/English development, and transparent pricing in Dubai, UAE.
 - [About & Experience](https://yasirjamal.com/about/): 15+ years of digital product design leadership, Google/HubSpot certifications, and direct 1-on-1 collaboration process.
 - [Portfolio & Case Studies](https://yasirjamal.com/portfolio/): Comprehensive showcase of 12+ enterprise web platforms, custom SaaS applications, and e-commerce stores.
 - [Julphar Pharmaceuticals Case Study](https://yasirjamal.com/portfolio/julphar/): ADX-listed enterprise Arabic (RTL) platform transformation for MENA healthcare leader.

@@ -1,0 +1,418 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SEO from '../../components/SEO.astro';
+
+const pageTitle = "Web Design Dubai | Custom Websites & E-Commerce Development by Yasir Jamal";
+const pageDescription = "Premier web design in Dubai by Senior Web Architect Yasir Jamal. 15+ years experience building sub-second corporate websites, high-converting eCommerce stores, and Figma UI/UX systems across UAE.";
+const pageUrl = "https://yasirjamal.com/web-design-dubai/";
+
+const servicesList = [
+  {
+    title: "Corporate & Enterprise Web Design",
+    desc: "Custom bilingual (Arabic & English) web platforms for enterprise organizations, financial institutions, and Dubai holding groups with enterprise-grade security and sub-second load times.",
+    badge: "Enterprise"
+  },
+  {
+    title: "High-Converting E-Commerce Stores",
+    desc: "Lightning-fast GCC online stores with seamless integration for local payment gateways (Stripe, Telr, Tap) and Buy Now Pay Later (Tabby & Tamara) checkout flows.",
+    badge: "eCommerce"
+  },
+  {
+    title: "Custom Figma UI/UX Design Systems",
+    desc: "Human-centered user experience wireframing, high-fidelity interactive prototypes, and scalable design token libraries tailored for high-ticket customer acquisition.",
+    badge: "UI/UX"
+  },
+  {
+    title: "Sub-Second Speed Engineering (Astro & Next.js)",
+    desc: "Zero-bloat modern architectures delivering verified 98-100 Core Web Vitals scores and 0.7s Largest Contentful Paint (LCP) on UAE mobile networks.",
+    badge: "Performance"
+  },
+  {
+    title: "Real Estate Portals & PropTech Platforms",
+    desc: "High-impact real estate websites with dynamic off-plan project showcases, interactive floor plans, PropertyFinder XML feeds, and automated WhatsApp lead capture.",
+    badge: "PropTech"
+  },
+  {
+    title: "Answer Engine & AI Search Optimization (AEO/GEO)",
+    desc: "Structured JSON-LD schema graphs, machine-readable entity maps, and llms.txt integration to ensure your Dubai business is recommended by ChatGPT and Google AI Overviews.",
+    badge: "AI Ready"
+  }
+];
+
+const featuredCaseStudies = [
+  {
+    title: "Julphar Pharmaceuticals",
+    client: "Julphar",
+    category: "Enterprise Healthcare Platform",
+    desc: "Full digital transformation and bilingual Arabic/English corporate portal for ADX-listed healthcare leader across MENA.",
+    link: "/portfolio/julphar/",
+    metrics: "Bilingual RTL • Sub-Second TTFB • ADX Compliance"
+  },
+  {
+    title: "Westminster Properties",
+    client: "Westminster Properties",
+    category: "Luxury Dubai Real Estate",
+    desc: "Prime property investment portal featuring dynamic off-plan launches, ROI payment schedules, and 1-click WhatsApp agent routing.",
+    link: "/portfolio/westminster-properties/",
+    metrics: "+42% Lead Conversion • 0.8s Mobile Speed"
+  },
+  {
+    title: "Alston & Clayden",
+    client: "Alston & Clayden",
+    category: "Ultra-Prime Real Estate Advisory",
+    desc: "Boutique luxury real estate advisory website for high-net-worth property investors in Downtown Dubai and Palm Jumeirah.",
+    link: "/portfolio/alston-clayden/",
+    metrics: "Minimalist Luxury UI • 100/100 SEO Score"
+  },
+  {
+    title: "SkyLynx Aviation",
+    client: "SkyLynx",
+    category: "Private Jet Charter Portal",
+    desc: "Private aviation booking interface with dynamic empty-leg flight aggregation and VIP quote generation.",
+    link: "/portfolio/skylynx/",
+    metrics: "Instant Quote Engine • Global API Sync"
+  }
+];
+
+const faqs = [
+  {
+    q: "How much does professional web design cost in Dubai?",
+    a: "Custom website design and development in Dubai typically ranges from AED 4,500 for focused high-converting landing pages to AED 12,000–AED 25,000 for complete corporate platforms, custom Figma UI, and sub-second eCommerce architectures. Every project receives a transparent, fixed-price scope proposal with zero hidden fees."
+  },
+  {
+    q: "Why hire a Senior Freelance Web Designer over a traditional Dubai agency?",
+    a: "Traditional agencies in Dubai charge heavy overhead markups and often hand off execution to junior developers after signing. Working directly with Yasir Jamal gives you direct 1-on-1 collaboration with a Senior Web Architect with 15+ years experience, ensuring 3x faster turnaround, zero middleman friction, and complete technical accountability."
+  },
+  {
+    q: "How long does it take to design and launch a custom website in Dubai?",
+    a: "Standard corporate and marketing websites are typically completed and launched within 2 to 4 weeks. Larger custom eCommerce platforms or complex SaaS web applications take 4 to 8 weeks delivered through structured weekly sprint reviews."
+  },
+  {
+    q: "Do you build bilingual Arabic and English websites with RTL layout support?",
+    a: "Yes. Every custom website can be engineered with native Right-to-Left (RTL) Arabic support, mirrored typography, and seamless English/Arabic language switching."
+  },
+  {
+    q: "Will my website be optimized for Google Search and AI Search (ChatGPT)?",
+    a: "Yes. Every build includes advanced Technical SEO, Core Web Vitals optimization (98+ score), and Generative Engine Optimization (GEO) structured schemas so search engines and AI assistants (ChatGPT, Perplexity, Gemini) index and recommend your business."
+  }
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": pageUrl,
+      "url": pageUrl,
+      "name": pageTitle,
+      "description": pageDescription,
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://yasirjamal.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Web Design Dubai",
+            "item": pageUrl
+          }
+        ]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://yasirjamal.com/#business",
+      "name": "Yasir Jamal | Web Design Dubai - Freelance Web Designer",
+      "url": "https://yasirjamal.com",
+      "logo": "https://yasirjamal.com/images/logo.webp",
+      "image": "https://yasirjamal.com/images/hero_v3.webp",
+      "telephone": "+971552600494",
+      "email": "webandgraphicdesigner@gmail.com",
+      "priceRange": "AED 4,500 - AED 25,000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dubai Media City",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "25.0927",
+        "longitude": "55.1562"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "48",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <Fragment slot="head">
+    <SEO title={pageTitle} description={pageDescription} url={pageUrl} type="website" />
+    <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+  </Fragment>
+
+  <!-- Hero Section -->
+  <header class="w-full bg-[#03050d] text-white pt-32 pb-20 font-elegant relative overflow-hidden">
+    <!-- Ambient Radial Glows -->
+    <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#1559E7]/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-[#6366F1]/15 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-6 relative z-10 text-left">
+      
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#1559E7]/20 border border-[#1559E7]/40 text-[#60A5FA] text-xs font-semibold uppercase tracking-wider">
+          📍 Dubai Media City, UAE
+        </span>
+        <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F6CD0B]/15 border border-[#F6CD0B]/30 text-[#F6CD0B] text-xs font-semibold">
+          ★ 5.0 Rated (48+ Verified Reviews) &bull; 15+ Years Authority
+        </span>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+          ⚡ 98/100 Google Mobile Speed
+        </span>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-tight leading-tight mb-6 max-w-4xl font-elegant">
+        Web Design Dubai: High-Converting, Sub-Second Digital Architecture.
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg md:text-xl font-light leading-relaxed max-w-3xl mb-8">
+        Partner directly with Senior Web Architect <strong>Yasir Jamal</strong>. We engineer custom corporate websites, high-converting GCC eCommerce platforms, and bespoke Figma UI/UX systems that load in 0.7 seconds and generate qualified client inquiries.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4">
+        <a 
+          href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20am%20looking%20for%20custom%20web%20design%20in%20Dubai.%20Let's%20discuss%20my%20project." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#F6CD0B] text-slate-950 font-bold text-sm sm:text-base hover:bg-yellow-400 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+        >
+          <span>Start Project on WhatsApp</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a 
+          href="/portfolio/" 
+          class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white font-medium text-sm sm:text-base transition-all"
+        >
+          <span>Explore Verified Portfolio</span>
+          <svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Core Services Grid -->
+  <section class="w-full bg-white py-20 font-elegant text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-left mb-14 max-w-3xl">
+        <span class="text-[#1559E7] text-xs font-bold uppercase tracking-widest block mb-2">Capabilities</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-[#01013E] tracking-tight">
+          Comprehensive Web Design &amp; Development Services in Dubai
+        </h2>
+        <p class="text-slate-600 text-base font-light mt-3">
+          Every solution is custom-coded from Figma wireframes to production deployment with zero template bloat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {servicesList.map((s, i) => (
+          <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#1559E7]/40 hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <span class="inline-block px-3 py-1 rounded-full bg-[#1559E7]/10 text-[#1559E7] text-xs font-bold uppercase tracking-wider">
+                {s.badge}
+              </span>
+              <h3 class="text-xl font-semibold text-slate-900">
+                {s.title}
+              </h3>
+              <p class="text-sm text-slate-600 font-light leading-relaxed">
+                {s.desc}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Senior Freelancer vs Traditional Agency Comparison -->
+  <section class="w-full bg-slate-50 py-20 font-elegant text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="text-left mb-14 max-w-3xl">
+        <span class="text-[#1559E7] text-xs font-bold uppercase tracking-widest block mb-2">Why It Matters</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-[#01013E] tracking-tight">
+          Senior Web Architect vs Traditional Dubai Agency
+        </h2>
+        <p class="text-slate-600 text-base font-light mt-3">
+          Why leading Dubai corporations and high-growth brands choose direct 1-on-1 collaboration with Yasir Jamal.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Agency Pitfalls -->
+        <div class="p-8 rounded-3xl bg-white border border-red-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm">✕</span>
+            <h3 class="text-xl font-semibold text-slate-900">Traditional Dubai Agencies</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600 font-light pl-2">
+            <li>• High administrative overheads and inflated retainers.</li>
+            <li>• Projects handed off to junior offshore contractors after pitch.</li>
+            <li>• Multiple communication layers (Account managers, coordinators).</li>
+            <li>• Bloated WordPress themes with 30+ plugins that load slowly (4s+).</li>
+            <li>• Slow turnaround times with rigid change-request fees.</li>
+          </ul>
+        </div>
+
+        <!-- Yasir Jamal Advantage -->
+        <div class="p-8 rounded-3xl bg-blue-50/70 border border-blue-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-8 rounded-full bg-[#1559E7] text-white flex items-center justify-center font-bold text-sm">✓</span>
+            <h3 class="text-xl font-semibold text-slate-900">Working Directly with Yasir Jamal</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-700 font-normal pl-2">
+            <li>• Direct 1-on-1 collaboration with a 15+ year Senior Architect.</li>
+            <li>• 100% custom-coded architecture (Astro, React, Next.js, Figma).</li>
+            <li>• Verified 0.7s sub-second loading speed and 98+ PageSpeed scores.</li>
+            <li>• Transparent fixed-price proposals (AED 4,500 – AED 25,000).</li>
+            <li>• 3x faster delivery with direct WhatsApp and async video reviews.</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Featured Dubai Case Studies -->
+  <section class="w-full bg-white py-20 font-elegant text-slate-900 border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4">
+        <div>
+          <span class="text-[#1559E7] text-xs font-bold uppercase tracking-widest block mb-2">Proven Track Record</span>
+          <h2 class="text-3xl sm:text-4xl font-light text-[#01013E] tracking-tight">
+            Featured Enterprise &amp; Luxury Web Case Studies
+          </h2>
+        </div>
+        <a href="/portfolio/" class="text-[#1559E7] font-semibold text-sm hover:underline inline-flex items-center gap-1">
+          <span>View All 13 Case Studies</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {featuredCaseStudies.map((cs) => (
+          <a href={cs.link} class="group p-8 rounded-3xl bg-slate-50 border border-slate-200 hover:border-[#1559E7] hover:shadow-xl transition-all block space-y-4">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#1559E7] block">
+              {cs.category}
+            </span>
+            <h3 class="text-2xl font-normal text-[#01013E] group-hover:text-[#1559E7] transition-colors">
+              {cs.title}
+            </h3>
+            <p class="text-sm text-slate-600 font-light leading-relaxed">
+              {cs.desc}
+            </p>
+            <div class="pt-4 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500 font-medium">
+              <span>{cs.metrics}</span>
+              <span class="text-[#1559E7] group-hover:translate-x-1 transition-transform">&rarr;</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section with Schema -->
+  <section class="w-full bg-[#01013E] text-white py-20 font-elegant">
+    <div class="max-w-4xl mx-auto px-6 space-y-10">
+      
+      <div>
+        <span class="text-[#F6CD0B] text-xs font-bold uppercase tracking-widest block mb-2">Transparency</span>
+        <h2 class="text-3xl sm:text-4xl font-light text-white tracking-tight">
+          Frequently Asked Questions About Web Design in Dubai
+        </h2>
+        <p class="text-slate-300 text-sm font-light mt-2">
+          Pricing, turnaround times, and technical standards for UAE web design projects.
+        </p>
+      </div>
+
+      <div class="divide-y divide-slate-800 border-t border-b border-slate-800">
+        {faqs.map((f) => (
+          <div class="py-6 space-y-2">
+            <h3 class="text-lg font-medium text-slate-100 flex items-center justify-between">
+              <span>{f.q}</span>
+              <span class="text-[#F6CD0B] text-lg font-light">&bull;</span>
+            </h3>
+            <p class="text-sm text-slate-300 font-light leading-relaxed">
+              {f.a}
+            </p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final WhatsApp CTA -->
+  <section class="w-full bg-[#03050d] py-20 font-elegant text-white text-center">
+    <div class="max-w-3xl mx-auto px-6 space-y-6">
+      <h2 class="text-3xl sm:text-4xl font-light tracking-tight">
+        Ready to Build a High-Converting Website in Dubai?
+      </h2>
+      <p class="text-slate-300 text-base font-light leading-relaxed max-w-xl mx-auto">
+        Get a direct, transparent fixed-price proposal within 24 hours. No sales reps, no agency markups—just senior engineering excellence.
+      </p>
+      <div class="pt-4">
+        <a 
+          href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20am%20looking%20for%20web%20design%20in%20Dubai.%20Let's%20discuss%20my%20project." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-[#F6CD0B] text-slate-950 font-bold text-base hover:bg-yellow-400 hover:shadow-xl transition-all transform hover:-translate-y-0.5"
+        >
+          <span>Connect Directly on WhatsApp</span>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</Layout>
