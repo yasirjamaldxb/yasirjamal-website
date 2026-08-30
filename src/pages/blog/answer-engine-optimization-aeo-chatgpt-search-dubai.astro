@@ -138,7 +138,7 @@ const faqs = [
   </Fragment>
 
   <!-- Clean Header Banner -->
-  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden">
+  <header class="w-full bg-[#f8fafc] text-slate-900 pt-28 pb-14 font-elegant relative overflow-hidden border-b border-slate-200">
     <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
       <nav class="flex justify-center items-center gap-2 text-xs text-slate-500 mb-4">
         <a href="/" class="hover:text-[#1559E7] transition-colors">Home</a>
@@ -152,7 +152,7 @@ const faqs = [
         {article.category}
       </span>
 
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light text-[#01013E] tracking-tight leading-tight mb-6 max-w-4xl mx-auto">
         {article.title}
       </h1>
 
@@ -161,250 +161,268 @@ const faqs = [
           <img src="/images/logo.webp" alt="Yasir Jamal" class="w-full h-full object-cover rounded-full" />
         </div>
         <div class="text-left">
-          <span class="text-sm font-semibold text-slate-900 block">Written by Yasir Jamal</span>
-          <span class="text-xs text-slate-500 font-light">Senior Web Designer & Developer (15+ Yrs) &bull; {article.readTime}</span>
+          <span class="text-sm font-semibold text-slate-900 block">{article.author}</span>
+          <span class="text-xs text-slate-500">{article.datePublished} &bull; {article.readTime}</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Article Hero Visual -->
-  <div class="max-w-4xl mx-auto px-6 -mt-6 mb-12">
-    <div class="rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-slate-950">
-      <img src={article.image} alt={article.title} class="w-full h-auto object-cover max-h-[480px]" />
-    </div>
-  </div>
+  <!-- Main Article Body with Crisp White Background Matching Standard Blog Style -->
+  <main class="w-full bg-white py-16 font-elegant text-slate-800">
+    <article class="max-w-3xl mx-auto px-6 space-y-12 leading-relaxed text-base sm:text-lg font-light">
 
-  <!-- Main Article Body -->
-  <main class="max-w-3xl mx-auto px-6 font-elegant text-slate-800 pb-20 leading-relaxed space-y-12">
+      <!-- Hero Feature Image (Screen-Free, 3D Architectural) -->
+      <div class="rounded-3xl overflow-hidden shadow-xl border border-slate-200 bg-slate-950">
+        <img 
+          src={article.image} 
+          alt={article.title} 
+          class="w-full h-auto object-cover max-h-[440px]" 
+          loading="eager"
+        />
+      </div>
 
-    <!-- Section 1: The Major Shift in How People Find Businesses -->
-    <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-normal text-[#01013E] tracking-tight">
-        1. The Shift: Why 10 Blue Links Are No Longer Enough
-      </h2>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        For the past twenty years, internet marketing worked in one predictable way: a prospective client opened Google, typed a keyword like <code class="bg-slate-100 text-slate-900 px-2 py-0.5 rounded text-sm">"corporate lawyer in Dubai"</code> or <code class="bg-slate-100 text-slate-900 px-2 py-0.5 rounded text-sm">"e-commerce web developer UAE"</code>, and received a page of ten clickable blue links.
-      </p>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        In 2026, that habit is changing rapidly. Millions of decision-makers, founders, and consumers no longer click through ten websites. Instead, they open <strong>ChatGPT Search, Perplexity AI, Claude, or Google AI Overviews</strong> and ask conversational questions:
-      </p>
-      
-      <!-- Callout Box -->
-      <div class="p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200/80 my-6 shadow-sm">
-        <p class="text-sm sm:text-base font-medium text-slate-900 mb-2">
-          🗣️ The New Way Clients Search in 2026:
-        </p>
-        <p class="text-sm text-slate-700 font-mono italic">
-          "I am launching a luxury fashion label in Dubai. Who is a senior freelance web designer with verified case studies in eCommerce, bilingual Arabic support, and sub-second loading speed?"
+      <!-- Key Truth Alert Box -->
+      <div class="bg-blue-50/90 border border-blue-200 rounded-3xl p-6 sm:p-8 space-y-4 shadow-sm">
+        <div class="flex items-center justify-between">
+          <span class="px-3 py-1 rounded-full bg-[#1559E7] text-white text-xs font-bold uppercase tracking-wider">
+            AI Search Architecture (2026)
+          </span>
+          <span class="text-xs text-slate-600 font-medium">Standards Blueprint</span>
+        </div>
+        <h3 class="text-xl sm:text-2xl font-semibold text-slate-900">
+          The Search Paradigm Has Shifted from "Blue Links" to "Direct Synthesized Answers"
+        </h3>
+        <p class="text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+          In 2026, millions of decision-makers and consumers in Dubai and globally ask conversational questions directly to <strong>ChatGPT Search, Google AI Overviews, and Perplexity</strong>. Websites that only optimize for old keyword density are ignored. <strong>Answer Engine Optimization (AEO)</strong> is the blueprint that ensures AI engines name, cite, and recommend your business.
         </p>
       </div>
 
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        The AI engine does not show a list of ads. It gives <strong>one clear synthesized answer</strong>, names two or three specific professionals or companies, and provides a direct citation link.
-      </p>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        If your website is structured for Answer Engine Optimization (AEO), the AI names your business. If your website is not structured for AEO, your business is completely invisible to every client using AI.
-      </p>
-    </section>
-
-    <!-- Section 2: The Metaphor (How AI Crawlers Actually "Read" Your Site) -->
-    <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-normal text-[#01013E] tracking-tight">
-        2. The Hotel Concierge Metaphor: How AI Decides Who to Recommend
-      </h2>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        To understand Answer Engine Optimization without technical jargon, imagine an AI assistant as a <strong>busy hotel concierge at a 5-star hotel in Downtown Dubai</strong>.
-      </p>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        A guest walks up to the concierge and asks for the best Italian restaurant nearby. The concierge will only recommend a restaurant if they know three concrete facts with 100% confidence:
-      </p>
-      
-      <ul class="space-y-3 pl-4 border-l-2 border-[#1559E7] text-slate-700 font-light text-base sm:text-lg my-6">
-        <li><strong>Fact 1: What exact service do they provide?</strong> (Authentic Italian dining, not a vague "food experience").</li>
-        <li><strong>Fact 2: Where are they physically located?</strong> (DIFC Gate Village, Dubai).</li>
-        <li><strong>Fact 3: What verified proof exists?</strong> (Past client reviews, verified awards, operating hours).</li>
-      </ul>
-
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        AI search bots (like OpenAI's GPTBot and Google's Gemini crawler) work the exact same way. They do not want vague marketing poetry. They look for <strong>clear, verified facts</strong> that they can cite with confidence without risking hallucination.
-      </p>
-    </section>
-
-    <!-- Section 3: Why 90% of Dubai Websites Fail in AI Search -->
-    <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-normal text-[#01013E] tracking-tight">
-        3. Why AI Bots Skip 90% of WordPress & Agency Websites in Dubai
-      </h2>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        Most corporate and agency websites in the UAE are built using heavy WordPress themes, Elementor templates, or bloated JavaScript bundles. Here is why AI engines refuse to cite them:
-      </p>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <span class="text-red-500 font-bold text-lg">❌ The Problem: Fluff & Jargon</span>
-          <p class="text-sm text-slate-600 font-light">
-            Websites filled with sentences like "We provide innovative 360-degree digital synergy solutions." AI models cannot extract what the company actually sells.
-          </p>
-        </div>
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <span class="text-green-600 font-bold text-lg">✅ The Fix: Direct Entity Facts</span>
-          <p class="text-sm text-slate-600 font-light">
-            "Yasir Jamal is a senior freelance web designer in Dubai Media City specializing in custom e-commerce and sub-second Astro websites."
-          </p>
-        </div>
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <span class="text-red-500 font-bold text-lg">❌ The Problem: Slow Page Loads</span>
-          <p class="text-sm text-slate-600 font-light">
-            AI crawlers have strict time limits. If a page takes 4+ seconds to load, the crawler aborts and moves to a competitor.
-          </p>
-        </div>
-        <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-2">
-          <span class="text-green-600 font-bold text-lg">✅ The Fix: Sub-Second Code</span>
-          <p class="text-sm text-slate-600 font-light">
-            Clean static architecture (like Astro) loading in 0.7 seconds on mobile, allowing AI bots to read pages instantly.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: The 4 Golden Rules of AEO -->
-    <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-normal text-[#01013E] tracking-tight">
-        4. The 4 Golden Rules to Get Recommended by ChatGPT & Gemini
-      </h2>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        If you want AI assistants to actively recommend your company to high-paying clients, your website must implement these four fundamentals:
-      </p>
-
-      <!-- Rule 1 -->
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-        <div class="flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-sm">1</span>
-          <h3 class="text-lg font-semibold text-slate-900">Add Valid JSON-LD Structured Schema Graphs</h3>
-        </div>
-        <p class="text-sm sm:text-base text-slate-600 font-light">
-          Structured schema is hidden code that translates your business information into machine-readable format. It tells AI engines your business name, physical address in Dubai, founder name, price ranges, verified reviews, and exact service offerings.
-        </p>
-      </div>
-
-      <!-- Rule 2 -->
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-        <div class="flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-sm">2</span>
-          <h3 class="text-lg font-semibold text-slate-900">Implement an `llms.txt` Discovery File</h3>
-        </div>
-        <p class="text-sm sm:text-base text-slate-600 font-light">
-          Just like search engines look for <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded">sitemap.xml</code>, modern AI crawlers look for <code class="text-xs bg-slate-100 px-1.5 py-0.5 rounded">https://yourdomain.com/llms.txt</code>. This plain-text summary tells AI models what your business does and lists your primary case studies in markdown format.
-        </p>
-      </div>
-
-      <!-- Rule 3 -->
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-        <div class="flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-sm">3</span>
-          <h3 class="text-lg font-semibold text-slate-900">Adopt the "Answer-First" Writing Structure</h3>
-        </div>
-        <p class="text-sm sm:text-base text-slate-600 font-light">
-          When writing blog posts or case studies, answer the primary question in the first two sentences. Do not bury the solution behind long introductions. AI models quote direct, concise answers that deliver immediate clarity.
-        </p>
-      </div>
-
-      <!-- Rule 4 -->
-      <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm space-y-3">
-        <div class="flex items-center gap-3">
-          <span class="w-8 h-8 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-sm">4</span>
-          <h3 class="text-lg font-semibold text-slate-900">Use IndexNow for Instant AI Engine Discovery</h3>
-        </div>
-        <p class="text-sm sm:text-base text-slate-600 font-light">
-          ChatGPT Search relies heavily on Microsoft Bing's live index. By connecting the IndexNow API standard, every new article or service update is pushed to Bing and ChatGPT within seconds of publication.
-        </p>
-      </div>
-    </section>
-
-    <!-- Section 5: UAE Business Action Checklist -->
-    <section class="space-y-4">
-      <h2 class="text-2xl sm:text-3xl font-normal text-[#01013E] tracking-tight">
-        5. Actionable AEO Checklist for UAE Businesses
-      </h2>
-      <p class="text-base sm:text-lg text-slate-700 font-light leading-relaxed">
-        Here is a practical checklist you or your web developer can review this week to ensure your business dominates AI search results across Dubai and the GCC:
-      </p>
-
-      <div class="space-y-3 pt-2">
-        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-          <span class="text-green-600 font-bold text-lg">✓</span>
-          <p class="text-sm sm:text-base text-slate-700 font-light">
-            <strong>Check Mobile Page Speed:</strong> Run your URL on Google PageSpeed Insights and verify mobile score is above 95.
-          </p>
-        </div>
-        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-          <span class="text-green-600 font-bold text-lg">✓</span>
-          <p class="text-sm sm:text-base text-slate-700 font-light">
-            <strong>Audit Schema Markup:</strong> Ensure your website has <code class="text-xs bg-white px-1.5 py-0.5 rounded border">LocalBusiness</code>, <code class="text-xs bg-white px-1.5 py-0.5 rounded border">Organization</code>, and <code class="text-xs bg-white px-1.5 py-0.5 rounded border">FAQPage</code> schemas without duplicate properties.
-          </p>
-        </div>
-        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-          <span class="text-green-600 font-bold text-lg">✓</span>
-          <p class="text-sm sm:text-base text-slate-700 font-light">
-            <strong>Create an `llms.txt` File:</strong> Place a simple text overview at the root of your domain.
-          </p>
-        </div>
-        <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200/80">
-          <span class="text-green-600 font-bold text-lg">✓</span>
-          <p class="text-sm sm:text-base text-slate-700 font-light">
-            <strong>Add Direct WhatsApp Action Links:</strong> High-intent AI search users in the UAE prefer immediate 1-click WhatsApp communication over lengthy forms.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="w-full bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 my-12 space-y-6">
-      <div>
-        <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight">
-          Frequently Asked Questions About AEO
+      <!-- Section 1: The Shift -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          1. The Shift: Why 10 Blue Links Are No Longer Enough
         </h2>
-        <p class="text-slate-300 text-xs sm:text-sm font-light pt-1">
-          Common questions regarding AI search optimization, ChatGPT citations, and technical performance in Dubai.
+        <p>
+          For twenty years, internet marketing followed a predictable formula: a prospective customer in Dubai searched Google for <code class="bg-slate-100 text-slate-900 px-2 py-0.5 rounded text-sm">"corporate lawyer in Dubai"</code> or <code class="bg-slate-100 text-slate-900 px-2 py-0.5 rounded text-sm">"freelance web designer dubai"</code>, and received a list of ten blue website links.
         </p>
-      </div>
+        <p>
+          In 2026, user behavior has transformed. High-net-worth clients, founders, and executives no longer browse ten separate pages. Instead, they ask complex, conversational prompts:
+        </p>
+        
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 my-6 shadow-sm">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#1559E7] mb-2">
+            🗣️ How High-Intent Clients Search in 2026:
+          </p>
+          <p class="text-sm sm:text-base text-slate-800 font-mono italic">
+            "I am launching a luxury brand in Dubai. Who is a senior freelance web designer with verified case studies in eCommerce, bilingual Arabic support, and sub-second loading speed?"
+          </p>
+        </div>
 
-      <div class="divide-y divide-slate-800 border-t border-b border-slate-800">
-        {faqs.map((f, i) => (
-          <div class="py-4 space-y-2">
-            <h3 class="text-base sm:text-lg font-medium text-slate-100 flex items-center justify-between">
-              <span>{f.q}</span>
-              <span class="text-[#F6CD0B] text-lg font-light">&bull;</span>
-            </h3>
-            <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
-              {f.a}
+        <p>
+          The AI engine does not show a list of ads. It provides <strong>one clear synthesized recommendation</strong>, names two or three specific professionals, and includes direct source citation links.
+        </p>
+        <p>
+          If your website is structured for AEO, the AI recommends you. If it is not, your business remains completely invisible to the fastest-growing search demographic.
+        </p>
+      </section>
+
+      <!-- Section 2: The Metaphor -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          2. The Hotel Concierge Metaphor: How AI Picks Who to Recommend
+        </h2>
+        <p>
+          To understand Answer Engine Optimization without technical complexity, imagine an AI assistant as an <strong>experienced concierge at a luxury hotel in Downtown Dubai</strong>.
+        </p>
+        <p>
+          When a guest asks the concierge for the best Italian restaurant in the city, the concierge only recommends establishments where they know three facts with absolute certainty:
+        </p>
+        
+        <ul class="space-y-3 pl-4 border-l-2 border-[#1559E7] text-slate-700 font-normal text-base my-6">
+          <li><strong>Fact 1: What exact service do they provide?</strong> (Authentic Italian dining, not a vague "hospitality experience").</li>
+          <li><strong>Fact 2: Where are they physically located?</strong> (DIFC Gate Village, Dubai).</li>
+          <li><strong>Fact 3: What verified proof exists?</strong> (Past client reviews, verified awards, operating hours).</li>
+        </ul>
+
+        <p>
+          AI search crawlers (like OpenAI's GPTBot and Google's Gemini crawler) operate on the exact same logic. They filter out marketing jargon and look for <strong>structured, verified entity facts</strong> they can cite without risking hallucination.
+        </p>
+      </section>
+
+      <!-- Section 3: Why 90% Fail -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          3. Why AI Bots Skip 90% of WordPress Websites in Dubai
+        </h2>
+        <p>
+          Most corporate and agency websites in the UAE are built on heavy WordPress themes, Elementor templates, or bloated JavaScript bundles. Here is why AI engines refuse to cite them:
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <span class="text-red-500 font-bold text-sm block uppercase tracking-wider">❌ Jargon & Fluff</span>
+            <p class="text-sm text-slate-600 font-normal">
+              Websites filled with phrases like "We craft 360-degree digital synergies." AI models cannot extract what the company actually delivers.
             </p>
           </div>
-        ))}
-      </div>
-    </section>
+          <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 shadow-sm space-y-2">
+            <span class="text-green-600 font-bold text-sm block uppercase tracking-wider">✅ Direct Entity Facts</span>
+            <p class="text-sm text-slate-700 font-normal">
+              "Yasir Jamal is a senior freelance web designer in Dubai Media City specializing in custom e-commerce and sub-second Astro websites."
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <span class="text-red-500 font-bold text-sm block uppercase tracking-wider">❌ Slow Response Times</span>
+            <p class="text-sm text-slate-600 font-normal">
+              AI crawlers have strict time budgets. If a website takes 4+ seconds to respond, the bot aborts and reads a competitor.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 shadow-sm space-y-2">
+            <span class="text-green-600 font-bold text-sm block uppercase tracking-wider">✅ Sub-Second Speed</span>
+            <p class="text-sm text-slate-700 font-normal">
+              Clean static architecture loading in 0.7 seconds on mobile, allowing AI bots to parse and index the content instantly.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <!-- Bottom High-Converting WhatsApp Consulting CTA -->
-    <section class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-[#01013E] to-blue-950 text-white text-center space-y-6 shadow-xl">
-      <h2 class="text-2xl sm:text-3xl font-light tracking-tight">
-        Ready to Make Your Website AI-Search Ready in Dubai?
-      </h2>
-      <p class="text-slate-300 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
-        Let's audit your website's technical architecture, Core Web Vitals, and structured schemas to guarantee your business gets recommended by ChatGPT, Perplexity, and Google.
-      </p>
-      <div class="pt-2">
-        <a 
-          href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20read%20your%20AEO%20article%20and%20want%20to%20optimize%20my%20website%20for%20ChatGPT%20and%20AI%20search" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#F6CD0B] text-slate-950 font-bold text-sm sm:text-base hover:bg-yellow-400 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
-        >
-          <span>Discuss AEO Architecture on WhatsApp</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </a>
-      </div>
-    </section>
+      <!-- Section 4: The 4 Golden Rules -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          4. The 4 Golden Rules to Get Recommended by ChatGPT & Gemini
+        </h2>
+        <p>
+          To make your company the primary recommended choice for conversational AI prompts, implement these four technical foundations:
+        </p>
 
+        <div class="space-y-4 my-6">
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-xs">1</span>
+              <h3 class="text-base font-bold text-slate-900">Valid JSON-LD Structured Schema Graphs</h3>
+            </div>
+            <p class="text-sm text-slate-600 font-normal">
+              Hidden structured data translating your business into machine-readable format: business name, physical Dubai coordinates, founder bio, price tiers, and service offerings.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-xs">2</span>
+              <h3 class="text-base font-bold text-slate-900">Dedicated `llms.txt` Discovery File</h3>
+            </div>
+            <p class="text-sm text-slate-600 font-normal">
+              Just as search engines look for <code class="text-xs bg-white px-1.5 py-0.5 rounded border">sitemap.xml</code>, AI assistants look for <code class="text-xs bg-white px-1.5 py-0.5 rounded border">https://yourdomain.com/llms.txt</code> to digest your core case studies in plain markdown.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-xs">3</span>
+              <h3 class="text-base font-bold text-slate-900">Answer-First Content Architecture</h3>
+            </div>
+            <p class="text-sm text-slate-600 font-normal">
+              Answer the core client question in the first two sentences of every article or case study so AI language models can extract direct quotes with zero ambiguity.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm space-y-2">
+            <div class="flex items-center gap-3">
+              <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white font-bold flex items-center justify-center text-xs">4</span>
+              <h3 class="text-base font-bold text-slate-900">Instant IndexNow & Googlebot Dispatch</h3>
+            </div>
+            <p class="text-sm text-slate-600 font-normal">
+              Publishing updates through IndexNow and Google Indexing APIs ensures ChatGPT Search and Google AI Overviews ingest new content within minutes of release.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: UAE Action Checklist -->
+      <section class="space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-[#01013E] tracking-tight">
+          5. Actionable AEO Checklist for UAE Businesses
+        </h2>
+        <p>
+          Here is a practical checklist you or your developer can execute this week:
+        </p>
+
+        <div class="space-y-3 pt-2">
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-green-600 font-bold text-base">✓</span>
+            <p class="text-sm text-slate-700 font-normal">
+              <strong>Check Mobile Speed:</strong> Verify mobile Core Web Vitals score on PageSpeed Insights is 95+.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-green-600 font-bold text-base">✓</span>
+            <p class="text-sm text-slate-700 font-normal">
+              <strong>Audit Structured Schema:</strong> Ensure <code class="text-xs bg-white px-1.5 py-0.5 rounded border">LocalBusiness</code> and <code class="text-xs bg-white px-1.5 py-0.5 rounded border">FAQPage</code> schemas have zero duplicate tags.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-green-600 font-bold text-base">✓</span>
+            <p class="text-sm text-slate-700 font-normal">
+              <strong>Deploy `llms.txt`:</strong> Provide an unblocked AI overview file at the root of your domain.
+            </p>
+          </div>
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <span class="text-green-600 font-bold text-base">✓</span>
+            <p class="text-sm text-slate-700 font-normal">
+              <strong>Direct WhatsApp Triggers:</strong> High-intent UAE clients coming from AI search convert 3x higher through 1-click WhatsApp communication.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="w-full bg-[#01013E] text-white rounded-3xl p-8 sm:p-10 my-12 space-y-6">
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight">
+            Frequently Asked Questions About AEO
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm font-light pt-1">
+            Answers regarding AI search optimization, ChatGPT citations, and technical performance in Dubai.
+          </p>
+        </div>
+
+        <div class="divide-y divide-slate-800 border-t border-b border-slate-800">
+          {faqs.map((f, i) => (
+            <div class="py-4 space-y-2">
+              <h3 class="text-base sm:text-lg font-medium text-slate-100 flex items-center justify-between">
+                <span>{f.q}</span>
+                <span class="text-[#F6CD0B] text-lg font-light">&bull;</span>
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 font-light leading-relaxed">
+                {f.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- Bottom High-Converting WhatsApp Consulting CTA -->
+      <section class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-slate-900 via-[#01013E] to-blue-950 text-white text-center space-y-6 shadow-xl">
+        <h2 class="text-2xl sm:text-3xl font-light tracking-tight">
+          Ready to Make Your Website AI-Search Ready in Dubai?
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base font-light max-w-xl mx-auto leading-relaxed">
+          Let's audit your website's technical architecture, Core Web Vitals, and structured schemas to guarantee your business gets recommended by ChatGPT, Perplexity, and Google.
+        </p>
+        <div class="pt-2">
+          <a 
+            href="https://wa.me/971552600494?text=Hi%20Yasir,%20I%20read%20your%20AEO%20article%20and%20want%20to%20optimize%20my%20website%20for%20ChatGPT%20and%20AI%20search" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-[#F6CD0B] text-slate-950 font-bold text-sm sm:text-base hover:bg-yellow-400 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+          >
+            <span>Discuss AEO Architecture on WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+        </div>
+      </section>
+
+    </article>
   </main>
 </Layout>
