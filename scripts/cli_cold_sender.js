@@ -16,7 +16,7 @@ const sampleLeads = [
   }
 ];
 
-function generateSabriStyleEmail(lead) {
+function generatePureEmail(lead) {
   return {
     subject: `quick question re: ${lead.company} mobile speed`,
     html: `
@@ -40,13 +40,13 @@ function generateSabriStyleEmail(lead) {
           Mind if I send over a 60-second speed comparison for ${lead.company}?
         </p>
 
-        <p style="margin: 0 0 32px 0;">
+        <p style="margin: 0 0 28px 0;">
           Best,<br>
           Yasir
         </p>
 
-        <!-- Sabri Suby / King Kong Style High-Trust Executive Signature -->
-        <div style="border-top: 2px solid #01013E; padding-top: 18px; margin-top: 32px;">
+        <!-- Pure King Kong Style High-Trust Signature (Single Website Link Only) -->
+        <div style="border-top: 2px solid #01013E; padding-top: 18px; margin-top: 28px;">
           
           <div style="font-size: 22px; font-weight: 900; color: #01013E; letter-spacing: -0.03em; margin-bottom: 8px;">
             YASIR JAMAL
@@ -65,40 +65,17 @@ function generateSabriStyleEmail(lead) {
           </div>
 
           <div style="font-size: 14px; font-weight: 600; color: #111827; margin-bottom: 4px;">
-            <a href="tel:+971552600494" style="color: #111827; text-decoration: none;">+971 55 2600 494</a>
+            +971 55 2600 494
           </div>
 
-          <div style="font-size: 14px; margin-bottom: 16px;">
+          <div style="font-size: 14px; margin-bottom: 20px;">
             <a href="https://yasirjamal.com" style="color: #1559E7; text-decoration: underline; font-weight: 600;">
               www.yasirjamal.com
             </a>
           </div>
 
-          <!-- Social & Contact Channels -->
-          <div style="margin-bottom: 20px;">
-            <table style="border-collapse: collapse;">
-              <tr>
-                <td style="padding-right: 12px;">
-                  <a href="https://wa.me/971552600494" style="display: inline-block; background-color: #25D366; color: #ffffff; font-size: 11px; font-weight: 700; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
-                    WhatsApp Direct
-                  </a>
-                </td>
-                <td style="padding-right: 12px;">
-                  <a href="https://yasirjamal.com/portfolio/" style="display: inline-block; background-color: #01013E; color: #ffffff; font-size: 11px; font-weight: 700; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
-                    13 Case Studies
-                  </a>
-                </td>
-                <td>
-                  <a href="https://yasirjamal.com/web-design-dubai/" style="display: inline-block; background-color: #f3f4f6; color: #1f2937; border: 1px solid #d1d5db; font-size: 11px; font-weight: 600; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
-                    Dubai Web Design
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </div>
-
           <!-- Partner & Trust Verification Badges -->
-          <div style="margin-bottom: 28px;">
+          <div style="margin-bottom: 24px;">
             <table style="border-collapse: collapse;">
               <tr>
                 <td style="padding-right: 8px;">
@@ -110,12 +87,12 @@ function generateSabriStyleEmail(lead) {
                 <td style="padding-right: 8px;">
                   <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
                     <span style="color: #F6CD0B;">★★★★★</span> 5.0<br>
-                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">48+ Verified Reviews</span>
+                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">48+ Reviews</span>
                   </div>
                 </td>
                 <td style="padding-right: 8px;">
                   <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
-                    ⚡ 0.7s Sub-Second<br>
+                    ⚡ 0.7s Speed<br>
                     <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Core Web Vitals</span>
                   </div>
                 </td>
@@ -129,29 +106,21 @@ function generateSabriStyleEmail(lead) {
             </table>
           </div>
 
-          <!-- Sabri Suby Style Disclaimer & CAN-SPAM Footer -->
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 16px; font-size: 11px; color: #9ca3af; line-height: 1.5;">
-            <p style="margin: 0 0 8px 0;">
-              You are receiving this communication regarding digital web performance from Yasir Jamal, based in Dubai Media City, UAE.
-            </p>
-            <p style="margin: 0 0 8px 0;">
-              All case studies and metrics mentioned (Julphar Pharmaceuticals, Westminster Properties) are verified client architectures. To opt-out from future performance updates, reply with "unsubscribe" or <a href="mailto:webandgraphicdesigner@gmail.com?subject=Unsubscribe%20${encodeURIComponent(lead.email)}" style="color: #9ca3af; text-decoration: underline;">click here to unsubscribe</a>.
-            </p>
-            <p style="margin: 0;">
-              Yasir Jamal &bull; Dubai Media City, Building 1, Dubai, UAE &bull; <a href="https://yasirjamal.com" style="color: #9ca3af; text-decoration: none;">yasirjamal.com</a>
-            </p>
+          <!-- Minimal Standard Opt-Out Text -->
+          <div style="border-top: 1px solid #f3f4f6; padding-top: 12px; font-size: 11px; color: #9ca3af; line-height: 1.5;">
+            To opt-out from future communications, reply with "unsubscribe".
           </div>
 
         </div>
 
       </div>
     `,
-    text: `Hi ${lead.name},\n\nCame across ${lead.company} while reviewing digital platforms in Dubai's ${lead.industry} sector.\n\nMost corporate platforms in the UAE currently carry 4+ seconds of mobile load delay, causing over 40% of high-intent buyers to bounce before viewing the offer.\n\nWe recently engineered sub-second platforms for ADX-listed Julphar Pharmaceuticals and Westminster Properties (0.7s load times, +42% inbound inquiries).\n\nMind if I send over a 60-second speed comparison for ${lead.company}?\n\nBest,\nYasir\n\n---\nYASIR JAMAL\nYasir Jamal\nSenior Web Architect & Head of Digital Engineering\nDubai Media City, Building 1, Dubai, United Arab Emirates\nPhone: +971 55 2600 494\nWebsite: https://yasirjamal.com\nWhatsApp: https://wa.me/971552600494\n\nTo unsubscribe, reply with "unsubscribe".`
+    text: `Hi ${lead.name},\n\nCame across ${lead.company} while reviewing digital platforms in Dubai's ${lead.industry} sector.\n\nMost corporate platforms in the UAE currently carry 4+ seconds of mobile load delay, causing over 40% of high-intent buyers to bounce before viewing the offer.\n\nWe recently engineered sub-second platforms for ADX-listed Julphar Pharmaceuticals and Westminster Properties (0.7s load times, +42% inbound inquiries).\n\nMind if I send over a 60-second speed comparison for ${lead.company}?\n\nBest,\nYasir\n\n---\nYASIR JAMAL\nYasir Jamal\nSenior Web Architect & Head of Digital Engineering\nDubai Media City, Building 1, Dubai, United Arab Emirates\n+971 55 2600 494\nwww.yasirjamal.com\n\nTo unsubscribe, reply with "unsubscribe".`
   };
 }
 
-async function sendSabriStyleEmail(lead) {
-  const pitch = generateSabriStyleEmail(lead);
+async function sendPureEmail(lead) {
+  const pitch = generatePureEmail(lead);
   const payload = JSON.stringify({
     from: 'Yasir Jamal <yasir@yasirjamal.com>',
     to: [lead.email],
@@ -192,18 +161,18 @@ async function sendSabriStyleEmail(lead) {
   });
 }
 
-async function runSabriStyleBatch(leads) {
+async function runPureBatch(leads) {
   console.log('========================================================================');
-  console.log('👑 SABRI SUBY STYLE HIGH-TRUST SIGNATURE COLD EMAIL DISPATCHER');
+  console.log('👑 PURE SINGLE-LINK COLD SENDER (WEBSITE ONLY + MINIMAL UNSUBSCRIBE)');
   console.log(`   Target Count: ${leads.length} Leads`);
   console.log('========================================================================\n');
 
   for (let i = 0; i < leads.length; i++) {
     const lead = leads[i];
-    console.log(`[${i + 1}/${leads.length}] Sending King Kong / Sabri style pitch to ${lead.name} (${lead.company} - ${lead.email})...`);
+    console.log(`[${i + 1}/${leads.length}] Sending pure pitch to ${lead.name} (${lead.company} - ${lead.email})...`);
 
     try {
-      const res = await sendSabriStyleEmail(lead);
+      const res = await sendPureEmail(lead);
       if (res.status === 200) {
         console.log(`   ✅ [200 OK] Delivered (Resend ID: ${res.data.id})`);
       } else {
@@ -219,7 +188,7 @@ async function runSabriStyleBatch(leads) {
     }
   }
 
-  console.log('\n🎉 King Kong / Sabri style cold email delivered successfully!\n');
+  console.log('\n🎉 Single-link cold email delivered successfully!\n');
 }
 
-runSabriStyleBatch(sampleLeads).catch(console.error);
+runPureBatch(sampleLeads).catch(console.error);
