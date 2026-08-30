@@ -37,35 +37,36 @@ function generateAuthenticEmail(lead) {
           I’m currently helping businesses improve their visibility across AI search and recommendation results.
         </p>
 
-        <p style="margin: 0 0 24px 0;">
+        <p style="margin: 0 0 28px 0;">
           If you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.
         </p>
 
-        <!-- Official Logo Directly Above Signoff -->
+        <!-- Bigger Profile Photo -->
         <div style="margin: 28px 0 16px 0;">
           <img 
-            src="https://yasirjamal.com/images/logo.png" 
+            src="https://yasirjamal.com/images/logo.webp" 
             alt="Yasir Jamal" 
-            style="height: 36px; width: auto; display: block; border: 0;" 
+            style="width: 72px; height: 72px; border-radius: 50%; border: 2px solid #e2e8f0; object-fit: cover; display: block;" 
           />
         </div>
 
-        <p style="margin: 0 0 16px 0;">
-          Best Regards,<br>
-          <strong style="color: #111827;">Yasir Jamal</strong>
+        <p style="margin: 0 0 4px 0;">Best regards,</p>
+        <p style="margin: 0 0 2px 0; font-weight: 700; color: #111827; font-size: 16px;">Yasir Jamal</p>
+        <p style="margin: 0 0 16px 0; color: #4b5563; font-size: 14px;">Product Designer &amp; AI Consultant</p>
+
+        <div style="font-size: 14px; color: #374151; line-height: 1.6; margin-bottom: 24px;">
+          <a href="mailto:yasir@yasirjamal.com" style="color: #111827; text-decoration: none;">yasir@yasirjamal.com</a><br>
+          WhatsApp: <a href="https://wa.me/971552600494" style="color: #111827; text-decoration: none; font-weight: 500;">+971 55 260 0494</a><br><br>
+          W: <a href="https://yasirjamal.com" style="color: #1559E7; text-decoration: none; font-weight: 600;">yasirjamal.com</a>
+        </div>
+
+        <!-- P.S. Friendly Opt-Out -->
+        <p style="margin: 28px 0 0 0; font-size: 13px; color: #6b7280; font-style: italic;">
+          P.S. Not relevant to you? Just reply “no thanks” and I won't follow up.
         </p>
-
-        <div style="font-size: 14px; color: #374151; line-height: 1.5;">
-          E: <a href="mailto:info@yasirjamal.com" style="color: #111827; text-decoration: none;">info@yasirjamal.com</a><br>
-          W: <a href="https://www.yasirjamal.com" style="color: #1559E7; text-decoration: none;">www.yasirjamal.com</a>
-        </div>
-
-        <div style="margin-top: 36px; padding-top: 12px; border-top: 1px solid #f3f4f6; font-size: 11px; color: #9ca3af;">
-          To opt-out from future emails, reply with "unsubscribe".
-        </div>
       </div>
     `,
-    text: `Hi ${lead.firstName},\n\nI was checking how businesses in ${lead.city} are appearing when potential customers ask ChatGPT for recommendations.\n\nI tested ${lead.company} against a few searches around ${lead.service}, and I noticed something interesting: ${lead.finding}.\n\nI’m currently helping businesses improve their visibility across AI search and recommendation results.\n\nIf you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.\n\nBest,\nYasir Jamal\n\nE: info@yasirjamal.com\nW: www.yasirjamal.com\n\nTo opt-out from future emails, reply with "unsubscribe".`
+    text: `Hi ${lead.firstName},\n\nI was checking how businesses in ${lead.city} are appearing when potential customers ask ChatGPT for recommendations.\n\nI tested ${lead.company} against a few searches around ${lead.service}, and I noticed something interesting: ${lead.finding}.\n\nI’m currently helping businesses improve their visibility across AI search and recommendation results.\n\nIf you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.\n\nBest regards,\nYasir Jamal\nProduct Designer & AI Consultant\n\nyasir@yasirjamal.com\nWhatsApp: +971 55 260 0494\n\nW: yasirjamal.com\n\nP.S. Not relevant to you? Just reply “no thanks” and I won't follow up.`
   };
 }
 
@@ -113,13 +114,13 @@ async function sendAuthenticEmail(lead) {
 
 async function runAuthenticBatch(leads) {
   console.log('========================================================================');
-  console.log('✉️ AUTHENTIC 1-ON-1 HUMAN COLD SENDER (NO BOT / ZERO JARGON)');
+  console.log('✉️ AUTHENTIC COLD SENDER (CUSTOM SIGNATURE & P.S. OPT-OUT)');
   console.log(`   Target Count: ${leads.length} Leads`);
   console.log('========================================================================\n');
 
   for (let i = 0; i < leads.length; i++) {
     const lead = leads[i];
-    console.log(`[${i + 1}/${leads.length}] Sending 1-on-1 email to ${lead.firstName} (${lead.company} - ${lead.email})...`);
+    console.log(`[${i + 1}/${leads.length}] Sending email to ${lead.firstName} (${lead.company} - ${lead.email})...`);
 
     try {
       const res = await sendAuthenticEmail(lead);
@@ -138,7 +139,7 @@ async function runAuthenticBatch(leads) {
     }
   }
 
-  console.log('\n🎉 Authentic 1-on-1 cold email delivered successfully!\n');
+  console.log('\n🎉 Cold email delivered successfully!\n');
 }
 
 runAuthenticBatch(sampleLeads).catch(console.error);
