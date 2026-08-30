@@ -33,6 +33,7 @@
 ## Technical Masterclasses & Software Architecture Guides
 
 - [Blog Index](https://yasirjamal.com/blog/): Articles on modern web design trends, technical SEO, and sub-second web architecture.
+- [Answer Engine Optimization (AEO) Blueprint](https://yasirjamal.com/blog/answer-engine-optimization-aeo-chatgpt-search-dubai/): Comprehensive non-technical guide for UAE businesses to optimize for ChatGPT Search, Perplexity, and Google AI Overviews in 2026.
 - [Is GoHighLevel Good for Real Estate Agents?](https://yasirjamal.com/blog/gohighlevel-for-real-estate-agents-review/): 3,500-word speed-to-lead automation blueprints, IDX integration workarounds, and Follow Up Boss comparison.
 - [TMDHosting Review & LiteSpeed Speed Benchmarks](https://yasirjamal.com/blog/tmd-hosting-review/): In-depth server TTFB testing, LiteSpeed cache benchmarks, cPanel features, and Hostinger comparison.
 - [GoHighLevel 30-Day Free Trial Agency Setup Guide](https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/): Complete blueprint to claiming the 30-day trial, connecting Cloudflare DNS, passing A2P 10DLC, and launching client sub-accounts.
