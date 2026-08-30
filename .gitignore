@@ -25,6 +25,7 @@ pnpm-debug.log*
 gsc_credentials.json
 client_secret.json
 ga4_token.json
+gbp_token.json
 scripts/deep_seo_audit_results.json
 *.pem
 *.key
