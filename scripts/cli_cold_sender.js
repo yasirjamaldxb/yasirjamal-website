@@ -9,122 +9,59 @@ const resendApiKey = creds.api_key;
 
 const sampleLeads = [
   {
-    name: "Ahmed",
-    company: "Elysian Luxury Real Estate",
-    email: "webandgraphicdesigner@gmail.com", // Test recipient
-    niche: "luxury properties in Dubai"
+    firstName: "Ahmed",
+    company: "Elysian Real Estate",
+    city: "Dubai",
+    service: "luxury off-plan property investment",
+    finding: "your top two competitors in Business Bay are getting recommended every time, while your company isn't showing up at all",
+    email: "webandgraphicdesigner@gmail.com" // Test recipient
   }
 ];
 
-function generateBusinessFirstPitch(lead) {
+function generateAuthenticEmail(lead) {
   return {
-    subject: `getting more client inquiries for ${lead.company}`,
+    subject: `ChatGPT recommendations for ${lead.company}`,
     html: `
       <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #111827; max-width: 600px;">
-        
-        <p style="margin: 0 0 16px 0;">Hi ${lead.name},</p>
-        
+        <p style="margin: 0 0 16px 0;">Hi ${lead.firstName},</p>
+
         <p style="margin: 0 0 16px 0;">
-          I was looking up companies offering <strong>${lead.niche}</strong> and came across ${lead.company}.
+          I was checking how businesses in ${lead.city} are appearing when potential customers ask ChatGPT for recommendations.
         </p>
 
         <p style="margin: 0 0 16px 0;">
-          Right now, when people in Dubai search for your services on Google or ask ChatGPT for recommendations, your competitors are showing up first and taking those client inquiries.
+          I tested ${lead.company} against a few searches around ${lead.service}, and I noticed something interesting: ${lead.finding}.
         </p>
 
         <p style="margin: 0 0 16px 0;">
-          Your current website isn't set up to get recommended by modern search engines, which means you're missing out on high-paying clients who are looking to hire right now.
-        </p>
-
-        <p style="margin: 0 0 16px 0;">
-          I've been helping Dubai businesses (including <strong>Julphar Pharmaceuticals</strong> and <strong>Westminster Properties</strong>) design clean websites that rank on Google, get recommended by AI, and bring in direct WhatsApp inquiries from qualified buyers.
+          I’m currently helping businesses improve their visibility across AI search and recommendation results.
         </p>
 
         <p style="margin: 0 0 24px 0;">
-          Mind if I send over a quick screenshot showing where your website is losing potential clients?
+          If you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.
         </p>
 
-        <p style="margin: 0 0 28px 0;">
+        <p style="margin: 0 0 24px 0;">
           Best,<br>
-          Yasir
+          Yasir Jamal
         </p>
 
-        <!-- High-Trust Signature Block -->
-        <div style="border-top: 2px solid #01013E; padding-top: 18px; margin-top: 28px;">
-          
-          <div style="font-size: 22px; font-weight: 900; color: #01013E; letter-spacing: -0.03em; margin-bottom: 8px;">
-            YASIR JAMAL
-          </div>
-
-          <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 2px;">
-            Yasir Jamal
-          </div>
-
-          <div style="font-size: 14px; color: #4b5563; margin-bottom: 4px;">
-            Senior Web Designer &amp; Digital Growth Consultant
-          </div>
-
-          <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 6px;">
-            Dubai Media City, Building 1, Dubai, United Arab Emirates
-          </div>
-
-          <div style="font-size: 14px; font-weight: 600; color: #111827; margin-bottom: 4px;">
-            +971 55 2600 494
-          </div>
-
-          <div style="font-size: 14px; margin-bottom: 20px;">
-            <a href="https://yasirjamal.com" style="color: #1559E7; text-decoration: underline; font-weight: 600;">
-              www.yasirjamal.com
-            </a>
-          </div>
-
-          <!-- Trust Verification Badges -->
-          <div style="margin-bottom: 24px;">
-            <table style="border-collapse: collapse;">
-              <tr>
-                <td style="padding-right: 8px;">
-                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
-                    <span style="color: #EA4335;">G</span><span style="color: #4285F4;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Partner<br>
-                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Certified 2026</span>
-                  </div>
-                </td>
-                <td style="padding-right: 8px;">
-                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
-                    <span style="color: #F6CD0B;">★★★★★</span> 5.0<br>
-                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">48+ Reviews</span>
-                  </div>
-                </td>
-                <td style="padding-right: 8px;">
-                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
-                    15+ Years<br>
-                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Dubai Experience</span>
-                  </div>
-                </td>
-                <td>
-                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
-                    Direct WhatsApp<br>
-                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Lead Funnels</span>
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <!-- Minimal Standard Opt-Out Text -->
-          <div style="border-top: 1px solid #f3f4f6; padding-top: 12px; font-size: 11px; color: #9ca3af; line-height: 1.5;">
-            To opt-out from future communications, reply with "unsubscribe".
-          </div>
-
+        <div style="margin-top: 24px; font-size: 14px; color: #374151; line-height: 1.5;">
+          E: <a href="mailto:info@yasirjamal.com" style="color: #111827; text-decoration: none;">info@yasirjamal.com</a><br>
+          W: <a href="https://www.yasirjamal.com" style="color: #1559E7; text-decoration: none;">www.yasirjamal.com</a>
         </div>
 
+        <div style="margin-top: 36px; padding-top: 12px; border-top: 1px solid #f3f4f6; font-size: 11px; color: #9ca3af;">
+          To opt-out from future emails, reply with "unsubscribe".
+        </div>
       </div>
     `,
-    text: `Hi ${lead.name},\n\nI was looking up companies offering ${lead.niche} and came across ${lead.company}.\n\nRight now, when people in Dubai search for your services on Google or ask ChatGPT for recommendations, your competitors are showing up first and taking those client inquiries.\n\nYour current website isn't set up to get recommended by modern search engines, which means you're missing out on high-paying clients who are looking to hire right now.\n\nI've been helping Dubai businesses (including Julphar Pharmaceuticals and Westminster Properties) design clean websites that rank on Google, get recommended by AI, and bring in direct WhatsApp inquiries from qualified buyers.\n\nMind if I send over a quick screenshot showing where your website is losing potential clients?\n\nBest,\nYasir\n\n---\nYASIR JAMAL\nYasir Jamal\nSenior Web Designer & Digital Growth Consultant\nDubai Media City, Building 1, Dubai, United Arab Emirates\nPhone: +971 55 2600 494\nWebsite: https://yasirjamal.com\n\nTo unsubscribe, reply with "unsubscribe".`
+    text: `Hi ${lead.firstName},\n\nI was checking how businesses in ${lead.city} are appearing when potential customers ask ChatGPT for recommendations.\n\nI tested ${lead.company} against a few searches around ${lead.service}, and I noticed something interesting: ${lead.finding}.\n\nI’m currently helping businesses improve their visibility across AI search and recommendation results.\n\nIf you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.\n\nBest,\nYasir Jamal\n\nE: info@yasirjamal.com\nW: www.yasirjamal.com\n\nTo opt-out from future emails, reply with "unsubscribe".`
   };
 }
 
-async function sendBusinessFirstEmail(lead) {
-  const pitch = generateBusinessFirstPitch(lead);
+async function sendAuthenticEmail(lead) {
+  const pitch = generateAuthenticEmail(lead);
   const payload = JSON.stringify({
     from: 'Yasir Jamal <yasir@yasirjamal.com>',
     to: [lead.email],
@@ -165,18 +102,18 @@ async function sendBusinessFirstEmail(lead) {
   });
 }
 
-async function runBusinessFirstBatch(leads) {
+async function runAuthenticBatch(leads) {
   console.log('========================================================================');
-  console.log('💼 ZERO-JARGON / REVENUE-FIRST COLD EMAIL DISPATCHER');
+  console.log('✉️ AUTHENTIC 1-ON-1 HUMAN COLD SENDER (NO BOT / ZERO JARGON)');
   console.log(`   Target Count: ${leads.length} Leads`);
   console.log('========================================================================\n');
 
   for (let i = 0; i < leads.length; i++) {
     const lead = leads[i];
-    console.log(`[${i + 1}/${leads.length}] Sending revenue-first pitch to ${lead.name} (${lead.company} - ${lead.email})...`);
+    console.log(`[${i + 1}/${leads.length}] Sending 1-on-1 email to ${lead.firstName} (${lead.company} - ${lead.email})...`);
 
     try {
-      const res = await sendBusinessFirstEmail(lead);
+      const res = await sendAuthenticEmail(lead);
       if (res.status === 200) {
         console.log(`   ✅ [200 OK] Delivered (Resend ID: ${res.data.id})`);
       } else {
@@ -192,7 +129,7 @@ async function runBusinessFirstBatch(leads) {
     }
   }
 
-  console.log('\n🎉 Revenue-first cold email delivered successfully!\n');
+  console.log('\n🎉 Authentic 1-on-1 cold email delivered successfully!\n');
 }
 
-runBusinessFirstBatch(sampleLeads).catch(console.error);
+runAuthenticBatch(sampleLeads).catch(console.error);
