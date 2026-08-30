@@ -41,12 +41,21 @@ function generateAuthenticEmail(lead) {
           If you'd like, I can send you the quick AI visibility check I ran on ${lead.company}. No pitch attached.
         </p>
 
-        <p style="margin: 0 0 24px 0;">
-          Best,<br>
-          Yasir Jamal
+        <!-- Official Logo Directly Above Signoff -->
+        <div style="margin: 28px 0 16px 0;">
+          <img 
+            src="https://yasirjamal.com/images/logo.png" 
+            alt="Yasir Jamal" 
+            style="height: 36px; width: auto; display: block; border: 0;" 
+          />
+        </div>
+
+        <p style="margin: 0 0 16px 0;">
+          Best Regards,<br>
+          <strong style="color: #111827;">Yasir Jamal</strong>
         </p>
 
-        <div style="margin-top: 24px; font-size: 14px; color: #374151; line-height: 1.5;">
+        <div style="font-size: 14px; color: #374151; line-height: 1.5;">
           E: <a href="mailto:info@yasirjamal.com" style="color: #111827; text-decoration: none;">info@yasirjamal.com</a><br>
           W: <a href="https://www.yasirjamal.com" style="color: #1559E7; text-decoration: none;">www.yasirjamal.com</a>
         </div>
