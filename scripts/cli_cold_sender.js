@@ -56,9 +56,14 @@ function generatePitch(lead) {
           Senior Web Architect &amp; Product Designer<br>
           <span style="color: #64748b; font-size: 12px;">Dubai Media City, UAE &bull; <a href="https://yasirjamal.com" style="color: #64748b;">yasirjamal.com</a></span>
         </p>
+
+        <hr style="border: none; border-top: 1px solid #e2e8f0; margin: 24px 0 12px 0;" />
+        <p style="color: #94a3b8; font-size: 11px; margin: 0;">
+          If you prefer not to receive future web performance teardowns, reply with "unsubscribe" or <a href="mailto:webandgraphicdesigner@gmail.com?subject=Unsubscribe%20${encodeURIComponent(lead.email)}" style="color: #94a3b8; text-decoration: underline;">click here to opt-out</a>.
+        </p>
       </div>
     `,
-    text: `Hi ${lead.name},\n\nI came across ${lead.company} while reviewing digital platforms in Dubai's ${lead.industry} sector.\n\nMost corporate websites in the UAE suffer from 4+ second load times on mobile, causing over 50% of high-intent visitors to bounce.\n\nAs a Senior Web Architect in Dubai Media City with 15+ years experience (Julphar Pharmaceuticals, Westminster Properties), I engineer custom web architectures that achieve 0.7s speed and 3x higher lead conversion.\n\nWould you be open to a quick 5-minute review this week?\n\nVerified case studies: https://yasirjamal.com/portfolio/\nDirect WhatsApp: https://wa.me/971552600494\n\nBest regards,\nYasir Jamal\nSenior Web Architect | Dubai Media City`
+    text: `Hi ${lead.name},\n\nI came across ${lead.company} while reviewing digital platforms in Dubai's ${lead.industry} sector.\n\nMost corporate websites in the UAE suffer from 4+ second load times on mobile, causing over 50% of high-intent visitors to bounce.\n\nAs a Senior Web Architect in Dubai Media City with 15+ years experience (Julphar Pharmaceuticals, Westminster Properties), I engineer custom web architectures that achieve 0.7s speed and 3x higher lead conversion.\n\nWould you be open to a quick 5-minute review this week?\n\nVerified case studies: https://yasirjamal.com/portfolio/\nDirect WhatsApp: https://wa.me/971552600494\n\nBest regards,\nYasir Jamal\nSenior Web Architect | Dubai Media City\n\n---\nTo opt-out from future emails, reply with "unsubscribe".`
   };
 }
 
@@ -68,6 +73,9 @@ async function sendColdEmail(lead) {
     from: 'Yasir Jamal <yasir@yasirjamal.com>',
     to: [lead.email],
     reply_to: 'webandgraphicdesigner@gmail.com',
+    headers: {
+      'List-Unsubscribe': `<mailto:webandgraphicdesigner@gmail.com?subject=Unsubscribe%20${encodeURIComponent(lead.email)}>`
+    },
     subject: pitch.subject,
     text: pitch.text,
     html: pitch.html
