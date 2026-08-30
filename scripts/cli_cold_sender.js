@@ -73,7 +73,7 @@ function generateAuthenticEmail(lead) {
 async function sendAuthenticEmail(lead) {
   const pitch = generateAuthenticEmail(lead);
   const payload = JSON.stringify({
-    from: 'Yasir Jamal <yasir@yasirjamal.com>',
+    from: 'Yasir Jamal <yasir@m.yasirjamal.com>',
     to: [lead.email],
     reply_to: 'webandgraphicdesigner@gmail.com',
     headers: {
