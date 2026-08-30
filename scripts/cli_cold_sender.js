@@ -12,141 +12,146 @@ const sampleLeads = [
     name: "Business Director",
     company: "Elysian Luxury Real Estate",
     email: "webandgraphicdesigner@gmail.com", // Test recipient
-    industry: "Luxury Real Estate",
-    currentSpeed: "4.6s",
-    potentialSpeed: "0.7s"
+    industry: "Luxury Real Estate"
   }
 ];
 
-function generateLuxuryPitch(lead) {
+function generateSabriStyleEmail(lead) {
   return {
-    subject: `⚡ Web Architecture Audit: ${lead.company} Mobile Performance`,
+    subject: `quick question re: ${lead.company} mobile speed`,
     html: `
-      <div style="background-color: #f8fafc; padding: 24px 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-        <div style="max-width: 580px; margin: 0 auto; background-color: #ffffff; border-radius: 20px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);">
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 15px; line-height: 1.6; color: #111827; max-width: 600px;">
+        
+        <p style="margin: 0 0 16px 0;">Hi ${lead.name},</p>
+        
+        <p style="margin: 0 0 16px 0;">
+          Came across <strong>${lead.company}</strong> while reviewing digital platforms in Dubai's ${lead.industry} sector.
+        </p>
+
+        <p style="margin: 0 0 16px 0;">
+          Most corporate platforms in the UAE currently carry 4+ seconds of mobile load delay, causing over 40% of high-intent buyers to bounce before viewing the offer.
+        </p>
+
+        <p style="margin: 0 0 16px 0;">
+          We recently engineered sub-second platforms for ADX-listed <strong>Julphar Pharmaceuticals</strong> and <strong>Westminster Properties</strong>, achieving <strong>0.7s load times</strong> and a <strong>+42% increase in inbound inquiries</strong>.
+        </p>
+
+        <p style="margin: 0 0 24px 0;">
+          Mind if I send over a 60-second speed comparison for ${lead.company}?
+        </p>
+
+        <p style="margin: 0 0 32px 0;">
+          Best,<br>
+          Yasir
+        </p>
+
+        <!-- Sabri Suby / King Kong Style High-Trust Executive Signature -->
+        <div style="border-top: 2px solid #01013E; padding-top: 18px; margin-top: 32px;">
           
-          <!-- Top Header Bar -->
-          <div style="background: linear-gradient(135deg, #03050d 0%, #01013E 100%); padding: 24px 28px; color: #ffffff;">
-            <table style="width: 100%; border-collapse: collapse;">
+          <div style="font-size: 22px; font-weight: 900; color: #01013E; letter-spacing: -0.03em; margin-bottom: 8px;">
+            YASIR JAMAL
+          </div>
+
+          <div style="font-size: 16px; font-weight: 700; color: #111827; margin-bottom: 2px;">
+            Yasir Jamal
+          </div>
+
+          <div style="font-size: 14px; color: #4b5563; margin-bottom: 4px;">
+            Senior Web Architect &amp; Head of Digital Engineering
+          </div>
+
+          <div style="font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 6px;">
+            Dubai Media City, Building 1, Dubai, United Arab Emirates
+          </div>
+
+          <div style="font-size: 14px; font-weight: 600; color: #111827; margin-bottom: 4px;">
+            <a href="tel:+971552600494" style="color: #111827; text-decoration: none;">+971 55 2600 494</a>
+          </div>
+
+          <div style="font-size: 14px; margin-bottom: 16px;">
+            <a href="https://yasirjamal.com" style="color: #1559E7; text-decoration: underline; font-weight: 600;">
+              www.yasirjamal.com
+            </a>
+          </div>
+
+          <!-- Social & Contact Channels -->
+          <div style="margin-bottom: 20px;">
+            <table style="border-collapse: collapse;">
               <tr>
-                <td>
-                  <span style="display: inline-block; background: rgba(21, 89, 231, 0.3); border: 1px solid rgba(21, 89, 231, 0.6); color: #60A5FA; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 9999px; margin-bottom: 8px;">
-                    Technical Web Performance Teardown
-                  </span>
-                  <h1 style="font-size: 20px; font-weight: 600; margin: 0; color: #ffffff; letter-spacing: -0.02em;">
-                    ${lead.company}
-                  </h1>
+                <td style="padding-right: 12px;">
+                  <a href="https://wa.me/971552600494" style="display: inline-block; background-color: #25D366; color: #ffffff; font-size: 11px; font-weight: 700; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
+                    WhatsApp Direct
+                  </a>
                 </td>
-                <td style="text-align: right; vertical-align: top;">
-                  <span style="color: #F6CD0B; font-size: 12px; font-weight: 600; display: inline-block; background: rgba(246, 205, 11, 0.1); border: 1px solid rgba(246, 205, 11, 0.3); padding: 4px 8px; border-radius: 8px;">
-                    📍 Dubai Media City
-                  </span>
+                <td style="padding-right: 12px;">
+                  <a href="https://yasirjamal.com/portfolio/" style="display: inline-block; background-color: #01013E; color: #ffffff; font-size: 11px; font-weight: 700; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
+                    13 Case Studies
+                  </a>
+                </td>
+                <td>
+                  <a href="https://yasirjamal.com/web-design-dubai/" style="display: inline-block; background-color: #f3f4f6; color: #1f2937; border: 1px solid #d1d5db; font-size: 11px; font-weight: 600; text-decoration: none; padding: 4px 10px; border-radius: 4px;">
+                    Dubai Web Design
+                  </a>
                 </td>
               </tr>
             </table>
           </div>
 
-          <!-- Main Body Content -->
-          <div style="padding: 28px; color: #1e293b; font-size: 15px; line-height: 1.6;">
-            <p style="margin: 0 0 16px 0;">Hi ${lead.name},</p>
-            
-            <p style="margin: 0 0 16px 0; color: #334155;">
-              I reviewed <strong>${lead.company}</strong> while analyzing digital conversion architectures across Dubai's ${lead.industry} sector.
-            </p>
-
-            <!-- Visual Metric Comparison Card -->
-            <div style="background: #f1f5f9; border-radius: 14px; padding: 18px; margin: 20px 0; border: 1px solid #e2e8f0;">
-              <table style="width: 100%; border-collapse: collapse; text-align: center;">
-                <tr>
-                  <td style="width: 50%; padding: 8px; border-right: 1px solid #cbd5e1;">
-                    <div style="font-size: 11px; font-weight: 700; color: #ef4444; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
-                      Typical UAE WordPress Site
-                    </div>
-                    <div style="font-size: 22px; font-weight: 800; color: #ef4444;">
-                      ${lead.currentSpeed}
-                    </div>
-                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">
-                      ~40% Mobile Visitor Bounce
-                    </div>
-                  </td>
-                  <td style="width: 50%; padding: 8px;">
-                    <div style="font-size: 11px; font-weight: 700; color: #10b981; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
-                      Yasir Jamal Sub-Second Build
-                    </div>
-                    <div style="font-size: 22px; font-weight: 800; color: #10b981;">
-                      ${lead.potentialSpeed}
-                    </div>
-                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">
-                      98/100 Core Web Vitals
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <p style="margin: 0 0 16px 0; color: #334155;">
-              As a Senior Web Architect with 15+ years experience (recently engineering digital platforms for ADX-listed <strong>Julphar Pharmaceuticals</strong> and luxury Dubai portal <strong>Westminster Properties</strong>), I replace bloated templates with sub-second, custom-coded web architectures that maximize high-ticket client inquiries.
-            </p>
-
-            <p style="margin: 0 0 24px 0; color: #334155;">
-              Would you be open to a quick 5-minute review of ${lead.company}'s digital acquisition funnel this week?
-            </p>
-
-            <!-- Direct Action Button -->
-            <div style="text-align: center; margin: 28px 0;">
-              <a href="https://wa.me/971552600494?text=Hi%20Yasir,%20let's%20discuss%20${encodeURIComponent(lead.company)}%20web%20performance" style="display: inline-block; background-color: #F6CD0B; color: #03050d; font-weight: 700; font-size: 14px; text-decoration: none; padding: 12px 28px; border-radius: 9999px; box-shadow: 0 2px 8px rgba(246, 205, 11, 0.3);">
-                💬 Connect Directly on WhatsApp
-              </a>
-            </div>
-
-            <!-- Executive Signature Block -->
-            <div style="border-top: 1px solid #e2e8f0; padding-top: 20px; margin-top: 28px;">
-              <table style="width: 100%; border-collapse: collapse;">
-                <tr>
-                  <td style="width: 56px; vertical-align: top; padding-right: 14px;">
-                    <img 
-                      src="https://yasirjamal.com/images/logo.webp" 
-                      alt="Yasir Jamal" 
-                      style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid #F6CD0B; display: block;" 
-                    />
-                  </td>
-                  <td style="vertical-align: top;">
-                    <div style="font-size: 15px; font-weight: 700; color: #01013E; margin-bottom: 2px;">
-                      Yasir Jamal
-                    </div>
-                    <div style="font-size: 13px; font-weight: 500; color: #1559E7; margin-bottom: 3px;">
-                      Senior Web Architect &amp; Product Designer (15+ Yrs)
-                    </div>
-                    <div style="font-size: 12px; color: #64748b;">
-                      📍 Dubai Media City, UAE &bull; <span style="color: #F6CD0B;">★★★★★</span> <strong>5.0</strong> (48+ Reviews)
-                    </div>
-                    <div style="font-size: 12px; margin-top: 6px;">
-                      <a href="https://yasirjamal.com/portfolio/" style="color: #1559E7; text-decoration: none; font-weight: 600; margin-right: 12px;">
-                        Explore 13 Verified Case Studies &rarr;
-                      </a>
-                    </div>
-                  </td>
-                </tr>
-              </table>
-            </div>
-
+          <!-- Partner & Trust Verification Badges -->
+          <div style="margin-bottom: 28px;">
+            <table style="border-collapse: collapse;">
+              <tr>
+                <td style="padding-right: 8px;">
+                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
+                    <span style="color: #EA4335;">G</span><span style="color: #4285F4;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Partner<br>
+                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Certified 2026</span>
+                  </div>
+                </td>
+                <td style="padding-right: 8px;">
+                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
+                    <span style="color: #F6CD0B;">★★★★★</span> 5.0<br>
+                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">48+ Verified Reviews</span>
+                  </div>
+                </td>
+                <td style="padding-right: 8px;">
+                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
+                    ⚡ 0.7s Sub-Second<br>
+                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Core Web Vitals</span>
+                  </div>
+                </td>
+                <td>
+                  <div style="border: 1px solid #e5e7eb; border-radius: 6px; padding: 6px 10px; background-color: #fafafa; font-size: 11px; font-weight: 700; color: #1f2937; text-align: center;">
+                    15+ Years<br>
+                    <span style="font-size: 9px; font-weight: normal; color: #6b7280;">Senior Architect</span>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
 
-          <!-- Unsubscribe Footer -->
-          <div style="background-color: #f8fafc; border-top: 1px solid #f1f5f9; padding: 14px 28px; font-size: 11px; color: #94a3b8; text-align: center;">
-            If you prefer not to receive future web performance teardowns, 
-            <a href="mailto:webandgraphicdesigner@gmail.com?subject=Unsubscribe%20${encodeURIComponent(lead.email)}" style="color: #94a3b8; text-decoration: underline;">click here to opt-out</a>.
+          <!-- Sabri Suby Style Disclaimer & CAN-SPAM Footer -->
+          <div style="border-top: 1px solid #e5e7eb; padding-top: 16px; font-size: 11px; color: #9ca3af; line-height: 1.5;">
+            <p style="margin: 0 0 8px 0;">
+              You are receiving this communication regarding digital web performance from Yasir Jamal, based in Dubai Media City, UAE.
+            </p>
+            <p style="margin: 0 0 8px 0;">
+              All case studies and metrics mentioned (Julphar Pharmaceuticals, Westminster Properties) are verified client architectures. To opt-out from future performance updates, reply with "unsubscribe" or <a href="mailto:webandgraphicdesigner@gmail.com?subject=Unsubscribe%20${encodeURIComponent(lead.email)}" style="color: #9ca3af; text-decoration: underline;">click here to unsubscribe</a>.
+            </p>
+            <p style="margin: 0;">
+              Yasir Jamal &bull; Dubai Media City, Building 1, Dubai, UAE &bull; <a href="https://yasirjamal.com" style="color: #9ca3af; text-decoration: none;">yasirjamal.com</a>
+            </p>
           </div>
 
         </div>
+
       </div>
     `,
-    text: `Technical Web Performance Teardown for ${lead.company}\n\nHi ${lead.name},\n\nI reviewed ${lead.company} while analyzing digital conversion architectures across Dubai's ${lead.industry} sector.\n\nMost corporate platforms in the UAE take 4+ seconds to load, losing ~40% of mobile inquiries.\n\nAs a Senior Web Architect with 15+ years experience (Julphar Pharmaceuticals, Westminster Properties), I engineer 0.7s sub-second web platforms that maximize high-ticket client inquiries.\n\nWould you be open to a quick 5-minute review this week?\n\nConnect on WhatsApp: https://wa.me/971552600494\nExplore Case Studies: https://yasirjamal.com/portfolio/\n\n---\nYasir Jamal\nSenior Web Architect | Dubai Media City\n5.0 Star Rated (48+ Reviews)\n\nTo opt-out, reply with "unsubscribe".`
+    text: `Hi ${lead.name},\n\nCame across ${lead.company} while reviewing digital platforms in Dubai's ${lead.industry} sector.\n\nMost corporate platforms in the UAE currently carry 4+ seconds of mobile load delay, causing over 40% of high-intent buyers to bounce before viewing the offer.\n\nWe recently engineered sub-second platforms for ADX-listed Julphar Pharmaceuticals and Westminster Properties (0.7s load times, +42% inbound inquiries).\n\nMind if I send over a 60-second speed comparison for ${lead.company}?\n\nBest,\nYasir\n\n---\nYASIR JAMAL\nYasir Jamal\nSenior Web Architect & Head of Digital Engineering\nDubai Media City, Building 1, Dubai, United Arab Emirates\nPhone: +971 55 2600 494\nWebsite: https://yasirjamal.com\nWhatsApp: https://wa.me/971552600494\n\nTo unsubscribe, reply with "unsubscribe".`
   };
 }
 
-async function sendLuxuryColdEmail(lead) {
-  const pitch = generateLuxuryPitch(lead);
+async function sendSabriStyleEmail(lead) {
+  const pitch = generateSabriStyleEmail(lead);
   const payload = JSON.stringify({
     from: 'Yasir Jamal <yasir@yasirjamal.com>',
     to: [lead.email],
@@ -171,13 +176,13 @@ async function sendLuxuryColdEmail(lead) {
         'Content-Length': Buffer.byteLength(payload)
       }
     }, (res) => {
-      let data = '';
-      res.on('data', chunk => data += chunk);
+      let body = '';
+      res.on('data', chunk => body += chunk);
       res.on('end', () => {
         try {
-          resolve({ status: res.statusCode, data: JSON.parse(data) });
+          resolve({ status: res.statusCode, data: JSON.parse(body) });
         } catch (e) {
-          resolve({ status: res.statusCode, raw: data });
+          resolve({ status: res.statusCode, raw: body });
         }
       });
     });
@@ -187,20 +192,20 @@ async function sendLuxuryColdEmail(lead) {
   });
 }
 
-async function runLuxuryOutreachBatch(leads) {
+async function runSabriStyleBatch(leads) {
   console.log('========================================================================');
-  console.log('💎 LUXURY BENTO AUDIT COLD EMAIL DISPATCHER');
+  console.log('👑 SABRI SUBY STYLE HIGH-TRUST SIGNATURE COLD EMAIL DISPATCHER');
   console.log(`   Target Count: ${leads.length} Leads`);
   console.log('========================================================================\n');
 
   for (let i = 0; i < leads.length; i++) {
     const lead = leads[i];
-    console.log(`[${i + 1}/${leads.length}] Sending luxury audit pitch to ${lead.name} (${lead.company} - ${lead.email})...`);
+    console.log(`[${i + 1}/${leads.length}] Sending King Kong / Sabri style pitch to ${lead.name} (${lead.company} - ${lead.email})...`);
 
     try {
-      const res = await sendLuxuryColdEmail(lead);
+      const res = await sendSabriStyleEmail(lead);
       if (res.status === 200) {
-        console.log(`   ✅ [200 OK] Luxury Audit Delivered (Resend ID: ${res.data.id})`);
+        console.log(`   ✅ [200 OK] Delivered (Resend ID: ${res.data.id})`);
       } else {
         console.log(`   ⚠️ [${res.status}] Notice: ${JSON.stringify(res.data || res.raw)}`);
       }
@@ -214,7 +219,7 @@ async function runLuxuryOutreachBatch(leads) {
     }
   }
 
-  console.log('\n🎉 Luxury audit cold email delivered successfully!\n');
+  console.log('\n🎉 King Kong / Sabri style cold email delivered successfully!\n');
 }
 
-runLuxuryOutreachBatch(sampleLeads).catch(console.error);
+runSabriStyleBatch(sampleLeads).catch(console.error);
