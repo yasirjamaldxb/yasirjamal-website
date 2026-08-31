@@ -119,11 +119,102 @@ const {
             });
           }
 
+          // Phone Call Clicks
+          else if (href.startsWith('tel:')) {
+            gtag('event', 'phone_call_click', {
+              event_category: 'Direct Inbound Contact',
+              event_label: href.replace('tel:', ''),
+              page_location: window.location.pathname
+            });
+          }
+
+          // Email Inquiry Clicks
+          else if (href.startsWith('mailto:')) {
+            gtag('event', 'email_inquiry_click', {
+              event_category: 'Direct Inbound Contact',
+              event_label: href.replace('mailto:', ''),
+              page_location: window.location.pathname
+            });
+          }
+
+          // Internal Portfolio Case Study Navigation
+          else if (href.includes('/portfolio/')) {
+            var caseStudySlug = href.split('/portfolio/')[1]?.replace(/\/$/, '') || 'index';
+            gtag('event', 'case_study_interaction', {
+              event_category: 'Portfolio Engagement',
+              case_study: caseStudySlug,
+              page_location: window.location.pathname
+            });
+          }
+
           // Live Client Case Study Outbound Visits
           else if (link.target === '_blank' && !href.includes('yasirjamal.com')) {
             gtag('event', 'outbound_portfolio_click', {
               event_category: 'Portfolio Verification',
               target_domain: link.hostname,
+              page_location: window.location.pathname
+            });
+          }
+        }, { passive: true });
+
+        // 3. Scroll Depth Milestone Funnel (25%, 50%, 75%, 90%)
+        var trackedScroll = { 25: false, 50: false, 75: false, 90: false };
+        window.addEventListener('scroll', function() {
+          var h = document.documentElement, 
+              b = document.body,
+              st = 'scrollTop',
+              sh = 'scrollHeight';
+          var percent = Math.round((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+
+          [25, 50, 75, 90].forEach(function(milestone) {
+            if (percent >= milestone && !trackedScroll[milestone]) {
+              trackedScroll[milestone] = true;
+              gtag('event', 'scroll_milestone_' + milestone, {
+                event_category: 'User Journey Scroll',
+                scroll_depth: milestone + '%',
+                page_location: window.location.pathname,
+                page_title: document.title.split('|')[0].trim()
+              });
+            }
+          });
+        }, { passive: true });
+
+        // 4. Time-on-Page Intent Milestones (15s, 30s, 60s, 120s)
+        [15, 30, 60, 120].forEach(function(seconds) {
+          setTimeout(function() {
+            if (document.visibilityState !== 'hidden') {
+              gtag('event', 'engaged_time_' + seconds + 's', {
+                event_category: 'Reading Engagement',
+                time_seconds: seconds,
+                page_location: window.location.pathname
+              });
+            }
+          }, seconds * 1000);
+        });
+
+        // 5. FAQ Accordion & Collapsible Engagement Tracker
+        document.addEventListener('click', function(e) {
+          var btn = e.target.closest('button, summary, [data-faq-trigger]');
+          if (!btn) return;
+          var text = btn.innerText.trim();
+          if (text.length > 5 && text.length < 150 && (text.includes('?') || btn.closest('details, [class*="faq"], [id*="faq"]'))) {
+            gtag('event', 'faq_accordion_open', {
+              event_category: 'User Intent Research',
+              question_text: text,
+              page_location: window.location.pathname
+            });
+          }
+        }, { passive: true });
+
+        // 6. Desktop Exit-Intent & Drop-Off Tracker
+        var exitTracked = false;
+        document.addEventListener('mouseleave', function(e) {
+          if (e.clientY <= 0 && !exitTracked) {
+            exitTracked = true;
+            var maxScroll = Object.keys(trackedScroll).filter(function(k){ return trackedScroll[k]; }).pop() || '0%';
+            gtag('event', 'exit_intent_detected', {
+              event_category: 'Drop-Off Intelligence',
+              last_scroll_depth: maxScroll,
               page_location: window.location.pathname
             });
           }
