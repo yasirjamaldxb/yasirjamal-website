@@ -79,11 +79,21 @@ const {
           
           // WhatsApp Inquiries & Conversion Tracking
           if (href.includes('wa.me') || href.includes('whatsapp.com')) {
+            var pageName = document.title.split('|')[0].trim() || window.location.pathname;
+            var currentPath = window.location.pathname;
+            
+            // Dynamically enrich WhatsApp URL with page attribution if not already customized
+            if (!href.includes('text=') || href.endsWith('wa.me/971552600494') || href.endsWith('wa.me/971552600494/')) {
+              var customMsg = encodeURIComponent("Hi Yasir, I'm visiting your website (" + pageName + ") and would like to discuss a project.");
+              link.href = "https://wa.me/971552600494?text=" + customMsg;
+            }
+
             gtag('event', 'whatsapp_lead_click', {
               event_category: 'Lead Conversion',
               event_label: link.innerText.trim() || 'WhatsApp CTA',
-              page_location: window.location.pathname,
-              destination: href
+              page_location: currentPath,
+              page_title: pageName,
+              destination: link.href
             });
           }
 
