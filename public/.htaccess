@@ -1,108 +1,67 @@
-# Enable Clean Static Routing & Comprehensive Legacy 301 Redirects
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
+# ==============================================================================
+# YASIR JAMAL - ENTERPRISE TECHNICAL SEO & CANONICAL REDIRECT ENGINE (.htaccess)
+# ==============================================================================
 
-  # 1. Portfolio & Work Redirects
-  RewriteRule ^work/?$ /portfolio/ [R=301,L]
-  RewriteRule ^work/westminster-properties/?$ /portfolio/westminster-properties/ [R=301,L]
-  RewriteRule ^work/skylynx/?$ /portfolio/skylynx/ [R=301,L]
-  RewriteRule ^work/alston-clayden/?$ /portfolio/alston-clayden/ [R=301,L]
-  RewriteRule ^work/markwilliams/?$ /portfolio/markwilliams/ [R=301,L]
-  RewriteRule ^work/mark-williams/?$ /portfolio/markwilliams/ [R=301,L]
-  RewriteRule ^work/dubai-podiatrist/?$ /portfolio/dubai-podiatrist/ [R=301,L]
-  RewriteRule ^work/noor-abu-dhabi/?$ /portfolio/noor-abu-dhabi/ [R=301,L]
-  RewriteRule ^work/paws-and-planes/?$ /portfolio/paws-and-planes/ [R=301,L]
-  RewriteRule ^work/alomaids/?$ /portfolio/alomaids/ [R=301,L]
-  RewriteRule ^work/fila-tech/?$ /portfolio/fila-tech/ [R=301,L]
-  RewriteRule ^work/julphar/?$ /portfolio/julphar/ [R=301,L]
-  RewriteRule ^work/abayadore/?$ /portfolio/abayadore/ [R=301,L]
-  RewriteRule ^work/hunza-global/?$ /portfolio/hunza-global/ [R=301,L]
-  RewriteRule ^work/baanpaa/?$ /portfolio/baanpaa/ [R=301,L]
-  RewriteRule ^work/(.*)$ /portfolio/$1 [R=301,L]
-  RewriteRule ^case-studies/?$ /portfolio/ [R=301,L]
-  RewriteRule ^case-studies/(.*)$ /portfolio/$1 [R=301,L]
-  RewriteRule ^portfolio-item/(.*)$ /portfolio/$1 [R=301,L]
-  RewriteRule ^portfolio-category/(.*)$ /portfolio/ [R=301,L]
+RewriteEngine On
 
-  # 2. About, Who Is & Services Redirects
-  RewriteRule ^who-is-yasir-jamal/?$ /about/ [R=301,L]
-  RewriteRule ^about-us/?$ /about/ [R=301,L]
-  RewriteRule ^about-me/?$ /about/ [R=301,L]
-  RewriteRule ^services/?$ /about/ [R=301,L]
-  RewriteRule ^our-services/?$ /about/ [R=301,L]
-  RewriteRule ^pricing/?$ /about/#faq [R=301,L]
+# 1. Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # 3. Contact & Quote Redirects
-  RewriteRule ^contact-us/?$ /about/#contact [R=301,L]
-  RewriteRule ^contact/?$ /about/#contact [R=301,L]
-  RewriteRule ^quote/?$ /about/#contact [R=301,L]
-  RewriteRule ^send-enquiry/?$ /about/#contact [R=301,L]
+# 2. Force Non-WWW (Canonical Host: yasirjamal.com)
+RewriteCond %{HTTP_HOST} ^www\.yasirjamal\.com$ [NC]
+RewriteRule ^(.*)$ https://yasirjamal.com/$1 [L,R=301]
 
-  # 4. Legacy WordPress Blog & Taxonomy 301 Redirects
-  RewriteRule ^blog/my-design-process/?$ /about/ [R=301,L]
-  RewriteRule ^blog/side-hustle/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
-  RewriteRule ^blog/category/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^category/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^blog/tag/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^tag/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^blog/author/(.*)$ /about/ [R=301,L]
-  RewriteRule ^author/(.*)$ /about/ [R=301,L]
-  RewriteRule ^blog/ecommerce-business-dubai-uae/?$ /blog/sub-second-ecommerce-architecture-gcc-scaling/ [R=301,L]
-  RewriteRule ^blog/failed-websites/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
-  RewriteRule ^blog/how-to-have-a-successful-online-business/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
-  RewriteRule ^blog/ux-design-challenge-for-beginners/?$ /about/ [R=301,L]
-  RewriteRule ^blog/web-design-in-2024/?$ /blog/modern-web-design-trends-2026/ [R=301,L]
-  RewriteRule ^blog/why-hire-a-freelance-web-designer/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
-  RewriteRule ^blog/page/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^page/(.*)$ /blog/ [R=301,L]
-  RewriteRule ^feed/?$ / [R=301,L]
-  RewriteRule ^blog/feed/?$ / [R=301,L]
-  RewriteRule ^comments/feed/?$ / [R=301,L]
+# 3. Force Trailing Slash on Directories (Excluding Files with Extensions)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !(.[a-zA-Z0-9]{1,5})$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ https://yasirjamal.com/$1/ [L,R=301]
 
-  # Direct Blog Slug Redirects (if accessed without /blog/ prefix)
-  RewriteRule ^astro-vs-wordpress-speed-performance-guide/?$ /blog/astro-vs-wordpress-speed-performance-guide/ [R=301,L]
-  RewriteRule ^conversion-rate-optimization-cro-lead-generation/?$ /blog/conversion-rate-optimization-cro-lead-generation/ [R=301,L]
-  RewriteRule ^dubai-technical-seo-audit-ranking-guide/?$ /blog/dubai-technical-seo-audit-ranking-guide/ [R=301,L]
-  RewriteRule ^generative-engine-optimization-geo-ai-search/?$ /blog/generative-engine-optimization-geo-ai-search/ [R=301,L]
-  RewriteRule ^hiring-freelance-web-designer-vs-agency-dubai/?$ /blog/hiring-freelance-web-designer-vs-agency-dubai/ [R=301,L]
-  RewriteRule ^modern-web-design-trends-2026/?$ /blog/modern-web-design-trends-2026/ [R=301,L]
-  RewriteRule ^sub-second-ecommerce-architecture-gcc-scaling/?$ /blog/sub-second-ecommerce-architecture-gcc-scaling/ [R=301,L]
+# ==============================================================================
+# 4. LEGACY 301 PERMANENT REDIRECTS (FIXING 100% OF GSC 404s & CONSOLIDATING PAGERANK)
+# ==============================================================================
 
-  # 5. Serve existing files directly
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteRule ^ - [L]
+# Legacy /work/ URLs -> /portfolio/
+RewriteRule ^work/?$ https://yasirjamal.com/portfolio/ [L,R=301]
+RewriteRule ^work/(.*)$ https://yasirjamal.com/portfolio/$1 [L,R=301]
 
-  # 6. Serve existing directory index.html files directly without redirect loops
-  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-  RewriteRule ^(.*)$ $1/index.html [L]
+# Legacy Contact & Quote URLs
+RewriteRule ^contact-us/?$ https://yasirjamal.com/ [L,R=301]
+RewriteRule ^contact/?$ https://yasirjamal.com/ [L,R=301]
+RewriteRule ^quote/?$ https://yasirjamal.com/ [L,R=301]
 
-  # 7. Clean URL handling for HTML files without extension
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.*)$ $1.html [L]
+# Legacy WordPress Blog URLs -> Modern Pillar & Guide URLs
+RewriteRule ^blog/failed-websites/?$ https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/ [L,R=301]
+RewriteRule ^blog/ecommerce-business-dubai-uae/?$ https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling/ [L,R=301]
+RewriteRule ^blog/web-design-in-2024/?$ https://yasirjamal.com/blog/modern-web-design-trends-2026/ [L,R=301]
+RewriteRule ^blog/why-hire-a-freelance-web-designer/?$ https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/ [L,R=301]
+RewriteRule ^blog/my-design-process/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^blog/side-hustle/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^blog/how-to-have-a-successful-online-business/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^blog/ux-design-challenge-for-beginners/?$ https://yasirjamal.com/blog/ [L,R=301]
 
-  # 8. Custom 404 Fallback
-  ErrorDocument 404 /404.html
-</IfModule>
+# Legacy WordPress Taxonomies, Feeds & Archives -> Clean Pages
+RewriteRule ^blog/category/(.*)$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^category/(.*)$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^tag/(.*)$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^author/(.*)$ https://yasirjamal.com/about/ [L,R=301]
+RewriteRule ^feed/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^blog/feed/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^comments/feed/?$ https://yasirjamal.com/blog/ [L,R=301]
+RewriteRule ^wp-content/(.*)$ https://yasirjamal.com/ [L,R=301]
+RewriteRule ^wp-includes/(.*)$ https://yasirjamal.com/ [L,R=301]
+RewriteRule ^wp-admin/(.*)$ https://yasirjamal.com/ [L,R=301]
 
-# Browser Caching & Performance Headers (Lighthouse 100/100)
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresDefault "access plus 1 month"
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 1 year"
-  ExpiresByType application/javascript "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType font/woff2 "access plus 1 year"
-</IfModule>
-
+# ==============================================================================
+# 5. SECURITY & PERFORMANCE HEADERS
+# ==============================================================================
 <IfModule mod_headers.c>
-  <FilesMatch "\.(ico|pdf|jpg|jpeg|png|webp|js|css|woff2|woff|ttf|svg)$">
-    Header set Cache-Control "max-age=31536000, public, immutable"
-  </FilesMatch>
-  Header set X-Robots-Tag "all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
-  Header set Access-Control-Allow-Origin "*"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
+
+# Custom 404 Error Page
+ErrorDocument 404 /404.html

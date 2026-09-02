@@ -1,0 +1,444 @@
+{
+  "sitemapUrls": [
+    "https://yasirjamal.com/",
+    "https://yasirjamal.com/about/",
+    "https://yasirjamal.com/portfolio/",
+    "https://yasirjamal.com/portfolio/abayadore/",
+    "https://yasirjamal.com/portfolio/paws-and-planes/",
+    "https://yasirjamal.com/portfolio/noor-abu-dhabi/",
+    "https://yasirjamal.com/portfolio/hunza-global/",
+    "https://yasirjamal.com/portfolio/alomaids/",
+    "https://yasirjamal.com/portfolio/baanpaa/",
+    "https://yasirjamal.com/portfolio/dubai-podiatrist/",
+    "https://yasirjamal.com/portfolio/markwilliams/",
+    "https://yasirjamal.com/portfolio/skylynx/",
+    "https://yasirjamal.com/portfolio/alston-clayden/",
+    "https://yasirjamal.com/portfolio/westminster-properties/",
+    "https://yasirjamal.com/portfolio/julphar/",
+    "https://yasirjamal.com/blog/",
+    "https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/",
+    "https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/",
+    "https://yasirjamal.com/blog/dubai-technical-seo-audit-ranking-guide/",
+    "https://yasirjamal.com/blog/generative-engine-optimization-geo-ai-search/",
+    "https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/",
+    "https://yasirjamal.com/blog/modern-web-design-trends-2026/",
+    "https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling/",
+    "https://yasirjamal.com/privacy-policy/",
+    "https://yasirjamal.com/terms/"
+  ],
+  "searchAnalyticsPages": [
+    {
+      "page": "https://yasirjamal.com/",
+      "clicks": 10,
+      "impressions": 1162,
+      "ctr": 0.008605851979345954,
+      "position": 27.271084337349397
+    },
+    {
+      "page": "https://yasirjamal.com/blog/tmd-hosting-review/",
+      "clicks": 3,
+      "impressions": 38,
+      "ctr": 0.07894736842105263,
+      "position": 28.92105263157895
+    },
+    {
+      "page": "https://yasirjamal.com/blog/my-design-process/",
+      "clicks": 2,
+      "impressions": 31,
+      "ctr": 0.06451612903225806,
+      "position": 21.06451612903226
+    },
+    {
+      "page": "https://yasirjamal.com/blog/speed-up-gohighlevel-funnels-custom-css-guide/",
+      "clicks": 2,
+      "impressions": 30,
+      "ctr": 0.06666666666666667,
+      "position": 39.9
+    },
+    {
+      "page": "https://www.yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide",
+      "clicks": 1,
+      "impressions": 13,
+      "ctr": 0.07692307692307693,
+      "position": 49.53846153846154
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/julphar/",
+      "clicks": 1,
+      "impressions": 20,
+      "ctr": 0.05,
+      "position": 18.4
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/markwilliams/",
+      "clicks": 1,
+      "impressions": 5,
+      "ctr": 0.2,
+      "position": 15
+    },
+    {
+      "page": "https://yasirjamal.com/about",
+      "clicks": 1,
+      "impressions": 40,
+      "ctr": 0.025,
+      "position": 2.55
+    },
+    {
+      "page": "https://yasirjamal.com/blog/astro-vs-wordpress-speed-performance-guide/",
+      "clicks": 1,
+      "impressions": 30,
+      "ctr": 0.03333333333333333,
+      "position": 53.3
+    },
+    {
+      "page": "https://yasirjamal.com/blog/failed-websites/",
+      "clicks": 1,
+      "impressions": 33,
+      "ctr": 0.030303030303030304,
+      "position": 24.181818181818183
+    },
+    {
+      "page": "https://yasirjamal.com/blog/side-hustle/",
+      "clicks": 1,
+      "impressions": 19,
+      "ctr": 0.05263157894736842,
+      "position": 16.05263157894737
+    },
+    {
+      "page": "https://yasirjamal.com/work/alomaids/",
+      "clicks": 1,
+      "impressions": 42,
+      "ctr": 0.023809523809523808,
+      "position": 10
+    },
+    {
+      "page": "https://www.yasirjamal.com/about/",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 6.433333333333334
+    },
+    {
+      "page": "https://www.yasirjamal.com/blog",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 9.1
+    },
+    {
+      "page": "https://www.yasirjamal.com/blog/generative-engine-optimization-geo-ai-search",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 67.10526315789474
+    },
+    {
+      "page": "https://www.yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 32.15
+    },
+    {
+      "page": "https://www.yasirjamal.com/blog/modern-web-design-trends-2026",
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 58.12903225806452
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio",
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 11.451612903225806
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/abayadore/",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/alomaids/",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 16.473684210526315
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/alston-clayden/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 36.5
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/baanpaa/",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 18.083333333333332
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/dubai-podiatrist/",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 25.074074074074073
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/hunza-global/",
+      "clicks": 0,
+      "impressions": 35,
+      "ctr": 0,
+      "position": 18.17142857142857
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/noor-abu-dhabi/",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 31.576923076923077
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/paws-and-planes/",
+      "clicks": 0,
+      "impressions": 48,
+      "ctr": 0,
+      "position": 19.083333333333332
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/skylynx/",
+      "clicks": 0,
+      "impressions": 17,
+      "ctr": 0,
+      "position": 20.764705882352942
+    },
+    {
+      "page": "https://www.yasirjamal.com/portfolio/westminster-properties/",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 25.291666666666668
+    },
+    {
+      "page": "https://yasirjamal.com/about/",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5.5
+    },
+    {
+      "page": "https://yasirjamal.com/blog/",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 4.142857142857142
+    },
+    {
+      "page": "https://yasirjamal.com/blog/category/guides/digital-marketing/",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 26.583333333333332
+    },
+    {
+      "page": "https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation",
+      "clicks": 0,
+      "impressions": 19,
+      "ctr": 0,
+      "position": 32.473684210526315
+    },
+    {
+      "page": "https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "page": "https://yasirjamal.com/blog/dubai-technical-seo-audit-ranking-guide",
+      "clicks": 0,
+      "impressions": 24,
+      "ctr": 0,
+      "position": 37.833333333333336
+    },
+    {
+      "page": "https://yasirjamal.com/blog/ecommerce-business-dubai-uae/",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 32.03846153846154
+    },
+    {
+      "page": "https://yasirjamal.com/blog/generative-engine-optimization-geo-ai-search",
+      "clicks": 0,
+      "impressions": 66,
+      "ctr": 0,
+      "position": 66.16666666666667
+    },
+    {
+      "page": "https://yasirjamal.com/blog/gohighlevel-30-day-free-trial-agency-setup-guide/",
+      "clicks": 0,
+      "impressions": 15,
+      "ctr": 0,
+      "position": 39.2
+    },
+    {
+      "page": "https://yasirjamal.com/blog/gohighlevel-hidden-costs-pricing-calculator/",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "page": "https://yasirjamal.com/blog/hiring-freelance-web-designer-vs-agency-dubai/",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 38.55555555555556
+    },
+    {
+      "page": "https://yasirjamal.com/blog/how-to-have-a-successful-online-business/",
+      "clicks": 0,
+      "impressions": 30,
+      "ctr": 0,
+      "position": 26.433333333333334
+    },
+    {
+      "page": "https://yasirjamal.com/blog/modern-web-design-trends-2026/",
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 38.7
+    },
+    {
+      "page": "https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling",
+      "clicks": 0,
+      "impressions": 33,
+      "ctr": 0,
+      "position": 27.181818181818183
+    },
+    {
+      "page": "https://yasirjamal.com/blog/ux-design-challenge-for-beginners/",
+      "clicks": 0,
+      "impressions": 26,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "page": "https://yasirjamal.com/blog/web-design-in-2024/",
+      "clicks": 0,
+      "impressions": 40,
+      "ctr": 0,
+      "position": 44.35
+    },
+    {
+      "page": "https://yasirjamal.com/blog/why-hire-a-freelance-web-designer/",
+      "clicks": 0,
+      "impressions": 39,
+      "ctr": 0,
+      "position": 20.153846153846153
+    },
+    {
+      "page": "https://yasirjamal.com/contact-us/",
+      "clicks": 0,
+      "impressions": 43,
+      "ctr": 0,
+      "position": 14.627906976744185
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/abayadore/",
+      "clicks": 0,
+      "impressions": 49,
+      "ctr": 0,
+      "position": 7.591836734693878
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/alomaids/",
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 7.5
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/alston-clayden/",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 20.304347826086957
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/julphar/",
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 10.214285714285714
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/markwilliams/",
+      "clicks": 0,
+      "impressions": 32,
+      "ctr": 0,
+      "position": 11.53125
+    },
+    {
+      "page": "https://yasirjamal.com/portfolio/skylynx/",
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 11.9
+    },
+    {
+      "page": "https://yasirjamal.com/privacy-policy/",
+      "clicks": 0,
+      "impressions": 50,
+      "ctr": 0,
+      "position": 10.8
+    },
+    {
+      "page": "https://yasirjamal.com/terms/",
+      "clicks": 0,
+      "impressions": 45,
+      "ctr": 0,
+      "position": 5.844444444444444
+    },
+    {
+      "page": "https://yasirjamal.com/work/",
+      "clicks": 0,
+      "impressions": 56,
+      "ctr": 0,
+      "position": 4.910714285714286
+    },
+    {
+      "page": "https://yasirjamal.com/work/alston-clayden/",
+      "clicks": 0,
+      "impressions": 27,
+      "ctr": 0,
+      "position": 12.88888888888889
+    },
+    {
+      "page": "https://yasirjamal.com/work/dubai-podiatrist/",
+      "clicks": 0,
+      "impressions": 16,
+      "ctr": 0,
+      "position": 14.25
+    },
+    {
+      "page": "https://yasirjamal.com/work/skylynx/",
+      "clicks": 0,
+      "impressions": 41,
+      "ctr": 0,
+      "position": 8.487804878048781
+    },
+    {
+      "page": "https://yasirjamal.com/work/westminster-properties/",
+      "clicks": 0,
+      "impressions": 23,
+      "ctr": 0,
+      "position": 16.086956521739133
+    }
+  ]
+}

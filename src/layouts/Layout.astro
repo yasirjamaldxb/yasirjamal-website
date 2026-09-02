@@ -12,6 +12,10 @@ const {
 	title, 
 	description = "#1 Rated Web Design Dubai & Custom Web Developer in Dubai with 15+ years experience. Custom web development, eCommerce engineering, and Google Maps local SEO across the UAE." 
 } = Astro.props;
+
+const rawPath = Astro.url.pathname;
+const normalizedPath = rawPath.endsWith('/') ? rawPath : `${rawPath}/`;
+const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 ---
 
 <!doctype html>
@@ -242,7 +246,7 @@ const {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
-    <meta property="og:url" content={`https://yasirjamal.com${Astro.url.pathname}`} />
+    <meta property="og:url" content={canonicalUrl} />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -251,7 +255,7 @@ const {
     <meta name="twitter:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
 
     <!-- Canonical Link -->
-    <link rel="canonical" href={`https://yasirjamal.com${Astro.url.pathname}`} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- High-Performance Asynchronous Google Fonts (Zero Render Blocking) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
