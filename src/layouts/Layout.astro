@@ -354,6 +354,42 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
       });
     </script>
 
+    <!-- 🛡️ Zero-Impact B2B Visitor Intelligence & Retargeting Hub (Non-Blocking / SEO & LLM Protected) -->
+    <script is:inline>
+      (function() {
+        // Defer execution until the browser has finished all critical rendering and network requests
+        function initVisitorIntelligence() {
+          if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadTrackingHub, { timeout: 4000 });
+          } else {
+            setTimeout(loadTrackingHub, 2500);
+          }
+        }
+
+        function loadTrackingHub() {
+          // Check for bot user agents (Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot) and skip execution
+          var ua = navigator.userAgent || '';
+          if (/bot|crawler|spider|crawling|googlebot|bingbot|gptbot|claudebot|perplexitybot|bytespider/i.test(ua)) {
+            return;
+          }
+
+          // Global Event Dispatcher for Third-Party Retargeting & Visitor ID Tools
+          window.trackVisitorLead = function(leadData) {
+            try {
+              if (window.fbq) window.fbq('track', 'Lead', leadData);
+              if (window.lintrk) window.lintrk('track', { conversion_id: 'lead' });
+            } catch(e) {}
+          };
+        }
+
+        if (document.readyState === 'complete') {
+          initVisitorIntelligence();
+        } else {
+          window.addEventListener('load', initVisitorIntelligence);
+        }
+      })();
+    </script>
+
     <!-- Google Search Console (Webmaster Tools) Verification -->
     <meta name="google-site-verification" content="xEMh0yJJAu6CwedX7Drn-XYMtysePatx0EUy7QRlO8g" />
 
