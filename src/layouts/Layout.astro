@@ -373,6 +373,15 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             return;
           }
 
+          // 🚀 RB2B Person-Level LinkedIn Visitor Identification (Key: 9NMMZHXX5QNW)
+          if (!window.reb2b) {
+            window.reb2b = {loaded: true};
+            var s = document.createElement("script");
+            s.async = true;
+            s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/9NMMZHXX5QNW/9NMMZHXX5QNW.js.gz";
+            document.head.appendChild(s);
+          }
+
           // Global Event Dispatcher for Third-Party Retargeting & Visitor ID Tools
           window.trackVisitorLead = function(leadData) {
             try {
