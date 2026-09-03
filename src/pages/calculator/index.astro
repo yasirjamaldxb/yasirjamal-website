@@ -1,0 +1,467 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout 
+  title="Interactive Web Design Cost & Scope Estimator Dubai | Yasir Jamal"
+  description="Calculate your custom website design investment, project scope, and launch timeline in Dubai. Transparent pricing, zero agency middleman bloat, and direct senior partnership."
+>
+  <main class="w-full bg-slate-950 text-white font-elegant min-h-screen pt-28 sm:pt-36 pb-20">
+    
+    <!-- Hero Header -->
+    <div class="max-w-4xl mx-auto px-5 sm:px-6 text-center mb-12 sm:mb-16">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-medium mb-4">
+        <span class="w-2 h-2 rounded-full bg-[#25D366] animate-pulse"></span>
+        <span>Transparent Pricing &bull; Instant Scope Calculation</span>
+      </div>
+      
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-white mb-4 leading-tight">
+        Calculate Your Web Design Scope &amp; Investment
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base font-light max-w-2xl mx-auto leading-relaxed">
+        Select your project requirements below to see a transparent ballpark investment range, architectural deliverables, and estimated launch timeline. Zero agency account managers, zero hidden surprises.
+      </p>
+
+      <!-- Currency Switcher Toggle -->
+      <div class="inline-flex items-center gap-1 bg-slate-900/90 border border-slate-800 p-1 rounded-xl mt-6">
+        <button id="curr-aed" class="curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-[#1559E7] text-white transition-all">
+          AED (د.إ)
+        </button>
+        <button id="curr-usd" class="curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all">
+          USD ($)
+        </button>
+      </div>
+    </div>
+
+    <!-- Main 2-Column Calculator Container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 items-start">
+      
+      <!-- Left Column: Interactive Scope Builder (7 Cols) -->
+      <div class="lg:col-span-7 space-y-10">
+        
+        <!-- Step 1: Project Type -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white flex items-center justify-center text-xs font-bold">1</span>
+            <h2 class="text-lg sm:text-xl font-medium text-white tracking-tight">Select Project Architecture</h2>
+          </div>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="project-type-group">
+            <label class="opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all hover:border-[#1559E7]">
+              <input type="radio" name="project_type" value="corporate" data-aed="9500" data-usd="2600" data-weeks="3" checked class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-1">Corporate Website</div>
+              <div class="text-xs text-slate-400 font-light">Custom lead-generating corporate presence built to outrank competitors.</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700">
+              <input type="radio" name="project_type" value="funnel" data-aed="6500" data-usd="1800" data-weeks="2" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-1">High-Converting Funnel</div>
+              <div class="text-xs text-slate-400 font-light">Direct response sales page engineered for ad traffic and fast conversion.</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700">
+              <input type="radio" name="project_type" value="ecommerce" data-aed="14500" data-usd="3950" data-weeks="4" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-1">Sub-Second eCommerce</div>
+              <div class="text-xs text-slate-400 font-light">High-volume online store with UAE/GCC payment gateways and fast checkout.</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700">
+              <input type="radio" name="project_type" value="saas" data-aed="16500" data-usd="4500" data-weeks="5" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-1">Custom Web App / SaaS</div>
+              <div class="text-xs text-slate-400 font-light">Full UX/UI design system and product architecture for web platforms.</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 2: Page Count & Scale -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white flex items-center justify-center text-xs font-bold">2</span>
+            <h2 class="text-lg sm:text-xl font-medium text-white tracking-tight">Scope &amp; Page Volume</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="page-count-group">
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700 text-center">
+              <input type="radio" name="page_count" value="lean" data-aed="0" data-usd="0" data-weeks="0" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-0.5">1 to 5 Pages</div>
+              <div class="text-xs text-slate-400 font-light">Lean &bull; Fast Launch</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all hover:border-[#1559E7] text-center">
+              <input type="radio" name="page_count" value="standard" data-aed="3500" data-usd="950" data-weeks="1" checked class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-0.5">6 to 12 Pages</div>
+              <div class="text-xs text-slate-400 font-light">Standard Business</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700 text-center">
+              <input type="radio" name="page_count" value="enterprise" data-aed="7500" data-usd="2000" data-weeks="2" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-0.5">13 to 25+ Pages</div>
+              <div class="text-xs text-slate-400 font-light">Multi-Service / Enterprise</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 3: Growth Drivers & Integrations -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white flex items-center justify-center text-xs font-bold">3</span>
+            <h2 class="text-lg sm:text-xl font-medium text-white tracking-tight">Growth Features &amp; Add-ons</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="addons-group">
+            <label class="addon-card cursor-pointer block border-2 border-[#25D366]/80 bg-[#25D366]/10 p-4 rounded-2xl transition-all">
+              <input type="checkbox" name="addons" value="aeo" data-aed="2500" data-usd="680" checked class="sr-only" />
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-sm text-white">AI Search / AEO Ready</span>
+                <span class="text-xs text-[#25D366] font-bold">+2,500 AED</span>
+              </div>
+              <div class="text-xs text-slate-400 font-light">Structured entity JSON-LD to get cited on ChatGPT, Perplexity &amp; Gemini.</div>
+            </label>
+
+            <label class="addon-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all">
+              <input type="checkbox" name="addons" value="seo" data-aed="2000" data-usd="550" class="sr-only" />
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-sm text-white">Google Maps &amp; UAE SEO</span>
+                <span class="text-xs text-slate-300 font-bold">+2,000 AED</span>
+              </div>
+              <div class="text-xs text-slate-400 font-light">Technical on-page schema and local geographic authority signals.</div>
+            </label>
+
+            <label class="addon-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all">
+              <input type="checkbox" name="addons" value="arabic" data-aed="3000" data-usd="820" class="sr-only" />
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-sm text-white">English + Arabic RTL</span>
+                <span class="text-xs text-slate-300 font-bold">+3,000 AED</span>
+              </div>
+              <div class="text-xs text-slate-400 font-light">Seamless bilingual localization with right-to-left layout perfection.</div>
+            </label>
+
+            <label class="addon-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all">
+              <input type="checkbox" name="addons" value="crm" data-aed="2500" data-usd="680" class="sr-only" />
+              <div class="flex items-center justify-between mb-1">
+                <span class="font-semibold text-sm text-white">CRM &amp; GoHighLevel Sync</span>
+                <span class="text-xs text-slate-300 font-bold">+2,500 AED</span>
+              </div>
+              <div class="text-xs text-slate-400 font-light">Automated lead routing to WhatsApp, SMS, and your sales pipeline.</div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Step 4: Speed & Timeline Priority -->
+        <div class="bg-slate-900/70 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-md">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="w-7 h-7 rounded-full bg-[#1559E7] text-white flex items-center justify-center text-xs font-bold">4</span>
+            <h2 class="text-lg sm:text-xl font-medium text-white tracking-tight">Timeline &amp; Delivery Pace</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="timeline-group">
+            <label class="opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all text-center">
+              <input type="radio" name="speed" value="standard" data-multiplier="1.0" checked class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-0.5">Standard Sprint</div>
+              <div class="text-xs text-slate-400 font-light">Thorough &bull; 3 to 5 Weeks</div>
+            </label>
+
+            <label class="opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all text-center">
+              <input type="radio" name="speed" value="express" data-multiplier="1.25" class="sr-only" />
+              <div class="font-semibold text-sm text-white mb-0.5">Express Launch (+25%)</div>
+              <div class="text-xs text-slate-400 font-light">Priority Fast-Track &bull; 10 to 14 Days</div>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- Right Column: Live Estimate Breakdown & Direct Dispatch (5 Cols, Sticky) -->
+      <div class="lg:col-span-5 lg:sticky lg:top-28 space-y-6">
+        
+        <div class="bg-gradient-to-br from-slate-900 via-[#01013E] to-slate-950 border border-slate-800 rounded-3xl p-7 sm:p-8 shadow-2xl text-white">
+          
+          <div class="flex items-center justify-between border-b border-slate-800/80 pb-4 mb-6">
+            <span class="text-xs font-semibold uppercase tracking-widest text-[#F6CD0B]">Estimated Investment</span>
+            <span class="text-xs text-slate-400" id="live-timeline-badge">Est. Timeline: 4 Weeks</span>
+          </div>
+
+          <!-- Large Dynamic Estimate Price -->
+          <div class="mb-6 text-left">
+            <div class="text-3xl sm:text-4xl md:text-[2.65rem] font-light text-white tracking-tight leading-none mb-1.5" id="live-price-range">
+              15,500 &ndash; 19,500 AED
+            </div>
+            <p class="text-xs text-slate-400 font-light">
+              Direct Senior Web Architect Partnership &bull; Zero Agency Middlemen.
+            </p>
+          </div>
+
+          <!-- Included Scope List -->
+          <div class="space-y-2.5 text-xs text-slate-300 border-t border-slate-800/80 pt-5 mb-7 text-left">
+            <div class="flex items-center gap-2">
+              <span class="text-[#25D366] font-bold">&check;</span>
+              <span>100% Handcrafted Custom Architecture (Zero Templates)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#25D366] font-bold">&check;</span>
+              <span>100/100 Core Web Vitals &amp; Sub-Second Page Speed</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#25D366] font-bold">&check;</span>
+              <span>15+ Years UAE Experience Direct 1-on-1 Partnership</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#25D366] font-bold">&check;</span>
+              <span>Full Source Code &amp; Domain Ownership (Zero Lock-in)</span>
+            </div>
+          </div>
+
+          <!-- Step 5 Lead Gate Form: Instant Scope & Roadmap Dispatch -->
+          <form id="calculator-lead-form" class="space-y-3.5 border-t border-slate-800/80 pt-6">
+            <div class="text-left">
+              <label for="lead-name" class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+              <input 
+                type="text" 
+                id="lead-name" 
+                required 
+                placeholder="e.g. Sarah Al-Maktoum" 
+                class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-[#25D366] focus:ring-1 focus:ring-[#25D366] transition-all"
+              />
+            </div>
+
+            <div class="text-left">
+              <label for="lead-contact" class="block text-xs font-medium text-slate-300 mb-1">Work Email or WhatsApp</label>
+              <input 
+                type="text" 
+                id="lead-contact" 
+                required 
+                placeholder="email@company.com or +971 50..." 
+                class="w-full px-4 py-3 rounded-xl bg-slate-950/90 border border-slate-700 text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-[#25D366] focus:ring-1 focus:ring-[#25D366] transition-all"
+              />
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold px-6 py-3.5 rounded-xl text-xs sm:text-sm shadow-[0_10px_25px_rgba(37,211,102,0.35)] hover:scale-[1.02] active:scale-95 transition-all"
+            >
+              <span>Get Itemized Scope &amp; Roadmap</span>
+              <span>&rarr;</span>
+            </button>
+
+            <!-- 1-Click WhatsApp Sync Button -->
+            <a 
+              id="calc-wa-sync-btn"
+              href="https://wa.me/971552600494" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-medium px-5 py-3 rounded-xl text-xs border border-white/20 hover:border-white/30 transition-all text-center"
+            >
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
+              </svg>
+              <span>Sync Calculation on WhatsApp</span>
+            </a>
+          </form>
+
+          <!-- Success State -->
+          <div id="calc-success-msg" class="hidden text-center py-6">
+            <div class="w-12 h-12 rounded-full bg-[#25D366]/20 text-[#25D366] flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <h4 class="text-base font-semibold text-white mb-1">Estimate Breakdown Sent!</h4>
+            <p class="text-xs text-slate-300 mb-4">Yasir is reviewing your scope selections and will send your detailed roadmap shortly.</p>
+            <a id="calc-wa-followup" href="#" target="_blank" class="inline-flex items-center gap-1.5 text-xs text-[#25D366] hover:underline font-medium">
+              <span>Open on WhatsApp to chat directly</span> &rarr;
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Interactive Scope Calculator Logic (Vanilla JS, Zero Bloat) -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      var currentCurrency = 'AED'; // 'AED' or 'USD'
+
+      var currencyButtons = {
+        aed: document.getElementById('curr-aed'),
+        usd: document.getElementById('curr-usd')
+      };
+
+      if (currencyButtons.aed && currencyButtons.usd) {
+        currencyButtons.aed.addEventListener('click', function() {
+          currentCurrency = 'AED';
+          currencyButtons.aed.className = 'curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-[#1559E7] text-white transition-all';
+          currencyButtons.usd.className = 'curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+          recalculateScope();
+        });
+
+        currencyButtons.usd.addEventListener('click', function() {
+          currentCurrency = 'USD';
+          currencyButtons.usd.className = 'curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold bg-[#1559E7] text-white transition-all';
+          currencyButtons.aed.className = 'curr-btn px-4 py-1.5 rounded-lg text-xs font-semibold text-slate-400 hover:text-white transition-all';
+          recalculateScope();
+        });
+      }
+
+      // Radio & Checkbox Change Handlers
+      var allInputs = document.querySelectorAll('input[name="project_type"], input[name="page_count"], input[name="addons"], input[name="speed"]');
+      allInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+          updateCardStyles();
+          recalculateScope();
+        });
+      });
+
+      function updateCardStyles() {
+        // Project Type Styling
+        document.querySelectorAll('input[name="project_type"]').forEach(function(radio) {
+          var card = radio.closest('label');
+          if (radio.checked) {
+            card.className = 'opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all';
+          } else {
+            card.className = 'opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700';
+          }
+        });
+
+        // Page Count Styling
+        document.querySelectorAll('input[name="page_count"]').forEach(function(radio) {
+          var card = radio.closest('label');
+          if (radio.checked) {
+            card.className = 'opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all text-center';
+          } else {
+            card.className = 'opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700 text-center';
+          }
+        });
+
+        // Addons Styling
+        document.querySelectorAll('input[name="addons"]').forEach(function(cb) {
+          var card = cb.closest('label');
+          if (cb.checked) {
+            card.className = 'addon-card cursor-pointer block border-2 border-[#25D366]/80 bg-[#25D366]/10 p-4 rounded-2xl transition-all';
+          } else {
+            card.className = 'addon-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700';
+          }
+        });
+
+        // Speed Styling
+        document.querySelectorAll('input[name="speed"]').forEach(function(radio) {
+          var card = radio.closest('label');
+          if (radio.checked) {
+            card.className = 'opt-card cursor-pointer block border-2 border-[#1559E7] bg-[#1559E7]/10 p-4 rounded-2xl transition-all text-center';
+          } else {
+            card.className = 'opt-card cursor-pointer block border border-slate-800 bg-slate-950/60 p-4 rounded-2xl transition-all hover:border-slate-700 text-center';
+          }
+        });
+      }
+
+      function recalculateScope() {
+        var isAED = currentCurrency === 'AED';
+        
+        // 1. Base Project Price & Weeks
+        var selProject = document.querySelector('input[name="project_type"]:checked');
+        var basePrice = parseInt(selProject.getAttribute(isAED ? 'data-aed' : 'data-usd') || '9500');
+        var estWeeks = parseInt(selProject.getAttribute('data-weeks') || '3');
+
+        // 2. Page Count Addon
+        var selPages = document.querySelector('input[name="page_count"]:checked');
+        var pagePrice = parseInt(selPages.getAttribute(isAED ? 'data-aed' : 'data-usd') || '3500');
+        estWeeks += parseInt(selPages.getAttribute('data-weeks') || '1');
+
+        // 3. Growth Addons
+        var addonsPrice = 0;
+        var selectedAddonNames = [];
+        document.querySelectorAll('input[name="addons"]:checked').forEach(function(cb) {
+          addonsPrice += parseInt(cb.getAttribute(isAED ? 'data-aed' : 'data-usd') || '0');
+          selectedAddonNames.push(cb.value);
+        });
+
+        // 4. Speed Multiplier
+        var selSpeed = document.querySelector('input[name="speed"]:checked');
+        var speedMultiplier = parseFloat(selSpeed.getAttribute('data-multiplier') || '1.0');
+        if (selSpeed.value === 'express') {
+          estWeeks = Math.max(2, Math.round(estWeeks * 0.5));
+        }
+
+        var subtotal = (basePrice + pagePrice + addonsPrice) * speedMultiplier;
+        var lowRange = Math.round(subtotal * 0.95);
+        var highRange = Math.round(subtotal * 1.15);
+
+        // Update UI
+        var priceEl = document.getElementById('live-price-range');
+        var timelineEl = document.getElementById('live-timeline-badge');
+
+        var currencySymbol = isAED ? 'AED' : 'USD';
+        if (priceEl) {
+          priceEl.innerHTML = lowRange.toLocaleString() + ' &ndash; ' + highRange.toLocaleString() + ' ' + currencySymbol;
+        }
+
+        if (timelineEl) {
+          timelineEl.textContent = 'Est. Timeline: ' + estWeeks + (estWeeks === 1 ? ' Week' : ' Weeks');
+        }
+
+        // Update WhatsApp Sync Link
+        var summaryText = "Hi Yasir, I configured a project on your Cost Estimator:\n" +
+          "- Type: " + selProject.value + "\n" +
+          "- Pages: " + selPages.value + "\n" +
+          "- Addons: " + (selectedAddonNames.join(', ') || 'None') + "\n" +
+          "- Estimated Scope: " + lowRange.toLocaleString() + " to " + highRange.toLocaleString() + " " + currencySymbol + "\n" +
+          "I would like to discuss this.";
+
+        var waSyncBtn = document.getElementById('calc-wa-sync-btn');
+        if (waSyncBtn) {
+          waSyncBtn.href = "https://wa.me/971552600494?text=" + encodeURIComponent(summaryText);
+        }
+      }
+
+      // Initial Calculation
+      updateCardStyles();
+      recalculateScope();
+
+      // Lead Form Submit Handler
+      var leadForm = document.getElementById('calculator-lead-form');
+      if (leadForm) {
+        leadForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var name = document.getElementById('lead-name').value.trim();
+          var contact = document.getElementById('lead-contact').value.trim();
+
+          if (!name || !contact) return;
+
+          var selProject = document.querySelector('input[name="project_type"]:checked').value;
+          var selPages = document.querySelector('input[name="page_count"]:checked').value;
+
+          // GA4 Telemetry
+          if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead', {
+              event_category: 'Lead Conversion',
+              event_label: 'Calculator Scope: ' + name + ' (' + selProject + ')',
+              lead_channel: 'scope_calculator',
+              project_type: selProject,
+              page_count: selPages,
+              contact_info: contact,
+              value: 1,
+              currency: 'AED'
+            });
+          }
+
+          // Dispatch to Visitor Hub
+          if (typeof window.trackVisitorLead === 'function') {
+            window.trackVisitorLead({ content_name: 'Scope Calculator', lead_name: name });
+          }
+
+          leadForm.classList.add('hidden');
+          var successMsg = document.getElementById('calc-success-msg');
+          if (successMsg) successMsg.classList.remove('hidden');
+
+          var waFollowup = document.getElementById('calc-wa-followup');
+          var waSyncBtn = document.getElementById('calc-wa-sync-btn');
+          if (waFollowup && waSyncBtn) {
+            waFollowup.href = waSyncBtn.href;
+          }
+        });
+      }
+    });
+  </script>
+</Layout>

@@ -36,6 +36,7 @@ const isLightHeader = isLightPage && !isQuotePage;
       <nav class={`hidden md:flex items-center gap-8 lg:gap-10 text-sm lg:text-base font-medium relative z-10 ${isLightHeader ? 'text-slate-900' : 'text-white/90'}`}>
         <a href="/about/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>About</a>
         <a href="/portfolio/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Case Studies</a>
+        <a href="/calculator/" class={isLightHeader ? "hover:text-[#1559E7] transition-colors" : "hover:text-white transition-colors"}>Cost Estimator</a>
       </nav>
     ) : (
       <span class="text-slate-700 text-xs font-medium tracking-wide hidden md:inline">
@@ -83,6 +84,7 @@ const isLightHeader = isLightPage && !isQuotePage;
     <div id="mobile-menu-dropdown" class="hidden md:hidden absolute top-full left-4 right-4 mt-2 p-5 rounded-3xl bg-white border border-slate-200/90 shadow-2xl space-y-3 z-[110] text-slate-900 font-elegant">
       <a href="/about/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors">About</a>
       <a href="/portfolio/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors">Case Studies</a>
+      <a href="/calculator/" class="block py-2.5 px-4 text-base font-semibold text-[#1559E7] hover:bg-slate-50 rounded-xl transition-colors">Cost Estimator</a>
       <a href="/blog/" class="block py-2.5 px-4 text-base font-semibold hover:bg-slate-50 rounded-xl transition-colors">Blog</a>
       <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
         <span class="text-xs text-slate-500 font-light">Dubai Media City, UAE</span>
