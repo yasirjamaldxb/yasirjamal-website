@@ -99,7 +99,7 @@ async function runDeploy() {
   const distFiles = getAllFiles('dist');
   const criticalFiles = distFiles.filter(f => {
     const ext = path.extname(f).toLowerCase();
-    return ext === '.html' || ext === '.xml' || ext === '.txt' || ext === '.json' || ext === '.htaccess';
+    return ext === '.html' || ext === '.xml' || ext === '.txt' || ext === '.json' || ext === '.htaccess' || ext === '.php';
   });
 
   for (const f of criticalFiles) {

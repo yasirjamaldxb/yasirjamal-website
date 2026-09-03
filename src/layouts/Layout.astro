@@ -10,7 +10,7 @@ interface Props {
 
 const { 
 	title, 
-	description = "#1 Rated Web Design Dubai & Custom Web Developer in Dubai with 15+ years experience. Custom web development, eCommerce engineering, and Google Maps local SEO across the UAE." 
+	description = "Direct 1-on-1 partnership with a Senior Web Architect and Digital Consultant with 15+ years experience. Custom enterprise web engineering, high-converting platforms, and sub-second performance across the UAE." 
 } = Astro.props;
 
 const rawPath = Astro.url.pathname;
@@ -422,19 +422,19 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 
     <!-- Open Graph / Google Search Site Name Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Web Design Dubai | Yasir Jamal" />
-    <meta name="application-name" content="Web Design Dubai | Yasir Jamal" />
-    <meta name="apple-mobile-web-app-title" content="Web Design Dubai | Yasir Jamal" />
+    <meta property="og:site_name" content="Yasir Jamal | Senior Web Design Consultant & Architect" />
+    <meta name="application-name" content="Yasir Jamal | Senior Web Design Consultant & Architect" />
+    <meta name="apple-mobile-web-app-title" content="Yasir Jamal | Web Consultant" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
+    <meta property="og:image" content="https://yasirjamal.com/images/yasir_about.jpg" />
     <meta property="og:url" content={canonicalUrl} />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://yasirjamal.com/images/hero_v3.jpg" />
+    <meta name="twitter:image" content="https://yasirjamal.com/images/yasir_about.jpg" />
 
     <!-- Canonical Link -->
     <link rel="canonical" href={canonicalUrl} />
