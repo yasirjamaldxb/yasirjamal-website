@@ -382,6 +382,15 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             document.head.appendChild(s);
           }
 
+          // 🏢 Leadfeeder (Dealfront) Company-Level Visitor Intelligence (Account: p1e024B0EgZ8GB6d)
+          if (!window.ldfdr) {
+            window.ldfdr = function(){(window.ldfdr._q=window.ldfdr._q||[]).push([].slice.call(arguments));};
+            var lfs = document.createElement("script");
+            lfs.async = true;
+            lfs.src = "https://sc.lfeeder.com/lftracker_v1_p1e024B0EgZ8GB6d.js";
+            document.head.appendChild(lfs);
+          }
+
           // Global Event Dispatcher for Third-Party Retargeting & Visitor ID Tools
           window.trackVisitorLead = function(leadData) {
             try {
