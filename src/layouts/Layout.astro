@@ -46,10 +46,14 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      
-      // Filter out automated search crawlers so Googlebot live test is 100% clean and 3rd-party ad robots.txt are not triggered
-      var isCrawlerBot = /bot|crawler|spider|googlebot|bingbot|gptbot|claudebot|perplexitybot|bytespider/i.test(navigator.userAgent || '');
-      if (!isCrawlerBot) {
+
+      var trackingInitialized = false;
+      function loadAnalyticsEngine() {
+        if (trackingInitialized) return;
+        var isCrawlerBot = /bot|crawler|spider|googlebot|bingbot|lighthouse|headlesschrome|mediapartners|adsbot|gptbot|claudebot|perplexitybot|bytespider/i.test(navigator.userAgent || '') || navigator.webdriver;
+        if (isCrawlerBot) return;
+
+        trackingInitialized = true;
         var gtmScript = document.createElement('script');
         gtmScript.async = true;
         gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5';
@@ -62,6 +66,11 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
         });
         gtag('config', 'AW-599518397');
       }
+
+      ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(evt) {
+        window.addEventListener(evt, loadAnalyticsEngine, { once: true, passive: true });
+      });
+      setTimeout(loadAnalyticsEngine, 3500);
 
       // 🎯 Universal Multi-Touch Attribution Engine (AI Search, Social Media, Organic & Campaigns)
       document.addEventListener('DOMContentLoaded', function() {
