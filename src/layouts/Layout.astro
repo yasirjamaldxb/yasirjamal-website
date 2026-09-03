@@ -54,34 +54,108 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
       });
       gtag('config', 'AW-599518397');
 
-      // 🎯 Automated Granular Attribution & Conversion Tracking
+      // 🎯 Universal Multi-Touch Attribution Engine (AI Search, Social Media, Organic & Campaigns)
       document.addEventListener('DOMContentLoaded', function() {
-        // 1. AI Search Engine & Referrer Intelligence Detector
-        try {
-          var ref = document.referrer.toLowerCase();
-          var aiEngine = '';
-          if (ref.includes('chatgpt.com') || ref.includes('openai.com')) aiEngine = 'ChatGPT Search';
-          else if (ref.includes('perplexity.ai')) aiEngine = 'Perplexity AI';
-          else if (ref.includes('claude.ai') || ref.includes('anthropic.com')) aiEngine = 'Claude AI';
-          else if (ref.includes('gemini.google.com')) aiEngine = 'Google Gemini';
-          else if (ref.includes('copilot.microsoft.com') || ref.includes('bing.com/chat')) aiEngine = 'Microsoft Copilot';
+        var originSource = 'Direct / Organic';
+        var originType = 'direct';
+        var ref = (document.referrer || '').toLowerCase();
+        var urlParams = new URLSearchParams(window.location.search);
+        var utmSource = urlParams.get('utm_source') || '';
+        var utmMedium = urlParams.get('utm_medium') || '';
+        var utmCampaign = urlParams.get('utm_campaign') || '';
 
-          if (aiEngine) {
-            gtag('event', 'ai_search_referrer_visit', {
-              ai_platform: aiEngine,
-              referrer_url: document.referrer,
-              landing_page: window.location.pathname
-            });
+        // 1. AI Search Engine & LLM Referrer Detector (ChatGPT, Perplexity, Claude, DeepSeek, Gemini, Copilot, Grok, Meta AI)
+        if (ref.includes('chatgpt.com') || ref.includes('openai.com') || utmSource.includes('chatgpt') || utmSource.includes('openai')) {
+          originSource = 'ChatGPT Search'; originType = 'ai_search';
+        } else if (ref.includes('perplexity.ai') || utmSource.includes('perplexity')) {
+          originSource = 'Perplexity AI'; originType = 'ai_search';
+        } else if (ref.includes('claude.ai') || ref.includes('anthropic.com') || utmSource.includes('claude')) {
+          originSource = 'Claude AI'; originType = 'ai_search';
+        } else if (ref.includes('deepseek.com') || utmSource.includes('deepseek')) {
+          originSource = 'DeepSeek AI'; originType = 'ai_search';
+        } else if (ref.includes('gemini.google.com') || ref.includes('bard.google.com') || utmSource.includes('gemini')) {
+          originSource = 'Google Gemini'; originType = 'ai_search';
+        } else if (ref.includes('copilot.microsoft.com') || ref.includes('bing.com/chat') || utmSource.includes('copilot')) {
+          originSource = 'Microsoft Copilot'; originType = 'ai_search';
+        } else if (ref.includes('grok.com') || ref.includes('x.com/i/grok') || utmSource.includes('grok')) {
+          originSource = 'Grok AI (xAI)'; originType = 'ai_search';
+        } else if (ref.includes('meta.ai') || utmSource.includes('meta_ai')) {
+          originSource = 'Meta AI'; originType = 'ai_search';
+        } else if (ref.includes('poe.com') || ref.includes('mistral.ai')) {
+          originSource = 'Other AI Search'; originType = 'ai_search';
+        }
+
+        // 2. Social Media Platform Detector (LinkedIn, Instagram, Twitter/X, Facebook, YouTube, TikTok, Reddit)
+        else if (ref.includes('linkedin.com') || ref.includes('lnkd.in') || utmSource.includes('linkedin')) {
+          originSource = 'LinkedIn'; originType = 'social_media';
+        } else if (ref.includes('instagram.com') || ref.includes('l.instagram.com') || utmSource.includes('instagram')) {
+          originSource = 'Instagram'; originType = 'social_media';
+        } else if (ref.includes('twitter.com') || ref.includes('x.com') || ref.includes('t.co') || utmSource.includes('twitter') || utmSource.includes('x')) {
+          originSource = 'Twitter / X'; originType = 'social_media';
+        } else if (ref.includes('facebook.com') || ref.includes('fb.me') || ref.includes('l.facebook.com') || ref.includes('m.facebook.com') || utmSource.includes('facebook')) {
+          originSource = 'Facebook'; originType = 'social_media';
+        } else if (ref.includes('youtube.com') || ref.includes('youtu.be') || utmSource.includes('youtube')) {
+          originSource = 'YouTube'; originType = 'social_media';
+        } else if (ref.includes('reddit.com') || ref.includes('redd.it') || utmSource.includes('reddit')) {
+          originSource = 'Reddit'; originType = 'social_media';
+        } else if (ref.includes('tiktok.com') || utmSource.includes('tiktok')) {
+          originSource = 'TikTok'; originType = 'social_media';
+        } else if (ref.includes('threads.net') || utmSource.includes('threads')) {
+          originSource = 'Threads'; originType = 'social_media';
+        } else if (ref.includes('pinterest.com') || utmSource.includes('pinterest')) {
+          originSource = 'Pinterest'; originType = 'social_media';
+        }
+
+        // 3. Search Engine Organic Detector (Google, Bing, Yahoo, DuckDuckGo)
+        else if (ref.includes('google.') || utmSource.includes('google')) {
+          originSource = 'Google Organic'; originType = 'search_engine';
+        } else if (ref.includes('bing.com')) {
+          originSource = 'Bing Search'; originType = 'search_engine';
+        } else if (ref.includes('yahoo.com') || ref.includes('duckduckgo.com')) {
+          originSource = 'Other Search Engine'; originType = 'search_engine';
+        }
+
+        // Save first touch attribution in Session Storage for multi-page persistence
+        try {
+          if (!sessionStorage.getItem('yj_first_source')) {
+            sessionStorage.setItem('yj_first_source', originSource);
+            sessionStorage.setItem('yj_first_type', originType);
+            sessionStorage.setItem('yj_first_landing', window.location.pathname);
+            if (utmSource) sessionStorage.setItem('yj_utm_source', utmSource);
+            if (utmMedium) sessionStorage.setItem('yj_utm_medium', utmMedium);
+            if (utmCampaign) sessionStorage.setItem('yj_utm_campaign', utmCampaign);
           }
         } catch(e) {}
 
-        // 2. Global Outbound, WhatsApp & Affiliate Click Listener
+        var sessionSource = sessionStorage.getItem('yj_first_source') || originSource;
+        var sessionType = sessionStorage.getItem('yj_first_type') || originType;
+
+        // Fire Granular Inbound Channel Attribution Event
+        if (originType === 'ai_search') {
+          gtag('event', 'ai_search_traffic', {
+            ai_platform: originSource,
+            referrer_url: document.referrer,
+            landing_page: window.location.pathname,
+            utm_source: utmSource,
+            utm_campaign: utmCampaign
+          });
+        } else if (originType === 'social_media') {
+          gtag('event', 'social_media_traffic', {
+            social_network: originSource,
+            referrer_url: document.referrer,
+            landing_page: window.location.pathname,
+            utm_source: utmSource,
+            utm_campaign: utmCampaign
+          });
+        }
+
+        // 4. Global Outbound, WhatsApp & Lead Click Listener with Multi-Touch Attribution
         document.addEventListener('click', function(e) {
           var link = e.target.closest('a');
           if (!link) return;
           var href = link.href || '';
           
-          // WhatsApp Inquiries & Conversion Tracking
+          // WhatsApp Inquiries & Conversion Tracking with Channel Attribution
           if (href.includes('wa.me') || href.includes('whatsapp.com')) {
             var pageName = document.title.split('|')[0].trim() || window.location.pathname;
             var currentPath = window.location.pathname;
@@ -95,6 +169,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             gtag('event', 'whatsapp_lead_click', {
               event_category: 'Lead Conversion',
               event_label: link.innerText.trim() || 'WhatsApp CTA',
+              traffic_source: sessionSource,
+              traffic_type: sessionType,
               page_location: currentPath,
               page_title: pageName,
               destination: link.href
@@ -105,6 +181,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               event_category: 'Lead Conversion',
               event_label: 'WhatsApp: ' + (link.innerText.trim() || 'Direct Inquiry'),
               lead_channel: 'whatsapp',
+              traffic_source: sessionSource,
+              traffic_type: sessionType,
               value: 1,
               currency: 'AED',
               page_location: currentPath
@@ -145,6 +223,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               event_category: 'Lead Conversion',
               event_label: 'Phone Call: ' + href.replace('tel:', ''),
               lead_channel: 'phone',
+              traffic_source: sessionSource,
+              traffic_type: sessionType,
               value: 1,
               currency: 'AED',
               page_location: window.location.pathname
@@ -156,6 +236,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             gtag('event', 'email_inquiry_click', {
               event_category: 'Direct Inbound Contact',
               event_label: href.replace('mailto:', ''),
+              traffic_source: sessionSource,
+              traffic_type: sessionType,
               page_location: window.location.pathname
             });
 
@@ -163,6 +245,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               event_category: 'Lead Conversion',
               event_label: 'Email Inquiry: ' + href.replace('mailto:', ''),
               lead_channel: 'email',
+              traffic_source: sessionSource,
+              traffic_type: sessionType,
               value: 1,
               currency: 'AED',
               page_location: window.location.pathname
@@ -247,6 +331,7 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             gtag('event', 'exit_intent_detected', {
               event_category: 'Drop-Off Intelligence',
               last_scroll_depth: maxScroll,
+              traffic_source: sessionSource,
               page_location: window.location.pathname
             });
           }
@@ -259,6 +344,8 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             event_category: 'Lead Conversion',
             event_label: form.id || form.name || 'Contact Form Submission',
             lead_channel: 'form',
+            traffic_source: sessionSource,
+            traffic_type: sessionType,
             value: 1,
             currency: 'AED',
             page_location: window.location.pathname
