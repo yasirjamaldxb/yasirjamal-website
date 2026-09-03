@@ -67,10 +67,10 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
         gtag('config', 'AW-599518397');
       }
 
-      ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function(evt) {
+      var userEvents = ['scroll', 'mousemove', 'touchstart', 'touchmove', 'pointerdown', 'click', 'keydown', 'wheel'];
+      userEvents.forEach(function(evt) {
         window.addEventListener(evt, loadAnalyticsEngine, { once: true, passive: true });
       });
-      setTimeout(loadAnalyticsEngine, 3500);
 
       // 🎯 Universal Multi-Touch Attribution Engine (AI Search, Social Media, Organic & Campaigns)
       document.addEventListener('DOMContentLoaded', function() {
