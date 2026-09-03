@@ -1198,7 +1198,27 @@ const faqs = [
               window.trackVisitorLead({ content_name: 'Free Video Audit', website_url: urlInput });
             }
 
-            // 3. Pre-fill WhatsApp message link for direct sync
+            // 3. Automated Instant Email Dispatch to yj.digitall@gmail.com
+            try {
+              var source = sessionStorage.getItem('first_touch_source') || 'Direct / Organic';
+              fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  _subject: '⚡ New Free Video Audit Request: ' + urlInput,
+                  Website_URL: urlInput,
+                  Contact_Destination: contactInput,
+                  Traffic_Source: source,
+                  Submission_URL: window.location.href,
+                  Timestamp: new Date().toLocaleString()
+                })
+              }).catch(function() {});
+            } catch(err) {}
+
+            // 4. Pre-fill WhatsApp message link for direct sync
             var waMsg = encodeURIComponent("Hi Yasir, I just requested a Free 2-Minute Video Audit for my website: " + urlInput + " (My Contact: " + contactInput + "). Please review.");
             var waUrl = "https://wa.me/971552600494?text=" + waMsg;
 

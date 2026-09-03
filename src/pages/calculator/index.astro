@@ -451,6 +451,38 @@ import Layout from '../../layouts/Layout.astro';
             window.trackVisitorLead({ content_name: 'Scope Calculator', lead_name: name });
           }
 
+          // Automated Instant Email Dispatch to yj.digitall@gmail.com
+          try {
+            var source = sessionStorage.getItem('first_touch_source') || 'Direct / Organic';
+            var priceText = document.getElementById('live-price-range') ? document.getElementById('live-price-range').innerText.trim() : 'N/A';
+            var timelineText = document.getElementById('live-timeline-badge') ? document.getElementById('live-timeline-badge').innerText.trim() : 'N/A';
+            
+            var selectedAddonList = [];
+            document.querySelectorAll('input[name="addons"]:checked').forEach(function(cb) {
+              selectedAddonList.push(cb.value);
+            });
+
+            fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify({
+                _subject: '🧮 New Project Scope Estimate from ' + name,
+                Client_Name: name,
+                Contact: contact,
+                Project_Type: selProject,
+                Page_Scope: selPages,
+                Selected_Addons: selectedAddonList.join(', ') || 'None',
+                Estimated_Range: priceText,
+                Estimated_Timeline: timelineText,
+                Traffic_Source: source,
+                Timestamp: new Date().toLocaleString()
+              })
+            }).catch(function() {});
+          } catch(err) {}
+
           leadForm.classList.add('hidden');
           var successMsg = document.getElementById('calc-success-msg');
           if (successMsg) successMsg.classList.remove('hidden');
