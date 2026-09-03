@@ -63,5 +63,28 @@ RewriteRule ^wp-admin/(.*)$ https://yasirjamal.com/ [L,R=301]
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
+# ==============================================================================
+# 6. GZIP / DEFLATE COMPRESSION (SUB-SECOND TTFB & GOOGLEBOT PERFORMANCE)
+# ==============================================================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json application/xml application/rss+xml image/svg+xml
+</IfModule>
+
+# ==============================================================================
+# 7. BROWSER CACHING & EXPIRES HEADERS
+# ==============================================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
 # Custom 404 Error Page
 ErrorDocument 404 /404.html
