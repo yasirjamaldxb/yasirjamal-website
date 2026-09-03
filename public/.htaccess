@@ -26,7 +26,8 @@ RewriteRule ^(.*)$ https://yasirjamal.com/$1/ [L,R=301]
 RewriteRule ^work/?$ https://yasirjamal.com/portfolio/ [L,R=301]
 RewriteRule ^work/(.*)$ https://yasirjamal.com/portfolio/$1 [L,R=301]
 
-# Legacy Contact & Quote URLs
+# Legacy Contact, Quote & Web Design Dubai URLs -> Homepage (Consolidating PageRank)
+RewriteRule ^web-design-dubai/?$ https://yasirjamal.com/ [L,R=301]
 RewriteRule ^contact-us/?$ https://yasirjamal.com/ [L,R=301]
 RewriteRule ^contact/?$ https://yasirjamal.com/ [L,R=301]
 RewriteRule ^quote/?$ https://yasirjamal.com/ [L,R=301]
