@@ -99,6 +99,16 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               page_title: pageName,
               destination: link.href
             });
+
+            // Standard GA4 & Google Ads Conversion Event
+            gtag('event', 'generate_lead', {
+              event_category: 'Lead Conversion',
+              event_label: 'WhatsApp: ' + (link.innerText.trim() || 'Direct Inquiry'),
+              lead_channel: 'whatsapp',
+              value: 1,
+              currency: 'AED',
+              page_location: currentPath
+            });
           }
 
           // GoHighLevel Affiliate Clicks
@@ -130,6 +140,15 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               event_label: href.replace('tel:', ''),
               page_location: window.location.pathname
             });
+
+            gtag('event', 'generate_lead', {
+              event_category: 'Lead Conversion',
+              event_label: 'Phone Call: ' + href.replace('tel:', ''),
+              lead_channel: 'phone',
+              value: 1,
+              currency: 'AED',
+              page_location: window.location.pathname
+            });
           }
 
           // Email Inquiry Clicks
@@ -137,6 +156,15 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
             gtag('event', 'email_inquiry_click', {
               event_category: 'Direct Inbound Contact',
               event_label: href.replace('mailto:', ''),
+              page_location: window.location.pathname
+            });
+
+            gtag('event', 'generate_lead', {
+              event_category: 'Lead Conversion',
+              event_label: 'Email Inquiry: ' + href.replace('mailto:', ''),
+              lead_channel: 'email',
+              value: 1,
+              currency: 'AED',
               page_location: window.location.pathname
             });
           }
@@ -222,6 +250,19 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
               page_location: window.location.pathname
             });
           }
+        }, { passive: true });
+
+        // 7. Global Form Submission Conversion Tracker
+        document.addEventListener('submit', function(e) {
+          var form = e.target;
+          gtag('event', 'generate_lead', {
+            event_category: 'Lead Conversion',
+            event_label: form.id || form.name || 'Contact Form Submission',
+            lead_channel: 'form',
+            value: 1,
+            currency: 'AED',
+            page_location: window.location.pathname
+          });
         }, { passive: true });
       });
     </script>
