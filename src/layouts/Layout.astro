@@ -43,16 +43,25 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 		<link rel="webmcp" type="application/json" href="https://yasirjamal.com/webmcp.json" title="WebMCP Actions Declaration" />
     
     <!-- Comprehensive Real-Time Google Analytics 4 & Conversion Intelligence -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-CS5207YPC5', {
-        send_page_view: true,
-        cookie_flags: 'SameSite=None;Secure'
-      });
-      gtag('config', 'AW-599518397');
+      
+      // Filter out automated search crawlers so Googlebot live test is 100% clean and 3rd-party ad robots.txt are not triggered
+      var isCrawlerBot = /bot|crawler|spider|googlebot|bingbot|gptbot|claudebot|perplexitybot|bytespider/i.test(navigator.userAgent || '');
+      if (!isCrawlerBot) {
+        var gtmScript = document.createElement('script');
+        gtmScript.async = true;
+        gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-CS5207YPC5';
+        document.head.appendChild(gtmScript);
+
+        gtag('js', new Date());
+        gtag('config', 'G-CS5207YPC5', {
+          send_page_view: true,
+          cookie_flags: 'SameSite=None;Secure'
+        });
+        gtag('config', 'AW-599518397');
+      }
 
       // 🎯 Universal Multi-Touch Attribution Engine (AI Search, Social Media, Organic & Campaigns)
       document.addEventListener('DOMContentLoaded', function() {
@@ -439,14 +448,10 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
     <!-- Canonical Link -->
     <link rel="canonical" href={canonicalUrl} />
 
-    <!-- High-Performance Asynchronous Google Fonts (Zero Render Blocking) -->
+    <!-- High-Performance Google Fonts (Preconnected & Swap Enabled) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'" />
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" />
-    </noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800&display=swap" />
 		<title>{title}</title>
     
     <!-- Comprehensive GEO & AISO Independent Verification Schema for Gemini, ChatGPT, Claude & Perplexity -->
