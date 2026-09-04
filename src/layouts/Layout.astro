@@ -964,77 +964,102 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 		>
 			<div class="relative w-full max-w-md bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-900 transform scale-95 transition-transform duration-300">
 				
-				<!-- Modal Header -->
-				<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+				<!-- Main Content View -->
+				<div id="video-audit-content">
+					<!-- Modal Header -->
+					<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+						<div>
+							<h3 class="text-base font-bold text-slate-900 leading-tight">Request Free Video Teardown</h3>
+							<p class="text-xs text-slate-500 mt-0.5">5-minute personal UX teardown sent within 24 hours</p>
+						</div>
+						<button 
+							type="button" 
+							data-close-audit-modal 
+							aria-label="Close" 
+							class="cursor-pointer text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100 transition-colors"
+						>
+							✕
+						</button>
+					</div>
+
+					<!-- Form -->
+					<form id="video-audit-form" class="space-y-3.5">
+						<div>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">Your Website URL *</label>
+							<input 
+								type="text" 
+								name="website_url" 
+								required 
+								placeholder="e.g. yourcompany.com" 
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
+							/>
+						</div>
+
+						<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+							<div>
+								<label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
+								<input 
+									type="text" 
+									name="name" 
+									required 
+									placeholder="e.g. Sarah Jenkins" 
+									class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
+								/>
+							</div>
+							<div>
+								<label class="block text-xs font-semibold text-slate-700 mb-1">Work Email *</label>
+								<input 
+									type="email" 
+									name="email" 
+									required 
+									placeholder="name@company.com" 
+									class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Number (Optional)</label>
+							<input 
+								type="tel" 
+								name="whatsapp" 
+								placeholder="+971 50 123 4567" 
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
+							/>
+						</div>
+
+						<button 
+							type="submit" 
+							id="audit-submit-btn" 
+							class="cursor-pointer w-full bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
+						>
+							<span>Send Video Teardown Request</span>
+							<span>&rarr;</span>
+						</button>
+					</form>
+				</div>
+
+				<!-- In-Modal Confirmation State (Shown after submission) -->
+				<div id="video-audit-success" class="hidden text-center py-4 space-y-4">
+					<div class="w-12 h-12 mx-auto rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-200 shadow-sm">
+						<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+						</svg>
+					</div>
 					<div>
-						<h3 class="text-base font-bold text-slate-900 leading-tight">Request Free Video Teardown</h3>
-						<p class="text-xs text-slate-500 mt-0.5">5-minute personal UX teardown sent within 24 hours</p>
+						<h3 class="text-lg font-bold text-slate-900">Request Received</h3>
+						<p id="video-audit-success-msg" class="text-xs text-slate-600 mt-2 leading-relaxed max-w-sm mx-auto">
+							Thank you! Yasir will record your private 5-minute video teardown and email it to you within 24 hours.
+						</p>
 					</div>
 					<button 
 						type="button" 
 						data-close-audit-modal 
-						aria-label="Close" 
-						class="cursor-pointer text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100 transition-colors"
+						class="cursor-pointer bg-slate-950 hover:bg-slate-800 text-white font-semibold px-6 py-2.5 rounded-xl text-xs shadow-sm transition-all"
 					>
-						✕
+						Done
 					</button>
 				</div>
-
-				<!-- Form -->
-				<form id="video-audit-form" class="space-y-3.5">
-					<div>
-						<label class="block text-xs font-semibold text-slate-700 mb-1">Your Website URL *</label>
-						<input 
-							type="text" 
-							name="website_url" 
-							required 
-							placeholder="e.g. yourcompany.com" 
-							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
-						/>
-					</div>
-
-					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-						<div>
-							<label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
-							<input 
-								type="text" 
-								name="name" 
-								required 
-								placeholder="e.g. Sarah Jenkins" 
-								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
-							/>
-						</div>
-						<div>
-							<label class="block text-xs font-semibold text-slate-700 mb-1">Work Email *</label>
-							<input 
-								type="email" 
-								name="email" 
-								required 
-								placeholder="name@company.com" 
-								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
-							/>
-						</div>
-					</div>
-
-					<div>
-						<label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Number (Optional)</label>
-						<input 
-							type="tel" 
-							name="whatsapp" 
-							placeholder="+971 50 123 4567" 
-							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
-						/>
-					</div>
-
-					<button 
-						type="submit" 
-						id="audit-submit-btn" 
-						class="cursor-pointer w-full bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
-					>
-						<span>Send Video Teardown Request</span>
-						<span>&rarr;</span>
-					</button>
-				</form>
 			</div>
 		</div>
 
@@ -1147,11 +1172,24 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 					}
 				}
 
+				var contentBox = document.getElementById('video-audit-content');
+				var successBox = document.getElementById('video-audit-success');
+				var successMsg = document.getElementById('video-audit-success-msg');
+
 				function closeAuditModal() {
 					if (auditModal) {
 						auditModal.classList.add('opacity-0', 'pointer-events-none');
 						var card = auditModal.querySelector('div');
 						if (card) card.classList.add('scale-95');
+						setTimeout(function() {
+							if (contentBox) contentBox.classList.remove('hidden');
+							if (successBox) successBox.classList.add('hidden');
+							if (auditSubmitBtn) {
+								auditSubmitBtn.disabled = false;
+								auditSubmitBtn.innerHTML = '<span>Send Video Teardown Request &rarr;</span>';
+							}
+							if (auditForm) auditForm.reset();
+						}, 300);
 					}
 				}
 
@@ -1175,7 +1213,7 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 						e.preventDefault();
 						if (auditSubmitBtn) {
 							auditSubmitBtn.disabled = true;
-							auditSubmitBtn.innerHTML = '<span>Scheduling Your Video Audit...</span>';
+							auditSubmitBtn.innerHTML = '<span>Sending Request...</span>';
 						}
 
 						var formData = new FormData(auditForm);
@@ -1205,18 +1243,15 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 							},
 							body: JSON.stringify(payload)
 						}).then(function() {
-							auditSubmitBtn.innerHTML = '<span>✅ Audit Request Confirmed!</span>';
-							setTimeout(function() {
-								closeAuditModal();
-								auditSubmitBtn.disabled = false;
-								auditSubmitBtn.innerHTML = '<span>Send Me My Private Video Teardown &rarr;</span>';
-								auditForm.reset();
-								alert('Thank you ' + name + '! Yasir will record your 5-minute private video teardown and email it to ' + email + ' within 24 hours.');
-							}, 1000);
+							if (successMsg) {
+								var displayUrl = website.replace(/^https?:\/\//i, '').replace(/\/$/, '');
+								successMsg.textContent = 'Thank you ' + name + '! Yasir will review ' + displayUrl + ' and email your private 5-minute video teardown to ' + email + ' within 24 hours.';
+							}
+							if (contentBox) contentBox.classList.add('hidden');
+							if (successBox) successBox.classList.remove('hidden');
 						}).catch(function() {
-							closeAuditModal();
-							auditSubmitBtn.disabled = false;
-							auditSubmitBtn.innerHTML = '<span>Send Me My Private Video Teardown &rarr;</span>';
+							if (contentBox) contentBox.classList.add('hidden');
+							if (successBox) successBox.classList.remove('hidden');
 						});
 					});
 				}
