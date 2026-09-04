@@ -1129,7 +1129,16 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 							_subject: '🔥 HIGH-PRIORITY WHATSAPP LEAD: ' + name + ' (' + phone + ')'
 						};
 
-						// 1. Send background lead email to yj.digitall@gmail.com
+						// 1. Dispatch directly to native Hostinger PHP mailer + FormSubmit backup
+						fetch('/api/send-lead.php', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							},
+							body: JSON.stringify(payload)
+						}).catch(function() {});
+
 						fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
 							method: 'POST',
 							headers: {
@@ -1235,6 +1244,16 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 							_subject: '🎬 FREE 5-MIN VIDEO AUDIT REQUEST: ' + website + ' (' + name + ')'
 						};
 
+						// Send to native Hostinger PHP mailer + FormSubmit backup
+						fetch('/api/send-lead.php', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							},
+							body: JSON.stringify(payload)
+						}).catch(function() {});
+
 						fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
 							method: 'POST',
 							headers: {
@@ -1242,17 +1261,14 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 								'Accept': 'application/json'
 							},
 							body: JSON.stringify(payload)
-						}).then(function() {
-							if (successMsg) {
-								var displayUrl = website.replace(/^https?:\/\//i, '').replace(/\/$/, '');
-								successMsg.textContent = 'Thank you ' + name + '! Yasir will review ' + displayUrl + ' and email your private 5-minute video teardown to ' + email + ' within 24 hours.';
-							}
-							if (contentBox) contentBox.classList.add('hidden');
-							if (successBox) successBox.classList.remove('hidden');
-						}).catch(function() {
-							if (contentBox) contentBox.classList.add('hidden');
-							if (successBox) successBox.classList.remove('hidden');
-						});
+						}).catch(function() {});
+
+						if (successMsg) {
+							var displayUrl = website.replace(/^https?:\/\//i, '').replace(/\/$/, '');
+							successMsg.textContent = 'Thank you ' + name + '! Yasir will review ' + displayUrl + ' and email your private 5-minute video teardown to ' + email + ' within 24 hours.';
+						}
+						if (contentBox) contentBox.classList.add('hidden');
+						if (successBox) successBox.classList.remove('hidden');
 					});
 				}
 
