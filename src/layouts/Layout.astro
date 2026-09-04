@@ -809,6 +809,38 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 		</main>
 		<Footer />
 
+		<!-- Sticky Bottom Floating Conversion Bar for Free Video Audit (Appears on Scroll) -->
+		<div 
+			id="sticky-audit-bar" 
+			class="fixed bottom-0 left-0 right-0 z-40 bg-[#030712]/95 backdrop-blur-xl border-t border-amber-500/30 py-3 px-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] transform translate-y-full transition-transform duration-500 ease-out font-elegant hidden sm:block"
+		>
+			<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+				<div class="flex items-center gap-3">
+					<span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
+					<div class="text-xs md:text-sm text-slate-200">
+						<strong class="text-white font-semibold">Struggling with low website leads?</strong> Get a Free 5-Minute Loom Video Audit of your current site.
+					</div>
+				</div>
+				<div class="flex items-center gap-3 shrink-0">
+					<button 
+						type="button" 
+						data-open-audit-modal 
+						class="cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-5 py-2 rounded-full text-xs shadow-lg hover:scale-105 transition-all"
+					>
+						Claim Free Video Audit &rarr;
+					</button>
+					<button 
+						type="button" 
+						id="dismiss-sticky-bar" 
+						aria-label="Dismiss banner" 
+						class="cursor-pointer text-slate-400 hover:text-white p-1 rounded-full text-xs transition-colors"
+					>
+						✕
+					</button>
+				</div>
+			</div>
+		</div>
+
 		<!-- High-Converting Minimalistic Floating WhatsApp Trigger with White 'Online' Badge -->
 		<div class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 flex flex-col items-center gap-1.5 pointer-events-auto">
 			<!-- Minimalistic White 'Online' Status Pill -->
@@ -820,18 +852,413 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 				<span class="font-semibold text-slate-800">Online</span>
 			</div>
 			
-			<!-- Official Authentic WhatsApp Button -->
-			<a 
-				href="https://wa.me/971552600494" 
-				target="_blank" 
-				rel="noopener noreferrer" 
+			<!-- Official Authentic WhatsApp Button Trigger -->
+			<button 
+				type="button" 
+				data-open-whatsapp-modal
 				aria-label="Chat directly with Yasir on WhatsApp"
-				class="relative w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.65)] hover:scale-110 active:scale-95 transition-all duration-300 group"
+				class="cursor-pointer relative w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-[0_8px_25px_rgba(37,211,102,0.45)] hover:shadow-[0_12px_32px_rgba(37,211,102,0.65)] hover:scale-110 active:scale-95 transition-all duration-300 group"
 			>
 				<svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
 					<path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
 				</svg>
-			</a>
+			</button>
 		</div>
+
+		<!-- ========================================================================= -->
+		<!-- 1. UNIVERSAL WHATSAPP LEAD CAPTURE MODAL (DESKTOP & MOBILE CONVERSION)   -->
+		<!-- ========================================================================= -->
+		<div 
+			id="whatsapp-lead-modal" 
+			class="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
+		>
+			<div class="relative w-full max-w-lg bg-[#0b0f19] border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl text-white transform scale-95 transition-transform duration-300">
+				
+				<!-- Close Button -->
+				<button 
+					type="button" 
+					data-close-whatsapp-modal 
+					aria-label="Close modal" 
+					class="cursor-pointer absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+				>
+					✕
+				</button>
+
+				<!-- Header -->
+				<div class="flex items-center gap-3.5 mb-5">
+					<div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-slate-950 shrink-0 shadow-lg">
+						<svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+							<path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
+						</svg>
+					</div>
+					<div>
+						<h3 class="text-lg sm:text-xl font-bold text-white leading-tight">
+							Chat Directly with Yasir Jamal
+						</h3>
+						<p class="text-xs text-slate-400">
+							Senior Web Architect &bull; Reply within 15 minutes
+						</p>
+					</div>
+				</div>
+
+				<!-- Form -->
+				<form id="whatsapp-lead-form" class="space-y-4">
+					<div>
+						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name *</label>
+						<input 
+							type="text" 
+							name="name" 
+							required 
+							placeholder="e.g. Tariq Al Mansoor" 
+							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+						/>
+					</div>
+
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+						<div>
+							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email *</label>
+							<input 
+								type="email" 
+								name="email" 
+								required 
+								placeholder="name@company.com" 
+								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+							/>
+						</div>
+						<div>
+							<label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp Number *</label>
+							<input 
+								type="tel" 
+								name="whatsapp" 
+								required 
+								placeholder="+971 50 123 4567" 
+								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Project Details / Website URL (Optional)</label>
+						<textarea 
+							name="message" 
+							rows="2" 
+							placeholder="Tell Yasir about your new website, redesign, or timeline..." 
+							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors resize-none"
+						></textarea>
+					</div>
+
+					<button 
+						type="submit" 
+						id="whatsapp-submit-btn" 
+						class="cursor-pointer w-full bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold py-3.5 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
+					>
+						<span>Start WhatsApp Chat Now</span>
+						<span>&rarr;</span>
+					</button>
+
+					<p class="text-[11px] text-center text-slate-500">
+						🔒 Your details are 100% private. We respond directly with zero sales calls.
+					</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- ========================================================================= -->
+		<!-- 2. FREE 5-MINUTE VIDEO AUDIT MODAL (HIGH-CONVERSION HOOK)                 -->
+		<!-- ========================================================================= -->
+		<div 
+			id="video-audit-modal" 
+			class="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
+		>
+			<div class="relative w-full max-w-lg bg-[#0b0f19] border border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl text-white transform scale-95 transition-transform duration-300">
+				
+				<!-- Close Button -->
+				<button 
+					type="button" 
+					data-close-audit-modal 
+					aria-label="Close modal" 
+					class="cursor-pointer absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
+				>
+					✕
+				</button>
+
+				<!-- Header -->
+				<div class="mb-5">
+					<div class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2">
+						🔥 Limited Offer (Only 3 Slots Left)
+					</div>
+					<h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">
+						Claim Your Free 5-Minute Video Website Audit
+					</h3>
+					<p class="text-xs text-slate-400 mt-1">
+						Yasir will personally record a screen breakdown showing conversion leaks, UX bottlenecks, and speed issues on your website. 100% actionable.
+					</p>
+				</div>
+
+				<!-- Form -->
+				<form id="video-audit-form" class="space-y-4">
+					<div>
+						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Current Website URL *</label>
+						<input 
+							type="url" 
+							name="website_url" 
+							required 
+							placeholder="https://yourcompany.com" 
+							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+						/>
+					</div>
+
+					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+						<div>
+							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name *</label>
+							<input 
+								type="text" 
+								name="name" 
+								required 
+								placeholder="e.g. Sarah Jenkins" 
+								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+							/>
+						</div>
+						<div>
+							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email (For Video Delivery) *</label>
+							<input 
+								type="email" 
+								name="email" 
+								required 
+								placeholder="name@company.com" 
+								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+							/>
+						</div>
+					</div>
+
+					<div>
+						<label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp Number (For Notification)</label>
+						<input 
+							type="tel" 
+							name="whatsapp" 
+							placeholder="+971 50 123 4567" 
+							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+						/>
+					</div>
+
+					<button 
+						type="submit" 
+						id="audit-submit-btn" 
+						class="cursor-pointer w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3.5 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
+					>
+						<span>Send Me My Free Video Audit</span>
+						<span>&rarr;</span>
+					</button>
+
+					<p class="text-[11px] text-center text-slate-500">
+						⏱️ Delivered via email within 24 hours. Zero pitch, pure value.
+					</p>
+				</form>
+			</div>
+		</div>
+
+		<!-- ========================================================================= -->
+		<!-- 3. GLOBAL MODAL & SCROLL CONTROLLER SCRIPT                                -->
+		<!-- ========================================================================= -->
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', function() {
+				// --- A. WhatsApp Modal Logic ---
+				var waModal = document.getElementById('whatsapp-lead-modal');
+				var waForm = document.getElementById('whatsapp-lead-form');
+				var waSubmitBtn = document.getElementById('whatsapp-submit-btn');
+
+				function openWAModal(e) {
+					if (e) e.preventDefault();
+					if (waModal) {
+						waModal.classList.remove('opacity-0', 'pointer-events-none');
+						var card = waModal.querySelector('div');
+						if (card) card.classList.remove('scale-95');
+					}
+				}
+
+				function closeWAModal() {
+					if (waModal) {
+						waModal.classList.add('opacity-0', 'pointer-events-none');
+						var card = waModal.querySelector('div');
+						if (card) card.classList.add('scale-95');
+					}
+				}
+
+				document.querySelectorAll('[data-open-whatsapp-modal]').forEach(function(el) {
+					el.addEventListener('click', openWAModal);
+				});
+
+				document.querySelectorAll('[data-close-whatsapp-modal]').forEach(function(el) {
+					el.addEventListener('click', closeWAModal);
+				});
+
+				if (waModal) {
+					waModal.addEventListener('click', function(e) {
+						if (e.target === waModal) closeWAModal();
+					});
+				}
+
+				// WhatsApp Lead Form Submit
+				if (waForm) {
+					waForm.addEventListener('submit', function(e) {
+						e.preventDefault();
+						if (waSubmitBtn) {
+							waSubmitBtn.disabled = true;
+							waSubmitBtn.innerHTML = '<span>Connecting to WhatsApp...</span>';
+						}
+
+						var formData = new FormData(waForm);
+						var name = formData.get('name') || '';
+						var email = formData.get('email') || '';
+						var phone = formData.get('whatsapp') || '';
+						var message = formData.get('message') || '';
+
+						var payload = {
+							name: name,
+							email: email,
+							whatsapp: phone,
+							message: message,
+							page: window.location.pathname,
+							source: sessionStorage.getItem('yj_first_source') || 'Direct / WhatsApp Modal',
+							_subject: '🔥 HIGH-PRIORITY WHATSAPP LEAD: ' + name + ' (' + phone + ')'
+						};
+
+						// 1. Send background lead email to yj.digitall@gmail.com
+						fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							},
+							body: JSON.stringify(payload)
+						}).catch(function() {});
+
+						// 2. Open WhatsApp directly with pre-filled message
+						var waText = encodeURIComponent(
+							"Hi Yasir! My name is " + name + " (" + email + "). " +
+							(message ? "Project details: " + message : "I'm interested in discussing a web design project.")
+						);
+						var waUrl = "https://wa.me/971552600494?text=" + waText;
+
+						setTimeout(function() {
+							window.open(waUrl, '_blank');
+							closeWAModal();
+							if (waSubmitBtn) {
+								waSubmitBtn.disabled = false;
+								waSubmitBtn.innerHTML = '<span>Start WhatsApp Chat Now &rarr;</span>';
+							}
+							waForm.reset();
+						}, 600);
+					});
+				}
+
+				// --- B. Free Video Audit Modal Logic ---
+				var auditModal = document.getElementById('video-audit-modal');
+				var auditForm = document.getElementById('video-audit-form');
+				var auditSubmitBtn = document.getElementById('audit-submit-btn');
+
+				function openAuditModal(e) {
+					if (e) e.preventDefault();
+					if (auditModal) {
+						auditModal.classList.remove('opacity-0', 'pointer-events-none');
+						var card = auditModal.querySelector('div');
+						if (card) card.classList.remove('scale-95');
+					}
+				}
+
+				function closeAuditModal() {
+					if (auditModal) {
+						auditModal.classList.add('opacity-0', 'pointer-events-none');
+						var card = auditModal.querySelector('div');
+						if (card) card.classList.add('scale-95');
+					}
+				}
+
+				document.querySelectorAll('[data-open-audit-modal]').forEach(function(el) {
+					el.addEventListener('click', openAuditModal);
+				});
+
+				document.querySelectorAll('[data-close-audit-modal]').forEach(function(el) {
+					el.addEventListener('click', closeAuditModal);
+				});
+
+				if (auditModal) {
+					auditModal.addEventListener('click', function(e) {
+						if (e.target === auditModal) closeAuditModal();
+					});
+				}
+
+				// Audit Form Submit
+				if (auditForm) {
+					auditForm.addEventListener('submit', function(e) {
+						e.preventDefault();
+						if (auditSubmitBtn) {
+							auditSubmitBtn.disabled = true;
+							auditSubmitBtn.innerHTML = '<span>Scheduling Your Video Audit...</span>';
+						}
+
+						var formData = new FormData(auditForm);
+						var website = formData.get('website_url') || '';
+						var name = formData.get('name') || '';
+						var email = formData.get('email') || '';
+						var phone = formData.get('whatsapp') || '';
+
+						var payload = {
+							website_url: website,
+							name: name,
+							email: email,
+							whatsapp: phone,
+							page: window.location.pathname,
+							source: sessionStorage.getItem('yj_first_source') || 'Free Video Audit Offer',
+							_subject: '🎬 FREE 5-MIN VIDEO AUDIT REQUEST: ' + website + ' (' + name + ')'
+						};
+
+						fetch('https://formsubmit.co/ajax/yj.digitall@gmail.com', {
+							method: 'POST',
+							headers: {
+								'Content-Type': 'application/json',
+								'Accept': 'application/json'
+							},
+							body: JSON.stringify(payload)
+						}).then(function() {
+							auditSubmitBtn.innerHTML = '<span>✅ Audit Request Confirmed!</span>';
+							setTimeout(function() {
+								closeAuditModal();
+								auditSubmitBtn.disabled = false;
+								auditSubmitBtn.innerHTML = '<span>Send Me My Free Video Audit &rarr;</span>';
+								auditForm.reset();
+								alert('Thank you ' + name + '! Yasir will record your 5-minute personal Loom video audit and email it to ' + email + ' within 24 hours.');
+							}, 1000);
+						}).catch(function() {
+							closeAuditModal();
+							auditSubmitBtn.disabled = false;
+							auditSubmitBtn.innerHTML = '<span>Send Me My Free Video Audit &rarr;</span>';
+						});
+					});
+				}
+
+				// --- C. Sticky Bottom Bar on Scroll Logic ---
+				var stickyBar = document.getElementById('sticky-audit-bar');
+				var dismissBtn = document.getElementById('dismiss-sticky-bar');
+				var dismissed = sessionStorage.getItem('yj_sticky_dismissed') === 'true';
+
+				if (dismissBtn) {
+					dismissBtn.addEventListener('click', function() {
+						dismissed = true;
+						sessionStorage.setItem('yj_sticky_dismissed', 'true');
+						if (stickyBar) stickyBar.classList.add('translate-y-full');
+					});
+				}
+
+				window.addEventListener('scroll', function() {
+					if (dismissed || !stickyBar) return;
+					if (window.scrollY > 350) {
+						stickyBar.classList.remove('translate-y-full');
+					} else {
+						stickyBar.classList.add('translate-y-full');
+					}
+				}, { passive: true });
+			});
+		</script>
 	</body>
 </html>

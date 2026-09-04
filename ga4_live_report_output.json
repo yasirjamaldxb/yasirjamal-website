@@ -1,0 +1,1981 @@
+{
+  "totals": {
+    "metricHeaders": [
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "bounceRate",
+        "type": "TYPE_FLOAT"
+      },
+      {
+        "name": "engagementRate",
+        "type": "TYPE_FLOAT"
+      }
+    ],
+    "rows": [
+      {
+        "metricValues": [
+          {
+            "value": "170"
+          },
+          {
+            "value": "256"
+          },
+          {
+            "value": "481"
+          },
+          {
+            "value": "291.44534066015626"
+          },
+          {
+            "value": "0.55859375"
+          },
+          {
+            "value": "0.44140625"
+          }
+        ]
+      }
+    ],
+    "rowCount": 1,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "sources": {
+    "dimensionHeaders": [
+      {
+        "name": "sessionSourceMedium"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "bounceRate",
+        "type": "TYPE_FLOAT"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "(direct) / (none)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "132"
+          },
+          {
+            "value": "155"
+          },
+          {
+            "value": "195"
+          },
+          {
+            "value": "91.376250883870966"
+          },
+          {
+            "value": "0.72258064516129028"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "google / organic"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "25"
+          },
+          {
+            "value": "49"
+          },
+          {
+            "value": "129"
+          },
+          {
+            "value": "477.03523904081635"
+          },
+          {
+            "value": "0.26530612244897961"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "chatgpt.com / ai-assistant"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "9"
+          },
+          {
+            "value": "21"
+          },
+          {
+            "value": "455.01690311111111"
+          },
+          {
+            "value": "0.22222222222222221"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "reddit.com / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "14.299535666666669"
+          },
+          {
+            "value": "0.66666666666666663"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "bing / organic"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "354.342316"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "considerin.net / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "sunblog.asia / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "webgrity.net / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "74.170869"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set) / Scamadviser.com"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "app.rb2b.com / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "10"
+          },
+          {
+            "value": "1770.853394"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "dubaipodiatrist.com / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "13"
+          },
+          {
+            "value": "42"
+          },
+          {
+            "value": "539.65595807692307"
+          },
+          {
+            "value": "0.30769230769230771"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "readlife.net / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "yahoo / organic"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "11"
+          },
+          {
+            "value": "39"
+          },
+          {
+            "value": "1052.2430769090909"
+          },
+          {
+            "value": "0.18181818181818182"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "yasirjamal.com / referral"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "28"
+          },
+          {
+            "value": "3880.55298"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      }
+    ],
+    "rowCount": 15,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "pages": {
+    "dimensionHeaders": [
+      {
+        "name": "pagePath"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "userEngagementDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      },
+      {
+        "name": "bounceRate",
+        "type": "TYPE_FLOAT"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "95"
+          },
+          {
+            "value": "277"
+          },
+          {
+            "value": "12663"
+          },
+          {
+            "value": "356.14612718023255"
+          },
+          {
+            "value": "0.40697674418604651"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "26"
+          },
+          {
+            "value": "411"
+          },
+          {
+            "value": "152.76205423076922"
+          },
+          {
+            "value": "0.15384615384615385"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/about/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "21"
+          },
+          {
+            "value": "22"
+          },
+          {
+            "value": "17"
+          },
+          {
+            "value": "42.099544695652177"
+          },
+          {
+            "value": "0.73913043478260865"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/portfolio/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "7"
+          },
+          {
+            "value": "17"
+          },
+          {
+            "value": "39"
+          },
+          {
+            "value": "5.053318692307692"
+          },
+          {
+            "value": "0.30769230769230771"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/answer-engine-optimization-aeo-chatgpt-search-dubai/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "11"
+          },
+          {
+            "value": "247"
+          },
+          {
+            "value": "994.131556"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/portfolio/abayadore/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "10"
+          },
+          {
+            "value": "59"
+          },
+          {
+            "value": "99.216061666666675"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/work/alston-clayden/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "7"
+          },
+          {
+            "value": "38"
+          },
+          {
+            "value": "6.8824795714285711"
+          },
+          {
+            "value": "0.2857142857142857"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/contact-us/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "26"
+          },
+          {
+            "value": "161.90635983333334"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/work/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "28"
+          },
+          {
+            "value": "20.244030199999997"
+          },
+          {
+            "value": "0.2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/gohighlevel-30-day-free-trial-agency-setup-guide/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "147"
+          },
+          {
+            "value": "305.59084675"
+          },
+          {
+            "value": "0.25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/services/magento-developer/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/tmd-hosting-review/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "41"
+          },
+          {
+            "value": "305.20988875"
+          },
+          {
+            "value": "0.25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/work/skylynx/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "4"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "22"
+          },
+          {
+            "value": "7.7444492"
+          },
+          {
+            "value": "0.2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/astro-vs-wordpress-speed-performance-guide/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "23"
+          },
+          {
+            "value": "38.42410233333333"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/speed-up-gohighlevel-funnels-custom-css-guide/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "80"
+          },
+          {
+            "value": "53.5421008"
+          },
+          {
+            "value": "0.2"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/astro-vs-wordpress-speed-performance-guide"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "10"
+          },
+          {
+            "value": "194.513068"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/my-design-process/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "2.1320443333333334"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/work/alomaids/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "41"
+          },
+          {
+            "value": "88.965932500000008"
+          },
+          {
+            "value": "0.25"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/generative-engine-optimization-geo-ai-search/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "36"
+          },
+          {
+            "value": "14.568626333333333"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/portfolio/paws-and-planes/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "22"
+          },
+          {
+            "value": "9.711708"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "3.5855955"
+          },
+          {
+            "value": "0.5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/failed-websites/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "15"
+          },
+          {
+            "value": "109.83129733333334"
+          },
+          {
+            "value": "0.33333333333333331"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/blog/side-hustle/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "6.231665"
+          },
+          {
+            "value": "0.5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/jquery-quick-overview/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "0"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "/portfolio/julphar/"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "63"
+          },
+          {
+            "value": "32.0671355"
+          },
+          {
+            "value": "0.5"
+          }
+        ]
+      }
+    ],
+    "rowCount": 63,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "geo": {
+    "dimensionHeaders": [
+      {
+        "name": "country"
+      },
+      {
+        "name": "city"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "averageSessionDuration",
+        "type": "TYPE_SECONDS"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "Pakistan"
+          },
+          {
+            "value": "Karachi"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "30"
+          },
+          {
+            "value": "102"
+          },
+          {
+            "value": "689.17604084313734"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "19"
+          },
+          {
+            "value": "19"
+          },
+          {
+            "value": "0.1950876842105263"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United Arab Emirates"
+          },
+          {
+            "value": "Dubai"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "12"
+          },
+          {
+            "value": "19"
+          },
+          {
+            "value": "58.21100547368421"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "(not set)"
+          },
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "11"
+          },
+          {
+            "value": "11"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "New York"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "8"
+          },
+          {
+            "value": "8"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Singapore"
+          },
+          {
+            "value": "Singapore"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "6"
+          },
+          {
+            "value": "1.951202"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "China"
+          },
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "5"
+          },
+          {
+            "value": "0.99595420000000012"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Albania"
+          },
+          {
+            "value": "Tirana"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "China"
+          },
+          {
+            "value": "Fuzhou"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "India"
+          },
+          {
+            "value": "Kolkata"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "72.62500775"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "India"
+          },
+          {
+            "value": "Lucknow"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "4"
+          },
+          {
+            "value": "27.34853825"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "Ashburn"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "2.0322276666666665"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "Houston"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "3"
+          },
+          {
+            "value": "3"
+          },
+          {
+            "value": "3.578200666666667"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Hong Kong"
+          },
+          {
+            "value": "(not set)"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "0.8474285"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Pakistan"
+          },
+          {
+            "value": "Gujranwala"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "6.5702455"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Pakistan"
+          },
+          {
+            "value": "Multan"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "109.4390505"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United Arab Emirates"
+          },
+          {
+            "value": "Sharjah"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "212.021445"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "Clifton"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "95.3000255"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "United States"
+          },
+          {
+            "value": "Highland Village"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "2"
+          },
+          {
+            "value": "2"
+          },
+          {
+            "value": "2.261425"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "Argentina"
+          },
+          {
+            "value": "Merlo"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          },
+          {
+            "value": "0"
+          }
+        ]
+      }
+    ],
+    "rowCount": 70,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "events": {
+    "dimensionHeaders": [
+      {
+        "name": "eventName"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "eventCount",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "totalUsers",
+        "type": "TYPE_INTEGER"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "page_view"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "481"
+          },
+          {
+            "value": "169"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "user_engagement"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "351"
+          },
+          {
+            "value": "66"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "session_start"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "255"
+          },
+          {
+            "value": "169"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "scroll"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "169"
+          },
+          {
+            "value": "54"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "first_visit"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "167"
+          },
+          {
+            "value": "167"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "scroll_milestone_25"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "78"
+          },
+          {
+            "value": "17"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "scroll_milestone_50"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "74"
+          },
+          {
+            "value": "16"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "scroll_milestone_75"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "71"
+          },
+          {
+            "value": "16"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "scroll_milestone_90"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "71"
+          },
+          {
+            "value": "16"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "engaged_time_15s"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "60"
+          },
+          {
+            "value": "14"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "engaged_time_30s"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "45"
+          },
+          {
+            "value": "11"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "exit_intent_detected"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "44"
+          },
+          {
+            "value": "6"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "engaged_time_60s"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "32"
+          },
+          {
+            "value": "6"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "engaged_time_120s"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "20"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "click"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "12"
+          },
+          {
+            "value": "9"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "whatsapp_lead_click"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "6"
+          },
+          {
+            "value": "5"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "case_study_interaction"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "5"
+          },
+          {
+            "value": "4"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "ai_search_referrer_visit"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "chat: 971552600494"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "contact"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "faq_accordion_open"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "outbound_portfolio_click"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "thank_you_page"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "1"
+          },
+          {
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "rowCount": 23,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  },
+  "devices": {
+    "dimensionHeaders": [
+      {
+        "name": "deviceCategory"
+      }
+    ],
+    "metricHeaders": [
+      {
+        "name": "activeUsers",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "sessions",
+        "type": "TYPE_INTEGER"
+      },
+      {
+        "name": "screenPageViews",
+        "type": "TYPE_INTEGER"
+      }
+    ],
+    "rows": [
+      {
+        "dimensionValues": [
+          {
+            "value": "desktop"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "127"
+          },
+          {
+            "value": "201"
+          },
+          {
+            "value": "389"
+          }
+        ]
+      },
+      {
+        "dimensionValues": [
+          {
+            "value": "mobile"
+          }
+        ],
+        "metricValues": [
+          {
+            "value": "43"
+          },
+          {
+            "value": "55"
+          },
+          {
+            "value": "92"
+          }
+        ]
+      }
+    ],
+    "rowCount": 2,
+    "metadata": {
+      "currencyCode": "USD",
+      "timeZone": "Etc/UTC"
+    },
+    "kind": "analyticsData#runReport"
+  }
+}
