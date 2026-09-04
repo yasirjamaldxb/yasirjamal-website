@@ -812,20 +812,20 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 		<!-- Sticky Bottom Floating Conversion Bar for Free Video Audit (Appears on Scroll) -->
 		<div 
 			id="sticky-audit-bar" 
-			class="fixed bottom-0 left-0 right-0 z-40 bg-[#030712]/95 backdrop-blur-xl border-t border-amber-500/30 py-3 px-4 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] transform translate-y-full transition-transform duration-500 ease-out font-elegant hidden sm:block"
+			class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-slate-200/90 py-3.5 px-4 sm:px-8 shadow-[0_-8px_30px_rgba(0,0,0,0.08)] transform translate-y-full transition-transform duration-500 ease-out font-elegant hidden sm:block text-slate-900"
 		>
 			<div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
 				<div class="flex items-center gap-3">
-					<span class="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
-					<div class="text-xs md:text-sm text-slate-200">
-						<strong class="text-white font-semibold">Send your URL for a private 5-minute video teardown.</strong> See exactly where your website is losing clients and how to fix it.
+					<span class="w-2 h-2 rounded-full bg-[#1559E7] animate-pulse shrink-0"></span>
+					<div class="text-xs md:text-sm text-slate-700">
+						<span class="font-semibold text-slate-950">Send your website URL for a private 5-minute video teardown.</span> Discover exactly what to fix to increase leads.
 					</div>
 				</div>
 				<div class="flex items-center gap-3 shrink-0">
 					<button 
 						type="button" 
 						data-open-audit-modal 
-						class="cursor-pointer bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold px-5 py-2 rounded-full text-xs shadow-lg hover:scale-105 transition-all"
+						class="cursor-pointer bg-slate-950 hover:bg-slate-800 text-white font-semibold px-5 py-2 rounded-full text-xs shadow-sm hover:shadow transition-all"
 					>
 						Get Video Teardown &rarr;
 					</button>
@@ -833,7 +833,7 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 						type="button" 
 						id="dismiss-sticky-bar" 
 						aria-label="Dismiss banner" 
-						class="cursor-pointer text-slate-400 hover:text-white p-1 rounded-full text-xs transition-colors"
+						class="cursor-pointer text-slate-400 hover:text-slate-700 p-1 rounded-full text-xs transition-colors"
 					>
 						✕
 					</button>
@@ -866,193 +866,174 @@ const canonicalUrl = `https://yasirjamal.com${normalizedPath}`;
 		</div>
 
 		<!-- ========================================================================= -->
-		<!-- 1. UNIVERSAL WHATSAPP LEAD CAPTURE MODAL (DESKTOP & MOBILE CONVERSION)   -->
+		<!-- 1. UNIVERSAL WHATSAPP LEAD CAPTURE MODAL (MINIMALIST LIGHT THEME)         -->
 		<!-- ========================================================================= -->
 		<div 
 			id="whatsapp-lead-modal" 
-			class="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
+			class="fixed inset-0 z-[200] bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
 		>
-			<div class="relative w-full max-w-lg bg-[#0b0f19] border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl text-white transform scale-95 transition-transform duration-300">
+			<div class="relative w-full max-w-md bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-900 transform scale-95 transition-transform duration-300">
 				
-				<!-- Close Button -->
-				<button 
-					type="button" 
-					data-close-whatsapp-modal 
-					aria-label="Close modal" 
-					class="cursor-pointer absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
-				>
-					✕
-				</button>
-
-				<!-- Header -->
-				<div class="flex items-center gap-3.5 mb-5">
-					<div class="w-12 h-12 rounded-full bg-[#25D366] flex items-center justify-center text-slate-950 shrink-0 shadow-lg">
-						<svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-							<path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
-						</svg>
+				<!-- Modal Header -->
+				<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+					<div class="flex items-center gap-3">
+						<div class="w-9 h-9 rounded-full bg-[#25D366]/10 text-[#25D366] flex items-center justify-center shrink-0">
+							<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+								<path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
+							</svg>
+						</div>
+						<div>
+							<h3 class="text-base font-bold text-slate-900 leading-tight">Chat with Yasir on WhatsApp</h3>
+							<p class="text-xs text-slate-500">Direct response from Dubai</p>
+						</div>
 					</div>
-					<div>
-						<h3 class="text-lg sm:text-xl font-bold text-white leading-tight">
-							Chat Directly with Yasir Jamal
-						</h3>
-						<p class="text-xs text-slate-400">
-							Senior Web Architect &bull; Reply within 15 minutes
-						</p>
-					</div>
+					<button 
+						type="button" 
+						data-close-whatsapp-modal 
+						aria-label="Close" 
+						class="cursor-pointer text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100 transition-colors"
+					>
+						✕
+					</button>
 				</div>
 
 				<!-- Form -->
-				<form id="whatsapp-lead-form" class="space-y-4">
+				<form id="whatsapp-lead-form" class="space-y-3.5">
 					<div>
-						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name *</label>
+						<label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
 						<input 
 							type="text" 
 							name="name" 
 							required 
 							placeholder="e.g. Tariq Al Mansoor" 
-							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#25D366] transition-colors"
 						/>
 					</div>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 						<div>
-							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email *</label>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">Work Email *</label>
 							<input 
 								type="email" 
 								name="email" 
 								required 
 								placeholder="name@company.com" 
-								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#25D366] transition-colors"
 							/>
 						</div>
 						<div>
-							<label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp Number *</label>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Number *</label>
 							<input 
 								type="tel" 
 								name="whatsapp" 
 								required 
 								placeholder="+971 50 123 4567" 
-								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors"
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#25D366] transition-colors"
 							/>
 						</div>
 					</div>
 
 					<div>
-						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Project Details / Website URL (Optional)</label>
+						<label class="block text-xs font-semibold text-slate-700 mb-1">Project Details (Optional)</label>
 						<textarea 
 							name="message" 
 							rows="2" 
-							placeholder="Tell Yasir about your new website, redesign, or timeline..." 
-							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-[#25D366] transition-colors resize-none"
+							placeholder="Brief project details or requirements..." 
+							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#25D366] transition-colors resize-none"
 						></textarea>
 					</div>
 
 					<button 
 						type="submit" 
 						id="whatsapp-submit-btn" 
-						class="cursor-pointer w-full bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold py-3.5 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
+						class="cursor-pointer w-full bg-[#25D366] hover:bg-[#20ba59] text-slate-950 font-bold py-3 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
 					>
-						<span>Start WhatsApp Chat Now</span>
+						<span>Continue to WhatsApp</span>
 						<span>&rarr;</span>
 					</button>
-
-					<p class="text-[11px] text-center text-slate-500">
-						🔒 Your details are 100% private. We respond directly with zero sales calls.
-					</p>
 				</form>
 			</div>
 		</div>
 
 		<!-- ========================================================================= -->
-		<!-- 2. FREE 5-MINUTE VIDEO AUDIT MODAL (HIGH-CONVERSION HOOK)                 -->
+		<!-- 2. FREE 5-MINUTE VIDEO TEARDOWN MODAL (MINIMALIST LIGHT THEME)            -->
 		<!-- ========================================================================= -->
 		<div 
 			id="video-audit-modal" 
-			class="fixed inset-0 z-[200] bg-black/80 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
+			class="fixed inset-0 z-[200] bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300 font-elegant"
 		>
-			<div class="relative w-full max-w-lg bg-[#0b0f19] border border-amber-500/40 rounded-3xl p-6 sm:p-8 shadow-2xl text-white transform scale-95 transition-transform duration-300">
+			<div class="relative w-full max-w-md bg-white border border-slate-200 rounded-2xl p-6 sm:p-7 shadow-2xl text-slate-900 transform scale-95 transition-transform duration-300">
 				
-				<!-- Close Button -->
-				<button 
-					type="button" 
-					data-close-audit-modal 
-					aria-label="Close modal" 
-					class="cursor-pointer absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-white/10 transition-colors"
-				>
-					✕
-				</button>
-
-				<!-- Header -->
-				<div class="mb-5">
-					<div class="inline-flex items-center gap-1.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider mb-2">
-						Private Website Teardown
+				<!-- Modal Header -->
+				<div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+					<div>
+						<h3 class="text-base font-bold text-slate-900 leading-tight">Request Free Video Teardown</h3>
+						<p class="text-xs text-slate-500 mt-0.5">5-minute personal UX teardown sent within 24 hours</p>
 					</div>
-					<h3 class="text-xl sm:text-2xl font-bold text-white leading-tight">
-						Get a Private 5-Minute Video Teardown of Your Website
-					</h3>
-					<p class="text-xs text-slate-300 mt-1.5 leading-relaxed">
-						Yasir will personally review your live website and record a 5-minute video highlighting high-impact UX, copy, and conversion fixes to stop losing qualified leads.
-					</p>
+					<button 
+						type="button" 
+						data-close-audit-modal 
+						aria-label="Close" 
+						class="cursor-pointer text-slate-400 hover:text-slate-700 p-1.5 rounded-full hover:bg-slate-100 transition-colors"
+					>
+						✕
+					</button>
 				</div>
 
 				<!-- Form -->
-				<form id="video-audit-form" class="space-y-4">
+				<form id="video-audit-form" class="space-y-3.5">
 					<div>
-						<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Current Website URL *</label>
+						<label class="block text-xs font-semibold text-slate-700 mb-1">Your Website URL *</label>
 						<input 
 							type="url" 
 							name="website_url" 
 							required 
 							placeholder="https://yourcompany.com" 
-							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
 						/>
 					</div>
 
 					<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
 						<div>
-							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Your Full Name *</label>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
 							<input 
 								type="text" 
 								name="name" 
 								required 
 								placeholder="e.g. Sarah Jenkins" 
-								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
 							/>
 						</div>
 						<div>
-							<label class="block text-xs font-semibold text-slate-300 mb-1.5">Work Email (For Video Delivery) *</label>
+							<label class="block text-xs font-semibold text-slate-700 mb-1">Work Email *</label>
 							<input 
 								type="email" 
 								name="email" 
 								required 
 								placeholder="name@company.com" 
-								class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+								class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
 							/>
 						</div>
 					</div>
 
 					<div>
-						<label class="block text-xs font-semibold text-slate-300 mb-1.5">WhatsApp Number (For Notification)</label>
+						<label class="block text-xs font-semibold text-slate-700 mb-1">WhatsApp Number (Optional)</label>
 						<input 
 							type="tel" 
 							name="whatsapp" 
 							placeholder="+971 50 123 4567" 
-							class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 transition-colors"
+							class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3.5 py-2.5 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-slate-900 transition-colors"
 						/>
 					</div>
 
 					<button 
 						type="submit" 
 						id="audit-submit-btn" 
-						class="cursor-pointer w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-3.5 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95 transition-all"
+						class="cursor-pointer w-full bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-xl text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
 					>
-						<span>Send Me My Private Video Teardown</span>
+						<span>Send Video Teardown Request</span>
 						<span>&rarr;</span>
 					</button>
-
-					<p class="text-[11px] text-center text-slate-500">
-						⏱️ Delivered via email within 24 hours. Zero pitch, pure value.
-					</p>
 				</form>
 			</div>
 		</div>
