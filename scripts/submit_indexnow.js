@@ -34,6 +34,8 @@ const urlList = [
   'https://yasirjamal.com/blog/modern-web-design-trends-2026/',
   'https://yasirjamal.com/blog/sub-second-ecommerce-architecture-gcc-scaling/',
   'https://yasirjamal.com/blog/dubai-technical-seo-audit-ranking-guide/',
+  'https://yasirjamal.com/calculator/',
+  'https://yasirjamal.com/blog/answer-engine-optimization-aeo-chatgpt-search-dubai/',
   'https://yasirjamal.com/blog/conversion-rate-optimization-cro-lead-generation/',
   'https://yasirjamal.com/privacy-policy/',
   'https://yasirjamal.com/terms/'
@@ -41,7 +43,7 @@ const urlList = [
 
 async function submitIndexNow() {
   console.log('========================================================');
-  console.log('🚀 SUBMITTING ALL 34 PAGES TO INDEXNOW (BING / COPILOT / CHATGPT)');
+  console.log(`🚀 SUBMITTING ALL ${urlList.length} PAGES TO INDEXNOW (BING / COPILOT / CHATGPT)`);
   console.log('========================================================\n');
 
   const payload = JSON.stringify({
