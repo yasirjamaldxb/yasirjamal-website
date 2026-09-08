@@ -62,6 +62,13 @@ RewriteRule ^wp-admin/(.*)$ https://yasirjamal.com/ [L,R=301]
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-XSS-Protection "1; mode=block"
     Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # HTML files must always revalidate so deployments reflect immediately
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires 0
+    </FilesMatch>
 </IfModule>
 
 # ==============================================================================
@@ -77,7 +84,7 @@ RewriteRule ^wp-admin/(.*)$ https://yasirjamal.com/ [L,R=301]
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresDefault "access plus 1 month"
-    ExpiresByType text/html "access plus 1 hour"
+    ExpiresByType text/html "access plus 0 seconds"
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
