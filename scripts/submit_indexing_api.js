@@ -8,6 +8,11 @@ const auth = new google.auth.GoogleAuth({
 const indexing = google.indexing({ version: 'v3', auth });
 
 const urlsToPing = [
+  'https://yasirjamal.com/blog/answer-engine-optimization-aeo-chatgpt-search-dubai/',
+  'https://yasirjamal.com/portfolio/fila-tech/',
+  'https://yasirjamal.com/portfolio/paws-and-planes/',
+  'https://yasirjamal.com/portfolio/hunza-global/',
+  'https://yasirjamal.com/blog/what-is-webmcp-agentic-web-design-guide/',
   'https://yasirjamal.com/blog/gohighlevel-for-real-estate-agents-review/',
   'https://yasirjamal.com/blog/gohighlevel-hidden-costs-pricing-calculator/',
   'https://yasirjamal.com/blog/generative-engine-optimization-geo-ai-search/',
