@@ -1,0 +1,1096 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const capabilities = [
+  {
+    title: "Custom WordPress Theme Engineering",
+    tag: "Clean Code &bull; Zero Bloat",
+    desc: "Bespoke WordPress themes engineered with lightweight PHP and Advanced Custom Fields Pro. No heavy page builders, no unnecessary JavaScript dependencies, and zero inherited code debt.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>`
+  },
+  {
+    title: "High-Converting WooCommerce Stores",
+    tag: "Sub-Second Checkout &bull; UAE Gateways",
+    desc: "Engineered for high transaction volumes with frictionless single-page checkouts. Full integration with UAE payment processors including Telr, Tabby, Tamara, Stripe UAE, and Apple Pay.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>`
+  },
+  {
+    title: "Bilingual Arabic (RTL) & English Architecture",
+    tag: "Native Right-to-Left &bull; UAE Corporate",
+    desc: "True bilingual typography and mirrored interface layouts built specifically for UAE corporate and government standards, ensuring natural reading rhythm in both Arabic and English.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>`
+  },
+  {
+    title: "Core Web Vitals & Speed Optimization",
+    tag: "95+ Mobile Guarantee &bull; Under 1s Load",
+    desc: "Radical performance engineering achieving sub-second Largest Contentful Paint (LCP) and zero Cumulative Layout Shift (CLS) on mobile 4G networks across Dubai and the Gulf.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>`
+  },
+  {
+    title: "Headless WordPress & Astro Architecture",
+    tag: "Decoupled Speed &bull; Modern Security",
+    desc: "Utilize WordPress purely as an intuitive headless CMS for editorial content while serving blazing fast Astro or Next.js static frontends distributed worldwide on edge networks.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/></svg>`
+  },
+  {
+    title: "Enterprise CRM & Custom API Webhooks",
+    tag: "HubSpot &bull; Salesforce &bull; Zoho",
+    desc: "Connect WordPress forms and lead flows directly to your sales pipeline. Seamless two-way synchronizations with HubSpot, Salesforce, Zoho CRM, and custom REST API endpoints.",
+    icon: `<svg class="w-7 h-7 text-[#1559E7]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`
+  }
+];
+
+const painVsFix = [
+  {
+    problemTitle: "Heavy Page Builders & Visual Bloat",
+    problemDesc: "Sites built on Elementor, Divi, or WPBakery load 40+ external CSS and JS scripts, dragging mobile Google PageSpeed scores down into the 20s and frustrating visitors.",
+    fixTitle: "Clean Custom Gutenberg & ACF Pro Blocks",
+    fixDesc: "Every interface component is hand-coded specifically for your brand. Only the exact CSS and JavaScript required for each block is loaded, ensuring instant sub-second page rendering."
+  },
+  {
+    problemTitle: "Fragile Plugin Stacks (40+ Active Plugins)",
+    problemDesc: "Inexperienced freelancers install a plugin for every basic function. Updates cause fatal PHP errors, database crashes, and unexpected site downtime during business hours.",
+    fixTitle: "Architectural PHP & Native WordPress APIs",
+    fixDesc: "Essential functionality is coded natively into a bespoke theme. We maintain fewer than 8 strictly necessary, high-reputation plugins, resulting in bulletproof stability."
+  },
+  {
+    problemTitle: "Broken Mobile Experience & Layout Shifting",
+    problemDesc: "Automated desktop conversions create terrible mobile layouts with unreadable text, misaligned touch targets, and poor Core Web Vitals rankings on Google UAE.",
+    fixTitle: "Mobile-First Responsive Engineering",
+    fixDesc: "Interfaces are conceptualized and tested on real mobile devices first, delivering flawless ergonomics, responsive typography, and thumb-friendly navigation across all screen sizes."
+  },
+  {
+    problemTitle: "Insecure Code & Frequent Hacking Risks",
+    problemDesc: "Unpatched nulled themes, outdated plugins, and default database prefixes leave corporate websites wide open to automated brute force bots and malware injections.",
+    fixTitle: "Enterprise Security Hardening & Edge WAF",
+    fixDesc: "Strict database prefix isolation, Cloudflare Web Application Firewall protection, two-factor authentication enforcement, and automated off-site backups safeguard your business assets."
+  }
+];
+
+const caseStudies = [
+  {
+    title: "Julphar Pharmaceuticals",
+    category: "ADX Listed Enterprise &bull; Healthcare",
+    desc: "Digital ecosystem redesign and frontend modernization for one of the largest pharmaceutical manufacturers in the Middle East, serving patients and healthcare professionals in 40+ countries.",
+    image: "/images/portfolio/showcase_julphar.jpg",
+    link: "/portfolio/julphar/",
+    metrics: "40+ Countries &bull; Enterprise Compliance"
+  },
+  {
+    title: "Westminster Properties Dubai",
+    category: "Luxury Real Estate &bull; Downtown Dubai",
+    desc: "High-performance property showcase portal featuring ultra-responsive property search, immersive floorplan viewer, and instant WhatsApp booking for prime Dubai investments.",
+    image: "/images/portfolio/showcase_westminster-properties.jpg",
+    link: "/portfolio/westminster-properties/",
+    metrics: "99/100 PageSpeed &bull; +140% Qualified Inquiries"
+  },
+  {
+    title: "ALOmaids Cleaning Services",
+    category: "On-Demand Service Platform &bull; Dubai",
+    desc: "Seamless on-demand booking web application with real-time slot scheduling, automated SMS reminders, and integrated Middle East credit card processing.",
+    image: "/images/portfolio/showcase_alomaids.jpg",
+    link: "/portfolio/alomaids/",
+    metrics: "3 Step Checkout &bull; +210% Booking Volume"
+  },
+  {
+    title: "FILA Tech UAE",
+    category: "Electronics &bull; Industrial Technology",
+    desc: "Lightning fast technical catalogue engineered with custom taxonomy filters, downloadable PDF specification sheets, and direct sales quote generation.",
+    image: "/images/portfolio/showcase_filatech.jpg",
+    link: "/portfolio/filatech/",
+    metrics: "0.6s Load Time &bull; Direct B2B RFQ Funnel"
+  }
+];
+
+const matrixRows = [
+  {
+    criterion: "Direct Senior Engineering",
+    yasir: "100% Direct partnership with Yasir Jamal (15+ Years UAE Experience)",
+    cheap: "Junior or offshore subcontracted developer without local context",
+    agency: "Pitched by senior directors, handed over to junior account coordinators"
+  },
+  {
+    criterion: "Code Quality & Theme Architecture",
+    yasir: "Hand-coded bespoke theme with clean PHP and ACF Pro blocks",
+    cheap: "Off-the-shelf bloated marketplace theme or heavy page builder",
+    agency: "Standardized Elementor templates reused across multiple clients"
+  },
+  {
+    criterion: "Mobile Speed & Core Web Vitals",
+    yasir: "Guaranteed 95+ PageSpeed on Mobile with sub-second page loads",
+    cheap: "25 to 45 PageSpeed with heavy render-blocking assets",
+    agency: "50 to 70 PageSpeed due to complex marketing tag bloat"
+  },
+  {
+    criterion: "Active Plugin Count",
+    yasir: "Lean footprint with strictly 5 to 8 essential verified plugins",
+    cheap: "35 to 55 plugins leading to frequent database conflicts",
+    agency: "20 to 30 plugins maintained on expensive recurring retainers"
+  },
+  {
+    criterion: "Bilingual Arabic & English (RTL)",
+    yasir: "Native bidirectional layout design with balanced UAE typography",
+    cheap: "Automated Google Translate or broken RTL visual alignment",
+    agency: "Subcontracted translation agency with significant markup"
+  },
+  {
+    criterion: "SEO & Conversion Architecture",
+    yasir: "Built-in Schema.org, fast crawl hierarchy, and CRO best practices",
+    cheap: "No structured data, missing canonical tags, weak internal links",
+    agency: "Sold as an expensive add-on package handled by a separate team"
+  },
+  {
+    criterion: "Ownership & Source Files",
+    yasir: "100% complete intellectual property and source code ownership",
+    cheap: "Unclear ownership, locked accounts, or missing licenses",
+    agency: "Proprietary agency hosting lock-in or ongoing platform fees"
+  }
+];
+
+const packages = [
+  {
+    name: "Custom Corporate WordPress",
+    subtitle: "For established UAE companies wanting a fast, authoritative presence",
+    idealFor: "Corporate entities, consulting firms, clinics, and service providers",
+    deliverables: [
+      "Bespoke custom WordPress theme coded from scratch",
+      "Tailored ACF Pro custom blocks for effortless editing",
+      "Full bilingual English and Arabic RTL implementation",
+      "95+ Google Mobile PageSpeed optimization guarantee",
+      "Complete Technical SEO foundation with LocalBusiness Schema",
+      "HubSpot, Zoho, or WhatsApp direct lead integration",
+      "30-day comprehensive post-launch warranty"
+    ],
+    ctaText: "Discuss Corporate Project",
+    popular: false
+  },
+  {
+    name: "High-Converting WooCommerce",
+    subtitle: "For brands requiring sub-second eCommerce with local UAE payments",
+    idealFor: "Direct-to-consumer brands, luxury retail, and high-SKU catalogues",
+    deliverables: [
+      "Custom WooCommerce theme engineered for conversion speed",
+      "Seamless payment integration (Telr, Tabby, Tamara, Stripe, Apple Pay)",
+      "High-speed AJAX cart, drawer summary, and single-page checkout",
+      "Inventory management, automated tax, and UAE shipping rules",
+      "Advanced product filtering with zero page reload delays",
+      "Speed optimization across multi-thousand SKU databases",
+      "45-day post-launch warranty with video handover training"
+    ],
+    ctaText: "Discuss eCommerce Store",
+    popular: true
+  },
+  {
+    name: "Enterprise Re-Architecture & Speed",
+    subtitle: "For high-traffic platforms suffering from bloat, downtime, or slow speeds",
+    idealFor: "Enterprises, news publishers, and high-concurrency booking portals",
+    deliverables: [
+      "Complete audit and migration away from bloated page builders",
+      "Database clean-up, query indexing, and transient purge",
+      "Headless WordPress or decoupled frontend configuration",
+      "Cloudflare Enterprise WAF, Redis caching, and edge routing",
+      "Zero-downtime database migration and 301 redirect map",
+      "Sub-second Largest Contentful Paint (LCP) guarantee",
+      "Priority SLA support and ongoing architectural advisory"
+    ],
+    ctaText: "Request Enterprise Audit",
+    popular: false
+  }
+];
+
+const faqs = [
+  {
+    q: "Why should I hire a freelance WordPress architect in Dubai instead of a traditional agency?",
+    a: "When you hire Yasir Jamal, you collaborate directly with a senior digital architect with 15+ years of hands-on UAE experience. Traditional agencies typically pitch with senior directors and then assign your project to junior coordinators or offshore contractors. With a direct partnership, you benefit from faster turnarounds, transparent communication, pristine hand-written code, and significantly lower overhead without agency markups."
+  },
+  {
+    q: "Do you build with Elementor, Divi, or custom code?",
+    a: "We build custom themes engineered with clean PHP, Tailwind CSS, and Advanced Custom Fields Pro. While page builders like Elementor are popular for beginners, they inject massive amounts of unnecessary CSS and JavaScript, slowing down your website and hurting your Google rankings. Our custom blocks give you the exact same visual editing flexibility in the WordPress admin while keeping the public frontend lighting fast."
+  },
+  {
+    q: "How do you guarantee a 90+ PageSpeed score on mobile devices?",
+    a: "We achieve sub-second speeds through structural engineering rather than band-aid caching plugins. We write modular, semantic markup, minimize external JavaScript libraries, optimize WebP and AVIF images with explicit dimensions, eliminate layout shifts, and implement edge caching via Cloudflare. This ensures your website loads under 1 second even on mobile connections across Dubai and the UAE."
+  },
+  {
+    q: "Can you build a fully bilingual Arabic and English WordPress website?",
+    a: "Yes. Having engineered corporate platforms across the UAE, bilingual capability is a core specialty. We implement native Right-to-Left (RTL) styling with proper Arabic typography, mirrored layout geometry, and seamless language toggling. We utilize robust translation frameworks such as WPML or Polylang without slowing down page delivery."
+  },
+  {
+    q: "Which UAE payment gateways do you integrate for WooCommerce?",
+    a: "We integrate all leading UAE and regional payment gateways, including Telr, Tabby (Buy Now Pay Later), Tamara, Stripe UAE, Checkout.com, Network International, and Apple Pay. Every checkout flow is optimized for mobile users to minimize cart abandonment."
+  },
+  {
+    q: "What is your typical project timeline for a custom WordPress website?",
+    a: "A custom corporate WordPress project typically takes between 3 to 5 weeks from initial architecture and Figma approval to final code deployment and testing. Complex WooCommerce storefronts or enterprise platforms usually require 5 to 8 weeks depending on database migration needs and custom third-party integrations."
+  },
+  {
+    q: "Will I lose my existing Google search rankings during a WordPress redesign?",
+    a: "No. Protecting your organic search traffic is an absolute priority. We perform a complete URL crawl before development, map strict 1-to-1 301 redirects for any modified paths, preserve title and meta data hierarchies, and upgrade your technical Schema markup. Most clients actually experience significant ranking improvements within 30 days due to faster load speeds and better mobile usability."
+  },
+  {
+    q: "Do I have 100% full ownership of the website and source code?",
+    a: "Yes. You receive 100% unencumbered intellectual property ownership of all Figma source files, WordPress theme files, custom plugins, and database contents upon project completion. There are zero proprietary locks and no recurring platform licensing fees."
+  },
+  {
+    q: "Which hosting environment do you recommend for WordPress in Dubai?",
+    a: "For top performance in Dubai and the GCC, we recommend managed cloud hosting providers such as Hostinger Cloud, Cloudways, Kinsta, or AWS UAE region with Cloudflare Enterprise CDN integration. We assist with complete server provisioning, SSL certificates, Redis object caching, and automated daily backups."
+  },
+  {
+    q: "How do we get started on a project?",
+    a: "Getting started is straightforward. Send a message on WhatsApp (+971 55 2600 494) or request a free 5-minute video audit of your current website. We will review your goals, analyze your competitors, and provide a clear, fixed-price proposal within 24 hours."
+  }
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+};
+
+const serviceJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custom WordPress Development Dubai",
+  "serviceType": "WordPress Web Development",
+  "description": "High performance custom WordPress development, WooCommerce architecture, speed optimization, and bilingual Arabic English websites in Dubai UAE.",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Yasir Jamal Web Design Dubai",
+    "url": "https://yasirjamal.com/",
+    "telephone": "+971552600494",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressRegion": "Dubai",
+      "addressCountry": "AE"
+    }
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Dubai" },
+    { "@type": "City", "name": "Abu Dhabi" },
+    { "@type": "Country", "name": "United Arab Emirates" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "WordPress Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Custom WordPress Theme Engineering"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "WooCommerce Development Dubai"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "WordPress Speed & Core Web Vitals Optimization"
+        }
+      }
+    ]
+  }
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://yasirjamal.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "WordPress Developer Dubai",
+      "item": "https://yasirjamal.com/wordpress-developer-dubai/"
+    }
+  ]
+};
+---
+
+<Layout
+  title="WordPress Developer Dubai | Freelance Custom WordPress Expert UAE"
+  description="Senior freelance WordPress developer in Dubai with 15+ years experience. Custom themes, sub-second speed, WooCommerce & bilingual Arabic web development."
+>
+  <!-- Inject Structured Data Schemas -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(serviceJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+  <main class="flex-grow flex flex-col items-center bg-slate-50 w-full font-elegant">
+
+    <!-- 1. HERO BANNER SECTION -->
+    <section class="w-full min-h-[92svh] sm:min-h-[100svh] relative flex flex-col justify-center sm:justify-end pt-28 sm:pt-36 pb-12 sm:pb-20 overflow-hidden bg-[#03050d] text-white select-none cursor-crosshair">
+      
+      <!-- Interactive Fluid Wave Canvas -->
+      <canvas id="wp-hero-canvas" class="absolute inset-0 z-0 w-full h-full"></canvas>
+      
+      <!-- Ambient Glows -->
+      <div class="absolute top-1/4 left-1/3 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#1559E7]/20 rounded-full blur-[140px] pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#06B6D4]/15 rounded-full blur-[140px] pointer-events-none"></div>
+      
+      <!-- Precision Background Grid -->
+      <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:48px_48px] pointer-events-none"></div>
+
+      <!-- Main Content Container -->
+      <div class="w-full max-w-7xl mx-auto px-5 sm:px-6 z-10 flex flex-col justify-center sm:justify-end items-start pointer-events-none my-auto sm:my-0">
+        
+        <div class="max-w-3xl text-left">
+          <!-- Trust Pill -->
+          <div class="pointer-events-auto inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[11px] sm:text-xs font-medium mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse"></span>
+            <span>Senior WordPress Architect &bull; 15+ Years UAE Experience &bull; Direct 1-on-1</span>
+          </div>
+
+          <!-- Master Headline -->
+          <h1 class="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[3.1rem] font-light text-white tracking-tight leading-[1.18] mb-4 font-elegant drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
+            Custom WordPress Development in Dubai Engineered for Speed, Conversions &amp; Scale.
+          </h1>
+
+          <!-- Context Subtitle -->
+          <p class="text-slate-200 text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-2xl mb-6 sm:mb-8 drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
+            Direct partnership with a Senior Web Architect. No junior account managers, no offshore outsourcing, and zero plugin bloat. Hand-coded custom themes, bilingual Arabic and English, and sub-second load times across the UAE.
+          </p>
+
+          <!-- Dual Hero Action CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pointer-events-auto w-full sm:w-auto">
+            <button 
+              type="button" 
+              data-open-whatsapp-modal 
+              class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold px-7 py-3.5 rounded-full text-xs sm:text-sm shadow-[0_10px_25px_rgba(37,211,102,0.35)] hover:scale-105 transition-all text-center whitespace-nowrap"
+            >
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
+              </svg>
+              <span>Chat on WhatsApp (Reply &lt;15m)</span>
+              <span>&rarr;</span>
+            </button>
+
+            <button
+              type="button"
+              data-open-audit-modal
+              class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-medium px-7 py-3.5 rounded-full text-xs sm:text-sm border border-white/20 hover:border-white/40 transition-all shadow-md text-center whitespace-nowrap"
+            >
+              <svg class="w-4 h-4 text-[#F6CD0B] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+              </svg>
+              <span>Get Free 5-Min Video Audit</span>
+            </button>
+          </div>
+
+          <!-- Quick Micro Proof Stats -->
+          <div class="pt-8 sm:pt-10 flex flex-wrap items-center gap-6 sm:gap-10 text-slate-300 text-xs sm:text-sm">
+            <div>
+              <span class="text-white font-bold text-base sm:text-lg block">15+</span>
+              <span class="text-slate-400 text-[11px] uppercase tracking-wider font-light">Years in UAE</span>
+            </div>
+            <div class="h-8 w-px bg-white/15"></div>
+            <div>
+              <span class="text-white font-bold text-base sm:text-lg block">95+</span>
+              <span class="text-slate-400 text-[11px] uppercase tracking-wider font-light">Mobile PageSpeed</span>
+            </div>
+            <div class="h-8 w-px bg-white/15"></div>
+            <div>
+              <span class="text-white font-bold text-base sm:text-lg block">100%</span>
+              <span class="text-slate-400 text-[11px] uppercase tracking-wider font-light">Direct Senior Dev</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Canvas Animation Script -->
+    <script is:inline>
+      function initWpHeroCanvas() {
+        const canvas = document.getElementById('wp-hero-canvas');
+        if (!canvas) return;
+
+        const ctx = canvas.getContext('2d', { alpha: true });
+        let width, height, animationFrameId;
+        const isMobile = window.innerWidth < 768;
+
+        const resize = () => {
+          width = canvas.width = canvas.offsetWidth;
+          height = canvas.height = canvas.offsetHeight;
+        };
+
+        resize();
+        window.addEventListener('resize', resize, { passive: true });
+
+        const particles = [];
+        const particleCount = isMobile ? 30 : 65;
+
+        for (let i = 0; i < particleCount; i++) {
+          particles.push({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            radius: Math.random() * 1.8 + 0.6,
+            vx: (Math.random() - 0.5) * 0.45,
+            vy: (Math.random() - 0.5) * 0.45,
+            alpha: Math.random() * 0.5 + 0.2
+          });
+        }
+
+        let time = 0;
+        function animate() {
+          time += 0.012;
+          ctx.clearRect(0, 0, width, height);
+
+          // Render connecting constellation web
+          for (let i = 0; i < particles.length; i++) {
+            const p1 = particles[i];
+            p1.x += p1.vx;
+            p1.y += p1.vy;
+
+            if (p1.x < 0) p1.x = width;
+            if (p1.x > width) p1.x = 0;
+            if (p1.y < 0) p1.y = height;
+            if (p1.y > height) p1.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
+            ctx.fillStyle = '#38bdf8';
+            ctx.globalAlpha = p1.alpha;
+            ctx.fill();
+
+            for (let j = i + 1; j < particles.length; j++) {
+              const p2 = particles[j];
+              const dx = p1.x - p2.x;
+              const dy = p1.y - p2.y;
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              const maxDist = isMobile ? 85 : 120;
+
+              if (dist < maxDist) {
+                ctx.beginPath();
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = '#1559E7';
+                ctx.globalAlpha = (1 - dist / maxDist) * 0.2;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+              }
+            }
+          }
+          ctx.globalAlpha = 1.0;
+          animationFrameId = requestAnimationFrame(animate);
+        }
+
+        animationFrameId = requestAnimationFrame(animate);
+
+        window.addEventListener('beforeunload', () => {
+          if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        }, { once: true });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => setTimeout(initWpHeroCanvas, 20));
+      } else {
+        setTimeout(initWpHeroCanvas, 20);
+      }
+    </script>
+
+
+    <!-- 2. CLIENT & PARTNER LOGO TICKER -->
+    <section class="w-full bg-white border-b border-slate-100 py-10 overflow-hidden relative font-elegant">
+      <div class="max-w-7xl mx-auto px-6 mb-5 text-center">
+        <span class="text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-900 font-bold block">
+          Trusted by enterprise teams, regional leaders and growing UAE businesses
+        </span>
+      </div>
+
+      <div class="relative w-full overflow-hidden py-3">
+        <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10"></div>
+
+        <div class="animate-marquee flex items-center gap-14 sm:gap-20 shrink-0">
+          <img src="/images/balanced_logos/property_finder.webp" alt="Property Finder" width="130" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[130px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/namshi.webp" alt="Namshi" width="125" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[125px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/audi.webp" alt="Audi" width="120" height="26" loading="lazy" decoding="async" class="h-5.5 sm:h-6.5 max-w-[120px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/julphar.webp" alt="Julphar Gulf Pharmaceutical Industries" width="140" height="24" loading="lazy" decoding="async" class="h-5 sm:h-6 max-w-[140px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/lootah_holding.webp" alt="Lootah Holding" width="135" height="24" loading="lazy" decoding="async" class="h-5 sm:h-6 max-w-[135px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/noor_abu_dhabi.webp" alt="Noor Abu Dhabi" width="130" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[130px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/omnicom.webp" alt="Omnicom Media Group" width="140" height="20" loading="lazy" decoding="async" class="h-4 sm:h-5 max-w-[140px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+          <img src="/images/balanced_logos/filatech.webp" alt="Filatech UAE" width="135" height="26" loading="lazy" decoding="async" class="h-5.5 sm:h-6.5 max-w-[135px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" />
+
+          <!-- Duplicate Set for Marquee -->
+          <img src="/images/balanced_logos/property_finder.webp" alt="Property Finder" width="130" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[130px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/namshi.webp" alt="Namshi" width="125" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[125px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/audi.webp" alt="Audi" width="120" height="26" loading="lazy" decoding="async" class="h-5.5 sm:h-6.5 max-w-[120px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/julphar.webp" alt="Julphar Gulf Pharmaceutical Industries" width="140" height="24" loading="lazy" decoding="async" class="h-5 sm:h-6 max-w-[140px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/lootah_holding.webp" alt="Lootah Holding" width="135" height="24" loading="lazy" decoding="async" class="h-5 sm:h-6 max-w-[135px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/noor_abu_dhabi.webp" alt="Noor Abu Dhabi" width="130" height="30" loading="lazy" decoding="async" class="h-6 sm:h-7.5 max-w-[130px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/omnicom.webp" alt="Omnicom Media Group" width="140" height="20" loading="lazy" decoding="async" class="h-4 sm:h-5 max-w-[140px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+          <img src="/images/balanced_logos/filatech.webp" alt="Filatech UAE" width="135" height="26" loading="lazy" decoding="async" class="h-5.5 sm:h-6.5 max-w-[135px] w-auto object-contain opacity-85 hover:opacity-100 transition-opacity shrink-0" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 3. THE ENGINEERING DIFFERENCE (PROBLEM VS SOLUTION) -->
+    <section class="w-full bg-[#f8fafc] py-20 md:py-28 font-elegant border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="max-w-3xl mb-16 text-left">
+          <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#1559E7] mb-2 block">
+            The Engineering Difference
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-slate-900 tracking-tight leading-snug mb-4">
+            Why 90% of WordPress Websites in Dubai Fail to Deliver Business Results
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            Most local agencies and inexpensive freelancers rely on pre-made marketplace themes bundled with 40+ unvetted plugins. The result is a slow, fragile website that loses customers and falls behind in Google rankings. Here is how senior engineering solves that.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {painVsFix.map(item => (
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-[0_4px_25px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col justify-between hover:shadow-[0_12px_35px_rgba(0,0,0,0.08)] transition-all">
+              <!-- Problem Block -->
+              <div class="mb-6 pb-6 border-b border-slate-100">
+                <div class="flex items-center gap-2.5 mb-2.5">
+                  <span class="w-6 h-6 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0">&times;</span>
+                  <h3 class="text-sm sm:text-base font-semibold text-rose-950">
+                    {item.problemTitle}
+                  </h3>
+                </div>
+                <p class="text-slate-500 text-xs sm:text-sm font-light leading-relaxed pl-8.5">
+                  {item.problemDesc}
+                </p>
+              </div>
+
+              <!-- Solution Block -->
+              <div>
+                <div class="flex items-center gap-2.5 mb-2.5">
+                  <span class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0">&check;</span>
+                  <h3 class="text-sm sm:text-base font-semibold text-slate-900">
+                    {item.fixTitle}
+                  </h3>
+                </div>
+                <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed pl-8.5">
+                  {item.fixDesc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 4. CORE WORDPRESS CAPABILITIES -->
+    <section class="w-full bg-white py-20 md:py-28 font-elegant border-b border-slate-200/80" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="max-w-3xl mb-16 text-left">
+          <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#1559E7] mb-2 block">
+            Specialized Capabilities
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-slate-900 tracking-tight leading-snug mb-4">
+            Custom WordPress Development Built for UAE Market Demands
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            Every business has distinct requirements. Whether you need a high-converting corporate presence, an ultra-fast WooCommerce storefront, or a custom API integration, each solution is engineered without shortcuts.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {capabilities.map(cap => (
+            <div class="group bg-slate-50 hover:bg-white rounded-3xl p-7 sm:p-8 border border-slate-200/70 hover:border-[#1559E7]/30 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.02)] hover:shadow-[0_16px_35px_rgba(21,89,231,0.08)] hover:-translate-y-1 flex flex-col justify-between">
+              <div>
+                <div class="w-14 h-14 rounded-2xl bg-white group-hover:bg-[#1559E7]/10 flex items-center justify-center mb-6 shadow-sm border border-slate-100 transition-colors">
+                  <Fragment set:html={cap.icon} />
+                </div>
+                <div class="mb-2">
+                  <span class="text-[11px] font-bold text-[#1559E7] uppercase tracking-wider block" set:html={cap.tag}></span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-semibold text-slate-900 tracking-tight mb-3">
+                  {cap.title}
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed">
+                  {cap.desc}
+                </p>
+              </div>
+
+              <div class="pt-6 mt-6 border-t border-slate-200/60 flex items-center justify-between">
+                <span class="text-xs font-medium text-slate-500 group-hover:text-slate-900 transition-colors">
+                  Production Ready
+                </span>
+                <span class="text-[#1559E7] font-bold group-hover:translate-x-1 transition-transform">
+                  &rarr;
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 5. VERIFIED UAE CASE STUDIES -->
+    <section class="w-full bg-[#f8fafc] py-20 md:py-28 font-elegant border-b border-slate-200/80" id="case-studies">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+          <div class="max-w-2xl text-left">
+            <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#1559E7] mb-2 block">
+              Proven UAE Client Results
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-slate-900 tracking-tight leading-snug">
+              WordPress Platforms Engineered for Leading Brands
+            </h2>
+          </div>
+          <div class="shrink-0">
+            <a href="/portfolio/" class="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#1559E7] hover:underline">
+              <span>View All 20+ Case Studies</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {caseStudies.map(study => (
+            <a href={study.link} class="group bg-white rounded-3xl overflow-hidden shadow-[0_6px_25px_rgba(0,0,0,0.04)] hover:shadow-[0_16px_40px_rgba(0,0,0,0.08)] border border-slate-100 flex flex-col hover:-translate-y-1 transition-all duration-300">
+              <div class="w-full aspect-[16/10] overflow-hidden bg-slate-900 relative">
+                <img 
+                  src={study.image} 
+                  alt={study.title} 
+                  width="640" 
+                  height="400" 
+                  loading="lazy" 
+                  decoding="async" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                />
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md text-white text-[10px] sm:text-xs font-medium border border-white/10" set:html={study.metrics}></span>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8 flex flex-col justify-between flex-grow">
+                <div>
+                  <span class="text-xs font-semibold text-[#1559E7] uppercase tracking-wider block mb-2" set:html={study.category}></span>
+                  <h3 class="text-xl font-bold text-slate-900 tracking-tight mb-2 group-hover:text-[#1559E7] transition-colors">
+                    {study.title}
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm font-light leading-relaxed">
+                    {study.desc}
+                  </p>
+                </div>
+
+                <div class="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
+                  <span class="text-xs font-semibold text-slate-800">
+                    Read Detailed Case Study
+                  </span>
+                  <span class="text-[#1559E7] font-bold group-hover:translate-x-1 transition-transform">
+                    &rarr;
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 6. THE DECISION MATRIX (COMPARISON TABLE) -->
+    <section class="w-full bg-white py-20 md:py-28 font-elegant border-b border-slate-200/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="max-w-3xl mb-14 text-left">
+          <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#1559E7] mb-2 block">
+            Objective Comparison
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-slate-900 tracking-tight leading-snug mb-4">
+            Senior Architect vs Low-Cost Freelancers vs Traditional Agencies
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            Hiring the right partner determines whether your website becomes a valuable business asset or a recurring technical headache. Here is how different options compare across Dubai.
+          </p>
+        </div>
+
+        <div class="w-full overflow-x-auto rounded-3xl border border-slate-200 shadow-[0_6px_30px_rgba(0,0,0,0.03)] bg-white">
+          <table class="w-full text-left border-collapse min-w-[760px]">
+            <thead>
+              <tr class="bg-slate-900 text-white text-xs sm:text-sm font-semibold">
+                <th class="py-4.5 px-6 font-medium">Evaluation Criterion</th>
+                <th class="py-4.5 px-6 bg-[#1559E7] font-bold text-white">Yasir Jamal (Senior Architect)</th>
+                <th class="py-4.5 px-6 font-medium text-slate-300">Inexpensive Freelancers</th>
+                <th class="py-4.5 px-6 font-medium text-slate-300">Traditional Dubai Agencies</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-xs sm:text-sm">
+              {matrixRows.map((row, index) => (
+                <tr class={index % 2 === 0 ? "bg-white" : "bg-slate-50/60"}>
+                  <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
+                    {row.criterion}
+                  </td>
+                  <td class="py-4 px-6 bg-blue-50/50 text-slate-900 font-medium border-l border-r border-blue-100">
+                    <div class="flex items-start gap-2">
+                      <span class="text-emerald-600 font-bold shrink-0 mt-0.5">&check;</span>
+                      <span>{row.yasir}</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-6 text-slate-600 font-light">
+                    <div class="flex items-start gap-2">
+                      <span class="text-rose-500 font-bold shrink-0 mt-0.5">&times;</span>
+                      <span>{row.cheap}</span>
+                    </div>
+                  </td>
+                  <td class="py-4 px-6 text-slate-600 font-light">
+                    <div class="flex items-start gap-2">
+                      <span class="text-amber-500 font-bold shrink-0 mt-0.5">&bull;</span>
+                      <span>{row.agency}</span>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 7. SPEED & CORE WEB VITALS BENCHMARK -->
+    <section class="w-full bg-[#03050d] text-white py-20 md:py-28 font-elegant relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/4 w-96 h-96 bg-[#1559E7]/20 rounded-full blur-[130px] pointer-events-none"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#25D366]/15 rounded-full blur-[130px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-5 text-left space-y-6">
+            <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#25D366] block">
+              Core Web Vitals Engineering
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight leading-snug">
+              Every 100ms Delay Costs 7% in Conversions. Speed Is Non-Negotiable.
+            </h2>
+            <p class="text-slate-300 text-xs sm:text-sm md:text-base font-light leading-relaxed">
+              Google algorithms in the UAE heavily reward websites passing all Core Web Vitals assessments. We optimize every asset, query, script, and font to guarantee sub-second rendering on mobile connections across Dubai.
+            </p>
+
+            <div class="pt-2 flex flex-col sm:flex-row gap-4">
+              <button
+                type="button"
+                data-open-audit-modal
+                class="cursor-pointer inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold px-6 py-3.5 rounded-full text-xs sm:text-sm transition-all shadow-[0_10px_25px_rgba(37,211,102,0.3)]"
+              >
+                <span>Request Free Speed Teardown</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Benchmark Visual Card -->
+          <div class="lg:col-span-7 bg-slate-900/90 rounded-3xl p-6 sm:p-8 border border-white/10 shadow-2xl backdrop-blur-md">
+            <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+              <div>
+                <span class="text-xs uppercase tracking-widest text-slate-400 block font-medium">Google PageSpeed Audit</span>
+                <span class="text-base sm:text-lg font-bold text-white">Live Benchmark Comparison</span>
+              </div>
+              <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold">
+                Mobile Simulation (4G)
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-6 mb-8">
+              <div class="bg-white/5 rounded-2xl p-5 border border-emerald-500/30 flex flex-col items-center text-center">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-emerald-400 flex items-center justify-center mb-3 bg-emerald-950/40">
+                  <span class="text-2xl sm:text-3xl font-extrabold text-emerald-400">98</span>
+                </div>
+                <span class="text-xs sm:text-sm font-bold text-white">Yasir Jamal Custom Build</span>
+                <span class="text-[11px] text-emerald-300 font-light mt-1">Passing All Vitals (&lt;0.8s LCP)</span>
+              </div>
+
+              <div class="bg-white/5 rounded-2xl p-5 border border-rose-500/30 flex flex-col items-center text-center">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-rose-500 flex items-center justify-center mb-3 bg-rose-950/40">
+                  <span class="text-2xl sm:text-3xl font-extrabold text-rose-500">34</span>
+                </div>
+                <span class="text-xs sm:text-sm font-bold text-slate-300">Average Competitor Build</span>
+                <span class="text-[11px] text-rose-300 font-light mt-1">Failing Vitals (4.8s LCP)</span>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5">
+                  <span>Largest Contentful Paint (LCP)</span>
+                  <span class="font-bold text-emerald-400">0.7s vs 4.8s</span>
+                </div>
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                  <div class="bg-emerald-400 h-full w-[15%]"></div>
+                  <div class="bg-rose-500 h-full w-[85%] opacity-40"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5">
+                  <span>Total Blocking Time (TBT)</span>
+                  <span class="font-bold text-emerald-400">0ms vs 840ms</span>
+                </div>
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                  <div class="bg-emerald-400 h-full w-[5%]"></div>
+                  <div class="bg-rose-500 h-full w-[95%] opacity-40"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1.5">
+                  <span>Cumulative Layout Shift (CLS)</span>
+                  <span class="font-bold text-emerald-400">0.000 vs 0.28</span>
+                </div>
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                  <div class="bg-emerald-400 h-full w-[3%]"></div>
+                  <div class="bg-rose-500 h-full w-[97%] opacity-40"></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 8. TRANSPARENT INVESTMENT SCOPES -->
+    <section class="w-full bg-slate-50 py-20 md:py-28 font-elegant border-b border-slate-200/80" id="pricing">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="max-w-3xl mb-16 text-left">
+          <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#1559E7] mb-2 block">
+            Transparent Project Scopes
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-slate-900 tracking-tight leading-snug mb-4">
+            Invest in a Lasting Commercial Asset, Not a Disposable Template
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base font-light leading-relaxed">
+            Every engagement is scoped with fixed pricing, clear deliverables, and zero surprise hourly billing. Choose the scope that fits your current business stage.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          {packages.map(pkg => (
+            <div class={`rounded-3xl p-7 sm:p-9 flex flex-col justify-between transition-all duration-300 ${pkg.popular ? 'bg-[#01013E] text-white shadow-[0_20px_50px_rgba(1,1,62,0.25)] ring-2 ring-[#1559E7]' : 'bg-white text-slate-900 border border-slate-200 shadow-[0_4px_25px_rgba(0,0,0,0.03)]'}`}>
+              
+              <div>
+                {pkg.popular && (
+                  <div class="inline-block px-3 py-1 rounded-full bg-[#1559E7] text-white text-[11px] font-bold uppercase tracking-wider mb-4">
+                    Most Requested Scope
+                  </div>
+                )}
+                
+                <h3 class={`text-xl sm:text-2xl font-bold tracking-tight mb-2 ${pkg.popular ? 'text-white' : 'text-slate-900'}`}>
+                  {pkg.name}
+                </h3>
+                <p class={`text-xs sm:text-sm font-light leading-relaxed mb-6 ${pkg.popular ? 'text-slate-300' : 'text-slate-600'}`}>
+                  {pkg.subtitle}
+                </p>
+
+                <div class="pt-4 pb-6 border-t border-b border-slate-200/20 mb-6">
+                  <span class={`text-[11px] uppercase tracking-wider font-semibold block mb-1 ${pkg.popular ? 'text-[#F6CD0B]' : 'text-[#1559E7]'}`}>
+                    Ideal For
+                  </span>
+                  <p class={`text-xs font-light ${pkg.popular ? 'text-slate-200' : 'text-slate-700'}`}>
+                    {pkg.idealFor}
+                  </p>
+                </div>
+
+                <div class="space-y-3 mb-8">
+                  <span class={`text-xs font-semibold uppercase tracking-wider block ${pkg.popular ? 'text-slate-300' : 'text-slate-900'}`}>
+                    Included Deliverables
+                  </span>
+                  {pkg.deliverables.map(del => (
+                    <div class="flex items-start gap-2.5 text-xs sm:text-sm font-light">
+                      <span class={`font-bold shrink-0 mt-0.5 ${pkg.popular ? 'text-[#25D366]' : 'text-[#1559E7]'}`}>&check;</span>
+                      <span class={pkg.popular ? 'text-slate-200' : 'text-slate-600'}>{del}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div class="pt-6 border-t border-slate-200/20">
+                <button
+                  type="button"
+                  data-open-whatsapp-modal
+                  class={`cursor-pointer w-full py-3.5 px-6 rounded-full text-xs sm:text-sm font-bold transition-all text-center ${pkg.popular ? 'bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 shadow-[0_10px_25px_rgba(37,211,102,0.3)]' : 'bg-slate-900 hover:bg-slate-800 text-white'}`}
+                >
+                  <span>{pkg.ctaText}</span>
+                  <span>&rarr;</span>
+                </button>
+              </div>
+
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 9. FAQ ACCORDION -->
+    <section class="w-full bg-[#01013E] text-white py-20 md:py-28 font-elegant border-t border-slate-800" id="faq">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        
+        <div class="text-left mb-12 space-y-3 max-w-3xl">
+          <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#F6CD0B] block">
+            Got Questions?
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-light text-white tracking-tight leading-snug">
+            Frequently Asked Questions: WordPress Development in Dubai
+          </h2>
+          <p class="text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+            Direct, candid answers regarding WordPress engineering standards, hosting in the UAE, bilingual Arabic implementation, timelines, and post-launch guarantees.
+          </p>
+        </div>
+
+        <div class="w-full divide-y divide-slate-800/80 border-t border-b border-slate-800/80">
+          {faqs.map((faq, idx) => (
+            <div class="faq-item group">
+              <button 
+                type="button"
+                class="faq-btn w-full flex justify-between items-center text-left py-4 sm:py-5 text-sm sm:text-base font-normal text-slate-100 hover:text-[#F6CD0B] transition-colors gap-4 focus:outline-none"
+                aria-expanded={idx === 0 ? "true" : "false"}
+              >
+                <span>{faq.q}</span>
+                <span class="faq-icon text-lg sm:text-xl font-light text-[#F6CD0B] shrink-0 transition-transform duration-300">
+                  {idx === 0 ? '−' : '+'}
+                </span>
+              </button>
+
+              <div 
+                class="faq-content overflow-hidden transition-all duration-300 ease-in-out max-h-0"
+                style={idx === 0 ? "max-height: 250px;" : "max-height: 0px;"}
+              >
+                <div class="pb-5 pt-1 pr-4 text-slate-300 text-xs sm:text-sm font-light leading-relaxed">
+                  <p>{faq.a}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Script -->
+    <script>
+      function initWpFaqAccordion() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach((item) => {
+          const btn = item.querySelector('.faq-btn');
+          const content = item.querySelector('.faq-content') as HTMLElement;
+          const icon = item.querySelector('.faq-icon');
+
+          if (!btn || !content) return;
+
+          btn.addEventListener('click', () => {
+            const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+            faqItems.forEach((otherItem) => {
+              const otherBtn = otherItem.querySelector('.faq-btn');
+              const otherContent = otherItem.querySelector('.faq-content') as HTMLElement;
+              const otherIcon = otherItem.querySelector('.faq-icon');
+
+              if (otherBtn && otherContent && otherBtn !== btn) {
+                otherBtn.setAttribute('aria-expanded', 'false');
+                otherContent.style.maxHeight = '0px';
+                if (otherIcon) otherIcon.textContent = '+';
+              }
+            });
+
+            if (isOpen) {
+              btn.setAttribute('aria-expanded', 'false');
+              content.style.maxHeight = '0px';
+              if (icon) icon.textContent = '+';
+            } else {
+              btn.setAttribute('aria-expanded', 'true');
+              content.style.maxHeight = content.scrollHeight + 30 + 'px';
+              if (icon) icon.textContent = '−';
+            }
+          });
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWpFaqAccordion);
+      } else {
+        initWpFaqAccordion();
+      }
+    </script>
+
+
+    <!-- 10. FINAL CONVERSION BANNER -->
+    <section class="w-full bg-[#03050d] text-white py-20 md:py-24 font-elegant relative overflow-hidden">
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#1559E7]/15 rounded-full blur-[160px] pointer-events-none"></div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 space-y-6">
+        <span class="text-xs sm:text-sm font-semibold uppercase tracking-widest text-[#25D366] block">
+          Ready to Elevate Your Web Presence?
+        </span>
+        
+        <h2 class="text-2xl sm:text-3xl md:text-5xl font-light text-white tracking-tight leading-tight">
+          Partner Directly with a Senior WordPress Architect in Dubai
+        </h2>
+        
+        <p class="text-slate-300 text-xs sm:text-sm md:text-base font-light leading-relaxed max-w-2xl mx-auto">
+          Skip the agency bureaucracy, junior developers, and plugin bloat. Get a bespoke, sub-second WordPress platform engineered to rank on Google and convert visitors into long-term clients.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button 
+            type="button" 
+            data-open-whatsapp-modal 
+            class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-slate-950 font-bold px-8 py-4 rounded-full text-xs sm:text-sm shadow-[0_12px_30px_rgba(37,211,102,0.35)] hover:scale-105 transition-all"
+          >
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.27.86 5.82 2.42a8.232 8.232 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.38 0-2.74-.36-3.95-1.08l-.3-.18-3.12.82.83-3.04-.2-.31c-.79-1.26-1.21-2.83-1.21-4.45 0-4.55 3.7-8.25 8.26-8.25zm-3.51 3.66c-.16 0-.43.06-.66.31-.22.25-.85.84-.85 2.05s.88 2.38 1 2.54c.12.16 1.72 2.63 4.17 3.69.58.25 1.04.4 1.39.51.59.19 1.13.16 1.55.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.46-.29s-1.21-.6-1.44-.68c-.22-.08-.39-.12-.55.13-.17.24-.63.79-.77.96-.14.16-.29.18-.53.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.43-1.35-1.67-.15-.25-.02-.37.1-.49.11-.11.25-.29.37-.43.12-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.13-.53-1.28-.73-1.75-.19-.47-.39-.41-.53-.41-.14-.01-.3-.01-.46-.01z"/>
+            </svg>
+            <span>Start WhatsApp Consultation</span>
+            <span>&rarr;</span>
+          </button>
+
+          <button
+            type="button"
+            data-open-audit-modal
+            class="cursor-pointer w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-medium px-8 py-4 rounded-full text-xs sm:text-sm border border-white/20 transition-all shadow-md"
+          >
+            <span>Request Free 5-Min Video Audit</span>
+          </button>
+        </div>
+
+        <p class="text-[11px] text-slate-400 font-light pt-2">
+          Strict non-disclosure agreements honored. Response typically within 15 minutes during UAE business hours.
+        </p>
+      </div>
+    </section>
+
+  </main>
+</Layout>
